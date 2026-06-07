@@ -137,3 +137,74 @@ def load_reference_card(
                 return payload[0]
             return payload
     return None
+
+
+def assemble_card_from_category_snapshots(
+    card_key: str,
+    upstream_key: str | None = None,
+    reference_dir: Path | None = None,
+) -> dict[str, Any] | None:
+    """
+    Build a minimal card detail from synced category_*.json rows when cards/{key}.json is missing.
+    Used for catalog wallet cards (e.g. chase-starbucksrewardsvisa) on Railway without live API.
+    """
+    root = reference_dir or REFERENCE_DIR
+    if not root.is_dir():
+        return None
+
+    keys = {k for k in (upstream_key, card_key) if k}
+    rules_by_id: dict[int, dict[str, Any]] = {}
+    meta: dict[str, Any] = {}
+
+    for path in sorted(root.glob("category_*.json")):
+        try:
+            rows = json.loads(path.read_text())
+        except (json.JSONDecodeError, OSError):
+            continue
+        if not isinstance(rows, list):
+            continue
+        for row in rows:
+            if row.get("cardKey") not in keys:
+                continue
+            if not meta:
+                meta = {
+                    "cardName": row.get("cardName") or card_key,
+                    "cardIssuer": row.get("cardIssuer") or "",
+                    "cardNetwork": row.get("cardNetwork") or "",
+                    "spendType": row.get("spendType") or "",
+                }
+            cat_id = row.get("spendBonusCategoryId")
+            if cat_id is None:
+                continue
+            rules_by_id[int(cat_id)] = {
+                "spendBonusCategoryName": row.get("spendBonusCategoryName") or "",
+                "spendBonusCategoryId": int(cat_id),
+                "spendBonusDesc": row.get("spendBonusDesc") or "",
+                "earnMultiplier": float(row.get("earnMultiplier") or 0),
+                "isDateLimit": int(row.get("isDateLimit") or 0),
+                "limitBeginDate": row.get("limitBeginDate") or "",
+                "limitEndDate": row.get("limitEndDate") or "",
+                "isSpendLimit": int(row.get("isSpendLimit") or 0),
+                "spendLimit": float(row.get("spendLimit") or 0),
+                "spendLimitResetPeriod": row.get("spendLimitResetPeriod") or "",
+            }
+
+    if not rules_by_id:
+        return None
+
+    spend_type = str(meta.get("spendType") or "Points")
+    return {
+        "cardKey": card_key,
+        "cardName": meta.get("cardName") or card_key,
+        "cardIssuer": meta.get("cardIssuer") or "",
+        "cardNetwork": meta.get("cardNetwork") or "",
+        "baseSpendAmount": 0.25,
+        "baseSpendEarnType": spend_type,
+        "baseSpendEarnCategory": spend_type,
+        "baseSpendEarnCurrency": "points",
+        "baseSpendEarnValuation": 1.0,
+        "baseSpendEarnIsCash": 0,
+        "baseSpendEarnCashValue": 1.0,
+        "isActive": 1,
+        "spendBonusCategory": list(rules_by_id.values()),
+    }

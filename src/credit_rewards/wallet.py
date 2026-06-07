@@ -42,22 +42,36 @@ def _load_from_db(card_key: str) -> CardProfile | None:
 def load_wallet(card_keys: list[str], client: CardDataClient | None = None) -> list[CardProfile]:
     client = client or CardDataClient()
     cards: list[CardProfile] = []
+    missing: list[str] = []
 
     for key in card_keys:
         key = key.strip()
         if not key:
             continue
-        loaded: CardProfile | None = None
-        if client.is_configured:
+        loaded: CardProfile | None = _load_from_db(key)
+        if loaded is None and client.is_configured:
             try:
-                payload = client.card_detail(key)
+                from credit_rewards.card_catalog import resolve_wallet_card_key
+
+                resolved = resolve_wallet_card_key(key)
+                rc_key = str(resolved["rewards_cc_card_key"])
+                payload = client.card_detail(rc_key)
                 loaded = normalize_card_detail(payload)
             except RewardsCCError:
                 loaded = None
         if loaded is None:
-            loaded = _load_from_db(key)
-        if loaded is None:
-            loaded = load_fixture_card(key)
+            try:
+                loaded = load_fixture_card(key)
+            except RewardsCCError:
+                missing.append(key)
+                continue
         cards.append(loaded)
+
+    if missing:
+        names = ", ".join(missing)
+        raise RewardsCCError(
+            f"Reward data not available for: {names}. "
+            "Remove the card or choose one from the popular list."
+        )
 
     return cards

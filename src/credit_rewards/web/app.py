@@ -497,7 +497,10 @@ def api_cards_by_issuer(q: str, limit: int = 48) -> dict[str, object]:
     query = (q or "").strip()
     if len(query) < 2:
         raise HTTPException(status_code=400, detail="Enter at least 2 characters for bank name")
-    matches = search_cards_by_issuer(query, limit=min(limit, 40))
+    matches = apply_local_image_urls(search_cards_by_issuer(query, limit=min(limit, 40)))
+    keys = [str(m["card_key"]) for m in matches if m.get("card_key")]
+    if keys:
+        _warm_images_async(keys)
     return {"query": query, "matches": matches, "total": len(matches)}
 
 
@@ -610,7 +613,16 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
         category, merchant_info = _resolve_purchase_category(body)
         card_keys = body.card_keys if body.card_keys else _all_registry_card_keys()
         if body.card_keys:
-            ensure_wallet_cards_in_db(card_keys)
+            missing = ensure_wallet_cards_in_db(card_keys)
+            if missing:
+                raise HTTPException(
+                    status_code=400,
+                    detail=(
+                        "Reward rules are not loaded for: "
+                        + ", ".join(missing)
+                        + ". Try a popular card or check your connection."
+                    ),
+                )
         wallet = _enrich_wallet(load_wallet(card_keys, CardDataClient()))
         purchase = PurchaseContext(category=category, amount_usd=body.amount_usd)
         results = recommend_best_cards(wallet, purchase)

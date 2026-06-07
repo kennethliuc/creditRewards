@@ -1146,12 +1146,13 @@
       }
       matches.forEach((c) => {
         catalogByKey[c.card_key] = { ...catalogByKey[c.card_key], ...c };
+        if (c.image_url) imageCache[c.card_key] = c.image_url;
       });
       resultsEl.innerHTML = matches.map((c) => cardTileHtml(c)).join('');
       resultsEl.querySelectorAll('.card-tile').forEach((btn) => {
         btn.addEventListener('click', () => addCardToWallet(btn.dataset.key, catalogByKey[btn.dataset.key]));
       });
-      hydrateCardImages(resultsEl);
+      await hydrateCardImages(resultsEl);
     } catch (err) {
       resultsEl.innerHTML = '';
       $('manageError').textContent = err.message;

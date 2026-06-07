@@ -114,6 +114,31 @@ def test_api_cards_lists_registry():
     assert res.json()["total"] == 20
 
 
+def test_recommend_with_catalog_starbucks_card(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+
+    resolve = client.post("/api/merchant/resolve", json={"merchant_name": "Starbucks"})
+    assert resolve.status_code == 200
+    merchant_id = resolve.json()["best"]["merchantId"]
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": merchant_id,
+            "amount_usd": 25,
+            "card_keys": ["chase-starbucksrewardsvisa", "amex-gold"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["card_count"] == 2
+    assert any(r["card_key"] == "chase-starbucksrewardsvisa" for r in data["rankings"])
+
+
 def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):
     monkeypatch.setattr(
         "credit_rewards.web.app.load_wallet",
