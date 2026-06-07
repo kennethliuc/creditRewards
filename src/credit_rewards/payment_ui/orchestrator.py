@@ -107,9 +107,9 @@ def build_payment_ui_monitor_plan(*, run_pytest: bool = True) -> dict[str, Any]:
         "gates": report["gates"],
         "tracks": report["tracks"],
         "tasks": [t.to_dict() for t in tasks],
-        "requirements_doc": "docs/payment-ui-requirements.md",
-        "monitor_doc": "docs/payment-ui-agent-system.md",
-        "tracker_doc": "docs/payment-ui-tracker.md",
+        "requirements_doc": "docs/product/payment-ui.md",
+        "monitor_doc": "docs/archive/agents/payment-ui-agent-system.md",
+        "tracker_doc": "docs/archive/agents/payment-ui-tracker.md",
         "commands": {
             "monitor": "credit-rewards-db payment-ui-monitor",
             "monitor_run": "credit-rewards-db payment-ui-monitor-run",

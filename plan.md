@@ -78,7 +78,7 @@ UserWallet
 
 ### Phase 1 checklist — Data layer
 
-**Card universe (Phase 1):** Top 20 general-purpose rewards cards — see [`docs/phase1-card-universe.md`](docs/phase1-card-universe.md).  
+**Card universe (Phase 1):** Top 20 general-purpose rewards cards — see [`docs/product/phase1-card-universe.md`](docs/product/phase1-card-universe.md).  
 **Progress:** **20 / 20** in `data/card_registry.yaml`.
 
 - [x] Own CardData API (Rewards CC–compatible paths) — `src/credit_rewards/card_api/`
@@ -197,7 +197,7 @@ For earn-time comparison, **Layer 1–3 on earn currency is enough**. Transfer p
 
 **User goal:** For each Phase 1 card, scrape issuer website → store in local DB; pull Rewards CC reference (ground truth); compare; explain mismatches using issuer page evidence; show everything on a web page.
 
-**Card scope:** Start with **5 cards already in registry** (reference JSON already synced). Expand to Top 20 per [`docs/phase1-card-universe.md`](docs/phase1-card-universe.md) in waves — do not block the dashboard on all 20 parsers.
+**Card scope:** **20/20** in registry with reference import. Scrape alignment ongoing — see [`docs/validation/status.md`](docs/validation/status.md).
 
 ### End-to-end flow
 
@@ -347,42 +347,31 @@ uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 
 ## Active development — Payment UI (homepage `/`)
 
-**Prerequisite:** Validation **`core_ready`** ✅
+**Prerequisite:** Validation **`core_ready`** ✅ · **Shipped:** https://credit-rewards-production.up.railway.app
 
-**User requirements:** [`docs/payment-ui-requirements.md`](docs/payment-ui-requirements.md)
+**Spec:** [`docs/product/payment-ui.md`](docs/product/payment-ui.md) · **Docs index:** [`docs/README.md`](docs/README.md)
 
-**Agent system:** [`docs/payment-ui-agent-system.md`](docs/payment-ui-agent-system.md) · Tracker: [`docs/payment-ui-tracker.md`](docs/payment-ui-tracker.md)
-
-| Track | Deliverable | Gate |
-|-------|-------------|------|
-| M | Merchant fuzzy URL + confirm | `payment-ui-monitor` track M |
-| P | Homepage flow + modal | index.html |
-| R | resolve + recommend API | `merchant_id`, full library |
-| T | pytest pay suite | test_merchant_mapping, test_pay_web |
+| Track | Deliverable | Status |
+|-------|-------------|--------|
+| M | Purchase channel + merchant resolve | ✅ |
+| P | Homepage flow + wallet + PWA | ✅ |
+| R | resolve + recommend API | ✅ |
+| T | pytest pay suite | ✅ |
+| Deploy | Railway Docker | ✅ |
 
 ```bash
-credit-rewards-db payment-ui-monitor-run
-uvicorn credit_rewards.web.app:app --port 8000
-# GET /api/payment-ui/monitor
+pytest tests/test_pay_web.py tests/test_payment_ui_e2e_smoke.py -q
+credit-rewards-db payment-ui-monitor-run   # optional agent monitor
 ```
 
 ### Phase checklist — Payment UI
 
-- [x] Merchant → category (YAML + fuzzy URL)
-- [x] User confirm merchant modal
-- [x] Homepage `/` full-library ranking
-- [x] Monitor `page_ready` formal sign-off + E2E smoke (`test_payment_ui_e2e_smoke.py`)
-- [x] Railway deploy artifacts (`Dockerfile`, `railway.toml`, [docs/deploy-railway.md](docs/deploy-railway.md))
-- [ ] Post-MVP: wallet filter, category fallback (founder approval required)
-
-### Success criteria (this track)
-
-| Criterion | Target |
-|-----------|--------|
-| Dashboard loads | All registry cards visible with both data sources |
-| Transparency | Every mismatch has category + multiplier + explanation |
-| Scraper loop | At least 1 card (`amex-gold`) reaches **fully matched** after parser fix |
-| API quota | Reference sync stays registry-scoped (<100 calls for 5 cards) |
+- [x] Merchant → category (YAML + purchase channel)
+- [x] User confirm merchant modal (high-confidence skip)
+- [x] Homepage `/` wallet ranking + i18n + savings
+- [x] PWA manifest + Add to Home Screen
+- [x] Railway deploy ([docs/operations/deploy-railway.md](docs/operations/deploy-railway.md))
+- [ ] Post-MVP: account UI, category fallback, TestFlight shell
 
 ---
 

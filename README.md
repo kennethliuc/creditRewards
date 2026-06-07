@@ -53,7 +53,7 @@ credit-rewards-db scrape --card-key my-card --url https://... --parser chase
 
 ## API examples
 
-See [docs/api-spec.md](docs/api-spec.md) and [Rewards CC docs](https://rewardscc.com/docs/getting-started/).
+See [docs/architecture/api-spec.md](docs/architecture/api-spec.md) and [Rewards CC docs](https://rewardscc.com/docs/getting-started/).
 
 ```bash
 curl http://127.0.0.1:8080/creditcard-detail-bycard/amex-gold
@@ -88,7 +88,7 @@ uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 uvicorn credit_rewards.web.app:app --port 8000
 # → http://127.0.0.1:8000/validation
 
-# Full validation run (writes reports/validation + docs/validation-status.md)
+# Full validation run (writes reports/validation + docs/validation/status.md)
 credit-rewards-db validation-report
 
 # Phase 1 only — Monitor gate (L1 + L3 + CPP + MCC, no scrape)
@@ -101,7 +101,7 @@ credit-rewards-db validation-monitor
 
 Set `REWARDS_CC_API_KEY` in `.env` (RapidAPI). Do **not** run `bulk-sync` unless you explicitly want every US card (~50k calls).
 
-**M1 progress:** see [`docs/m1-agent-tracker.md`](docs/m1-agent-tracker.md).
+Validation gates: [`docs/validation/status.md`](docs/validation/status.md).
 
 ## Tests
 
@@ -117,7 +117,7 @@ Parser unit tests use HTML snippets; integration tests use scraped-shaped fixtur
 
 Share the payment demo at a public HTTPS URL:
 
-1. See **[docs/deploy-railway.md](docs/deploy-railway.md)** for step-by-step setup.
+1. See **[docs/operations/deploy-railway.md](docs/operations/deploy-railway.md)** for step-by-step setup.
 2. Railway builds `Dockerfile` (SQLite from `data/reference/`, no API keys at runtime).
 3. Set `CREDITREWARDS_USER_AGENT` with your contact email for Nominatim.
 
@@ -128,5 +128,9 @@ PORT=8000 bash scripts/start_web.sh
 
 ## Docs
 
-- [`idea.md`](idea.md) — product
-- [`plan.md`](plan.md) — architecture
+Index: **[docs/README.md](docs/README.md)**
+
+- [`idea.md`](idea.md) — product vision & OKR
+- [`plan.md`](plan.md) — architecture & phased checklist
+- [`docs/product/payment-ui.md`](docs/product/payment-ui.md) — payment homepage spec
+- [`docs/operations/deploy-railway.md`](docs/operations/deploy-railway.md) — public demo deploy

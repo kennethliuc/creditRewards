@@ -14,7 +14,7 @@ from credit_rewards.validation.dashboard import build_validation_dashboard
 from credit_rewards.validation.golden import run_golden_cases
 
 REPORTS_DIR = Path(__file__).resolve().parents[3] / "reports" / "validation"
-STATUS_PATH = Path(__file__).resolve().parents[3] / "docs" / "validation-status.md"
+STATUS_PATH = Path(__file__).resolve().parents[3] / "docs" / "validation" / "status.md"
 
 
 def _card_source_types(db_path: Path | None = None) -> dict[str, str]:

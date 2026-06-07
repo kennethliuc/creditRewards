@@ -1,5 +1,7 @@
 # Deploy to Railway
 
+**Live demo:** https://credit-rewards-production.up.railway.app
+
 Public demo URL for the payment homepage (`/`).
 
 ## What gets deployed

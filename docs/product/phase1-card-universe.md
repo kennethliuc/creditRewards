@@ -1,10 +1,10 @@
 # Phase 1 — Top 20 Card Universe
 
-**Purpose:** Define which credit cards Phase 1 should support for scrape + reference sync + recommendation validation.
+**Purpose:** Define which credit cards Phase 1 supports for reference sync + recommendation validation.
 
-**Audience fit:** Multi-card holders (2–8 cards) who care about **category rewards at payment time** — aligned with [`idea.md`](../idea.md), not single-card or bad-credit segments.
+**Status (2026-06):** **20/20** cards in `data/card_registry.yaml` with reference JSON imported. Scrape parsers vary by issuer; runtime demo uses reference import (Railway).
 
-**Date:** 2026-06-02
+**Audience fit:** Multi-card holders (2–8 cards) — aligned with [`idea.md`](../../idea.md).
 
 ---
 
@@ -134,3 +134,5 @@ After each wave, `validate-reference` should pass for:
 - **United / Delta co-brand** — common in travel wallets, defer to Phase 2
 
 Confirm this Top 20 before we expand `card_registry.yaml` and build new issuer parsers.
+
+**Update (2026-06):** Top 20 confirmed and loaded. Parser/scrape alignment is ongoing (see [validation/status.md](../validation/status.md)); payment demo uses reference import.

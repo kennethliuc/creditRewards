@@ -667,7 +667,7 @@ def validation_report_cmd(
         help="Skip fetching issuer HTML for compare evidence",
     ),
 ) -> None:
-    """Run full validation (V0–V5) and write reports/validation + docs/validation-status.md."""
+    """Run full validation (V0–V5) and write reports/validation + docs/validation/status.md."""
     from credit_rewards.validation.report import run_validation_report
 
     init_db()
@@ -688,7 +688,7 @@ def validation_report_cmd(
             typer.echo(f"  • {blocker}", err=True)
         raise typer.Exit(2)
     else:
-        typer.echo("Not ship ready — see blockers in validation-status.md", err=True)
+        typer.echo("Not ship ready — see blockers in docs/validation/status.md", err=True)
         for blocker in summary["blockers"]:
             typer.echo(f"  • {blocker}", err=True)
         raise typer.Exit(1)
