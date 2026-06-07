@@ -1,12 +1,17 @@
-# Merchant → Rewards CC spend category (Phase 1 payment-moment)
-# Match by domain (URL checkout) or display name / alias (manual entry).
+# Merchant → Rewards CC spend category by purchase channel
+#
+# Resolve / recommend use purchase_channel:
+#   online    (网站 URL tab) → online_category ?? spend_bonus_category_name
+#   in_store  (实体店 tab)   → in_store_category ?? spend_bonus_category_name
+#
+# If both channels share one category, set spend_bonus_category_name only.
 updated: "2026-06-07"
 
 merchants:
-  # Dining
+  # Dining — same category online (order) and in-store
   - id: chipotle
     name: Chipotle
-    aliases: [chipotle mexican grill]
+    aliases: [chipotle mexican grill, chpotle]
     domains: [chipotle.com]
     spend_bonus_category_name: Dining
 
@@ -22,6 +27,24 @@ merchants:
     domains: [starbucks.com]
     spend_bonus_category_name: Dining
 
+  - id: chick_fil_a
+    name: Chick-fil-A
+    aliases: [chick fil a, chick a fila, chickfila, chick-fil-a, cfa, chik fil a]
+    domains: [chick-fil-a.com]
+    spend_bonus_category_name: Dining
+
+  - id: in_n_out
+    name: In-N-Out Burger
+    aliases: [in n out, innout, in-n-out]
+    domains: [in-n-out.com]
+    spend_bonus_category_name: Dining
+
+  - id: seven_eleven
+    name: 7-Eleven
+    aliases: [7 eleven, seven eleven, 711]
+    domains: [7-eleven.com]
+    spend_bonus_category_name: Dining
+
   - id: doordash
     name: DoorDash
     aliases: [door dash]
@@ -34,7 +57,7 @@ merchants:
     domains: [ubereats.com]
     spend_bonus_category_name: Dining
 
-  # Grocery
+  # Grocery — online grocery pickup/delivery often still Grocery Stores on cards
   - id: whole_foods
     name: Whole Foods Market
     aliases: [whole foods, wholefoods]
@@ -59,30 +82,40 @@ merchants:
     domains: [safeway.com]
     spend_bonus_category_name: Grocery Stores
 
-  # Wholesale / big box
+  - id: central_market
+    name: Central Market
+    aliases: [central market]
+    domains: [centralmarket.com]
+    spend_bonus_category_name: Grocery Stores
+
+  # Big-box / wholesale — website vs store differ
   - id: costco
     name: Costco
     aliases: [costco wholesale]
     domains: [costco.com]
-    spend_bonus_category_name: Wholesale Clubs
+    spend_bonus_category_name: Online Shopping
+    in_store_category: Wholesale Clubs
 
   - id: sams_club
     name: Sam's Club
     aliases: [sams club]
     domains: [samsclub.com]
-    spend_bonus_category_name: Wholesale Clubs
+    spend_bonus_category_name: Online Shopping
+    in_store_category: Wholesale Clubs
 
   - id: walmart
     name: Walmart
     aliases: []
     domains: [walmart.com]
-    spend_bonus_category_name: Grocery Stores
+    spend_bonus_category_name: Online Shopping
+    in_store_category: Grocery Stores
 
   - id: target
     name: Target
     aliases: []
     domains: [target.com]
-    spend_bonus_category_name: All Purchases
+    spend_bonus_category_name: Online Shopping
+    in_store_category: All Purchases
 
   # Gas
   - id: shell
@@ -97,7 +130,7 @@ merchants:
     domains: [chevron.com]
     spend_bonus_category_name: Gas Stations
 
-  # Online shopping
+  # Online-first retail
   - id: amazon
     name: Amazon
     aliases: [amazon.com]
@@ -109,14 +142,23 @@ merchants:
     aliases: [apple, apple.com]
     domains: [apple.com]
     spend_bonus_category_name: Online Shopping
+    in_store_category: All Purchases
 
   - id: best_buy
     name: Best Buy
     aliases: [bestbuy]
     domains: [bestbuy.com]
     spend_bonus_category_name: Online Shopping
+    in_store_category: All Purchases
 
-  # Travel & hotels
+  - id: nike
+    name: Nike
+    aliases: []
+    domains: [nike.com]
+    spend_bonus_category_name: Online Shopping
+    in_store_category: All Purchases
+
+  # Travel & hotels — booking site ≈ same category
   - id: airbnb
     name: Airbnb
     aliases: []
@@ -153,7 +195,7 @@ merchants:
     domains: [southwest.com]
     spend_bonus_category_name: Airfare
 
-  # Rideshare / transit
+  # Rideshare
   - id: uber
     name: Uber
     aliases: []
@@ -179,7 +221,7 @@ merchants:
     domains: [walgreens.com]
     spend_bonus_category_name: Drugstores
 
-  # Streaming
+  # Streaming — online only
   - id: netflix
     name: Netflix
     aliases: []

@@ -178,21 +178,22 @@ def lookup_store_name_nominatim(query: str) -> NominatimMatch | None:
 
 def lookup_domain_brand_nominatim(domain: str) -> NominatimMatch | None:
     """When URL host is unknown in catalog, search Nominatim using brand label from domain."""
-    from credit_rewards.merchant_url_parse import registrable_label
+    from credit_rewards.merchant_url_parse import expand_domain_brand_queries, registrable_label
 
     label = registrable_label(domain)
     if len(label) < 3:
         return None
-    match = lookup_store_name_nominatim(label)
-    if match:
-        return NominatimMatch(
-            place_id=match.place_id,
-            display_name=match.display_name,
-            spend_bonus_category_name=match.spend_bonus_category_name,
-            osm_class=match.osm_class,
-            osm_type=match.osm_type,
-            match_type="nominatim_domain_brand",
-            confidence=match.confidence,
-            score=match.score + 5,
-        )
+    for query in expand_domain_brand_queries(label):
+        match = lookup_store_name_nominatim(query)
+        if match:
+            return NominatimMatch(
+                place_id=match.place_id,
+                display_name=match.display_name,
+                spend_bonus_category_name=match.spend_bonus_category_name,
+                osm_class=match.osm_class,
+                osm_type=match.osm_type,
+                match_type="nominatim_domain_brand",
+                confidence=match.confidence,
+                score=match.score + 5,
+            )
     return None

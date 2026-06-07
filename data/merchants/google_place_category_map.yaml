@@ -1,0 +1,81 @@
+# Google Places types → Rewards CC spend bonus category
+source: google-places-api
+updated: "2026-06-07"
+
+# Match first primaryType, then any type in list, then name hints
+primary_types:
+  restaurant: Dining
+  mexican_restaurant: Dining
+  american_restaurant: Dining
+  chinese_restaurant: Dining
+  japanese_restaurant: Dining
+  italian_restaurant: Dining
+  indian_restaurant: Dining
+  thai_restaurant: Dining
+  vietnamese_restaurant: Dining
+  hamburger_restaurant: Dining
+  pizza_restaurant: Dining
+  seafood_restaurant: Dining
+  steak_house: Dining
+  sushi_restaurant: Dining
+  fast_food_restaurant: Dining
+  cafe: Dining
+  coffee_shop: Dining
+  bar: Dining
+  bakery: Dining
+  meal_takeaway: Dining
+  meal_delivery: Dining
+  ice_cream_shop: Dining
+
+  supermarket: Grocery Stores
+  grocery_store: Grocery Stores
+  grocery_or_supermarket: Grocery Stores
+  convenience_store: Grocery Stores
+
+  gas_station: Gas Stations
+  electric_vehicle_charging_station: Gas Stations
+
+  pharmacy: Drugstores
+  drugstore: Drugstores
+
+  department_store: All Purchases
+  shopping_mall: All Purchases
+  clothing_store: All Purchases
+  home_goods_store: Home Improvement
+  hardware_store: Home Improvement
+  furniture_store: All Purchases
+
+  electronics_store: Online Shopping
+  book_store: All Purchases
+
+  lodging: Hotels
+  hotel: Hotels
+  motel: Hotels
+
+  movie_theater: Entertainment
+  amusement_park: Entertainment
+  gym: Entertainment
+
+  wholesaler: Wholesale Clubs
+  warehouse_store: Wholesale Clubs
+
+types:
+  food: Dining
+  store: All Purchases
+  point_of_interest: All Purchases
+
+name_hints:
+  - pattern: grocery|supermarket|trader joe|whole foods|safeway|kroger|costco|walmart|central market
+    category: Grocery Stores
+  - pattern: chipotle|starbucks|mcdonald|subway|taco|pizza|sushi|grill|cafe|coffee
+    category: Dining
+  - pattern: cvs|walgreens|pharmacy|drug
+    category: Drugstores
+  - pattern: shell|chevron|exxon|mobil|gas station
+    category: Gas Stations
+  - pattern: hotel|marriott|hilton|hyatt|airbnb
+    category: Hotels
+  - pattern: amazon|best buy|apple store|nike
+    category: Online Shopping
+
+default_category: All Purchases

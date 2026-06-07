@@ -1,9 +1,14 @@
 """Checkout URL parsing helpers."""
 
 from credit_rewards.merchant_url_parse import (
+    expand_domain_brand_queries,
     extract_domains_from_text,
     extract_embedded_urls,
+    format_brand_display_name,
+    infer_text_queries_from_url,
     is_payment_gateway_host,
+    parse_store_brand_from_url,
+    google_maps_search_queries,
     registrable_label,
     url_haystack,
 )
@@ -43,3 +48,41 @@ def test_url_haystack_includes_decoded_query():
     host, hay = url_haystack("https://pay.example.com/?store=starbucks.com")
     assert host == "pay.example.com"
     assert "starbucks.com" in hay
+
+
+def test_expand_domain_brand_queries_splits_compound_slug():
+    assert "central market" in expand_domain_brand_queries("centralmarket")
+    assert expand_domain_brand_queries("centralmarket")[0] == "centralmarket"
+
+
+def test_parse_store_brand_from_merchant_website():
+    parsed = parse_store_brand_from_url("http://centralmarket.com/")
+    assert parsed is not None
+    assert parsed.display_name == "Central Market"
+    assert parsed.domain == "centralmarket.com"
+    assert "central market" in parsed.search_queries
+
+
+def test_parse_store_brand_from_checkout_url():
+    url = (
+        "https://checkout.stripe.com/c/pay/cs_live_abc"
+        "?return_url=https%3A%2F%2Fwww.chipotle.com%2Forder%2Fdone"
+    )
+    parsed = parse_store_brand_from_url(url)
+    assert parsed is not None
+    assert parsed.display_name == "Chipotle"
+    assert parsed.source == "embedded_domain"
+
+
+def test_google_maps_search_queries_from_parsed_brand():
+    parsed = parse_store_brand_from_url("http://centralmarket.com/")
+    assert parsed is not None
+    queries = google_maps_search_queries(parsed)
+    assert queries[0] == "Central Market"
+    assert "centralmarket" in queries
+    assert any("centralmarket.com" in q for q in queries)
+
+
+def test_format_brand_display_name():
+    assert format_brand_display_name("central market") == "Central Market"
+    assert format_brand_display_name("whole-foods") == "Whole Foods"

@@ -30,7 +30,8 @@ def _wallet_loader(db_path):
 def test_index_page_loads():
     res = client.get("/")
     assert res.status_code == 200
-    assert "这次用哪张卡" in res.text
+    assert "仅在本机使用" in res.text
+    assert "wallet-ui.js" in res.text
 
 
 def test_merchant_resolve_url():

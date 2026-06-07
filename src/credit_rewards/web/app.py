@@ -1,11 +1,15 @@
 from __future__ import annotations
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import os
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -33,8 +37,21 @@ from credit_rewards.validation.dashboard import build_validation_dashboard
 from credit_rewards.validation.summary_report import build_validation_summary_report
 from credit_rewards.payment_ui.orchestrator import build_payment_ui_monitor_plan
 from credit_rewards.wallet import load_wallet
+from credit_rewards.web.accounts import (
+    SESSION_COOKIE,
+    SESSION_DAYS,
+    AccountError,
+    ensure_account_schema,
+    get_user_wallet,
+    login_user,
+    logout_session,
+    register_user,
+    save_user_wallet,
+    user_id_from_session,
+)
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
+COOKIE_SECURE = os.getenv("CREDITREWARDS_COOKIE_SECURE", "0").lower() in {"1", "true", "yes"}
 FETCH_EVIDENCE = os.getenv("CREDITREWARDS_FETCH_EVIDENCE", "1").lower() not in {
     "0",
     "false",
@@ -53,11 +70,64 @@ class RecommendRequest(BaseModel):
     merchant_name: str | None = Field(default=None, min_length=1)
     merchant_id: str | None = Field(default=None, min_length=1)
     amount_usd: float = Field(gt=0)
+    purchase_channel: str | None = Field(default=None, pattern="^(online|in_store)$")
 
 
 class MerchantResolveRequest(BaseModel):
     merchant_url: str | None = Field(default=None, min_length=1)
     merchant_name: str | None = Field(default=None, min_length=1)
+    latitude: float | None = Field(default=None, ge=-90, le=90)
+    longitude: float | None = Field(default=None, ge=-180, le=180)
+    purchase_channel: str | None = Field(default=None, pattern="^(online|in_store)$")
+
+
+class WalletCardInput(BaseModel):
+    card_key: str = Field(min_length=1)
+    nickname: str = ""
+    last4: str = ""
+
+
+class RegisterRequest(BaseModel):
+    email: str = Field(min_length=3)
+    password: str = Field(min_length=8)
+    cards: list[WalletCardInput] = Field(min_length=1)
+
+
+class LoginRequest(BaseModel):
+    email: str = Field(min_length=3)
+    password: str = Field(min_length=1)
+
+
+class WalletUpdateRequest(BaseModel):
+    cards: list[WalletCardInput] = Field(min_length=1)
+
+
+def _card_display_name(card_key: str) -> str:
+    return card_key.replace("-", " ").title()
+
+
+def _set_session_cookie(response: Response, token: str) -> None:
+    response.set_cookie(
+        key=SESSION_COOKIE,
+        value=token,
+        httponly=True,
+        samesite="lax",
+        max_age=SESSION_DAYS * 86400,
+        secure=COOKIE_SECURE,
+    )
+
+
+def _clear_session_cookie(response: Response) -> None:
+    response.delete_cookie(key=SESSION_COOKIE, httponly=True, samesite="lax", secure=COOKIE_SECURE)
+
+
+def _session_user_id(request: Request) -> int | None:
+    return user_id_from_session(request.cookies.get(SESSION_COOKIE))
+
+
+@app.on_event("startup")
+def _startup_account_schema() -> None:
+    ensure_account_schema()
 
 
 def _all_registry_card_keys() -> list[str]:
@@ -65,25 +135,39 @@ def _all_registry_card_keys() -> list[str]:
 
 
 def _resolve_purchase_category(body: RecommendRequest) -> tuple[str, dict[str, object] | None]:
-    if body.category:
-        if body.merchant_id and body.merchant_id.startswith("osm:"):
+    channel = body.purchase_channel
+
+    if body.category and body.merchant_id:
+        if body.merchant_id.startswith("osm:") or body.merchant_id.startswith("gmaps:"):
             match = lookup_merchant_category(
                 merchant_id=body.merchant_id,
                 category=body.category,
                 merchant_name=body.merchant_name,
             )
             return body.category, match.to_dict()
-        if body.merchant_id:
-            try:
-                match = lookup_merchant_by_id(body.merchant_id)
-            except MerchantNotFoundError as exc:
-                raise HTTPException(status_code=404, detail=str(exc)) from exc
-            return match.spend_bonus_category_name, match.to_dict()
+        if body.merchant_id.startswith("web:"):
+            match = lookup_merchant_category(
+                merchant_id=body.merchant_id,
+                category=body.category,
+                merchant_name=body.merchant_name,
+            )
+            return body.category, match.to_dict()
+        try:
+            match = lookup_merchant_by_id(
+                body.merchant_id,
+                purchase_channel=channel,
+            )
+        except MerchantNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        confirmed = {**match.to_dict(), "spendBonusCategoryName": body.category}
+        return body.category, confirmed
+
+    if body.category:
         return body.category, None
 
     if body.merchant_id:
         try:
-            match = lookup_merchant_by_id(body.merchant_id)
+            match = lookup_merchant_by_id(body.merchant_id, purchase_channel=channel)
         except MerchantNotFoundError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
         return match.spend_bonus_category_name, match.to_dict()
@@ -93,6 +177,7 @@ def _resolve_purchase_category(body: RecommendRequest) -> tuple[str, dict[str, o
             match = lookup_merchant_category(
                 merchant_url=body.merchant_url,
                 merchant_name=body.merchant_name,
+                purchase_channel=channel,
             )
         except MerchantNotFoundError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
@@ -340,6 +425,7 @@ def api_cards() -> dict[str, object]:
         cards.append(
             {
                 "card_key": entry["card_key"],
+                "card_name": _card_display_name(entry["card_key"]),
                 "issuer": entry.get("issuer") or "",
                 "reward_program": entry.get("reward_program") or "",
             }
@@ -348,9 +434,16 @@ def api_cards() -> dict[str, object]:
 
 
 @app.get("/api/merchants")
-def api_merchants(q: str | None = None) -> dict[str, object]:
+def api_merchants(
+    q: str | None = None,
+    purchase_channel: str | None = None,
+) -> dict[str, object]:
     if q:
-        return {"query": q, "suggestions": merchant_suggestions(q)}
+        return {
+            "query": q,
+            "purchaseChannel": purchase_channel or "in_store",
+            "suggestions": merchant_suggestions(q, purchase_channel=purchase_channel),
+        }
     merchants = list_merchants()
     return {"total": len(merchants), "merchants": merchants}
 
@@ -361,15 +454,36 @@ def api_merchant_resolve(body: MerchantResolveRequest) -> dict[str, object]:
         result = resolve_merchant(
             merchant_url=body.merchant_url,
             merchant_name=body.merchant_name,
+            latitude=body.latitude,
+            longitude=body.longitude,
+            purchase_channel=body.purchase_channel,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     if not result.best:
-        raise HTTPException(
-            status_code=404,
-            detail="No merchant match. Try another URL, store name, or pick from suggestions.",
+        detail = "No merchant match. Try another URL, store name, or pick from suggestions."
+        channel = body.purchase_channel or (
+            "online" if body.merchant_url else "in_store"
         )
-    return result.to_dict()
+        if channel == "in_store" and body.latitude is None and body.longitude is None:
+            detail += " Allow location access for better nearby store matching."
+        raise HTTPException(status_code=404, detail=detail)
+    payload = result.to_dict()
+    payload["usedLocation"] = body.latitude is not None and body.longitude is not None
+    return payload
+
+
+@app.get("/api/merchant/config")
+def api_merchant_config() -> dict[str, object]:
+    from credit_rewards.merchant_google_places import google_places_enabled
+    from credit_rewards.merchant_nominatim import NOMINATIM_ENABLED
+
+    enabled = google_places_enabled()
+    return {
+        "googlePlacesEnabled": enabled,
+        "nominatimEnabled": NOMINATIM_ENABLED,
+        "locationRecommended": enabled,
+    }
 
 
 @app.post("/api/recommend")
@@ -396,3 +510,76 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
         "card_count": len(results),
         "full_library": body.card_keys is None,
     }
+
+
+@app.post("/api/auth/register")
+def api_auth_register(body: RegisterRequest, response: Response) -> dict[str, object]:
+    try:
+        result = register_user(
+            body.email,
+            body.password,
+            [c.model_dump() for c in body.cards],
+        )
+    except AccountError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    _set_session_cookie(response, str(result["session_token"]))
+    return {
+        "authenticated": True,
+        "email": result["email"],
+        "cards": result["cards"],
+    }
+
+
+@app.post("/api/auth/login")
+def api_auth_login(body: LoginRequest, response: Response) -> dict[str, object]:
+    try:
+        result = login_user(body.email, body.password)
+    except AccountError as exc:
+        raise HTTPException(status_code=401, detail=str(exc)) from exc
+    _set_session_cookie(response, str(result["session_token"]))
+    return {
+        "authenticated": True,
+        "email": result["email"],
+        "cards": result["cards"],
+    }
+
+
+@app.post("/api/auth/logout")
+def api_auth_logout(request: Request, response: Response) -> dict[str, object]:
+    logout_session(request.cookies.get(SESSION_COOKIE))
+    _clear_session_cookie(response)
+    return {"ok": True}
+
+
+@app.get("/api/auth/me")
+def api_auth_me(request: Request) -> dict[str, object]:
+    user_id = _session_user_id(request)
+    if not user_id:
+        return {"authenticated": False}
+    try:
+        wallet = get_user_wallet(user_id)
+    except AccountError:
+        return {"authenticated": False}
+    return {"authenticated": True, "email": wallet["email"], "cards": wallet["cards"]}
+
+
+@app.get("/api/wallet")
+def api_get_wallet(request: Request) -> dict[str, object]:
+    user_id = _session_user_id(request)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Not logged in")
+    try:
+        return get_user_wallet(user_id)
+    except AccountError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+
+@app.put("/api/wallet")
+def api_put_wallet(body: WalletUpdateRequest, request: Request) -> dict[str, object]:
+    user_id = _session_user_id(request)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Not logged in")
+    try:
+        return save_user_wallet(user_id, [c.model_dump() for c in body.cards])
+    except AccountError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc

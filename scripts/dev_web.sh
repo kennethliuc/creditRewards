@@ -5,6 +5,13 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 export PYTHONPATH=src
 
+if [[ -f "$ROOT/.env" ]]; then
+  set -a
+  # shellcheck disable=SC1091
+  source "$ROOT/.env"
+  set +a
+fi
+
 # Ensure hidden .pth is readable (macOS may mark it hidden)
 PTH=".venv/lib/python3.13/site-packages/_editable_impl_credit_rewards.pth"
 if [[ -f "$PTH" ]]; then

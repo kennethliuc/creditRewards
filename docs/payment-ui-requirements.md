@@ -20,7 +20,7 @@ User is **about to pay**. They need one answer: **which card earns the most** fo
 | R2b | Unknown store/domain → **OpenStreetMap Nominatim** (free, no AI; `CREDITREWARDS_NOMINATIM=0` to disable) | ✅ |
 | R3 | User **confirms merchant + category** before recommend (popup/modal) | ✅ |
 | R4 | Page lives at **homepage `/`** | ✅ |
-| R5 | **Full library** compare (Phase-1 registry ~20 cards), ranked by reward USD | ✅ |
+| R5 | **User wallet** compare (user's cards only), ranked by reward USD | ✅ |
 | R6 | Inputs: **store URL or store name** + **amount USD** | ✅ |
 | R7 | Output: **best card** + **full ranking** with estimated value + short reason | ✅ |
 | R8 | Reward engine uses **validated** rules (validation `core_ready` prerequisite) | ✅ |
@@ -31,7 +31,6 @@ User is **about to pay**. They need one answer: **which card earns the most** fo
 
 - Browser extension / checkout autofill
 - Bank login / Plaid
-- Wallet persistence / user accounts
 - Transfer-partner redemption optimization
 - Replacing manual category entirely (fallback picker is Post-MVP polish)
 
@@ -41,7 +40,8 @@ User is **about to pay**. They need one answer: **which card earns the most** fo
 
 | Item | Notes |
 |------|-------|
-| Wallet filter (user picks 2–3 cards) | Founder chose **full library first** |
+| Wallet filter (user picks 2–3 cards) | ✅ Local + Account modes |
+| User accounts (email/password, nickname, last4) | ✅ Account mode |
 | Manual category fallback when merchant unknown | UX polish |
 | Merchant catalog expansion beyond seed YAML | MerchantAgent ongoing |
 | Mobile shell | Post-MVP roadmap |

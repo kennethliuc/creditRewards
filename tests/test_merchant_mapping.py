@@ -64,10 +64,65 @@ def test_lookup_by_merchant_id():
     assert match.match_type == "confirmed"
 
 
-def test_unknown_domain_raises(monkeypatch):
+def test_walmart_url_online_shopping():
+    result = resolve_merchant(merchant_url="https://www.walmart.com/checkout")
+    assert result.best
+    assert result.best.merchant_name == "Walmart"
+    assert result.best.spend_bonus_category_name == "Online Shopping"
+    assert result.purchase_channel == "online"
+
+
+def test_walmart_name_in_store_grocery():
+    result = resolve_merchant(merchant_name="Walmart")
+    assert result.best
+    assert result.best.spend_bonus_category_name == "Grocery Stores"
+    assert result.purchase_channel == "in_store"
+
+
+def test_costco_online_vs_in_store():
+    online = resolve_merchant(merchant_url="https://www.costco.com/Checkout")
+    in_store = resolve_merchant(merchant_name="Costco")
+    assert online.best.spend_bonus_category_name == "Online Shopping"
+    assert in_store.best.spend_bonus_category_name == "Wholesale Clubs"
+
+
+def test_central_market_url_uses_catalog():
+    result = resolve_merchant(merchant_url="http://centralmarket.com/")
+    assert result.best
+    assert result.best.merchant_id == "central_market"
+    assert result.best.spend_bonus_category_name == "Grocery Stores"
+
+
+def test_channel_categories_for_row():
+    from credit_rewards.merchant_mapping import channel_categories_for_row, load_merchant_catalog
+
+    walmart = next(r for r in load_merchant_catalog() if r["id"] == "walmart")
+    cats = channel_categories_for_row(walmart)
+    assert cats["online"] == "Online Shopping"
+    assert cats["in_store"] == "Grocery Stores"
+
+
+def test_lookup_merchant_by_id_respects_channel():
+    online = lookup_merchant_by_id("walmart", purchase_channel="online")
+    instore = lookup_merchant_by_id("walmart", purchase_channel="in_store")
+    assert online.spend_bonus_category_name == "Online Shopping"
+    assert instore.spend_bonus_category_name == "Grocery Stores"
+
+
+def test_unknown_domain_online_fallback(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
     result = resolve_merchant_url("https://unknown-shop-xyz.example.com/pay?id=1")
-    assert result.best is None
+    assert result.best
+    assert result.best.merchant_id.startswith("web:")
+    assert result.best.spend_bonus_category_name == "Online Shopping"
+
+
+def test_chick_fil_a_alias_in_store():
+    result = resolve_merchant(merchant_name="chick a fila", purchase_channel="in_store")
+    assert result.best
+    assert result.best.merchant_name == "Chick-fil-A"
+    assert result.best.spend_bonus_category_name == "Dining"
+    assert result.best.source == "catalog"
 
 
 def test_unknown_name_raises(monkeypatch):
@@ -94,6 +149,29 @@ def test_suggestions_prefix():
     hits = merchant_suggestions("chip")
     assert hits
     assert hits[0]["name"] == "Chipotle"
+    assert hits[0]["category"] == "Dining"
+
+
+def test_suggestions_fuzzy_typo():
+    hits = merchant_suggestions("chpotle")
+    assert hits
+    assert hits[0]["name"] == "Chipotle"
+
+
+def test_fuzzy_name_resolve_chik_fila():
+    result = resolve_merchant(merchant_name="chikfila")
+    assert result.best
+    assert result.best.merchant_name == "Chick-fil-A"
+    assert result.best.match_type == "fuzzy_name"
+    assert result.needs_confirmation is True
+
+
+def test_fuzzy_name_resolve_in_n_out():
+    result = resolve_merchant(merchant_name="in n ot")
+    assert result.best
+    assert result.best.merchant_name == "In-N-Out Burger"
+    assert result.best.match_type == "fuzzy_name"
+    assert result.needs_confirmation is True
 
 
 def test_api_resolve_shape():

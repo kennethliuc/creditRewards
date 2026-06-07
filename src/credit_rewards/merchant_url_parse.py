@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
 from urllib.parse import unquote, urlparse
 
 # Checkout/payment hosts — merchant identity is usually in query/path, not this host.
@@ -33,6 +34,55 @@ DOMAIN_IN_TEXT = re.compile(
 )
 
 NESTED_URL = re.compile(r"https?://[^\s\"'<>]+", re.IGNORECASE)
+
+
+@dataclass(frozen=True)
+class ParsedStoreBrand:
+    """Store identity inferred from a merchant website URL."""
+
+    display_name: str
+    domain: str
+    host: str
+    brand_slug: str
+    search_queries: tuple[str, ...]
+    source: str  # domain | embedded_domain
+
+
+def format_brand_display_name(phrase: str) -> str:
+    """Human-readable store name (central market → Central Market)."""
+    parts: list[str] = []
+    for token in re.split(r"[\s\-]+", phrase.strip()):
+        if not token:
+            continue
+        if token.isupper() and len(token) <= 4:
+            parts.append(token)
+        else:
+            parts.append(token.capitalize())
+    return " ".join(parts)
+
+
+def expand_domain_brand_queries(label: str) -> list[str]:
+    """Turn domain slugs into search phrases (centralmarket → central market)."""
+    raw = label.replace("-", " ").strip().lower()
+    if not raw:
+        return []
+    queries: list[str] = []
+    seen: set[str] = set()
+
+    def add(q: str) -> None:
+        q = re.sub(r"\s+", " ", q.strip())
+        if len(q) >= 3 and q not in seen:
+            seen.add(q)
+            queries.append(q)
+
+    add(raw)
+    if " " not in raw:
+        for suffix in ("market", "mart", "foods", "shop", "store", "fresh"):
+            if raw.endswith(suffix) and len(raw) > len(suffix) + 2:
+                stem = raw[: -len(suffix)]
+                if stem.isalpha():
+                    add(f"{stem} {suffix}")
+    return queries
 
 
 def normalize_url_input(url: str) -> str:
@@ -103,6 +153,68 @@ def registrable_label(domain: str) -> str:
     if len(parts) >= 2:
         return parts[-2]
     return parts[0]
+
+
+def parse_store_brand_from_url(url: str) -> ParsedStoreBrand | None:
+    """Parse a merchant store name from a website or checkout URL."""
+    host, haystack = url_haystack(url)
+    merchant_domain: str | None = None
+    source = "domain"
+
+    if is_payment_gateway_host(host):
+        embedded_domains: list[str] = []
+        for embedded in extract_embedded_urls(url):
+            embedded_host, _ = url_haystack(embedded)
+            if not is_payment_gateway_host(embedded_host):
+                embedded_domains.append(embedded_host)
+        for domain in extract_domains_from_text(haystack):
+            if not is_payment_gateway_host(domain):
+                embedded_domains.append(domain)
+        if not embedded_domains:
+            return None
+        merchant_domain = embedded_domains[0]
+        source = "embedded_domain"
+    else:
+        merchant_domain = host
+
+    label = registrable_label(merchant_domain)
+    queries = expand_domain_brand_queries(label)
+    if not queries:
+        return None
+
+    display_query = max(queries, key=lambda q: ((" " in q), len(q)))
+    return ParsedStoreBrand(
+        display_name=format_brand_display_name(display_query),
+        domain=merchant_domain,
+        host=host,
+        brand_slug=label,
+        search_queries=tuple(queries),
+        source=source,
+    )
+
+
+def infer_text_queries_from_url(url: str) -> list[str]:
+    parsed = parse_store_brand_from_url(url)
+    return list(parsed.search_queries) if parsed else []
+
+
+def google_maps_search_queries(parsed: ParsedStoreBrand) -> list[str]:
+    """Search phrases for Google Maps Places Text Search."""
+    queries: list[str] = []
+    seen: set[str] = set()
+
+    def add(q: str) -> None:
+        q = re.sub(r"\s+", " ", q.strip())
+        key = q.lower()
+        if len(q) >= 3 and key not in seen:
+            seen.add(key)
+            queries.append(q)
+
+    add(parsed.display_name)
+    for q in parsed.search_queries:
+        add(q)
+    add(f"{parsed.display_name} {parsed.domain}")
+    return queries
 
 
 def is_payment_gateway_host(host: str) -> bool:
