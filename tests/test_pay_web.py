@@ -63,6 +63,20 @@ def test_pwa_assets():
         assert icon.status_code == 200, path
 
 
+def test_api_cards_registry_image_urls_when_bundled():
+    from credit_rewards.card_image import local_image_path, registry_card_keys_for_images
+
+    keys = registry_card_keys_for_images()
+    if not keys or not all(local_image_path(k) for k in keys):
+        pytest.skip("Bundled data/card_images/ missing for registry")
+
+    res = client.get("/api/cards")
+    assert res.status_code == 200
+    cards = res.json()["cards"]
+    assert len(cards) == len(keys)
+    assert all(c.get("image_url", "").startswith("/api/cards/image/file") for c in cards)
+
+
 def test_merchant_resolve_url():
     res = client.post("/api/merchant/resolve", json={"merchant_url": "https://chipotle.com"})
     assert res.status_code == 200

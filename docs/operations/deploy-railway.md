@@ -7,6 +7,7 @@ Public demo URL for the payment homepage (`/`).
 ## What gets deployed
 
 - **One Docker container**: FastAPI web app + SQLite `carddata.db` (built from `data/reference/` at image build time)
+- **Card art**: `data/card_images/` (bundled PNG/JPG for Phase-1 registry — no Rewards CC key needed for images)
 - **No** separate CardData API on `:8080`
 - **No** Rewards CC API key required at runtime
 

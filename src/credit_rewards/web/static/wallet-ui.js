@@ -235,6 +235,7 @@
 
   let catalog = [];
   let catalogByKey = {};
+  let catalogImagesPromise = null;
   let issuerHints = [];
   function loadImageUrlCache() {
     try {
@@ -316,7 +317,7 @@
       return;
     }
     showView('local-setup');
-    renderLocalCardTiles();
+    await renderLocalCardTiles();
   }
 
   function loadPayTab() {
@@ -658,29 +659,37 @@
     };
   }
 
-  function cardThumbHtml(meta, { small = false } = {}) {
+  function cardThumbHtml(meta, { small = false, eager = false } = {}) {
     const name = meta.card_name || meta.card_key;
     const cls = small ? 'card-thumb card-thumb-sm' : 'card-thumb';
     const key = esc(meta.card_key);
     const slotCls = small ? 'card-thumb-slot card-thumb-sm' : 'card-thumb-slot';
     const cached = imageCache[meta.card_key] || meta.image_url;
+    const loading = eager ? 'eager' : 'lazy';
     if (cached) {
-      return `<div class="${slotCls}" data-card-key="${key}"><img class="${cls}" src="${esc(cached)}" alt="${esc(name)}" loading="lazy" /></div>`;
+      return `<div class="${slotCls}" data-card-key="${key}"><img class="${cls}" src="${esc(cached)}" alt="${esc(name)}" loading="${loading}" decoding="async" /></div>`;
     }
     const initial = (name.replace(/[^A-Za-z0-9]/g, '').charAt(0) || '?').toUpperCase();
     return `<div class="${slotCls}" data-card-key="${key}"><div class="${cls} card-thumb-fallback" aria-hidden="true">${esc(initial)}</div></div>`;
   }
 
-  async function hydrateCardImages(rootEl) {
-    if (!rootEl) return;
-    const keys = [
-      ...new Set(
-        [...rootEl.querySelectorAll('[data-card-key]')]
-          .map((el) => el.dataset.cardKey)
-          .filter(Boolean),
+  function browserPreloadImages(urls) {
+    const unique = [...new Set(urls.filter(Boolean))];
+    return Promise.all(
+      unique.map(
+        (url) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+          }),
       ),
-    ];
-    const need = keys.filter((k) => !imageCache[k] && !catalogByKey[k]?.image_url);
+    );
+  }
+
+  async function fetchMissingImageUrls(keys) {
+    const need = keys.filter((k) => k && !imageCache[k] && !catalogByKey[k]?.image_url);
     if (!need.length) return;
     try {
       const res = await fetch('/api/cards/images', {
@@ -692,17 +701,45 @@
       if (!res.ok) return;
       Object.assign(imageCache, data.images || {});
       saveImageUrlCache();
-      rootEl.querySelectorAll('[data-card-key]').forEach((slot) => {
-        const url = imageCache[slot.dataset.cardKey];
-        if (!url) return;
-        const name =
-          slot.closest('.manage-row')?.querySelector('strong')?.textContent ||
-          slot.closest('.card-tile')?.querySelector('.card-tile-name')?.textContent ||
-          slot.dataset.cardKey;
-        const cls = slot.classList.contains('card-thumb-sm') ? 'card-thumb card-thumb-sm' : 'card-thumb';
-        slot.innerHTML = `<img class="${cls}" src="${esc(url)}" alt="${esc(name)}" loading="lazy" />`;
-      });
     } catch (_) {}
+  }
+
+  function imageUrlForKey(cardKey) {
+    return imageCache[cardKey] || catalogByKey[cardKey]?.image_url || '';
+  }
+
+  async function ensureCatalogImages() {
+    if (!catalogImagesPromise) {
+      catalogImagesPromise = (async () => {
+        if (!catalog.length) await loadCatalog();
+        const keys = catalog.map((c) => c.card_key);
+        await fetchMissingImageUrls(keys);
+        await browserPreloadImages(keys.map((k) => imageUrlForKey(k)));
+      })();
+    }
+    return catalogImagesPromise;
+  }
+
+  async function hydrateCardImages(rootEl) {
+    if (!rootEl) return;
+    const keys = [
+      ...new Set(
+        [...rootEl.querySelectorAll('[data-card-key]')]
+          .map((el) => el.dataset.cardKey)
+          .filter(Boolean),
+      ),
+    ];
+    await fetchMissingImageUrls(keys);
+    rootEl.querySelectorAll('[data-card-key]').forEach((slot) => {
+      const url = imageUrlForKey(slot.dataset.cardKey);
+      if (!url) return;
+      const name =
+        slot.closest('.manage-row')?.querySelector('strong')?.textContent ||
+        slot.closest('.card-tile')?.querySelector('.card-tile-name')?.textContent ||
+        slot.dataset.cardKey;
+      const cls = slot.classList.contains('card-thumb-sm') ? 'card-thumb card-thumb-sm' : 'card-thumb';
+      slot.innerHTML = `<img class="${cls}" src="${esc(url)}" alt="${esc(name)}" loading="eager" decoding="async" />`;
+    });
   }
 
   function cardTileHtml(card, { inWallet = false, selected = false } = {}) {
@@ -710,14 +747,15 @@
     const disabled = inWallet ? ' in-wallet' : '';
     const sel = selected ? ' selected' : '';
     return `<button type="button" class="card-tile${disabled}${sel}" data-key="${esc(card.card_key)}" ${inWallet ? 'disabled' : ''}>
-      ${cardThumbHtml(meta)}
+      ${cardThumbHtml(meta, { eager: true })}
       <div class="card-tile-name">${esc(meta.card_name)}</div>
     </button>`;
   }
 
-  function renderLocalCardTiles() {
+  async function renderLocalCardTiles() {
     const grid = $('localCardPicker');
     if (!grid) return;
+    await ensureCatalogImages();
     localSetupSelected = new Set();
     grid.innerHTML = catalog.map((c) => cardTileHtml(c)).join('');
     grid.querySelectorAll('.card-tile').forEach((btn) => {
@@ -732,7 +770,7 @@
         }
       });
     });
-    hydrateCardImages(grid);
+    await hydrateCardImages(grid);
   }
 
   function activeInputEl() {
@@ -981,7 +1019,7 @@
     grid.querySelectorAll('.card-tile:not(.in-wallet)').forEach((btn) => {
       btn.addEventListener('click', () => addCardToWallet(btn.dataset.key));
     });
-    hydrateCardImages(grid);
+    void hydrateCardImages(grid);
   }
 
   async function loadIssuerHints() {
@@ -1088,8 +1126,11 @@
     const w = resolveWallet();
     if (w) enterPayFlow();
     else {
-      showView('local-setup');
-      renderLocalCardTiles();
+      void (async () => {
+        await ensureCatalogImages();
+        showView('local-setup');
+        await renderLocalCardTiles();
+      })();
     }
   }
 
@@ -1191,7 +1232,7 @@
       renderSavingsUI(null);
       $('resetModal').classList.remove('show');
       showView('local-setup');
-      renderLocalCardTiles();
+      void renderLocalCardTiles();
     }
 
     $('resetConfirm').addEventListener('click', () => performLocalReset());
@@ -1284,6 +1325,7 @@
     await refreshMerchantHints('');
 
     await loadCatalog();
+    void ensureCatalogImages();
 
     if (!window.CR_I18N.hasChosenLocale()) {
       languageReturnView = 'bootstrap';
@@ -1297,7 +1339,7 @@
     if (w) enterPayFlow();
     else {
       showView('local-setup');
-      renderLocalCardTiles();
+      await renderLocalCardTiles();
     }
   }
 
