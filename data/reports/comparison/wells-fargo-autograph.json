@@ -1,0 +1,230 @@
+{
+  "card_key": "wells-fargo-autograph",
+  "card_name": "Wells Fargo Autograph\u2120\u00a0",
+  "issuer": "Wells Fargo",
+  "source_url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 1464813222,
+      "spend_bonus_category_name": "Telecom",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 11030576,
+      "spend_bonus_category_name": "Tolls",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1468589631,
+      "spend_bonus_category_name": "Transit",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 1464813222,
+      "spend_bonus_category_name": "Telecom",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 11030576,
+      "spend_bonus_category_name": "Tolls",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1468589631,
+      "spend_bonus_category_name": "Transit",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+        "spend_bonus_category_group": "Auto"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+        "spend_bonus_category_group": "Auto"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1464813222,
+        "spend_bonus_category_name": "Telecom",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1464813222,
+        "spend_bonus_category_name": "Telecom",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 11030576,
+        "spend_bonus_category_name": "Tolls",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 11030576,
+        "spend_bonus_category_name": "Tolls",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1468589631,
+        "spend_bonus_category_name": "Transit",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1468589631,
+        "spend_bonus_category_name": "Transit",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

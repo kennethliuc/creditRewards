@@ -1,0 +1,17 @@
+{
+  "card_key": "citi-double-cash",
+  "card_name": "Citi Double Cash\u00ae",
+  "issuer": "Citi",
+  "source_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [],
+  "reference_rules": [],
+  "matched": [],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

@@ -1,0 +1,251 @@
+# Visa ISO 18245 Merchant Category Codes → Rewards CC spend bonus categories
+# Source: Visa Merchant Data Standards Manual (curated Phase 1 subset)
+updated: "2026-06-07"
+source_name: visa-iso-18245
+default_category:
+  spend_bonus_category_id: 0
+  spend_bonus_category_name: "All Purchases"
+  spend_bonus_category_group: "General"
+  mcc_description: "Unmapped MCC — use card base earn rate"
+
+exact:
+  "5310":
+    mcc_description: "Discount Stores"
+    spend_bonus_category_id: 1132334901
+    spend_bonus_category_name: "Grocery Stores"
+    spend_bonus_category_group: "Shopping"
+  "5311":
+    mcc_description: "Department Stores"
+    spend_bonus_category_id: 0
+    spend_bonus_category_name: "All Purchases"
+    spend_bonus_category_group: "Shopping"
+  "5411":
+    mcc_description: "Grocery Stores, Supermarkets"
+    spend_bonus_category_id: 1132334901
+    spend_bonus_category_name: "Grocery Stores"
+    spend_bonus_category_group: "Shopping"
+  "5422":
+    mcc_description: "Freezer and Locker Meat Provisioners"
+    spend_bonus_category_id: 1132334901
+    spend_bonus_category_name: "Grocery Stores"
+    spend_bonus_category_group: "Shopping"
+  "5451":
+    mcc_description: "Dairy Products Stores"
+    spend_bonus_category_id: 1132334901
+    spend_bonus_category_name: "Grocery Stores"
+    spend_bonus_category_group: "Shopping"
+  "5499":
+    mcc_description: "Miscellaneous Food Stores"
+    spend_bonus_category_id: 1132334901
+    spend_bonus_category_name: "Grocery Stores"
+    spend_bonus_category_group: "Shopping"
+  "5812":
+    mcc_description: "Eating Places, Restaurants"
+    spend_bonus_category_id: 160378660
+    spend_bonus_category_name: "Dining"
+    spend_bonus_category_group: "Dining"
+  "5813":
+    mcc_description: "Drinking Places (Alcoholic Beverages)"
+    spend_bonus_category_id: 160378660
+    spend_bonus_category_name: "Dining"
+    spend_bonus_category_group: "Dining"
+  "5814":
+    mcc_description: "Fast Food Restaurants"
+    spend_bonus_category_id: 160378660
+    spend_bonus_category_name: "Dining"
+    spend_bonus_category_group: "Dining"
+  "5912":
+    mcc_description: "Drug Stores and Pharmacies"
+    spend_bonus_category_id: 1096261883
+    spend_bonus_category_name: "Drugstores"
+    spend_bonus_category_group: "Shopping"
+  "5541":
+    mcc_description: "Service Stations (with or without ancillary services)"
+    spend_bonus_category_id: 1455345350
+    spend_bonus_category_name: "Gas Stations"
+    spend_bonus_category_group: "Auto"
+  "5542":
+    mcc_description: "Automated Fuel Dispensers"
+    spend_bonus_category_id: 1455345350
+    spend_bonus_category_name: "Gas Stations"
+    spend_bonus_category_group: "Auto"
+  "4511":
+    mcc_description: "Airlines, Air Carriers"
+    spend_bonus_category_id: 2013874334
+    spend_bonus_category_name: "Airfare"
+    spend_bonus_category_group: "Travel"
+  "4722":
+    mcc_description: "Travel Agencies, Tour Operators"
+    spend_bonus_category_id: 708398285
+    spend_bonus_category_name: "All Travel Agencies"
+    spend_bonus_category_group: "Travel"
+  "7011":
+    mcc_description: "Lodging — Hotels, Motels, Resorts"
+    spend_bonus_category_id: 164006704
+    spend_bonus_category_name: "Hotels"
+    spend_bonus_category_group: "Travel"
+  "4121":
+    mcc_description: "Taxicabs and Limousines (Lyft/Uber/Rideshare)"
+    spend_bonus_category_id: 1982334500
+    spend_bonus_category_name: "Ridesharing"
+    spend_bonus_category_group: "Travel"
+  "4899":
+    mcc_description: "Cable, Satellite, and Other Pay Television/Radio/Streaming"
+    spend_bonus_category_id: 248970942
+    spend_bonus_category_name: "Streaming Services"
+    spend_bonus_category_group: "Entertainment"
+  "5815":
+    mcc_description: "Digital Goods — Media, Books, Movies, Music"
+    spend_bonus_category_id: 248970942
+    spend_bonus_category_name: "Streaming Services"
+    spend_bonus_category_group: "Entertainment"
+  "4131":
+    mcc_description: "Bus Lines, Including Charters, Tour Buses"
+    spend_bonus_category_id: 1468589631
+    spend_bonus_category_name: "Transit"
+    spend_bonus_category_group: "Travel"
+  "4784":
+    mcc_description: "Tolls and Bridge Fees"
+    spend_bonus_category_id: 11030576
+    spend_bonus_category_name: "Tolls"
+    spend_bonus_category_group: "Travel"
+  "5732":
+    mcc_description: "Electronics Stores"
+    spend_bonus_category_id: 158645550
+    spend_bonus_category_name: "Online Shopping"
+    spend_bonus_category_group: "Shopping"
+  "5651":
+    mcc_description: "Family Clothing Stores"
+    spend_bonus_category_id: 0
+    spend_bonus_category_name: "All Purchases"
+    spend_bonus_category_group: "Shopping"
+  "5999":
+    mcc_description: "Miscellaneous and Specialty Retail Stores"
+    spend_bonus_category_id: 0
+    spend_bonus_category_name: "All Purchases"
+    spend_bonus_category_group: "Shopping"
+  "7523":
+    mcc_description: "Parking Lots, Parking Meters and Garages"
+    spend_bonus_category_id: 1468589631
+    spend_bonus_category_name: "Transit"
+    spend_bonus_category_group: "Travel"
+  "7832":
+    mcc_description: "Motion Picture Theaters"
+    spend_bonus_category_id: 1754717276
+    spend_bonus_category_name: "Entertainment"
+    spend_bonus_category_group: "Entertainment"
+  "7997":
+    mcc_description: "Membership Clubs, Recreation Sports, Fitness"
+    spend_bonus_category_id: 1576799624
+    spend_bonus_category_name: "Fitness Clubs"
+    spend_bonus_category_group: "Services"
+  "8299":
+    mcc_description: "Schools and Educational Services"
+    spend_bonus_category_id: 0
+    spend_bonus_category_name: "All Purchases"
+    spend_bonus_category_group: "General"
+  "5977":
+    mcc_description: "Cosmetic Stores"
+    spend_bonus_category_id: 1096261883
+    spend_bonus_category_name: "Drugstores"
+    spend_bonus_category_group: "Shopping"
+  "7230":
+    mcc_description: "Beauty and Barber Shops"
+    spend_bonus_category_id: 1096261883
+    spend_bonus_category_name: "Drugstores"
+    spend_bonus_category_group: "Shopping"
+  "4111":
+    mcc_description: "Local/Suburban Commuter Passenger Transportation"
+    spend_bonus_category_id: 176638649
+    spend_bonus_category_name: "Travel"
+    spend_bonus_category_group: "Travel"
+  "4112":
+    mcc_description: "Passenger Railways"
+    spend_bonus_category_id: 176638649
+    spend_bonus_category_name: "Travel"
+    spend_bonus_category_group: "Travel"
+  "4411":
+    mcc_description: "Steamship and Cruise Lines"
+    spend_bonus_category_id: 176638649
+    spend_bonus_category_name: "Travel"
+    spend_bonus_category_group: "Travel"
+  "5962":
+    mcc_description: "Direct Marketing — Travel Related Arrangement Services"
+    spend_bonus_category_id: 176638649
+    spend_bonus_category_name: "Travel"
+    spend_bonus_category_group: "Travel"
+  "5200":
+    mcc_description: "Home Supply Warehouse Stores"
+    spend_bonus_category_id: 1550080980
+    spend_bonus_category_name: "Home Improvement"
+    spend_bonus_category_group: "Shopping"
+  "5211":
+    mcc_description: "Lumber and Building Materials Stores"
+    spend_bonus_category_id: 1550080980
+    spend_bonus_category_name: "Home Improvement"
+    spend_bonus_category_group: "Shopping"
+  "5231":
+    mcc_description: "Glass, Paint, and Wallpaper Stores"
+    spend_bonus_category_id: 1550080980
+    spend_bonus_category_name: "Home Improvement"
+    spend_bonus_category_group: "Shopping"
+  "5251":
+    mcc_description: "Hardware Stores"
+    spend_bonus_category_id: 1550080980
+    spend_bonus_category_name: "Home Improvement"
+    spend_bonus_category_group: "Shopping"
+  "5261":
+    mcc_description: "Lawn and Garden Supply Stores"
+    spend_bonus_category_id: 1550080980
+    spend_bonus_category_name: "Home Improvement"
+    spend_bonus_category_group: "Shopping"
+  "4812":
+    mcc_description: "Telecommunication Equipment and Telephone Sales"
+    spend_bonus_category_id: 1464813222
+    spend_bonus_category_name: "Telecom"
+    spend_bonus_category_group: "Telecom"
+  "4814":
+    mcc_description: "Telecommunication Services"
+    spend_bonus_category_id: 1464813222
+    spend_bonus_category_name: "Telecom"
+    spend_bonus_category_group: "Telecom"
+  "4816":
+    mcc_description: "Computer Network/Information Services"
+    spend_bonus_category_id: 1464813222
+    spend_bonus_category_name: "Telecom"
+    spend_bonus_category_group: "Telecom"
+  "7941":
+    mcc_description: "Commercial Sports, Athletic Fields, Professional Sports Clubs"
+    spend_bonus_category_id: 1576799624
+    spend_bonus_category_name: "Fitness Clubs"
+    spend_bonus_category_group: "Services"
+  "7922":
+    mcc_description: "Theatrical Producers and Ticket Agencies"
+    spend_bonus_category_id: 929639080
+    spend_bonus_category_name: "Live Entertainment"
+    spend_bonus_category_group: "Entertainment"
+  "7929":
+    mcc_description: "Bands, Orchestras, and Miscellaneous Entertainers"
+    spend_bonus_category_id: 929639080
+    spend_bonus_category_name: "Live Entertainment"
+    spend_bonus_category_group: "Entertainment"
+
+ranges:
+  - from: 3000
+    to: 3299
+    mcc_description: "Airlines (Visa airline range)"
+    spend_bonus_category_id: 2013874334
+    spend_bonus_category_name: "Airfare"
+    spend_bonus_category_group: "Travel"
+  - from: 3351
+    to: 3441
+    mcc_description: "Car Rental Agencies"
+    spend_bonus_category_id: 1766781107
+    spend_bonus_category_name: "Car Rentals"
+    spend_bonus_category_group: "Travel"
+  - from: 3501
+    to: 3838
+    mcc_description: "Lodging — Hotels, Motels, Resorts"
+    spend_bonus_category_id: 164006704
+    spend_bonus_category_name: "Hotels"
+    spend_bonus_category_group: "Travel"

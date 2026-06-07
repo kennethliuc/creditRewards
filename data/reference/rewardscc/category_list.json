@@ -1,0 +1,2057 @@
+[
+  {
+    "spendBonusCategoryGroup": "Travel",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "AAA",
+            "spendBonusCategoryId": 34414,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Booking.com)",
+            "spendBonusCategoryId": 972912538,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Brex Travel)",
+            "spendBonusCategoryId": 1676561020,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Citi Travel)",
+            "spendBonusCategoryId": 1676652671,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Elan Rewards)",
+            "spendBonusCategoryId": 780924772,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Robinhood)",
+            "spendBonusCategoryId": 770166490,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (U.S. Bank)",
+            "spendBonusCategoryId": 1850534442,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel (Ultimate Rewards)",
+            "spendBonusCategoryId": 605657763,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "All Travel Agencies",
+            "spendBonusCategoryId": 708398285,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "amextravel.com",
+            "spendBonusCategoryId": 1120466653,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Capital Vacations",
+            "spendBonusCategoryId": 209817123,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Expedia",
+            "spendBonusCategoryId": 1731938066,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels.com",
+            "spendBonusCategoryId": 1959628644,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Interval International",
+            "spendBonusCategoryId": 1189200020,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Priceline",
+            "spendBonusCategoryId": 1872433078,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Vrbo",
+            "spendBonusCategoryId": 698220,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Airfare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Air Canada",
+            "spendBonusCategoryId": 645447711,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Air France",
+            "spendBonusCategoryId": 643335443,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Alaska Airlines",
+            "spendBonusCategoryId": 126590392,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Allegiant Air",
+            "spendBonusCategoryId": 409696446,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "American Airlines",
+            "spendBonusCategoryId": 1141863839,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "ANA",
+            "spendBonusCategoryId": 34622,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Asiana Airlines",
+            "spendBonusCategoryId": 67206840,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "avianca airlines",
+            "spendBonusCategoryId": 898095680,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "British Airways",
+            "spendBonusCategoryId": 26822743,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Cathay Pacific",
+            "spendBonusCategoryId": 1661110348,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Delta Airlines",
+            "spendBonusCategoryId": 1995164488,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Emirates",
+            "spendBonusCategoryId": 1275639671,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Frontier",
+            "spendBonusCategoryId": 1504604234,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hawaiian Airlines",
+            "spendBonusCategoryId": 857675141,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hong Kong Express",
+            "spendBonusCategoryId": 894599910,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Icelandair",
+            "spendBonusCategoryId": 1317888506,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "JetBlue",
+            "spendBonusCategoryId": 1635163214,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "KLM Royal Dutch Airlines",
+            "spendBonusCategoryId": 699327210,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Korean Air",
+            "spendBonusCategoryId": 1786351338,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "LATAM",
+            "spendBonusCategoryId": 9521530,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Lufthansa",
+            "spendBonusCategoryId": 1181912803,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Qatar Airways",
+            "spendBonusCategoryId": 2023518787,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Southwest",
+            "spendBonusCategoryId": 1754257416,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Spirit Airlines",
+            "spendBonusCategoryId": 701522248,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Tap Air Portugal",
+            "spendBonusCategoryId": 761019478,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Turkish Airlines",
+            "spendBonusCategoryId": 1006552078,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "United Airlines",
+            "spendBonusCategoryId": 733185608,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Virgin Atlantic",
+            "spendBonusCategoryId": 488519832,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Airfare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Air Travel (amextravel.com)",
+            "spendBonusCategoryId": 83575218,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Air Travel (Capital One)",
+            "spendBonusCategoryId": 1396855303,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Air Travel (CitiTravel.com)",
+            "spendBonusCategoryId": 436957618,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Air Travel (Robinhood)",
+            "spendBonusCategoryId": 770223834,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Air Travel (Ultimate Rewards)",
+            "spendBonusCategoryId": 605645987,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Airfare (U.S. Bank)",
+            "spendBonusCategoryId": 1679304869,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Airfare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Airfare",
+            "spendBonusCategoryId": 2013874334,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Airfare (LuxuryCardTravel.com)",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Airfare (LuxuryCardTravel.com)",
+            "spendBonusCategoryId": 1504561470,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Tours",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "All Tours",
+            "spendBonusCategoryId": 195587031,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Train",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Amtrak",
+            "spendBonusCategoryId": 141592440,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Attractions",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Attractions (CitiTravel.com)",
+            "spendBonusCategoryId": 923252904,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Hotel",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Best Western",
+            "spendBonusCategoryId": 1383930936,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Caesars",
+            "spendBonusCategoryId": 1736931504,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Choice Privileges",
+            "spendBonusCategoryId": 252294239,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Diamond Resorts",
+            "spendBonusCategoryId": 242114707,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hilton Hotels & Resorts",
+            "spendBonusCategoryId": 856563187,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Holiday Inn Club Vacations",
+            "spendBonusCategoryId": 296806260,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels",
+            "spendBonusCategoryId": 164006704,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Hyatt",
+            "spendBonusCategoryId": 10478769,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "IHG Hotels & Resorts",
+            "spendBonusCategoryId": 1342938109,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Marriott",
+            "spendBonusCategoryId": 661059256,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "MGM Grand",
+            "spendBonusCategoryId": 660768846,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "PENN Entertainment",
+            "spendBonusCategoryId": 1100403985,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Radisson Hotels",
+            "spendBonusCategoryId": 247349669,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sonesta",
+            "spendBonusCategoryId": 1454208354,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Wyndham Hotels & Resorts",
+            "spendBonusCategoryId": 1087721449,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Campground",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Campgrounds",
+            "spendBonusCategoryId": 1298541251,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Car Rental",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Car Rentals",
+            "spendBonusCategoryId": 1766781107,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Car Rental",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Car Rentals (Capital One)",
+            "spendBonusCategoryId": 670145462,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Car Rentals (CitiTravel.com)",
+            "spendBonusCategoryId": 646993658,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Car Rentals (Robinhood)",
+            "spendBonusCategoryId": 1617158892,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Car Rentals (U.S. Bank)",
+            "spendBonusCategoryId": 600360476,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Car Rentals (Ultimate Rewards)",
+            "spendBonusCategoryId": 1086445664,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Cruise",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Carnival",
+            "spendBonusCategoryId": 2023568528,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Celebrity Cruises",
+            "spendBonusCategoryId": 704488877,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Cruises",
+            "spendBonusCategoryId": 1722037888,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Holland America",
+            "spendBonusCategoryId": 460028077,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Norwegian Cruise Line",
+            "spendBonusCategoryId": 400737186,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Princess Cruises",
+            "spendBonusCategoryId": 542551765,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "RCI",
+            "spendBonusCategoryId": 38550,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Royal Caribbean",
+            "spendBonusCategoryId": 527887901,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Hotels (AAdvantage)",
+            "spendBonusCategoryId": 71034650,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels (Capital One)",
+            "spendBonusCategoryId": 1517218866,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels (CitiTravel.com)",
+            "spendBonusCategoryId": 773320415,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels (Robinhood)",
+            "spendBonusCategoryId": 467763813,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels (U.S. Bank)",
+            "spendBonusCategoryId": 1481287317,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Hotels (Ultimate Rewards)",
+            "spendBonusCategoryId": 948306327,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Prepaid Hotels (amextravel.com)",
+            "spendBonusCategoryId": 1534293716,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel (LuxuryCardTravel.com)",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Hotels (LuxuryCardTravel.com)",
+            "spendBonusCategoryId": 1900989179,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Rideshare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Lyft",
+            "spendBonusCategoryId": 606097,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ridesharing",
+            "spendBonusCategoryId": 1982334500,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Uber",
+            "spendBonusCategoryId": 698047,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Transportation",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Taxi",
+            "spendBonusCategoryId": 693446,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Tolls",
+            "spendBonusCategoryId": 11030576,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Transit",
+            "spendBonusCategoryId": 1468589631,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Travel",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Travel",
+            "spendBonusCategoryId": 176638649,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Theme Park",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "U.S. Disney",
+            "spendBonusCategoryId": 913558844,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Universal",
+            "spendBonusCategoryId": 749426898,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Services",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Media",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Advertisements",
+            "spendBonusCategoryId": 1043850520,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Insurance",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Auto Insurance",
+            "spendBonusCategoryId": 318766093,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Insurance",
+            "spendBonusCategoryId": 448229901,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Computer Services",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Computer Services",
+            "spendBonusCategoryId": 937266493,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Health",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Fitness Clubs",
+            "spendBonusCategoryId": 1576799624,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Healthcare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Healthcare",
+            "spendBonusCategoryId": 1938591400,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Home Repair",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Home Repair",
+            "spendBonusCategoryId": 158059436,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Military",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Military",
+            "spendBonusCategoryId": 1057789791,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Shipping",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Shipping",
+            "spendBonusCategoryId": 1661710546,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Utilities",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Utilities",
+            "spendBonusCategoryId": 1895002328,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Pet",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Veterinary",
+            "spendBonusCategoryId": 1955643906,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Veterinary Services",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Veterinary Services",
+            "spendBonusCategoryId": 766060098,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "All",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "All",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "All",
+            "spendBonusCategoryId": 34569,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Shopping",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Clothing",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "All Clothing Stores",
+            "spendBonusCategoryId": 206676615,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ann Taylor",
+            "spendBonusCategoryId": 1701513171,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Athleta",
+            "spendBonusCategoryId": 2071197538,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Avenue Online",
+            "spendBonusCategoryId": 165061689,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Banana Republic",
+            "spendBonusCategoryId": 334949575,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Bealls",
+            "spendBonusCategoryId": 141193264,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Brooks Brothers",
+            "spendBonusCategoryId": 535979656,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Buckle",
+            "spendBonusCategoryId": 140218626,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Carter's",
+            "spendBonusCategoryId": 2024227367,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Catherines",
+            "spendBonusCategoryId": 1934165244,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Eddie Bauer",
+            "spendBonusCategoryId": 259534793,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Express",
+            "spendBonusCategoryId": 1731958624,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Famous Footwear",
+            "spendBonusCategoryId": 1041805910,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Fashion to Figure",
+            "spendBonusCategoryId": 1604275631,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Forever 21",
+            "spendBonusCategoryId": 1756090688,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "FULLBEAUTY",
+            "spendBonusCategoryId": 23740717,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "GAP",
+            "spendBonusCategoryId": 40061,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Harris Teeter",
+            "spendBonusCategoryId": 706150099,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "J.Crew",
+            "spendBonusCategoryId": 156735108,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "L.L.Bean",
+            "spendBonusCategoryId": 1212781966,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Lands' End",
+            "spendBonusCategoryId": 723882550,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Lane Bryant",
+            "spendBonusCategoryId": 140867171,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "New York & Company",
+            "spendBonusCategoryId": 207211494,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Old Navy",
+            "spendBonusCategoryId": 1345926303,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "RealRewards",
+            "spendBonusCategoryId": 109895703,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ross",
+            "spendBonusCategoryId": 616096,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "rue21 ",
+            "spendBonusCategoryId": 9812709,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Select Clothing Stores",
+            "spendBonusCategoryId": 113913391,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sierra",
+            "spendBonusCategoryId": 178239102,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Talbots",
+            "spendBonusCategoryId": 1452185936,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "The Children\u2019s Place",
+            "spendBonusCategoryId": 2121145637,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "TJ Maxx",
+            "spendBonusCategoryId": 1470552843,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "VENUS",
+            "spendBonusCategoryId": 11186560,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Victoria's Secret",
+            "spendBonusCategoryId": 803276570,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Retail Stores",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "All Retail Stores",
+            "spendBonusCategoryId": 1321279624,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Household Goods",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "AllModern",
+            "spendBonusCategoryId": 3509228,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Birch Lane",
+            "spendBonusCategoryId": 1769545549,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Furniture Stores",
+            "spendBonusCategoryId": 1848992449,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "HomeGoods",
+            "spendBonusCategoryId": 1404917036,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "IKEA",
+            "spendBonusCategoryId": 651694,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Joss & Main",
+            "spendBonusCategoryId": 575256977,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Mark and Graham",
+            "spendBonusCategoryId": 1415457528,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Pottery Barn",
+            "spendBonusCategoryId": 1254018605,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Wayfair",
+            "spendBonusCategoryId": 1404061697,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "West Elm",
+            "spendBonusCategoryId": 660366592,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Williams Sonoma",
+            "spendBonusCategoryId": 2023412898,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Shopping Portal",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Amazon",
+            "spendBonusCategoryId": 141708891,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "eBay",
+            "spendBonusCategoryId": 632646,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Rakuten",
+            "spendBonusCategoryId": 1754101573,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Walmart.com",
+            "spendBonusCategoryId": 659805482,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Electronics",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Apple",
+            "spendBonusCategoryId": 8864770,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Best Buy",
+            "spendBonusCategoryId": 1755547022,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Electronic Stores",
+            "spendBonusCategoryId": 553661236,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Fry's",
+            "spendBonusCategoryId": 10114256,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Marvel",
+            "spendBonusCategoryId": 153574073,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Micro Center",
+            "spendBonusCategoryId": 376297687,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Microsoft Store Digital",
+            "spendBonusCategoryId": 1733416308,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "PlayStation",
+            "spendBonusCategoryId": 896263345,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sony",
+            "spendBonusCategoryId": 693526,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Home Improvement",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Arhaus",
+            "spendBonusCategoryId": 142005376,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ballard Designs",
+            "spendBonusCategoryId": 536472179,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Frontgate",
+            "spendBonusCategoryId": 1696121880,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Grandin Road",
+            "spendBonusCategoryId": 1886342397,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Houzz",
+            "spendBonusCategoryId": 10250455,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Lowe's",
+            "spendBonusCategoryId": 151441616,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Michaels",
+            "spendBonusCategoryId": 1067285305,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Tractor Supply Co.",
+            "spendBonusCategoryId": 1051806146,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Book Store",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Barnes & Noble",
+            "spendBonusCategoryId": 753214592,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Book Stores",
+            "spendBonusCategoryId": 1431777067,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Sporting Goods",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Bass Pro",
+            "spendBonusCategoryId": 1956811876,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Camping World",
+            "spendBonusCategoryId": 641017166,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Gander RV & Outdoors",
+            "spendBonusCategoryId": 720076751,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Good Sam",
+            "spendBonusCategoryId": 715937677,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Harley-Davidson",
+            "spendBonusCategoryId": 165261599,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "MLSSTORE.COM",
+            "spendBonusCategoryId": 2056697104,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "NFLShop.com",
+            "spendBonusCategoryId": 1671435271,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Nike",
+            "spendBonusCategoryId": 601874,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Peloton",
+            "spendBonusCategoryId": 1800378277,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Polaris",
+            "spendBonusCategoryId": 1806600512,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "REI",
+            "spendBonusCategoryId": 38582,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sporting Goods Stores",
+            "spendBonusCategoryId": 664222077,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Sportsman's Warehouse",
+            "spendBonusCategoryId": 462618779,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Department Store",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Belk",
+            "spendBonusCategoryId": 551688,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Boscov's",
+            "spendBonusCategoryId": 1721328088,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Burlington",
+            "spendBonusCategoryId": 1626529792,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Department Stores",
+            "spendBonusCategoryId": 1881287255,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Dillard's",
+            "spendBonusCategoryId": 266902712,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Fred Meyer",
+            "spendBonusCategoryId": 1282177511,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "JCPenney",
+            "spendBonusCategoryId": 380951921,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Kohl's",
+            "spendBonusCategoryId": 152423376,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Macy's",
+            "spendBonusCategoryId": 153593040,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Marshalls",
+            "spendBonusCategoryId": 1973252258,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Nordstrom",
+            "spendBonusCategoryId": 1455064776,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Saks Fifth Avenue",
+            "spendBonusCategoryId": 174268034,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sears",
+            "spendBonusCategoryId": 11118416,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sephora",
+            "spendBonusCategoryId": 1447770754,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "World Market",
+            "spendBonusCategoryId": 959296737,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Discount Store",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Big Lots",
+            "spendBonusCategoryId": 1869153976,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Target",
+            "spendBonusCategoryId": 177696129,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Walmart",
+            "spendBonusCategoryId": 1401936047,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Retail",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "BJ's",
+            "spendBonusCategoryId": 550352,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Beauty",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Cosmetic Stores",
+            "spendBonusCategoryId": 1279169009,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sally Beauty",
+            "spendBonusCategoryId": 1214304181,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "SalonCentric",
+            "spendBonusCategoryId": 700121589,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ultamate",
+            "spendBonusCategoryId": 1281940344,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Wholesale Club",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Costco",
+            "spendBonusCategoryId": 160868508,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Sam's Club",
+            "spendBonusCategoryId": 1926653656,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Wholesale Clubs",
+            "spendBonusCategoryId": 1386466601,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Grocery",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Dillons",
+            "spendBonusCategoryId": 1729100528,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Grocery Delivery",
+            "spendBonusCategoryId": 1565859350,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Grocery Stores",
+            "spendBonusCategoryId": 1132334901,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Instacart",
+            "spendBonusCategoryId": 446138318,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "King Sooper",
+            "spendBonusCategoryId": 1788200269,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Kroger",
+            "spendBonusCategoryId": 152460735,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Kroger Pay",
+            "spendBonusCategoryId": 1572707408,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Menards",
+            "spendBonusCategoryId": 1816955216,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Pick 'n Save",
+            "spendBonusCategoryId": 781437752,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "QFC",
+            "spendBonusCategoryId": 38816,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ralphs",
+            "spendBonusCategoryId": 158794992,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Red Bull",
+            "spendBonusCategoryId": 1798855424,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Smith's",
+            "spendBonusCategoryId": 1455650864,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Whole Foods",
+            "spendBonusCategoryId": 10156149,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Drugstores",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Drugstores",
+            "spendBonusCategoryId": 1096261883,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Auto Manufacturer",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Ford Service",
+            "spendBonusCategoryId": 1447294223,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Health",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Health & Beauty",
+            "spendBonusCategoryId": 724733756,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Health & Wellness",
+            "spendBonusCategoryId": 2084067958,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Home Improvement",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Home Improvement",
+            "spendBonusCategoryId": 1550080980,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Office Supplies",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Office Supplies",
+            "spendBonusCategoryId": 1055848074,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Online Shopping",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Online Shopping",
+            "spendBonusCategoryId": 158645550,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Pet",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Pet Shops",
+            "spendBonusCategoryId": 2086025756,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Petco",
+            "spendBonusCategoryId": 9734300,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Shopping Centers",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Simon Centers",
+            "spendBonusCategoryId": 1726449655,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Drugstore",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Walgreens",
+            "spendBonusCategoryId": 1893120956,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Charity",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Charity",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "American Heart Association",
+            "spendBonusCategoryId": 1213168157,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Charities",
+            "spendBonusCategoryId": 680751335,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Feeding America",
+            "spendBonusCategoryId": 494985384,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Select Charities",
+            "spendBonusCategoryId": 1281829907,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Payment",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Digital Wallet",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Apple Pay",
+            "spendBonusCategoryId": 1140889025,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Digital Wallet",
+            "spendBonusCategoryId": 1287070698,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Paypal",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "PayPal",
+            "spendBonusCategoryId": 156562809,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Telecom",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Telecom Provider",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "AT&T",
+            "spendBonusCategoryId": 541633,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "T-Mobile",
+            "spendBonusCategoryId": 875851528,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "T-Mobile (hardware)",
+            "spendBonusCategoryId": 810342231,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Verizon",
+            "spendBonusCategoryId": 1430860197,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Media",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Cable TV",
+            "spendBonusCategoryId": 2040526150,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Streaming Services",
+            "spendBonusCategoryId": 248970942,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Telecom",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Telecom",
+            "spendBonusCategoryId": 1464813222,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Auto",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Auto Maintenance",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Auto Maintenance",
+            "spendBonusCategoryId": 1346232549,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Auto Payment",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Auto Payments",
+            "spendBonusCategoryId": 1417099609,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Auto Manufacturer",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "BMW",
+            "spendBonusCategoryId": 34308,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Ford",
+            "spendBonusCategoryId": 632161,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "GM",
+            "spendBonusCategoryId": 2522,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Lexus",
+            "spendBonusCategoryId": 9473920,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "MINI",
+            "spendBonusCategoryId": 605990,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Toyota",
+            "spendBonusCategoryId": 176617118,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Auto",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Car Wash",
+            "spendBonusCategoryId": 2015705956,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Gas Station",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Exxon",
+            "spendBonusCategoryId": 10026075,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Mobil",
+            "spendBonusCategoryId": 9651961,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Gas Stations",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Gas Stations",
+            "spendBonusCategoryId": 1455345350,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Parking",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Parking",
+            "spendBonusCategoryId": 1787420892,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Business",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Buisness Expenses",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Buisness Expenses",
+            "spendBonusCategoryId": 819565356,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Business Services",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Business Services",
+            "spendBonusCategoryId": 313029423,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Software",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Cloud Providers",
+            "spendBonusCategoryId": 5687100,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Software",
+            "spendBonusCategoryId": 1784952984,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Computer Hardware",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Computer Hardware",
+            "spendBonusCategoryId": 2079110110,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Daycare",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Daycare",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Daycare",
+            "spendBonusCategoryId": 1722841246,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Dining",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "All Dining",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Dining",
+            "spendBonusCategoryId": 160378660,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Dining Portal",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Dining (Ultimate Rewards)",
+            "spendBonusCategoryId": 1563999853,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Rakuten Dining",
+            "spendBonusCategoryId": 1862793297,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Food Delivery",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "DoorDash",
+            "spendBonusCategoryId": 2057923428,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Food Delivery",
+            "spendBonusCategoryId": 1953038737,
+            "isAll": 1
+          },
+          {
+            "spendBonusCategoryName": "Uber Eats",
+            "spendBonusCategoryId": 1809425434,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Fast Food",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Fast Food",
+            "spendBonusCategoryId": 1245291978,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Dining Establishment",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "McDonald's",
+            "spendBonusCategoryId": 2059990295,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Restaurant Chain",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Panera",
+            "spendBonusCategoryId": 156707710,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Starbucks",
+            "spendBonusCategoryId": 1753892470,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Entertainment",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Entertainment Portal",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Disney Online",
+            "spendBonusCategoryId": 1238025738,
+            "isAll": 0
+          },
+          {
+            "spendBonusCategoryName": "Entertainment (Capital One)",
+            "spendBonusCategoryId": 823114854,
+            "isAll": 0
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "All Entertainment",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Entertainment",
+            "spendBonusCategoryId": 1754717276,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Live Entertainment",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Live Entertainment",
+            "spendBonusCategoryId": 929639080,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Movie Theatres",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Movie Theatres",
+            "spendBonusCategoryId": 2054018678,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Theme Parks",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Theme Parks",
+            "spendBonusCategoryId": 815128299,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "Sporting Event",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Yankee Stadium",
+            "spendBonusCategoryId": 1603228406,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Nonprofit",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Nonprofit",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Ducks Unlimited",
+            "spendBonusCategoryId": 1152718310,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Education",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Education",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Education Expenses",
+            "spendBonusCategoryId": 872670626,
+            "isAll": 1
+          }
+        ]
+      },
+      {
+        "spendBonusSubcategoryGroup": "University",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Universities",
+            "spendBonusCategoryId": 1248445110,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Payments",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Foreign Transactions",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Foreign Transactions",
+            "spendBonusCategoryId": 2050742026,
+            "isAll": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Mortgage",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Mortgage",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Mortgage Payments",
+            "spendBonusCategoryId": 25152554,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spendBonusCategoryGroup": "Rent",
+    "spendBonusSubcategoryGroup": [
+      {
+        "spendBonusSubcategoryGroup": "Rent",
+        "spendBonusCategory": [
+          {
+            "spendBonusCategoryName": "Rent",
+            "spendBonusCategoryId": 617233,
+            "isAll": 1
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "card_key": "amex-blue-business-plus",
+  "card_name": "Blue Business\u00ae Plus",
+  "issuer": "American Express",
+  "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 34569,
+      "spend_bonus_category_name": "All",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+      "spend_bonus_category_group": "All"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 34569,
+      "spend_bonus_category_name": "All",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+      "spend_bonus_category_group": "All"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 34569,
+        "spend_bonus_category_name": "All",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+        "spend_bonus_category_group": "All"
+      },
+      "reference": {
+        "spend_bonus_category_id": 34569,
+        "spend_bonus_category_name": "All",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+        "spend_bonus_category_group": "All"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

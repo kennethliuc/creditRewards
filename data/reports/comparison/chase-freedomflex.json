@@ -1,0 +1,200 @@
+{
+  "card_key": "chase-freedomflex",
+  "card_name": "Chase Freedom Flex\u00ae Credit Card",
+  "issuer": "Chase",
+  "source_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 141708891,
+      "spend_bonus_category_name": "Amazon",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 494985384,
+      "spend_bonus_category_name": "Feeding America",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on Amazon",
+      "spend_bonus_category_group": "Charity"
+    },
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1096261883,
+      "spend_bonus_category_name": "Drugstores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3% on drugstore purchases",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 141708891,
+      "spend_bonus_category_name": "Amazon",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 494985384,
+      "spend_bonus_category_name": "Feeding America",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Get 5% cash back on Amazon",
+      "spend_bonus_category_group": "Charity"
+    },
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1096261883,
+      "spend_bonus_category_name": "Drugstores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3% on drugstore purchases",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 141708891,
+        "spend_bonus_category_name": "Amazon",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 141708891,
+        "spend_bonus_category_name": "Amazon",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 494985384,
+        "spend_bonus_category_name": "Feeding America",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Get 5% cash back on Amazon",
+        "spend_bonus_category_group": "Charity"
+      },
+      "reference": {
+        "spend_bonus_category_id": 494985384,
+        "spend_bonus_category_name": "Feeding America",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Get 5% cash back on Amazon",
+        "spend_bonus_category_group": "Charity"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1096261883,
+        "spend_bonus_category_name": "Drugstores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3% on drugstore purchases",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1096261883,
+        "spend_bonus_category_name": "Drugstores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3% on drugstore purchases",
+        "spend_bonus_category_group": "Shopping"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "spendBonusSubcategoryGroup": "Grocery",
+    "spendBonusCategory": [
+      { "spendBonusCategoryName": "Grocery Stores", "spendBonusCategoryId": 1132334901, "isAll": 1 },
+      { "spendBonusCategoryName": "Dining", "spendBonusCategoryId": 160378660, "isAll": 1 },
+      { "spendBonusCategoryName": "Gas Stations", "spendBonusCategoryId": 987654321, "isAll": 1 },
+      { "spendBonusCategoryName": "Travel", "spendBonusCategoryId": 164006704, "isAll": 1 },
+      { "spendBonusCategoryName": "Airfare", "spendBonusCategoryId": 2013874334, "isAll": 1 }
+    ]
+  }
+]

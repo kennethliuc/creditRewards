@@ -1,0 +1,253 @@
+[
+  {
+    "cardKey": "citi-customcash",
+    "cardIssuer": "Citi",
+    "cardName": "Citi Custom Cash℠ ",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "Standard Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Citi Entertainment®",
+        "benefitDesc": "Let Citi Entertainment bring the fun to you. Through the Citi Entertainment program you can enjoy access to music, sports, culinary experiences and more ' from virtually anywhere.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Citi® Quick Lock",
+        "benefitDesc": "Misplaced your card? Use Citi Quick Lock to instantly block new charges, while allowing recurring charges to continue without disruption. It buys you peace of mind and time to find your card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Free Access to your FICO® Score",
+        "benefitDesc": "View your FICO Score anytime, with no impact to your score. It's updated monthly and easy to find on the Citi Mobile App and Citi Online. See the key factors affecting your score and more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Offered by Mastercard®, this program helps eliminate the worry of identity theft by monitoring and alerting cardholders if suspicious activity is found. It takes just a few minutes to enroll for free, and as soon as you do, your monitoring begins.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusCategoryGroup": "Dining",
+        "spendBonusSubcategoryGroup": "All Dining",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Drugstores",
+        "spendBonusCategoryId": 1096261883,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "All Drugstores",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Fitness Clubs",
+        "spendBonusCategoryId": 1576799624,
+        "spendBonusCategoryGroup": "Services",
+        "spendBonusSubcategoryGroup": "Health",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Gas Stations",
+        "spendBonusCategoryId": 1455345350,
+        "spendBonusCategoryGroup": "Auto",
+        "spendBonusSubcategoryGroup": "All Gas Stations",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Grocery Stores",
+        "spendBonusCategoryId": 1132334901,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Grocery",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Home Improvement",
+        "spendBonusCategoryId": 1550080980,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "All Home Improvement",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Live Entertainment",
+        "spendBonusCategoryId": 929639080,
+        "spendBonusCategoryGroup": "Entertainment",
+        "spendBonusSubcategoryGroup": "Live Entertainment",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Streaming Services",
+        "spendBonusCategoryId": 248970942,
+        "spendBonusCategoryGroup": "Telecom",
+        "spendBonusSubcategoryGroup": "Media",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Transit",
+        "spendBonusCategoryId": 1468589631,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Transportation",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      },
+      {
+        "spendBonusCategoryType": "Option 1",
+        "spendBonusCategoryName": "Travel",
+        "spendBonusCategoryId": 176638649,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "All Travel",
+        "spendBonusDesc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500,
+        "spendLimitResetPeriod": "Month"
+      }
+    ],
+    "annualSpend": []
+  }
+]

@@ -1,0 +1,128 @@
+# OpenStreetMap tags → Rewards CC spend bonus category
+# Used by Nominatim fallback (free API, no AI).
+source: openstreetmap-nominatim
+updated: "2026-06-07"
+
+# Match order: first matching rule wins (class+type, then shop=, amenity=, tourism=)
+rules:
+  - class: amenity
+    type: restaurant
+    category: Dining
+  - class: amenity
+    type: fast_food
+    category: Dining
+  - class: amenity
+    type: cafe
+    category: Dining
+  - class: amenity
+    type: bar
+    category: Dining
+  - class: amenity
+    type: pub
+    category: Dining
+  - class: amenity
+    type: food_court
+    category: Dining
+
+  - class: shop
+    type: supermarket
+    category: Grocery Stores
+  - class: shop
+    type: convenience
+    category: Grocery Stores
+  - class: shop
+    type: greengrocer
+    category: Grocery Stores
+  - class: shop
+    type: bakery
+    category: Grocery Stores
+  - class: shop
+    type: department_store
+    category: All Purchases
+  - class: shop
+    type: mall
+    category: All Purchases
+  - class: shop
+    type: clothes
+    category: All Purchases
+  - class: shop
+    type: electronics
+    category: Online Shopping
+  - class: shop
+    type: computer
+    category: Online Shopping
+  - class: shop
+    type: chemist
+    category: Drugstores
+  - class: shop
+    type: beauty
+    category: Drugstores
+  - class: shop
+    type: gas
+    category: Gas Stations
+  - class: shop
+    type: car_repair
+    category: Gas Stations
+
+  - class: amenity
+    type: pharmacy
+    category: Drugstores
+  - class: amenity
+    type: fuel
+    category: Gas Stations
+  - class: amenity
+    type: charging_station
+    category: Gas Stations
+
+  - class: aeroway
+    type: aerodrome
+    category: Airfare
+  - class: tourism
+    type: hotel
+    category: Hotels
+  - class: tourism
+    type: motel
+    category: Hotels
+  - class: tourism
+    type: theme_park
+    category: Entertainment
+  - class: tourism
+    type: cinema
+    category: Entertainment
+
+  - class: shop
+    type: wholesale
+    category: Wholesale Clubs
+
+extratags:
+  "shop:supermarket": Grocery Stores
+  "shop:department_store": All Purchases
+  "shop:variety_store": All Purchases
+  "shop:hardware": Home Improvement
+  "amenity:restaurant": Dining
+  "amenity:fast_food": Dining
+  "amenity:cafe": Dining
+  "amenity:pharmacy": Drugstores
+  "amenity:fuel": Gas Stations
+  "tourism:hotel": Hotels
+  "aeroway:aerodrome": Airfare
+
+name_hints:
+  - pattern: grocery|supermarket|market basket|safeway|kroger|aldi|trader
+    category: Grocery Stores
+  - pattern: pizza|grill|kitchen|bistro|sushi|taco|burger|coffee|starbucks|dunkin
+    category: Dining
+  - pattern: pharmacy|cvs|walgreens|drug
+    category: Drugstores
+  - pattern: gas|shell|chevron|exxon|mobil|bp station
+    category: Gas Stations
+  - pattern: hotel|marriott|hilton|hyatt|airbnb|motel
+    category: Hotels
+  - pattern: airline|airways| aviation
+    category: Airfare
+  - pattern: uber|lyft|taxi|transit|metro
+    category: Lyft
+  - pattern: netflix|spotify|hulu|disney+
+    category: Streaming Services
+
+default_category: All Purchases

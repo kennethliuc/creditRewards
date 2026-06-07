@@ -1,0 +1,40 @@
+[
+  {
+    "cardKey": "chase-freedomflex",
+    "cardIssuer": "Chase",
+    "cardName": "Chase Freedom Flex®",
+    "cardNetwork": "Mastercard",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Chase Ultimate Rewards",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryName": "Grocery Stores",
+        "spendBonusCategoryId": 1132334901,
+        "spendBonusDesc": "Earn 5% at Grocery Stores (excluding Walmart and Target)",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 1,
+        "limitBeginDate": "2024-01-01",
+        "limitEndDate": "2024-03-31",
+        "isSpendLimit": 1,
+        "spendLimit": 1500,
+        "spendLimitResetPeriod": "Quarter"
+      },
+      {
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusDesc": "3x on dining including takeout and eligible delivery services",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ]
+  }
+]

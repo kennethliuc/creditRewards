@@ -1,0 +1,230 @@
+{
+  "card_key": "capital-one-savorone",
+  "card_name": "Savor Rewards",
+  "issuer": "Capital One",
+  "source_url": "https://www.capitalone.com/credit-cards/savor/",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 670145462,
+      "spend_bonus_category_name": "Car Rentals (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1754717276,
+      "spend_bonus_category_name": "Entertainment",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+      "spend_bonus_category_group": "Entertainment"
+    },
+    {
+      "spend_bonus_category_id": 823114854,
+      "spend_bonus_category_name": "Entertainment (Capital One)",
+      "earn_multiplier": 8.0,
+      "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+      "spend_bonus_category_group": "Entertainment"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1517218866,
+      "spend_bonus_category_name": "Hotels (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+      "spend_bonus_category_group": "Telecom"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 670145462,
+      "spend_bonus_category_name": "Car Rentals (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1754717276,
+      "spend_bonus_category_name": "Entertainment",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+      "spend_bonus_category_group": "Entertainment"
+    },
+    {
+      "spend_bonus_category_id": 823114854,
+      "spend_bonus_category_name": "Entertainment (Capital One)",
+      "earn_multiplier": 8.0,
+      "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+      "spend_bonus_category_group": "Entertainment"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1517218866,
+      "spend_bonus_category_name": "Hotels (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+      "spend_bonus_category_group": "Telecom"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 670145462,
+        "spend_bonus_category_name": "Car Rentals (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 670145462,
+        "spend_bonus_category_name": "Car Rentals (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1754717276,
+        "spend_bonus_category_name": "Entertainment",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+        "spend_bonus_category_group": "Entertainment"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1754717276,
+        "spend_bonus_category_name": "Entertainment",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+        "spend_bonus_category_group": "Entertainment"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 823114854,
+        "spend_bonus_category_name": "Entertainment (Capital One)",
+        "earn_multiplier": 8.0,
+        "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+        "spend_bonus_category_group": "Entertainment"
+      },
+      "reference": {
+        "spend_bonus_category_id": 823114854,
+        "spend_bonus_category_name": "Entertainment (Capital One)",
+        "earn_multiplier": 8.0,
+        "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+        "spend_bonus_category_group": "Entertainment"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1517218866,
+        "spend_bonus_category_name": "Hotels (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1517218866,
+        "spend_bonus_category_name": "Hotels (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+        "spend_bonus_category_group": "Telecom"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

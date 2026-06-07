@@ -1,0 +1,320 @@
+{
+  "card_key": "apple-card",
+  "card_name": "Apple Card",
+  "issuer": "Goldman Sachs",
+  "source_url": "https://www.apple.com/apple-card/",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 8864770,
+      "spend_bonus_category_name": "Apple",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1140889025,
+      "spend_bonus_category_name": "Apple Pay",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+      "spend_bonus_category_group": "Payment"
+    },
+    {
+      "spend_bonus_category_id": 10026075,
+      "spend_bonus_category_name": "Exxon",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 9651961,
+      "spend_bonus_category_name": "Mobil",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 601874,
+      "spend_bonus_category_name": "Nike",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 156707710,
+      "spend_bonus_category_name": "Panera",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 875851528,
+      "spend_bonus_category_name": "T-Mobile",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 698047,
+      "spend_bonus_category_name": "Uber",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1809425434,
+      "spend_bonus_category_name": "Uber Eats",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1893120956,
+      "spend_bonus_category_name": "Walgreens",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 8864770,
+      "spend_bonus_category_name": "Apple",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1140889025,
+      "spend_bonus_category_name": "Apple Pay",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+      "spend_bonus_category_group": "Payment"
+    },
+    {
+      "spend_bonus_category_id": 10026075,
+      "spend_bonus_category_name": "Exxon",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 9651961,
+      "spend_bonus_category_name": "Mobil",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 601874,
+      "spend_bonus_category_name": "Nike",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 156707710,
+      "spend_bonus_category_name": "Panera",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 875851528,
+      "spend_bonus_category_name": "T-Mobile",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 698047,
+      "spend_bonus_category_name": "Uber",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1809425434,
+      "spend_bonus_category_name": "Uber Eats",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1893120956,
+      "spend_bonus_category_name": "Walgreens",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 8864770,
+        "spend_bonus_category_name": "Apple",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 8864770,
+        "spend_bonus_category_name": "Apple",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1140889025,
+        "spend_bonus_category_name": "Apple Pay",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+        "spend_bonus_category_group": "Payment"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1140889025,
+        "spend_bonus_category_name": "Apple Pay",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+        "spend_bonus_category_group": "Payment"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 10026075,
+        "spend_bonus_category_name": "Exxon",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Auto"
+      },
+      "reference": {
+        "spend_bonus_category_id": 10026075,
+        "spend_bonus_category_name": "Exxon",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Auto"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 9651961,
+        "spend_bonus_category_name": "Mobil",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Auto"
+      },
+      "reference": {
+        "spend_bonus_category_id": 9651961,
+        "spend_bonus_category_name": "Mobil",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Auto"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 601874,
+        "spend_bonus_category_name": "Nike",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 601874,
+        "spend_bonus_category_name": "Nike",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 156707710,
+        "spend_bonus_category_name": "Panera",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 156707710,
+        "spend_bonus_category_name": "Panera",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 875851528,
+        "spend_bonus_category_name": "T-Mobile",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 875851528,
+        "spend_bonus_category_name": "T-Mobile",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 698047,
+        "spend_bonus_category_name": "Uber",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 698047,
+        "spend_bonus_category_name": "Uber",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1809425434,
+        "spend_bonus_category_name": "Uber Eats",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1809425434,
+        "spend_bonus_category_name": "Uber Eats",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1893120956,
+        "spend_bonus_category_name": "Walgreens",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1893120956,
+        "spend_bonus_category_name": "Walgreens",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+        "spend_bonus_category_group": "Shopping"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

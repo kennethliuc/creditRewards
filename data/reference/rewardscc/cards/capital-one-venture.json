@@ -1,0 +1,218 @@
+[
+  {
+    "cardKey": "capitalone-venture",
+    "cardIssuer": "Capital One",
+    "cardName": "Venture Rewards",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Elite Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "https://www.capitalone.com/credit-cards/venture/",
+    "annualFee": 95,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Capital One Miles",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.8,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.5,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "75000",
+    "signupBonusType": "Capital One Miles",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 4000,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 95,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening",
+    "trustedTraveler": "Receive up to a $120 credit for Global Entry or TSA PreCheck",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "Escape the crows with 2 visits per year to Capitol One Lounges or to 100+ locations through our Partner Lounge Network",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "24-hour Travel Assistance Services",
+        "benefitDesc": "If your credit card is lost or stolen, you can get an emergency replacement card and a cash advance.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "Rent an eligible vehicle with your credit card and you can be covered for damage due to collision or theft.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Dining",
+        "benefitDesc": "Make your next meal even more memorable with access to cardholder-only reservations at award-winning restaurants and tickets to curated culinary events. Explore dining benefits. ",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Entertainment",
+        "benefitDesc": "Enjoy access to can't-miss events across music, sports and dining with exclusive pre-sales, tickets, suite experiences and more. Explore entertainment. ",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Lounge",
+        "benefitDesc": "Relax and recharge away from the airport crowds with luxurious amenities and fresh, local food and beverage options.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Shopping",
+        "benefitDesc": "Capital One Shopping is an online shopping tool that automatically applies available coupon codes to your order. Learn more about Capital One Shopping.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Travel",
+        "benefitDesc": "Get our best prices on thousands of trip options'even after you book. Plus, pay flexibly with your rewards, a card or both. Explore Capital One Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "CreditWise®",
+        "benefitDesc": "Get alerts when your TransUnion® or Experian® credit report changes. Learn more about CreditWise.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "You'll get additional warranty protection at no charge on eligible items that are purchased with your credit card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global Entry or TSA PreCheck® Credit",
+        "benefitDesc": "Receive up to a $120 credit for Global Entry or TSA PreCheck®",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enroll in HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Hertz Five Star® status",
+        "benefitDesc": "Skip the rental counter and choose from a wider selection of cars with Venture",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lifestyle Collection",
+        "benefitDesc": "Unlock premium benefits with every stay, like a $50 experience credit, room upgrades when available and more when booking through Capital One Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lyft",
+        "benefitDesc": "More rides means more adventure. Take three rides in a month with Lyft to earn a $5 credit.3* Plus, save 10% on all scheduled rides to or from U.S. airports when you pay with your World Elite or World Legend Mastercard. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to premium preferred seats and ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Partner Lounge Network",
+        "benefitDesc": "Elevate your travel experience by visiting one of the global lounge locations in our Partner Lounge Network.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Peacock",
+        "benefitDesc": "Get $3 off Peacock Premium or Peacock Premium Plus each month when you use your World Elite or World Legend Mastercard to subscribe. Watch new movies from theaters, buzzworthy original series, hit TV shows, live sports and so much more. Eligibility restrictions, exclusions and terms apply. Offer expires 12/31/2027.1",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Pass",
+        "benefitDesc": "Get access to 1,700+ airport lounges worldwide and special offers and discounts in the terminal on dining, retail and spa experiences.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Get automatic insurance for a covered loss at no extra charge when you use your credit card to purchase your fare.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "World Elite Concierge",
+        "benefitDesc": "Complimentary 24/7 concierge agent for lifestyle needs, travel bookings and event access.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Car Rentals (Capital One)",
+        "spendBonusCategoryName": "Car Rentals (Capital One)",
+        "spendBonusCategoryId": 670145462,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Car Rental",
+        "spendBonusDesc": "Earn 5X miles on rental cars booked through Capital One Travel",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels (Capital One)",
+        "spendBonusCategoryName": "Hotels (Capital One)",
+        "spendBonusCategoryId": 1517218866,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel",
+        "spendBonusDesc": "Earn 5X miles on hotels booked through Capital One Travel",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

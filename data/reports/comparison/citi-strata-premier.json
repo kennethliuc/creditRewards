@@ -1,0 +1,260 @@
+{
+  "card_key": "citi-strata-premier",
+  "card_name": "Citi Strata Premier\u00ae",
+  "issuer": "Citi",
+  "source_url": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 923252904,
+      "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 646993658,
+      "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 164006704,
+      "spend_bonus_category_name": "Hotels",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 773320415,
+      "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 923252904,
+      "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 646993658,
+      "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 164006704,
+      "spend_bonus_category_name": "Hotels",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 773320415,
+      "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 923252904,
+        "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 923252904,
+        "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 646993658,
+        "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 646993658,
+        "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+        "spend_bonus_category_group": "Auto"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+        "spend_bonus_category_group": "Auto"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 164006704,
+        "spend_bonus_category_name": "Hotels",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 164006704,
+        "spend_bonus_category_name": "Hotels",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 773320415,
+        "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 773320415,
+        "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

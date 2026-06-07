@@ -1,0 +1,92 @@
+[
+  {
+    "cardKey": "citi-doublecash",
+    "cardIssuer": "Citi",
+    "cardName": "Citi Double Cash®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "Standard Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "200",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Cash",
+    "signupBonusSpend": 1500,
+    "signupBonusLength": 6,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn $200 cash back after you spend $1,500 on purchases in the first 6 months of your Citi Double Cash® card account opening.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Citi Entertainment®",
+        "benefitDesc": "Citi Entertainment takes the once out of once in a lifetime. Get special access to purchase tickets to thousands of events, including presale tickets and exclusive experiences for the year's most anticipated concerts, sporting events, dining experiences and more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Help Keep Your Identity Safe",
+        "benefitDesc": "The ID Theft Protection program offered by Mastercard helps eliminate the worry of identity theft by monitoring the information you choose to protect and alerting you if suspicious activity is found. It takes just a few minutes to enroll for free, and as soon as you do, your monitoring begins. Visit mastercardidps.idprotectiononline.com to learn more",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

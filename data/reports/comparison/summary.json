@@ -1,0 +1,3223 @@
+{
+  "card_count": 20,
+  "aligned_count": 20,
+  "scrape_verified_count": 20,
+  "parser_fix_count": 0,
+  "misaligned": [],
+  "reports": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "card_name": "Chase Freedom Unlimited\u00ae Credit Card",
+      "issuer": "Chase",
+      "source_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on drugstore purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on drugstore purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on drugstore purchases",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on drugstore purchases",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "card_name": "Chase Sapphire Preferred\u00ae Credit Card",
+      "issuer": "Chase",
+      "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1565859350,
+          "spend_bonus_category_name": "Grocery Delivery",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on select streaming services",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Earn 2x on travel purchases",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1565859350,
+          "spend_bonus_category_name": "Grocery Delivery",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3x points on select streaming services",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Earn 2x on travel purchases",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1565859350,
+            "spend_bonus_category_name": "Grocery Delivery",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1565859350,
+            "spend_bonus_category_name": "Grocery Delivery",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on select streaming services",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3x points on select streaming services",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Earn 2x on travel purchases",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Earn 2x on travel purchases",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "card_name": "Chase Freedom Flex\u00ae Credit Card",
+      "issuer": "Chase",
+      "source_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 141708891,
+          "spend_bonus_category_name": "Amazon",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 494985384,
+          "spend_bonus_category_name": "Feeding America",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on Amazon",
+          "spend_bonus_category_group": "Charity"
+        },
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on drugstore purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 141708891,
+          "spend_bonus_category_name": "Amazon",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 494985384,
+          "spend_bonus_category_name": "Feeding America",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Get 5% cash back on Amazon",
+          "spend_bonus_category_group": "Charity"
+        },
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% on drugstore purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Get 5% cash back on the Feeding America",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 141708891,
+            "spend_bonus_category_name": "Amazon",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 141708891,
+            "spend_bonus_category_name": "Amazon",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Get 5% cash back on Chase Travel",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 494985384,
+            "spend_bonus_category_name": "Feeding America",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Get 5% cash back on Amazon",
+            "spend_bonus_category_group": "Charity"
+          },
+          "reference": {
+            "spend_bonus_category_id": 494985384,
+            "spend_bonus_category_name": "Feeding America",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Get 5% cash back on Amazon",
+            "spend_bonus_category_group": "Charity"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% on travel purchased through Chase Ultimate Rewards.",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on drugstore purchases",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% on drugstore purchases",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "card_name": "Chase Sapphire Reserve\u00ae Credit Card",
+      "issuer": "Chase",
+      "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x points on flights purchased direct",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 8.0,
+          "spend_bonus_desc": "8x points on Chase Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3x points on dining worldwide",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 164006704,
+          "spend_bonus_category_name": "Hotels",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x points on hotels purchased direct",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5x total points on all eligible Lyft purchases",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1800378277,
+          "spend_bonus_category_name": "Peloton",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10x points on eligible Peloton hardware and accessory purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x points on flights purchased direct",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 605657763,
+          "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+          "earn_multiplier": 8.0,
+          "spend_bonus_desc": "8x points on Chase Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3x points on dining worldwide",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 164006704,
+          "spend_bonus_category_name": "Hotels",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x points on hotels purchased direct",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5x total points on all eligible Lyft purchases",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1800378277,
+          "spend_bonus_category_name": "Peloton",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10x points on eligible Peloton hardware and accessory purchases",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x points on flights purchased direct",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x points on flights purchased direct",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 8.0,
+            "spend_bonus_desc": "8x points on Chase Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 605657763,
+            "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+            "earn_multiplier": 8.0,
+            "spend_bonus_desc": "8x points on Chase Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3x points on dining worldwide",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3x points on dining worldwide",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 164006704,
+            "spend_bonus_category_name": "Hotels",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x points on hotels purchased direct",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 164006704,
+            "spend_bonus_category_name": "Hotels",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x points on hotels purchased direct",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5x total points on all eligible Lyft purchases",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5x total points on all eligible Lyft purchases",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1800378277,
+            "spend_bonus_category_name": "Peloton",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10x points on eligible Peloton hardware and accessory purchases",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1800378277,
+            "spend_bonus_category_name": "Peloton",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10x points on eligible Peloton hardware and accessory purchases",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "amex-gold",
+      "card_name": "American Express\u00ae Gold",
+      "issuer": "American Express",
+      "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1120466653,
+          "spend_bonus_category_name": "amextravel.com",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1120466653,
+          "spend_bonus_category_name": "amextravel.com",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 4.0,
+          "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1120466653,
+            "spend_bonus_category_name": "amextravel.com",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1120466653,
+            "spend_bonus_category_name": "amextravel.com",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 4.0,
+            "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "amex-platinum",
+      "card_name": "The Platinum Card\u00ae",
+      "issuer": "American Express",
+      "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1534293716,
+          "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1534293716,
+          "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1534293716,
+            "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1534293716,
+            "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "citi-double-cash",
+      "card_name": "Citi Double Cash\u00ae",
+      "issuer": "Citi",
+      "source_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [],
+      "reference_rules": [],
+      "matched": [],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "card_name": "Venture X Rewards",
+      "issuer": "Capital One",
+      "source_url": "https://www.capitalone.com/credit-cards/venture-x/",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 1396855303,
+          "spend_bonus_category_name": "Air Travel (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 1396855303,
+          "spend_bonus_category_name": "Air Travel (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1396855303,
+            "spend_bonus_category_name": "Air Travel (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1396855303,
+            "spend_bonus_category_name": "Air Travel (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "capital-one-venture",
+      "card_name": "Venture Rewards",
+      "issuer": "Capital One",
+      "source_url": "https://www.capitalone.com/credit-cards/venture/",
+      "scraped_at": "2026-06-07T00:27:13+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5X miles on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5X miles on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5X miles on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5X miles on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5X miles on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5X miles on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5X miles on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5X miles on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "card_name": "Savor Rewards",
+      "issuer": "Capital One",
+      "source_url": "https://www.capitalone.com/credit-cards/savor/",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1754717276,
+          "spend_bonus_category_name": "Entertainment",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 823114854,
+          "spend_bonus_category_name": "Entertainment (Capital One)",
+          "earn_multiplier": 8.0,
+          "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+          "spend_bonus_category_group": "Telecom"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 670145462,
+          "spend_bonus_category_name": "Car Rentals (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1754717276,
+          "spend_bonus_category_name": "Entertainment",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 823114854,
+          "spend_bonus_category_name": "Entertainment (Capital One)",
+          "earn_multiplier": 8.0,
+          "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1517218866,
+          "spend_bonus_category_name": "Hotels (Capital One)",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+          "spend_bonus_category_group": "Telecom"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 670145462,
+            "spend_bonus_category_name": "Car Rentals (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn unlimited 5% cash back on rental cars booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on dining",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1754717276,
+            "spend_bonus_category_name": "Entertainment",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+            "spend_bonus_category_group": "Entertainment"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1754717276,
+            "spend_bonus_category_name": "Entertainment",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on entertainment",
+            "spend_bonus_category_group": "Entertainment"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 823114854,
+            "spend_bonus_category_name": "Entertainment (Capital One)",
+            "earn_multiplier": 8.0,
+            "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+            "spend_bonus_category_group": "Entertainment"
+          },
+          "reference": {
+            "spend_bonus_category_id": 823114854,
+            "spend_bonus_category_name": "Entertainment (Capital One)",
+            "earn_multiplier": 8.0,
+            "spend_bonus_desc": "Earn 8% cash back on Capital One Entertainment purchases",
+            "spend_bonus_category_group": "Entertainment"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back at grocery stores",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1517218866,
+            "spend_bonus_category_name": "Hotels (Capital One)",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn unlimited 5% cash back on hotels booked through Capital One Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3% cash back on popular streaming services",
+            "spend_bonus_category_group": "Telecom"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "card_name": "Discover it\u00ae Cash Back",
+      "issuer": "Discover",
+      "source_url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "card_name": "Wells Fargo Active Cash\u00ae",
+      "issuer": "Wells Fargo",
+      "source_url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [],
+      "reference_rules": [],
+      "matched": [],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "card_name": "Wells Fargo Autograph\u2120\u00a0",
+      "issuer": "Wells Fargo",
+      "source_url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1464813222,
+          "spend_bonus_category_name": "Telecom",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 11030576,
+          "spend_bonus_category_name": "Tolls",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1464813222,
+          "spend_bonus_category_name": "Telecom",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 11030576,
+          "spend_bonus_category_name": "Tolls",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Restaurants: dining in, take-out, catering, delivery and more",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Gas: gas stations and electric vehicle charging stations",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Popular Streaming Services: content at home or on the go",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1464813222,
+            "spend_bonus_category_name": "Telecom",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1464813222,
+            "spend_bonus_category_name": "Telecom",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Phone Plans: cell phone and landline providers",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 11030576,
+            "spend_bonus_category_name": "Tolls",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 11030576,
+            "spend_bonus_category_name": "Tolls",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Transit: subways, ride shares, parking, tolls and more",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn unlimited 3X points - Travel: airfare, hotels, car rentals, cruises and more",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "card_name": "Blue Cash Preferred\u00ae",
+      "issuer": "American Express",
+      "source_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back at U.S. gas stations.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 6.0,
+          "spend_bonus_desc": "Earn 6% cash back at U.S. supermarkets on up to $6,000 per calendar year in purchases (then 1%).",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1982334500,
+          "spend_bonus_category_name": "Ridesharing",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 6.0,
+          "spend_bonus_desc": "Earn 6% cash back on select U.S. streaming subscriptions.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 11030576,
+          "spend_bonus_category_name": "Tolls",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back at U.S. gas stations.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 6.0,
+          "spend_bonus_desc": "Earn 6% cash back at U.S. supermarkets on up to $6,000 per calendar year in purchases (then 1%).",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1982334500,
+          "spend_bonus_category_name": "Ridesharing",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 6.0,
+          "spend_bonus_desc": "Earn 6% cash back on select U.S. streaming subscriptions.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 11030576,
+          "spend_bonus_category_name": "Tolls",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back at U.S. gas stations.",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back at U.S. gas stations.",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 6.0,
+            "spend_bonus_desc": "Earn 6% cash back at U.S. supermarkets on up to $6,000 per calendar year in purchases (then 1%).",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 6.0,
+            "spend_bonus_desc": "Earn 6% cash back at U.S. supermarkets on up to $6,000 per calendar year in purchases (then 1%).",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1982334500,
+            "spend_bonus_category_name": "Ridesharing",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1982334500,
+            "spend_bonus_category_name": "Ridesharing",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 6.0,
+            "spend_bonus_desc": "Earn 6% cash back on select U.S. streaming subscriptions.",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 6.0,
+            "spend_bonus_desc": "Earn 6% cash back on select U.S. streaming subscriptions.",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 11030576,
+            "spend_bonus_category_name": "Tolls",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 11030576,
+            "spend_bonus_category_name": "Tolls",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "card_name": "Citi Custom Cash\u2120\u00a0",
+      "issuer": "Citi",
+      "source_url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1576799624,
+          "spend_bonus_category_name": "Fitness Clubs",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Services"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 929639080,
+          "spend_bonus_category_name": "Live Entertainment",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1576799624,
+          "spend_bonus_category_name": "Fitness Clubs",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Services"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 929639080,
+          "spend_bonus_category_name": "Live Entertainment",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Entertainment"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1468589631,
+          "spend_bonus_category_name": "Transit",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 5.0,
+          "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1576799624,
+            "spend_bonus_category_name": "Fitness Clubs",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Services"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1576799624,
+            "spend_bonus_category_name": "Fitness Clubs",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Services"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 929639080,
+            "spend_bonus_category_name": "Live Entertainment",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Entertainment"
+          },
+          "reference": {
+            "spend_bonus_category_id": 929639080,
+            "spend_bonus_category_name": "Live Entertainment",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Entertainment"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1468589631,
+            "spend_bonus_category_name": "Transit",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 5.0,
+            "spend_bonus_desc": "Earn 5% cash back on your top eligible spend category each billing cycle up to $500 spent.",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "card_name": "Citi Strata Premier\u00ae",
+      "issuer": "Citi",
+      "source_url": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 923252904,
+          "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 646993658,
+          "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 164006704,
+          "spend_bonus_category_name": "Hotels",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 773320415,
+          "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 2013874334,
+          "spend_bonus_category_name": "Airfare",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 923252904,
+          "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 646993658,
+          "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 164006704,
+          "spend_bonus_category_name": "Hotels",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 773320415,
+          "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+          "earn_multiplier": 10.0,
+          "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 2013874334,
+            "spend_bonus_category_name": "Airfare",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Air Travel",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 923252904,
+            "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 923252904,
+            "spend_bonus_category_name": "Attractions (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Attractions booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 646993658,
+            "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 646993658,
+            "spend_bonus_category_name": "Car Rentals (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Car Rentals booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Restaurants",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Gas Stations and EV Charging Stations",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 at Supermarkets",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 164006704,
+            "spend_bonus_category_name": "Hotels",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 164006704,
+            "spend_bonus_category_name": "Hotels",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Earn 3X ThankYou\u00ae Points per $1 on Hotel Purchases",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 773320415,
+            "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 773320415,
+            "spend_bonus_category_name": "Hotels (CitiTravel.com)",
+            "earn_multiplier": 10.0,
+            "spend_bonus_desc": "Earn 10 ThankYou\u00ae Points per $1 spent on Hotels booked through CitiTravel.com",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "card_name": "Bank of America\u00ae Customized Cash Rewards",
+      "issuer": "Bank of America",
+      "source_url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1386466601,
+          "spend_bonus_category_name": "Wholesale Clubs",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 158645550,
+          "spend_bonus_category_name": "Online Shopping",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1464813222,
+          "spend_bonus_category_name": "Telecom",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 1132334901,
+          "spend_bonus_category_name": "Grocery Stores",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1386466601,
+          "spend_bonus_category_name": "Wholesale Clubs",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 160378660,
+          "spend_bonus_category_name": "Dining",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1096261883,
+          "spend_bonus_category_name": "Drugstores",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1455345350,
+          "spend_bonus_category_name": "Gas Stations",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 1550080980,
+          "spend_bonus_category_name": "Home Improvement",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 158645550,
+          "spend_bonus_category_name": "Online Shopping",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 248970942,
+          "spend_bonus_category_name": "Streaming Services",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 1464813222,
+          "spend_bonus_category_name": "Telecom",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 176638649,
+          "spend_bonus_category_name": "Travel",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1132334901,
+            "spend_bonus_category_name": "Grocery Stores",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1386466601,
+            "spend_bonus_category_name": "Wholesale Clubs",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1386466601,
+            "spend_bonus_category_name": "Wholesale Clubs",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 160378660,
+            "spend_bonus_category_name": "Dining",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1096261883,
+            "spend_bonus_category_name": "Drugstores",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1455345350,
+            "spend_bonus_category_name": "Gas Stations",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1550080980,
+            "spend_bonus_category_name": "Home Improvement",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 158645550,
+            "spend_bonus_category_name": "Online Shopping",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 158645550,
+            "spend_bonus_category_name": "Online Shopping",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 248970942,
+            "spend_bonus_category_name": "Streaming Services",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1464813222,
+            "spend_bonus_category_name": "Telecom",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1464813222,
+            "spend_bonus_category_name": "Telecom",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 176638649,
+            "spend_bonus_category_name": "Travel",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "apple-card",
+      "card_name": "Apple Card",
+      "issuer": "Goldman Sachs",
+      "source_url": "https://www.apple.com/apple-card/",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 8864770,
+          "spend_bonus_category_name": "Apple",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1140889025,
+          "spend_bonus_category_name": "Apple Pay",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+          "spend_bonus_category_group": "Payment"
+        },
+        {
+          "spend_bonus_category_id": 10026075,
+          "spend_bonus_category_name": "Exxon",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 9651961,
+          "spend_bonus_category_name": "Mobil",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 601874,
+          "spend_bonus_category_name": "Nike",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 156707710,
+          "spend_bonus_category_name": "Panera",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 875851528,
+          "spend_bonus_category_name": "T-Mobile",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 698047,
+          "spend_bonus_category_name": "Uber",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1809425434,
+          "spend_bonus_category_name": "Uber Eats",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1893120956,
+          "spend_bonus_category_name": "Walgreens",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 8864770,
+          "spend_bonus_category_name": "Apple",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 1140889025,
+          "spend_bonus_category_name": "Apple Pay",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+          "spend_bonus_category_group": "Payment"
+        },
+        {
+          "spend_bonus_category_id": 10026075,
+          "spend_bonus_category_name": "Exxon",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 9651961,
+          "spend_bonus_category_name": "Mobil",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Auto"
+        },
+        {
+          "spend_bonus_category_id": 601874,
+          "spend_bonus_category_name": "Nike",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Shopping"
+        },
+        {
+          "spend_bonus_category_id": 156707710,
+          "spend_bonus_category_name": "Panera",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 875851528,
+          "spend_bonus_category_name": "T-Mobile",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Telecom"
+        },
+        {
+          "spend_bonus_category_id": 698047,
+          "spend_bonus_category_name": "Uber",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Travel"
+        },
+        {
+          "spend_bonus_category_id": 1809425434,
+          "spend_bonus_category_name": "Uber Eats",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Dining"
+        },
+        {
+          "spend_bonus_category_id": 1893120956,
+          "spend_bonus_category_name": "Walgreens",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+          "spend_bonus_category_group": "Shopping"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 8864770,
+            "spend_bonus_category_name": "Apple",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 8864770,
+            "spend_bonus_category_name": "Apple",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Get 3% back on everything you buy from Apple, whether you buy it at an Apple Store, apple.com, the App Store, or iTunes.",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1140889025,
+            "spend_bonus_category_name": "Apple Pay",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+            "spend_bonus_category_group": "Payment"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1140889025,
+            "spend_bonus_category_name": "Apple Pay",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Get 2% back every time you buy something using Apple Pay.",
+            "spend_bonus_category_group": "Payment"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 10026075,
+            "spend_bonus_category_name": "Exxon",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 10026075,
+            "spend_bonus_category_name": "Exxon",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 9651961,
+            "spend_bonus_category_name": "Mobil",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Auto"
+          },
+          "reference": {
+            "spend_bonus_category_id": 9651961,
+            "spend_bonus_category_name": "Mobil",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Auto"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 601874,
+            "spend_bonus_category_name": "Nike",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 601874,
+            "spend_bonus_category_name": "Nike",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Shopping"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 156707710,
+            "spend_bonus_category_name": "Panera",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 156707710,
+            "spend_bonus_category_name": "Panera",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 875851528,
+            "spend_bonus_category_name": "T-Mobile",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Telecom"
+          },
+          "reference": {
+            "spend_bonus_category_id": 875851528,
+            "spend_bonus_category_name": "T-Mobile",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Telecom"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 698047,
+            "spend_bonus_category_name": "Uber",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 698047,
+            "spend_bonus_category_name": "Uber",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Travel"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1809425434,
+            "spend_bonus_category_name": "Uber Eats",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Dining"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1809425434,
+            "spend_bonus_category_name": "Uber Eats",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Dining"
+          }
+        },
+        {
+          "scraped": {
+            "spend_bonus_category_id": 1893120956,
+            "spend_bonus_category_name": "Walgreens",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Shopping"
+          },
+          "reference": {
+            "spend_bonus_category_id": 1893120956,
+            "spend_bonus_category_name": "Walgreens",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+            "spend_bonus_category_group": "Shopping"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "card_name": "Blue Business\u00ae Plus",
+      "issuer": "American Express",
+      "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 34569,
+          "spend_bonus_category_name": "All",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+          "spend_bonus_category_group": "All"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 34569,
+          "spend_bonus_category_name": "All",
+          "earn_multiplier": 2.0,
+          "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+          "spend_bonus_category_group": "All"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 34569,
+            "spend_bonus_category_name": "All",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+            "spend_bonus_category_group": "All"
+          },
+          "reference": {
+            "spend_bonus_category_id": 34569,
+            "spend_bonus_category_name": "All",
+            "earn_multiplier": 2.0,
+            "spend_bonus_desc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+            "spend_bonus_category_group": "All"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "card_name": "Bilt Blue Card",
+      "issuer": "First Electronic Bank",
+      "source_url": "https://www.biltrewards.com/card",
+      "scraped_at": "2026-06-07T00:27:14+00:00",
+      "reference_synced_at": "2026-06-03T05:05:12+00:00",
+      "scraped_rules": [
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3X points on Lyft rides",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "reference_rules": [
+        {
+          "spend_bonus_category_id": 606097,
+          "spend_bonus_category_name": "Lyft",
+          "earn_multiplier": 3.0,
+          "spend_bonus_desc": "3X points on Lyft rides",
+          "spend_bonus_category_group": "Travel"
+        }
+      ],
+      "matched": [
+        {
+          "scraped": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3X points on Lyft rides",
+            "spend_bonus_category_group": "Travel"
+          },
+          "reference": {
+            "spend_bonus_category_id": 606097,
+            "spend_bonus_category_name": "Lyft",
+            "earn_multiplier": 3.0,
+            "spend_bonus_desc": "3X points on Lyft rides",
+            "spend_bonus_category_group": "Travel"
+          }
+        }
+      ],
+      "mismatches": [],
+      "extra_scraped": [],
+      "extra_reference": [],
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false
+    }
+  ]
+}

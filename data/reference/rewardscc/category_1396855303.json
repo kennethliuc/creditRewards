@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "capitalone-biz-venturex",
+    "cardName": "Venture X Business",
+    "cardIssuer": "Capital One",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Air Travel (Capital One)",
+    "spendBonusCategoryName": "Air Travel (Capital One)",
+    "spendBonusCategoryId": 1396855303,
+    "spendBonusDesc": "Book through Capital One Travel to earn 5X on flights",
+    "earnMultiplier": 5.0,
+    "spendType": "Capital One Miles",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  },
+  {
+    "cardKey": "capitalone-venturex",
+    "cardName": "Venture X Rewards",
+    "cardIssuer": "Capital One",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Air Travel (Capital One)",
+    "spendBonusCategoryName": "Air Travel (Capital One)",
+    "spendBonusCategoryId": 1396855303,
+    "spendBonusDesc": "5X Miles on flights booked through Capital One Travel",
+    "earnMultiplier": 5.0,
+    "spendType": "Capital One Miles",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

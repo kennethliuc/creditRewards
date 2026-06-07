@@ -1,0 +1,293 @@
+{
+  "date": "2026-06-07",
+  "scraped_count": 20,
+  "reference_only_count": 0,
+  "scrape_attempt": {
+    "skipped": false,
+    "scraped": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "rules": 3
+      },
+      {
+        "card_key": "chase-sapphire-preferred",
+        "rules": 6
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "rules": 6
+      },
+      {
+        "card_key": "chase-sapphire-reserve",
+        "rules": 6
+      },
+      {
+        "card_key": "amex-gold",
+        "rules": 4
+      },
+      {
+        "card_key": "amex-platinum",
+        "rules": 2
+      },
+      {
+        "card_key": "citi-double-cash",
+        "rules": 6
+      },
+      {
+        "card_key": "capital-one-venture-x",
+        "rules": 3
+      },
+      {
+        "card_key": "capital-one-venture",
+        "rules": 2
+      },
+      {
+        "card_key": "capital-one-savorone",
+        "rules": 7
+      },
+      {
+        "card_key": "discover-it-cash-back",
+        "rules": 2
+      },
+      {
+        "card_key": "wells-fargo-active-cash",
+        "rules": 4
+      },
+      {
+        "card_key": "wells-fargo-autograph",
+        "rules": 7
+      },
+      {
+        "card_key": "amex-blue-cash-preferred",
+        "rules": 6
+      },
+      {
+        "card_key": "citi-custom-cash",
+        "rules": 10
+      },
+      {
+        "card_key": "citi-strata-premier",
+        "rules": 8
+      },
+      {
+        "card_key": "bofa-customized-cash",
+        "rules": 10
+      },
+      {
+        "card_key": "apple-card",
+        "rules": 10
+      },
+      {
+        "card_key": "amex-blue-business-plus",
+        "rules": 1
+      },
+      {
+        "card_key": "bilt-mastercard",
+        "rules": 1
+      }
+    ],
+    "failed": []
+  },
+  "cards": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 3,
+      "total_rows": 3,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 6,
+      "total_rows": 6,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 6,
+      "total_rows": 6,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 6,
+      "total_rows": 6,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-gold",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 4,
+      "total_rows": 4,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-platinum",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 2,
+      "total_rows": 2,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-double-cash",
+      "source_type": "scrape",
+      "aligned": false,
+      "scrape_verified": false,
+      "parser_fix_needed": true,
+      "verified_rows": 0,
+      "total_rows": 6,
+      "verified_pct": 0.0
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 3,
+      "total_rows": 3,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "capital-one-venture",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 2,
+      "total_rows": 2,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 7,
+      "total_rows": 7,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 2,
+      "total_rows": 2,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "source_type": "scrape",
+      "aligned": false,
+      "scrape_verified": false,
+      "parser_fix_needed": true,
+      "verified_rows": 0,
+      "total_rows": 4,
+      "verified_pct": 0.0
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 7,
+      "total_rows": 7,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 6,
+      "total_rows": 6,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 10,
+      "total_rows": 10,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 8,
+      "total_rows": 8,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 10,
+      "total_rows": 10,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "apple-card",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 10,
+      "total_rows": 10,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 1,
+      "total_rows": 1,
+      "verified_pct": 100.0
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "source_type": "scrape",
+      "aligned": true,
+      "scrape_verified": true,
+      "parser_fix_needed": false,
+      "verified_rows": 1,
+      "total_rows": 1,
+      "verified_pct": 100.0
+    }
+  ]
+}

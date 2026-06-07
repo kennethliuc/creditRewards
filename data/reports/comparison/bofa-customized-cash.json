@@ -1,0 +1,320 @@
+{
+  "card_key": "bofa-customized-cash",
+  "card_name": "Bank of America\u00ae Customized Cash Rewards",
+  "issuer": "Bank of America",
+  "source_url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1386466601,
+      "spend_bonus_category_name": "Wholesale Clubs",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1096261883,
+      "spend_bonus_category_name": "Drugstores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 1550080980,
+      "spend_bonus_category_name": "Home Improvement",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 158645550,
+      "spend_bonus_category_name": "Online Shopping",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 1464813222,
+      "spend_bonus_category_name": "Telecom",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1386466601,
+      "spend_bonus_category_name": "Wholesale Clubs",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1096261883,
+      "spend_bonus_category_name": "Drugstores",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 1455345350,
+      "spend_bonus_category_name": "Gas Stations",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Auto"
+    },
+    {
+      "spend_bonus_category_id": 1550080980,
+      "spend_bonus_category_name": "Home Improvement",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 158645550,
+      "spend_bonus_category_name": "Online Shopping",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 1464813222,
+      "spend_bonus_category_name": "Telecom",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1386466601,
+        "spend_bonus_category_name": "Wholesale Clubs",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1386466601,
+        "spend_bonus_category_name": "Wholesale Clubs",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Automatic 2% cash back at grocery stores and wholesale clubs. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1096261883,
+        "spend_bonus_category_name": "Drugstores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1096261883,
+        "spend_bonus_category_name": "Drugstores",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Auto"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1455345350,
+        "spend_bonus_category_name": "Gas Stations",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Auto"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1550080980,
+        "spend_bonus_category_name": "Home Improvement",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1550080980,
+        "spend_bonus_category_name": "Home Improvement",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 158645550,
+        "spend_bonus_category_name": "Online Shopping",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 158645550,
+        "spend_bonus_category_name": "Online Shopping",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1464813222,
+        "spend_bonus_category_name": "Telecom",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1464813222,
+        "spend_bonus_category_name": "Telecom",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Choose which category you want to earn 3% cash back in: gas and EV charging stations; online shopping, including cable, internet, phone plans and streaming; dining; travel; drug stores and pharmacies; or home improvement and furnishings. Earn 3% and 2% cash back on the first $2,500 in combined purchases each quarter in the choice category, and at grocery stores and wholesale clubs, then earn unlimited 1% thereafter.",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

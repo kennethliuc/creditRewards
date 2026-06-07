@@ -1,0 +1,161 @@
+# Phase 1 — Top 20 US rewards cards (scrape URLs + Rewards CC key mapping)
+cards:
+  - card_key: chase-freedom-unlimited
+    rewards_cc_card_key: chase-freedomunlimited
+    issuer: Chase
+    card_network: Visa
+    url: https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited
+    reward_program: Chase Ultimate Rewards
+    parser: chase
+
+  - card_key: chase-sapphire-preferred
+    rewards_cc_card_key: chase-sapphirepreferred
+    issuer: Chase
+    card_network: Visa
+    url: https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred
+    reward_program: Chase Ultimate Rewards
+    parser: chase
+
+  - card_key: chase-freedomflex
+    rewards_cc_card_key: chase-freedomflex
+    issuer: Chase
+    card_network: Mastercard
+    url: https://creditcards.chase.com/cash-back-credit-cards/freedom/flex
+    reward_program: Chase Ultimate Rewards
+    parser: chase
+
+  - card_key: chase-sapphire-reserve
+    rewards_cc_card_key: chase-sapphirereserve
+    issuer: Chase
+    card_network: Visa
+    url: https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve
+    reward_program: Chase Ultimate Rewards
+    parser: chase
+
+  - card_key: amex-gold
+    rewards_cc_card_key: amex-gold
+    issuer: American Express
+    card_network: American Express
+    url: https://www.americanexpress.com/us/credit-cards/card/gold-card/
+    reward_program: American Express Membership Rewards
+    parser: amex
+
+  - card_key: amex-platinum
+    rewards_cc_card_key: amex-platinum
+    issuer: American Express
+    card_network: American Express
+    url: https://www.americanexpress.com/us/credit-cards/card/platinum/
+    reward_program: American Express Membership Rewards
+    parser: amex
+
+  - card_key: citi-double-cash
+    rewards_cc_card_key: citi-doublecash
+    issuer: Citi
+    card_network: Mastercard
+    url: https://www.citi.com/credit-cards/citi-double-cash-credit-card
+    reward_program: Cash Back
+    parser: citi
+
+  - card_key: capital-one-venture-x
+    rewards_cc_card_key: capitalone-venturex
+    issuer: Capital One
+    card_network: Visa
+    url: https://www.capitalone.com/credit-cards/venture-x/
+    reward_program: Capital One Miles
+    parser: capitalone
+
+  - card_key: capital-one-venture
+    rewards_cc_card_key: capitalone-venture
+    issuer: Capital One
+    card_network: Visa
+    url: https://www.capitalone.com/credit-cards/venture/
+    reward_program: Capital One Miles
+    parser: capitalone
+
+  - card_key: capital-one-savorone
+    rewards_cc_card_key: capitalone-savorone
+    issuer: Capital One
+    card_network: Mastercard
+    url: https://www.capitalone.com/credit-cards/savorone/
+    reward_program: Cash Back
+    parser: capitalone
+
+  - card_key: discover-it-cash-back
+    rewards_cc_card_key: discover-cashback
+    issuer: Discover
+    card_network: Discover
+    url: https://www.discover.com/credit-cards/cash-back/it-card.html
+    reward_program: Cash Back
+    parser: discover
+
+  - card_key: wells-fargo-active-cash
+    rewards_cc_card_key: wellsfargo-activecash
+    issuer: Wells Fargo
+    card_network: Visa
+    url: https://creditcards.wellsfargo.com/active-cash-credit-card/
+    reward_program: Cash Back
+    parser: wellsfargo
+
+  - card_key: wells-fargo-autograph
+    rewards_cc_card_key: wellsfargo-autograph
+    issuer: Wells Fargo
+    card_network: Visa
+    url: https://creditcards.wellsfargo.com/autograph-visa-credit-card/
+    reward_program: Wells Fargo Rewards
+    parser: wellsfargo
+
+  - card_key: amex-blue-cash-preferred
+    rewards_cc_card_key: amex-bluecashpreferred
+    issuer: American Express
+    card_network: American Express
+    url: https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/
+    reward_program: Cash Back
+    parser: amex
+
+  - card_key: citi-custom-cash
+    rewards_cc_card_key: citi-customcash
+    issuer: Citi
+    card_network: Mastercard
+    url: https://www.citi.com/credit-cards/citi-custom-cash-credit-card
+    reward_program: ThankYou Points
+    parser: citi
+
+  - card_key: citi-strata-premier
+    rewards_cc_card_key: citi-premier
+    issuer: Citi
+    card_network: Mastercard
+    url: https://www.citi.com/credit-cards/citi-strata-premier-credit-card
+    reward_program: ThankYou Points
+    parser: citi
+
+  - card_key: bofa-customized-cash
+    rewards_cc_card_key: boa-customizedcashrewards
+    issuer: Bank of America
+    card_network: Visa
+    url: https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/
+    reward_program: Cash Back
+    parser: bofa
+
+  - card_key: apple-card
+    rewards_cc_card_key: goldmansachs-applecard
+    issuer: Goldman Sachs
+    card_network: Mastercard
+    url: https://www.apple.com/apple-card/
+    reward_program: Cash Back
+    parser: apple
+
+  - card_key: amex-blue-business-plus
+    rewards_cc_card_key: amex-biz-bluebusinessplus
+    issuer: American Express
+    card_network: American Express
+    url: https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex
+    reward_program: American Express Membership Rewards
+    parser: amex
+
+  - card_key: bilt-mastercard
+    rewards_cc_card_key: cardless-biltblue
+    issuer: Wells Fargo
+    card_network: Mastercard
+    url: https://www.biltrewards.com/
+    reward_program: Bilt Points
+    parser: bilt

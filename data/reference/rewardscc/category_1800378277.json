@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "chase-sapphirereserve",
+    "cardName": "Chase Sapphire Reserve\u00ae Credit Card",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Peloton",
+    "spendBonusCategoryName": "Peloton",
+    "spendBonusCategoryId": 1800378277,
+    "spendBonusDesc": "10x points on eligible Peloton hardware and accessory purchases",
+    "earnMultiplier": 10.0,
+    "spendType": "Chase Ultimate Rewards",
+    "isDateLimit": 1,
+    "limitBeginDate": "2022-03-01",
+    "limitEndDate": "2027-09-30",
+    "isSpendLimit": 1,
+    "spendLimit": 5000,
+    "spendLimitResetPeriod": "Year"
+  },
+  {
+    "cardKey": "chase-jpmorganreserve",
+    "cardName": "J.P. Morgan Reserve\u00ae",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Peloton",
+    "spendBonusCategoryName": "Peloton",
+    "spendBonusCategoryId": 1800378277,
+    "spendBonusDesc": "10x points on eligible Peloton hardware and accessory purchases",
+    "earnMultiplier": 10.0,
+    "spendType": "Chase Ultimate Rewards",
+    "isDateLimit": 1,
+    "limitBeginDate": "2022-03-01",
+    "limitEndDate": "2027-09-30",
+    "isSpendLimit": 1,
+    "spendLimit": 5000,
+    "spendLimitResetPeriod": "Year"
+  }
+]

@@ -1,0 +1,557 @@
+{
+  "ok": true,
+  "total_categories": 44,
+  "classified_pct": 100.0,
+  "mcc_bonus_coverage_pct": 100.0,
+  "master_category_count": 304,
+  "categories": [
+    {
+      "category_id": 160378660,
+      "category_name": "Dining",
+      "category_group": "Dining",
+      "card_count": 11,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5812",
+        "5813",
+        "5814"
+      ],
+      "mapped_category_name": "Dining",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1132334901,
+      "category_name": "Grocery Stores",
+      "category_group": "Shopping",
+      "card_count": 6,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5310",
+        "5411",
+        "5422",
+        "5451",
+        "5499"
+      ],
+      "mapped_category_name": "Grocery Stores",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 248970942,
+      "category_name": "Streaming Services",
+      "category_group": "Telecom",
+      "card_count": 6,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4899",
+        "5815"
+      ],
+      "mapped_category_name": "Streaming Services",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1455345350,
+      "category_name": "Gas Stations",
+      "category_group": "Auto",
+      "card_count": 5,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5541",
+        "5542"
+      ],
+      "mapped_category_name": "Gas Stations",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 2013874334,
+      "category_name": "Airfare",
+      "category_group": "Travel",
+      "card_count": 4,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4511"
+      ],
+      "mapped_category_name": "Airfare",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 605657763,
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_group": "Travel",
+      "card_count": 4,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1096261883,
+      "category_name": "Drugstores",
+      "category_group": "Shopping",
+      "card_count": 4,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5912",
+        "5977",
+        "7230"
+      ],
+      "mapped_category_name": "Drugstores",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 176638649,
+      "category_name": "Travel",
+      "category_group": "Travel",
+      "card_count": 4,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4111",
+        "4112",
+        "4411",
+        "5962"
+      ],
+      "mapped_category_name": "Travel",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 670145462,
+      "category_name": "Car Rentals (Capital One)",
+      "category_group": "Travel",
+      "card_count": 3,
+      "strategy": "mcc_range",
+      "mcc_codes": [],
+      "mapped_category_name": "car rentals",
+      "gap": false,
+      "note": "Alias range bucket for car rentals"
+    },
+    {
+      "category_id": 1550080980,
+      "category_name": "Home Improvement",
+      "category_group": "Shopping",
+      "card_count": 3,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5200",
+        "5211",
+        "5231",
+        "5251",
+        "5261"
+      ],
+      "mapped_category_name": "Home Improvement",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1517218866,
+      "category_name": "Hotels (Capital One)",
+      "category_group": "Travel",
+      "card_count": 3,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7011"
+      ],
+      "mapped_category_name": "hotels",
+      "gap": false,
+      "note": "Alias of hotels"
+    },
+    {
+      "category_id": 606097,
+      "category_name": "Lyft",
+      "category_group": "Travel",
+      "card_count": 3,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1468589631,
+      "category_name": "Transit",
+      "category_group": "Travel",
+      "card_count": 3,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4131",
+        "7523"
+      ],
+      "mapped_category_name": "Transit",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 164006704,
+      "category_name": "Hotels",
+      "category_group": "Travel",
+      "card_count": 2,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7011"
+      ],
+      "mapped_category_name": "Hotels",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1464813222,
+      "category_name": "Telecom",
+      "category_group": "Telecom",
+      "card_count": 2,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4812",
+        "4814",
+        "4816"
+      ],
+      "mapped_category_name": "Telecom",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 11030576,
+      "category_name": "Tolls",
+      "category_group": "Travel",
+      "card_count": 2,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4784"
+      ],
+      "mapped_category_name": "Tolls",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1396855303,
+      "category_name": "Air Travel (Capital One)",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4511"
+      ],
+      "mapped_category_name": "airfare",
+      "gap": false,
+      "note": "Alias of airfare"
+    },
+    {
+      "category_id": 34569,
+      "category_name": "All",
+      "category_group": "All",
+      "card_count": 1,
+      "strategy": "mcc_default",
+      "mcc_codes": [],
+      "mapped_category_name": "All Purchases",
+      "gap": false,
+      "note": "Catch-all category \u2014 unmapped MCC correctly uses base earn"
+    },
+    {
+      "category_id": 141708891,
+      "category_name": "Amazon",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 8864770,
+      "category_name": "Apple",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Specialty category \u2014 classify as merchant-only until merchant map exists"
+    },
+    {
+      "category_id": 1140889025,
+      "category_name": "Apple Pay",
+      "category_group": "Payment",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 923252904,
+      "category_name": "Attractions (CitiTravel.com)",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 646993658,
+      "category_name": "Car Rentals (CitiTravel.com)",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1754717276,
+      "category_name": "Entertainment",
+      "category_group": "Entertainment",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7832"
+      ],
+      "mapped_category_name": "Entertainment",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 823114854,
+      "category_name": "Entertainment (Capital One)",
+      "category_group": "Entertainment",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7832"
+      ],
+      "mapped_category_name": "entertainment",
+      "gap": false,
+      "note": "Alias of entertainment"
+    },
+    {
+      "category_id": 10026075,
+      "category_name": "Exxon",
+      "category_group": "Auto",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 494985384,
+      "category_name": "Feeding America",
+      "category_group": "Charity",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1576799624,
+      "category_name": "Fitness Clubs",
+      "category_group": "Services",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7997",
+        "7941"
+      ],
+      "mapped_category_name": "Fitness Clubs",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 1565859350,
+      "category_name": "Grocery Delivery",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 773320415,
+      "category_name": "Hotels (CitiTravel.com)",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 929639080,
+      "category_name": "Live Entertainment",
+      "category_group": "Entertainment",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "7922",
+        "7929"
+      ],
+      "mapped_category_name": "Live Entertainment",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 9651961,
+      "category_name": "Mobil",
+      "category_group": "Auto",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 601874,
+      "category_name": "Nike",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 158645550,
+      "category_name": "Online Shopping",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "5732"
+      ],
+      "mapped_category_name": "Online Shopping",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 156707710,
+      "category_name": "Panera",
+      "category_group": "Dining",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1800378277,
+      "category_name": "Peloton",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1534293716,
+      "category_name": "Prepaid Hotels (amextravel.com)",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1982334500,
+      "category_name": "Ridesharing",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "mcc_dedicated",
+      "mcc_codes": [
+        "4121"
+      ],
+      "mapped_category_name": "Ridesharing",
+      "gap": false,
+      "note": ""
+    },
+    {
+      "category_id": 875851528,
+      "category_name": "T-Mobile",
+      "category_group": "Telecom",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 698047,
+      "category_name": "Uber",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1809425434,
+      "category_name": "Uber Eats",
+      "category_group": "Dining",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1893120956,
+      "category_name": "Walgreens",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1386466601,
+      "category_name": "Wholesale Clubs",
+      "category_group": "Shopping",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    },
+    {
+      "category_id": 1120466653,
+      "category_name": "amextravel.com",
+      "category_group": "Travel",
+      "card_count": 1,
+      "strategy": "merchant_only",
+      "mcc_codes": [],
+      "mapped_category_name": "",
+      "gap": false,
+      "note": "Portal/brand category \u2014 MCC alone cannot trigger bonus"
+    }
+  ],
+  "blockers": [],
+  "date": "2026-06-07"
+}

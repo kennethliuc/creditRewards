@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Scrape vs API — CreditRewards</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0f14;
+      --card: #151b24;
+      --text: #eef2f7;
+      --muted: #93a0b0;
+      --accent: #3dd68c;
+      --border: #243041;
+      --match: #3dd68c;
+      --mismatch: #ff7b7b;
+      --note: #e6c84a;
+      --verified: #5eb8ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      padding: 1rem;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+    p.sub { color: var(--muted); margin: 0 0 1rem; line-height: 1.4; }
+    a { color: var(--accent); }
+    .summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+      font-size: .95rem;
+    }
+    .summary span { color: var(--muted); }
+    .summary strong { color: var(--text); }
+    .summary .aligned strong { color: var(--match); }
+    .summary .verified strong { color: var(--verified); }
+    .card-section {
+      margin-bottom: .75rem;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .card-header:hover { background: rgba(255,255,255,.03); }
+    .card-title { font-weight: 600; }
+    .badge {
+      font-size: .75rem;
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .badge.ok { color: var(--match); border-color: var(--match); }
+    .badge.warn { color: var(--mismatch); border-color: var(--mismatch); }
+    .card-body { display: none; padding: 0 1rem 1rem; }
+    .card-section.open .card-body { display: block; }
+    .meta { font-size: .85rem; color: var(--muted); margin-bottom: .75rem; }
+    .notes { font-size: .85rem; color: var(--note); margin-bottom: .75rem; }
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: .75rem;
+    }
+    @media (max-width: 900px) {
+      .columns { grid-template-columns: 1fr; }
+    }
+    .col h3 {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 0 0 .5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    th, td {
+      text-align: left;
+      padding: .4rem .35rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 500; }
+    .mult { font-weight: 600; white-space: nowrap; }
+    .desc { color: var(--muted); font-size: .8rem; max-width: 14rem; }
+    tr.match td { color: var(--match); }
+    tr.mismatch td { color: var(--mismatch); }
+    tr.extra_scrape td, tr.extra_reference td { color: var(--note); }
+    tr.scrape_verified td { color: var(--verified); }
+    .diff-row.scrape_verified { color: var(--verified); }
+    .diff-row.reference_verified { color: var(--mismatch); }
+    .diff-row.scrape_noise { color: var(--note); }
+    .evidence {
+      margin-top: .35rem;
+      padding: .5rem .65rem;
+      border-radius: 8px;
+      background: rgba(255,255,255,.04);
+      font-size: .78rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+    .evidence strong { color: var(--text); font-weight: 600; }
+    .evidence .tag {
+      display: inline-block;
+      margin-right: .35rem;
+      padding: .1rem .4rem;
+      border-radius: 4px;
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .evidence .tag.ok { background: rgba(61,214,140,.15); color: var(--match); }
+    .evidence .tag.scrape { background: rgba(94,184,255,.15); color: var(--verified); }
+    .evidence .tag.fix { background: rgba(255,123,123,.15); color: var(--mismatch); }
+    .diff-row { font-size: .85rem; padding: .35rem 0; border-bottom: 1px solid var(--border); }
+    .diff-row.match { color: var(--match); }
+    .diff-row.mismatch { color: var(--mismatch); }
+    .diff-row.extra_scrape, .diff-row.extra_reference { color: var(--note); }
+    .error { color: var(--mismatch); margin-top: 1rem; display: none; }
+    .error.show { display: block; }
+    .loading { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Scrape vs API</h1>
+    <p class="sub">Issuer website rewards (scraped) vs Rewards CC reference. When they differ, we search the issuer page for evidence — if the site supports our scrape, no parser change needed.</p>
+    <p class="sub"><a href="/validation">Validation dashboard</a> · <a href="/">Recommend</a></p>
+
+    <div id="summary" class="summary loading">Loading comparison…</div>
+    <div id="error" class="error"></div>
+    <div id="cards"></div>
+  </div>
+
+  <script>
+    const summaryEl = document.getElementById('summary');
+    const cardsEl = document.getElementById('cards');
+    const errorEl = document.getElementById('error');
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s ?? '';
+      return d.innerHTML;
+    }
+
+    function rulesTable(rules, rowClassFn) {
+      if (!rules.length) return '<p class="meta">—</p>';
+      const rows = rules.map(r => {
+        const cls = rowClassFn ? rowClassFn(r) : '';
+        return `<tr class="${cls}">
+          <td>${esc(r.category_name)}</td>
+          <td class="mult">${r.multiplier}x</td>
+          <td class="desc">${esc(r.description)}</td>
+        </tr>`;
+      }).join('');
+      return `<table>
+        <thead><tr><th>Category</th><th>Mult</th><th>Description</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+    }
+
+    function evidenceBlock(d) {
+      if (!d.evidence_summary && !(d.evidence_scrape || []).length && !(d.evidence_reference || []).length) {
+        return '';
+      }
+      const tag =
+        d.status === 'scrape_verified' ? '<span class="tag scrape">scrape OK</span>'
+        : d.status === 'reference_verified' ? '<span class="tag fix">fix scrape</span>'
+        : d.status === 'scrape_noise' ? '<span class="tag fix">parser noise</span>'
+        : d.evidence_verdict === 'both_supported' ? '<span class="tag">ambiguous</span>'
+        : d.status === 'match' ? '<span class="tag ok">match</span>' : '';
+      const summary = d.evidence_summary ? `<div>${esc(d.evidence_summary)}</div>` : '';
+      const scrapeSnips = (d.evidence_scrape || []).map(s =>
+        `<div><strong>Website → scrape:</strong> ${esc(s)}</div>`).join('');
+      const refSnips = (d.evidence_reference || []).map(s =>
+        `<div><strong>Website → API:</strong> ${esc(s)}</div>`).join('');
+      const action = d.evidence_action === 'keep_scrape'
+        ? '<div><strong>Action:</strong> keep scraper logic (issuer page supports us)</div>'
+        : d.evidence_action === 'fix_scrape'
+        ? '<div><strong>Action:</strong> update scraper to match issuer page</div>'
+        : '';
+      return `<div class="evidence">${tag}${summary}${scrapeSnips}${refSnips}${action}</div>`;
+    }
+
+    function diffPanel(diff) {
+      if (!diff.length) return '<p class="meta">No diff rows</p>';
+      return diff.map(d => {
+        const label = d.status === 'match' ? '✓ match'
+          : d.status === 'scrape_verified' ? '✓ scrape verified (issuer page)'
+          : d.status === 'reference_verified' ? '✗ API matches website — fix scrape'
+          : d.status === 'scrape_noise' ? '✗ scrape noise — fix parser'
+          : d.status === 'mismatch' ? '✗ mismatch'
+          : d.status === 'extra_scrape' ? '+ scrape only'
+          : '+ API only';
+        const detail = d.scraped_multiplier != null && d.reference_multiplier != null
+          ? ` (${d.scraped_multiplier}x vs ${d.reference_multiplier}x)`
+          : d.scraped_multiplier != null ? ` (${d.scraped_multiplier}x)`
+          : d.reference_multiplier != null ? ` (${d.reference_multiplier}x)` : '';
+        const note = d.note && d.status !== 'scrape_verified' ? ` — ${esc(d.note)}` : '';
+        return `<div class="diff-row ${d.status}">${esc(d.category_name)}: ${label}${detail}${note}${evidenceBlock(d)}</div>`;
+      }).join('');
+    }
+
+    function renderCard(c) {
+      const diffByName = Object.fromEntries((c.diff || []).map(d => [d.category_name.toLowerCase(), d.status]));
+      const scrapeClass = r => diffByName[r.category_name.toLowerCase()] || '';
+      const refClass = r => diffByName[r.category_name.toLowerCase()] || '';
+      const badge = c.aligned
+        ? '<span class="badge ok">aligned</span>'
+        : c.scrape_verified
+        ? '<span class="badge ok">scrape verified</span>'
+        : c.parser_fix_needed
+        ? `<span class="badge warn">${c.mismatch_count || 0} fix parser</span>`
+        : `<span class="badge warn">${c.mismatch_count || 0} mismatch(es)</span>`;
+      const notes = (c.notes || []).length
+        ? `<div class="notes">${c.notes.map(esc).join(' · ')}</div>` : '';
+      const scraped = c.last_scraped ? `Last scraped: ${esc(c.last_scraped)}` : 'Not scraped yet';
+      const issuerLink = c.issuer_url
+        ? `<a href="${esc(c.issuer_url)}" target="_blank" rel="noopener">Issuer page</a>` : '';
+
+      return `<section class="card-section" data-key="${esc(c.card_key)}">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div>
+            <div class="card-title">${esc(c.card_name)} · ${esc(c.issuer)}</div>
+            <div class="meta">${esc(c.card_key)} · ${scraped} · ${issuerLink}</div>
+          </div>
+          ${badge}
+        </div>
+        <div class="card-body">
+          ${notes}
+          <div class="columns">
+            <div class="col">
+              <h3>Website (scraped)</h3>
+              ${rulesTable(c.scraped_rules || [], scrapeClass)}
+            </div>
+            <div class="col">
+              <h3>API (reference)</h3>
+              ${rulesTable(c.reference_rules || [], refClass)}
+            </div>
+            <div class="col">
+              <h3>Diff</h3>
+              ${diffPanel(c.diff || [])}
+            </div>
+          </div>
+        </div>
+      </section>`;
+    }
+
+    function bindSections() {
+      document.querySelectorAll('.card-section .card-header').forEach(header => {
+        const toggle = () => {
+          const section = header.closest('.card-section');
+          const open = section.classList.toggle('open');
+          header.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+        header.addEventListener('click', toggle);
+        header.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+        });
+      });
+    }
+
+    async function load() {
+      try {
+        const res = await fetch('/api/compare');
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Request failed');
+
+        summaryEl.classList.remove('loading');
+        summaryEl.innerHTML = `
+          <div><span>Total cards</span> <strong>${data.total}</strong></div>
+          <div class="aligned"><span>Aligned</span> <strong>${data.aligned_count}</strong></div>
+          <div class="verified"><span>Scrape verified</span> <strong>${data.scrape_verified_count ?? 0}</strong></div>
+          <div class="mismatch"><span>Need parser fix</span> <strong>${data.parser_fix_count ?? 0}</strong></div>
+        `;
+
+        cardsEl.innerHTML = (data.cards || []).map(renderCard).join('');
+        bindSections();
+      } catch (err) {
+        summaryEl.classList.remove('loading');
+        summaryEl.textContent = '';
+        errorEl.textContent = err.message;
+        errorEl.classList.add('show');
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Independent program-level CPP benchmarks (cents per point) for cross-check.
+# Source: Upgraded Points published valuations — https://upgradedpoints.com/credit-cards/points-and-miles-valuations/
+# Cash-back programs use 1.0 cpp (1 cent per $1 spent at 1x = 1 cpp on points currency).
+updated: "2026-06-02"
+source_name: upgraded-points
+source_url: https://upgradedpoints.com/credit-cards/points-and-miles-valuations/
+programs:
+  - program_name: American Express Membership Rewards
+    cpp_default: 2.0
+    cpp_cash_floor: 0.6
+  - program_name: Chase Ultimate Rewards
+    cpp_default: 2.0
+    cpp_cash_floor: 1.0
+  - program_name: Citi ThankYou Rewards
+    cpp_default: 1.7
+    cpp_cash_floor: 0.8
+  - program_name: Capital One Miles
+    cpp_default: 1.85
+    cpp_cash_floor: 0.5
+  - program_name: Bilt Points
+    cpp_default: 2.2
+    cpp_cash_floor: 1.0
+  - program_name: Wells Fargo Go Far Rewards
+    cpp_default: 1.0
+    cpp_cash_floor: 1.0
+  - program_name: Cash
+    cpp_default: 1.0
+    cpp_cash_floor: 1.0

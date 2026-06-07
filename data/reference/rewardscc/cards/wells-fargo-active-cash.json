@@ -1,0 +1,132 @@
+[
+  {
+    "cardKey": "wellsfargo-activecash",
+    "cardIssuer": "Wells Fargo",
+    "cardName": "Wells Fargo Active Cash®",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Signature®",
+    "cardType": "Personal",
+    "cardUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "200",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Cash",
+    "signupBonusSpend": 500,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn a $200 cash rewards bonus when you spend $500 in purchases in the first 3 months.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "24/7 Concierge service",
+        "benefitDesc": "Find tickets to top sports and entertainment events, book travel, make dinner reservations and more with your complimentary 24/7 Visa Signature Concierge.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Cellular Telephone Protection",
+        "benefitDesc": "Up to $600 of cell phone protection against damage or theft. Subject to a $25 deductible.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global Entry Statement Credit",
+        "benefitDesc": "Apply for Global Entry, a U.S. Customs and Border Protection program and use your Visa Signature card to pay the application fee (currently $120) to receive a $120 statement credit.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Golf Benefits from Troon Rewards®",
+        "benefitDesc": "Enjoy automatic Silver Status when you sign up for Troon Rewards®, for 10% savings on golf fees, merchandise and lessons at over 150 golf courses across the United States and the world.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Luxury Hotel Collection",
+        "benefitDesc": "The Active Cash Card offers you a premium collection of benefits at a selection of the world’s most intriguing and prestigious properties. Benefits include room upgrade, late check-out and complimentary breakfast. Visit Visa Signature Hotel Collection7 and learn more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "OpenTable",
+        "benefitDesc": "Eligible Visa cardholders can enjoy special events access to the hottest dining events on OpenTable. Restrictions apply.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Pass airport lounge access",
+        "benefitDesc": "Enjoy access to over 1,700 airport lounges and experiences around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program available 24x7. Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sofar Sounds",
+        "benefitDesc": "Enjoy a free ticket per show with the purchase of one or more tickets, plus you can access 7-day Visa Exclusive Presale opportunities.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Stay connected in over 175 countries",
+        "benefitDesc": "Eligible Visa cardholders can now use the GigSky app to access complimentary or discounted global mobile data, in 175+ countries and destinations worldwide as well as on over 200 of the world’s top cruise ships. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel and Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Universal Destinations & Experiences",
+        "benefitDesc": "Get exciting benefits at Universal Studios Hollywood and Universal Orlando Resort when you pay with your Visa Signature® or Visa Infinite® card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Concierge",
+        "benefitDesc": "Get assistance with travel planning, entertainment tickets and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Luxury Hotel Collection",
+        "benefitDesc": "Enjoy special guest status at 900+ Visa Signature Luxury Hotel properties worldwide.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Rental Car Privileges",
+        "benefitDesc": "Book your next road trip with your Visa Signature card to receive up to 25% off base rates on qualifying rentals from Avis and Budget. Your card can also unlock complimentary upgrades (when available), waived Additional Driver Fee and 10% saving on XM Satellite radio during rental.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

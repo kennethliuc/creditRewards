@@ -1,0 +1,27 @@
+version: "2026-06-02"
+aggregation: max
+sanity_cap_cpp: 3.5
+
+programs:
+  "American Express Membership Rewards":
+    valuation_program_key: amex-mr
+  "Chase Ultimate Rewards":
+    valuation_program_key: chase-ur
+  "Citi ThankYou Rewards":
+    valuation_program_key: citi-typ
+  "Capital One Miles":
+    valuation_program_key: capone-miles
+  "Bilt Points":
+    valuation_program_key: bilt
+  "Wells Fargo Go Far Rewards":
+    valuation_program_key: wf-gofar
+  "Cash":
+    official_cpp: 1.0
+
+card_overrides:
+  chase-freedom-unlimited:
+    use_program: "Chase Ultimate Rewards"
+  chase-freedomflex:
+    use_program: "Chase Ultimate Rewards"
+  citi-double-cash:
+    use_program: "Citi ThankYou Rewards"

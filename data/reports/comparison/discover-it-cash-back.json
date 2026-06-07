@@ -1,0 +1,80 @@
+{
+  "card_key": "discover-it-cash-back",
+  "card_name": "Discover it\u00ae Cash Back",
+  "issuer": "Discover",
+  "source_url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1550080980,
+      "spend_bonus_category_name": "Home Improvement",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1550080980,
+      "spend_bonus_category_name": "Home Improvement",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% Cashback Bonus at Restaurants",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1550080980,
+        "spend_bonus_category_name": "Home Improvement",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1550080980,
+        "spend_bonus_category_name": "Home Improvement",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5% Cashback Bonus at Home Improvement stores",
+        "spend_bonus_category_group": "Shopping"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

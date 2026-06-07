@@ -1,0 +1,200 @@
+# Merchant → Rewards CC spend category (Phase 1 payment-moment)
+# Match by domain (URL checkout) or display name / alias (manual entry).
+updated: "2026-06-07"
+
+merchants:
+  # Dining
+  - id: chipotle
+    name: Chipotle
+    aliases: [chipotle mexican grill]
+    domains: [chipotle.com]
+    spend_bonus_category_name: Dining
+
+  - id: mcdonalds
+    name: McDonald's
+    aliases: [mcdonalds, mcd]
+    domains: [mcdonalds.com]
+    spend_bonus_category_name: Dining
+
+  - id: starbucks
+    name: Starbucks
+    aliases: []
+    domains: [starbucks.com]
+    spend_bonus_category_name: Dining
+
+  - id: doordash
+    name: DoorDash
+    aliases: [door dash]
+    domains: [doordash.com]
+    spend_bonus_category_name: Dining
+
+  - id: ubereats
+    name: Uber Eats
+    aliases: [uber eats]
+    domains: [ubereats.com]
+    spend_bonus_category_name: Dining
+
+  # Grocery
+  - id: whole_foods
+    name: Whole Foods Market
+    aliases: [whole foods, wholefoods]
+    domains: [wholefoodsmarket.com]
+    spend_bonus_category_name: Grocery Stores
+
+  - id: trader_joes
+    name: Trader Joe's
+    aliases: [trader joes, trader joe's]
+    domains: [traderjoes.com]
+    spend_bonus_category_name: Grocery Stores
+
+  - id: kroger
+    name: Kroger
+    aliases: []
+    domains: [kroger.com]
+    spend_bonus_category_name: Grocery Stores
+
+  - id: safeway
+    name: Safeway
+    aliases: []
+    domains: [safeway.com]
+    spend_bonus_category_name: Grocery Stores
+
+  # Wholesale / big box
+  - id: costco
+    name: Costco
+    aliases: [costco wholesale]
+    domains: [costco.com]
+    spend_bonus_category_name: Wholesale Clubs
+
+  - id: sams_club
+    name: Sam's Club
+    aliases: [sams club]
+    domains: [samsclub.com]
+    spend_bonus_category_name: Wholesale Clubs
+
+  - id: walmart
+    name: Walmart
+    aliases: []
+    domains: [walmart.com]
+    spend_bonus_category_name: Grocery Stores
+
+  - id: target
+    name: Target
+    aliases: []
+    domains: [target.com]
+    spend_bonus_category_name: All Purchases
+
+  # Gas
+  - id: shell
+    name: Shell
+    aliases: []
+    domains: [shell.com, shell.us]
+    spend_bonus_category_name: Gas Stations
+
+  - id: chevron
+    name: Chevron
+    aliases: []
+    domains: [chevron.com]
+    spend_bonus_category_name: Gas Stations
+
+  # Online shopping
+  - id: amazon
+    name: Amazon
+    aliases: [amazon.com]
+    domains: [amazon.com, smile.amazon.com]
+    spend_bonus_category_name: Online Shopping
+
+  - id: apple
+    name: Apple Store
+    aliases: [apple, apple.com]
+    domains: [apple.com]
+    spend_bonus_category_name: Online Shopping
+
+  - id: best_buy
+    name: Best Buy
+    aliases: [bestbuy]
+    domains: [bestbuy.com]
+    spend_bonus_category_name: Online Shopping
+
+  # Travel & hotels
+  - id: airbnb
+    name: Airbnb
+    aliases: []
+    domains: [airbnb.com]
+    spend_bonus_category_name: Hotels
+
+  - id: marriott
+    name: Marriott
+    aliases: [marriott hotels]
+    domains: [marriott.com]
+    spend_bonus_category_name: Hotels
+
+  - id: expedia
+    name: Expedia
+    aliases: []
+    domains: [expedia.com]
+    spend_bonus_category_name: Travel
+
+  - id: delta
+    name: Delta Air Lines
+    aliases: [delta, delta airlines]
+    domains: [delta.com]
+    spend_bonus_category_name: Airfare
+
+  - id: united
+    name: United Airlines
+    aliases: [united]
+    domains: [united.com]
+    spend_bonus_category_name: Airfare
+
+  - id: southwest
+    name: Southwest Airlines
+    aliases: [southwest]
+    domains: [southwest.com]
+    spend_bonus_category_name: Airfare
+
+  # Rideshare / transit
+  - id: uber
+    name: Uber
+    aliases: []
+    domains: [uber.com]
+    spend_bonus_category_name: Lyft
+
+  - id: lyft
+    name: Lyft
+    aliases: []
+    domains: [lyft.com]
+    spend_bonus_category_name: Lyft
+
+  # Drugstores
+  - id: cvs
+    name: CVS
+    aliases: [cvs pharmacy]
+    domains: [cvs.com]
+    spend_bonus_category_name: Drugstores
+
+  - id: walgreens
+    name: Walgreens
+    aliases: []
+    domains: [walgreens.com]
+    spend_bonus_category_name: Drugstores
+
+  # Streaming
+  - id: netflix
+    name: Netflix
+    aliases: []
+    domains: [netflix.com]
+    spend_bonus_category_name: Streaming Services
+
+  - id: spotify
+    name: Spotify
+    aliases: []
+    domains: [spotify.com]
+    spend_bonus_category_name: Streaming Services
+
+  # Entertainment
+  - id: amc
+    name: AMC Theatres
+    aliases: [amc theaters, amc]
+    domains: [amctheatres.com]
+    spend_bonus_category_name: Entertainment

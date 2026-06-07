@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "chase-freedomflex",
+    "cardName": "Chase Freedom Flex\u00ae Credit Card",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Multi Category",
+    "spendBonusCategoryName": "Feeding America",
+    "spendBonusCategoryId": 494985384,
+    "spendBonusDesc": "Get 5% cash back on Amazon",
+    "earnMultiplier": 5.0,
+    "spendType": "Cash",
+    "isDateLimit": 1,
+    "limitBeginDate": "2026-04-01",
+    "limitEndDate": "2026-06-30",
+    "isSpendLimit": 1,
+    "spendLimit": 1500,
+    "spendLimitResetPeriod": "Quarter"
+  },
+  {
+    "cardKey": "chase-freedom",
+    "cardName": "Chase Freedom\u00ae",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Visa",
+    "categoryType": "Multi Category",
+    "spendBonusCategoryName": "Feeding America",
+    "spendBonusCategoryId": 494985384,
+    "spendBonusDesc": "Get 5% cash back on Amazon",
+    "earnMultiplier": 5.0,
+    "spendType": "Cash",
+    "isDateLimit": 1,
+    "limitBeginDate": "2026-04-01",
+    "limitEndDate": "2026-06-30",
+    "isSpendLimit": 1,
+    "spendLimit": 1500,
+    "spendLimitResetPeriod": "Quarter"
+  }
+]

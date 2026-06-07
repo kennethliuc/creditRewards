@@ -1,0 +1,158 @@
+[
+  {
+    "cardKey": "chase-freedomunlimited",
+    "cardIssuer": "Chase",
+    "cardName": "Chase Freedom Unlimited® Credit Card",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Traditional",
+    "cardType": "Personal",
+    "cardUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.5,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "200",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Cash",
+    "signupBonusSpend": 500,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn a $200 bonus after you spend $500 on purchases in the first 3 months from account opening.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "24/7 Fraud Monitoring",
+        "benefitDesc": "We help safeguard your credit card purchases using sophisticated fraud monitoring. We monitor for fraud 24/7 and can text, email or call you if there are unusual purchases on your credit card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is provided for theft and collision damage for most cars in the U.S. and abroad. In the U.S., coverage is secondary to your personal insurance.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "DoorDash",
+        "benefitDesc": "Get 6 months of complimentary access to DashPass– a membership for both DoorDash and Caviar – which unlocks $0 delivery fees and lower service fees on eligible orders. After that, you are automatically enrolled in DashPass at the current monthly rate. Activate by Dec 31, 2027. Plus, DashPass members get up to $10 off quarterly on non-restaurant DoorDash orders through Dec 31, 2027.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Extended Warranty Protection",
+        "benefitDesc": "Extends the time period of the U.S. manufacturer's warranty by an additional year, on eligible warranties of three years or less.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "OpenTable",
+        "benefitDesc": "Eligible Visa cardholders can enjoy special events access to the hottest dining events on OpenTable. Restrictions apply.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "Covers your new purchases for 120 days against damage or theft up to $500 per claim and $50,000 per account.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program available 24x7. Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sofar Sounds",
+        "benefitDesc": "Enjoy a free ticket per show with the purchase of one or more tickets, plus you can access 7-day Visa Exclusive Presale opportunities.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel and Emergency Assistance",
+        "benefitDesc": "If you run into a problem away from home, call the Benefit Administrator for legal and medical referrals or other travel emergency assistance. (You will be responsible for the cost of any goods or services obtained.)",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Cancellation/Interruption Insurance",
+        "benefitDesc": "You can be reimbursed up to $1,500 per person and $6,000 per trip for your pre-paid, non-refundable passenger fares, if your trip is canceled or cut short by sickness, severe weather and other covered situations.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Zero Liability Protection",
+        "benefitDesc": "Means you won't be held responsible for unauthorized charges made with your card or account information.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - All Travel (Ultimate Rewards)",
+        "spendBonusCategoryName": "All Travel (Ultimate Rewards)",
+        "spendBonusCategoryId": 605657763,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusDesc": "Earn 5% on travel purchased through Chase Ultimate Rewards",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Dining",
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusCategoryGroup": "Dining",
+        "spendBonusSubcategoryGroup": "All Dining",
+        "spendBonusDesc": "Earn 3% on dining at restaurants, including takeout and eligible delivery services",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Drugstores",
+        "spendBonusCategoryName": "Drugstores",
+        "spendBonusCategoryId": 1096261883,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "All Drugstores",
+        "spendBonusDesc": "Earn 3% on drugstore purchases",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

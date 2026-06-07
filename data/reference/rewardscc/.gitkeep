@@ -1,0 +1,11 @@
+# Rewards CC reference fixtures (golden test data)
+
+Synced from the official [Rewards CC API](https://rewardscc.com/docs/) via:
+
+```bash
+credit-rewards-db sync-reference
+```
+
+**Do not commit API keys.** Only JSON responses belong here.
+
+Used by `credit-rewards-db validate-reference` to check our scraper-based CardData API.

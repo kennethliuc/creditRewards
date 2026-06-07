@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CreditRewards — Which card?</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0f14;
+      --card: #151b24;
+      --text: #eef2f7;
+      --muted: #93a0b0;
+      --accent: #3dd68c;
+      --border: #243041;
+      --fail: #ff7b7b;
+      --pending: #e6c84a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      padding: 1rem;
+    }
+    .wrap { max-width: 480px; margin: 0 auto; }
+    .nav { margin-bottom: 1rem; font-size: .85rem; color: var(--muted); }
+    .nav a { color: var(--accent); text-decoration: none; margin-right: .75rem; }
+    h1 { font-size: 1.45rem; margin: 0 0 .25rem; }
+    p.sub { color: var(--muted); margin: 0 0 1.25rem; line-height: 1.45; font-size: .95rem; }
+    .tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
+    .tab {
+      flex: 1; padding: .65rem; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--card);
+      color: var(--muted); cursor: pointer; font: inherit; text-align: center;
+    }
+    .tab.active { color: var(--text); border-color: var(--accent); background: rgba(61,214,140,.08); }
+    label { display: block; font-size: .82rem; color: var(--muted); margin: .65rem 0 .35rem; }
+    input, select, button {
+      width: 100%; font: inherit; border-radius: 12px;
+      border: 1px solid var(--border); background: var(--card);
+      color: var(--text); padding: .85rem 1rem;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="url"] {
+      direction: ltr;
+      text-align: left;
+      unicode-bidi: isolate;
+    }
+    #form { direction: ltr; }
+    input:focus { outline: 2px solid rgba(61,214,140,.35); border-color: var(--accent); }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .hints { font-size: .78rem; color: var(--muted); margin-top: .35rem; line-height: 1.35; }
+    button.primary {
+      margin-top: 1.1rem; background: var(--accent); color: #04130a;
+      font-weight: 700; border: none; cursor: pointer;
+    }
+    button.primary:disabled { opacity: .5; cursor: wait; }
+    button.secondary {
+      margin-top: .65rem; background: transparent; color: var(--muted);
+      border: 1px solid var(--border); cursor: pointer;
+    }
+    .error { color: var(--fail); margin-top: 1rem; font-size: .9rem; display: none; line-height: 1.4; }
+    .error.show { display: block; }
+    .result { margin-top: 1.25rem; display: none; }
+    .result.show { display: block; }
+    .hero {
+      padding: 1.1rem 1.15rem; border-radius: 16px;
+      background: linear-gradient(135deg, rgba(61,214,140,.14), rgba(61,214,140,.04));
+      border: 1px solid rgba(61,214,140,.35); margin-bottom: 1rem;
+    }
+    .hero-label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .hero-card { font-size: 1.2rem; font-weight: 700; margin: .25rem 0; }
+    .hero-value { font-size: 1.65rem; font-weight: 800; color: var(--accent); }
+    .hero-meta { font-size: .85rem; color: var(--muted); margin-top: .5rem; line-height: 1.4; }
+    .rank-head { font-size: .82rem; color: var(--muted); margin: .5rem 0 .35rem; }
+    .rank-list {
+      border: 1px solid var(--border); border-radius: 14px; background: var(--card);
+      overflow: hidden; max-height: 360px; overflow-y: auto;
+    }
+    .rank-row {
+      display: grid; grid-template-columns: 2rem 1fr auto; gap: .5rem;
+      align-items: center; padding: .65rem .85rem;
+      border-top: 1px solid var(--border); font-size: .88rem;
+    }
+    .rank-row:first-child { border-top: none; }
+    .rank-row.top { background: rgba(61,214,140,.06); }
+    .rank-num { color: var(--muted); font-weight: 600; text-align: center; }
+    .rank-name { font-weight: 500; }
+    .rank-sub { font-size: .75rem; color: var(--muted); }
+    .rank-usd { font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,.55);
+      display: none; align-items: flex-end; justify-content: center;
+      padding: 1rem; z-index: 100;
+    }
+    .modal-backdrop.show { display: flex; }
+    .modal {
+      width: 100%; max-width: 480px; background: var(--card);
+      border: 1px solid var(--border); border-radius: 18px 18px 14px 14px;
+      padding: 1.15rem 1.15rem 1rem; max-height: 85dvh; overflow-y: auto;
+    }
+    .modal h2 { margin: 0 0 .35rem; font-size: 1.1rem; }
+    .modal p.lead { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; line-height: 1.4; }
+    .confirm-box {
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: .9rem 1rem; margin-bottom: .85rem; background: var(--bg);
+    }
+    .confirm-merchant { font-size: 1.15rem; font-weight: 700; }
+    .confirm-category { color: var(--accent); font-weight: 600; margin-top: .25rem; }
+    .confirm-meta { font-size: .78rem; color: var(--muted); margin-top: .5rem; line-height: 1.4; word-break: break-all; }
+    .confidence-high { color: var(--accent); }
+    .confidence-medium { color: var(--pending); }
+    .confidence-low { color: var(--fail); }
+    .candidate-list { margin: .5rem 0 0; padding: 0; list-style: none; }
+    .candidate-list li { margin-bottom: .45rem; }
+    .candidate-list label {
+      display: flex; gap: .6rem; align-items: flex-start; margin: 0;
+      padding: .55rem .65rem; border-radius: 10px; border: 1px solid var(--border);
+      cursor: pointer; font-size: .88rem; color: var(--text);
+    }
+    .candidate-list input { width: auto; margin-top: .15rem; }
+    .candidate-list label.selected { border-color: var(--accent); background: rgba(61,214,140,.08); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <strong>Recommend</strong>
+      <a href="/compare">Compare</a>
+      <a href="/validation">Validation</a>
+      <a href="/validation-report">Report</a>
+    </nav>
+
+    <h1>这次用哪张卡？</h1>
+    <p class="sub">输入店家和金额，在 Phase-1 全库卡中找出 reward 价值最高的一张。</p>
+
+    <div class="tabs">
+      <button type="button" class="tab active" data-tab="url">结账页 URL</button>
+      <button type="button" class="tab" data-tab="name">店名</button>
+    </div>
+
+    <form id="form">
+      <div id="panel-url" class="panel active">
+        <label for="merchantUrl">付款/结账页完整 URL</label>
+        <input id="merchantUrl" type="text" inputmode="text" dir="ltr"
+          placeholder="粘贴完整 checkout 链接（可很长）" autocomplete="off" spellcheck="false" />
+        <div class="hints">支持长链接：会在整段 URL 里 fuzzy 匹配商家域名（如嵌在 Stripe/PayPal 回调里）。</div>
+      </div>
+
+      <div id="panel-name" class="panel">
+        <label for="merchantName">店名</label>
+        <input id="merchantName" type="text" dir="ltr" placeholder="Chipotle" list="merchant-name-hints" autocomplete="off" />
+        <div class="hints">支持别名，如 Whole Foods、Trader Joe's</div>
+      </div>
+
+      <datalist id="merchant-name-hints"></datalist>
+
+      <label for="amount">消费金额 (USD)</label>
+      <input id="amount" type="number" dir="ltr" min="0.01" step="0.01" value="100" required />
+
+      <button type="submit" class="primary" id="go">识别商家并继续</button>
+    </form>
+
+    <div id="error" class="error"></div>
+
+    <div id="result" class="result">
+      <div class="hero">
+        <div class="hero-label">推荐使用</div>
+        <div class="hero-card" id="bestName"></div>
+        <div class="hero-value" id="bestValue"></div>
+        <div class="hero-meta" id="bestMeta"></div>
+      </div>
+      <div class="rank-head" id="rankHead"></div>
+      <div class="rank-list" id="rankings"></div>
+    </div>
+  </div>
+
+  <div id="confirmModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="confirmTitle">
+      <h2 id="confirmTitle">确认商家</h2>
+      <p class="lead">请确认系统识别的店家和消费类别是否正确，再计算最优卡。</p>
+
+      <div class="confirm-box">
+        <div class="confirm-merchant" id="confirmMerchant"></div>
+        <div class="confirm-category" id="confirmCategory"></div>
+        <div class="confirm-meta" id="confirmMeta"></div>
+      </div>
+
+      <div id="candidateBlock" style="display:none">
+        <label for="candidatePick">其他可能匹配</label>
+        <ul class="candidate-list" id="candidateList"></ul>
+      </div>
+
+      <button type="button" class="primary" id="confirmGo">确认，推荐最优卡</button>
+      <button type="button" class="secondary" id="confirmCancel">返回修改</button>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = { url: document.getElementById('panel-url'), name: document.getElementById('panel-name') };
+    let activeTab = 'url';
+    let pendingAmount = 0;
+    let resolvePayload = null;
+    let selectedPick = null;
+    let selectAllOnNextFocus = false;
+
+    function activeInputEl() {
+      return activeTab === 'url'
+        ? document.getElementById('merchantUrl')
+        : document.getElementById('merchantName');
+    }
+
+    function markInputsForReentry() {
+      selectAllOnNextFocus = true;
+    }
+
+    function bindReentryInput(el) {
+      el.addEventListener('focus', () => {
+        if (!selectAllOnNextFocus) return;
+        selectAllOnNextFocus = false;
+        requestAnimationFrame(() => {
+          if (document.activeElement === el) el.select();
+        });
+      });
+      // If caret is stuck at start, append instead of prepending (looks like reversed typing).
+      el.addEventListener('beforeinput', (e) => {
+        if (e.inputType !== 'insertText' && e.inputType !== 'insertCompositionText') return;
+        if (el.selectionStart !== 0 || el.selectionEnd !== 0 || !el.value.length) return;
+        e.preventDefault();
+        const text = e.data || '';
+        const end = el.value.length;
+        el.setSelectionRange(end, end);
+        el.setRangeText(text, end, end, 'end');
+      });
+    }
+
+    bindReentryInput(document.getElementById('merchantUrl'));
+    bindReentryInput(document.getElementById('merchantName'));
+    bindReentryInput(document.getElementById('amount'));
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeTab = btn.dataset.tab;
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === activeTab));
+        panels.url.classList.toggle('active', activeTab === 'url');
+        panels.name.classList.toggle('active', activeTab === 'name');
+      });
+    });
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s == null ? '' : String(s);
+      return d.innerHTML;
+    }
+
+    function confidenceLabel(c) {
+      if (c === 'high') return '<span class="confidence-high">高置信度</span>';
+      if (c === 'medium') return '<span class="confidence-medium">中置信度 — 请核对</span>';
+      return '<span class="confidence-low">低置信度 — 请仔细核对</span>';
+    }
+
+    async function loadMerchants() {
+      try {
+        const res = await fetch('/api/merchants');
+        const data = await res.json();
+        document.querySelector('.sub').textContent =
+          `输入店家和金额，在 Phase-1 全库 ${data.total} 张卡里找出 reward 价值最高的一张。`;
+        document.getElementById('merchant-name-hints').innerHTML = (data.merchants || []).map(m =>
+          `<option value="${esc(m.name)}">${esc(m.category)}</option>`
+        ).join('');
+      } catch (_) {}
+    }
+
+    function showConfirmModal(data) {
+      activeInputEl().blur();
+      resolvePayload = data;
+      const best = data.best;
+      selectedPick = best;
+
+      document.getElementById('confirmMerchant').textContent = best.merchantName;
+      document.getElementById('confirmCategory').textContent = `→ ${best.spendBonusCategoryName}`;
+      const hostLine = data.parsedHost ? `页面 host: ${data.parsedHost} · ` : '';
+      const sourceLine = best.source === 'nominatim' ? ' · OpenStreetMap 推断' : '';
+      document.getElementById('confirmMeta').innerHTML =
+        `${hostLine}匹配: ${esc(best.matchedOn)} (${esc(best.matchType)}) · ${confidenceLabel(best.confidence)}${sourceLine}`;
+
+      const candidates = (data.candidates || []).filter(c => c.merchantId !== best.merchantId);
+      const block = document.getElementById('candidateBlock');
+      const list = document.getElementById('candidateList');
+      if (candidates.length) {
+        block.style.display = 'block';
+        list.innerHTML = [best, ...candidates].map(c => `
+          <li>
+            <label class="${c.merchantId === selectedPick.merchantId ? 'selected' : ''}">
+              <input type="radio" name="merchantPick" value="${esc(c.merchantId)}"
+                ${c.merchantId === selectedPick.merchantId ? 'checked' : ''} />
+              <span>
+                <strong>${esc(c.merchantName)}</strong> → ${esc(c.spendBonusCategoryName)}
+                <br><span style="color:var(--muted);font-size:.78rem">${esc(c.matchType)} · ${esc(c.confidence)}${c.source === 'nominatim' ? ' · OSM' : ''}</span>
+              </span>
+            </label>
+          </li>
+        `).join('');
+        list.querySelectorAll('input[name=merchantPick]').forEach(radio => {
+          radio.addEventListener('change', () => {
+            const all = [best, ...candidates];
+            selectedPick = all.find(c => c.merchantId === radio.value) || best;
+            list.querySelectorAll('label').forEach(l => l.classList.remove('selected'));
+            radio.closest('label').classList.add('selected');
+            document.getElementById('confirmMerchant').textContent = selectedPick.merchantName;
+            document.getElementById('confirmCategory').textContent = `→ ${selectedPick.spendBonusCategoryName}`;
+          });
+        });
+      } else {
+        block.style.display = 'none';
+        list.innerHTML = '';
+      }
+
+      document.getElementById('confirmModal').classList.add('show');
+    }
+
+    function hideConfirmModal(refocusInput = false) {
+      document.getElementById('confirmModal').classList.remove('show');
+      if (!refocusInput) return;
+      const input = activeInputEl();
+      input.focus({ preventScroll: true });
+      requestAnimationFrame(() => {
+        if (document.activeElement === input) input.select();
+      });
+    }
+
+    async function runRecommend(pick, amount_usd) {
+      const errorEl = document.getElementById('error');
+      const resultEl = document.getElementById('result');
+      errorEl.classList.remove('show');
+      resultEl.classList.remove('show');
+
+      const payload = {
+        merchant_id: pick.merchantId,
+        merchant_name: pick.merchantName,
+        amount_usd,
+      };
+      if (pick.merchantId.startsWith('osm:') || pick.source === 'nominatim') {
+        payload.category = pick.spendBonusCategoryName;
+      }
+
+      const res = await fetch('/api/recommend', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || 'Request failed');
+
+      const best = data.best;
+      const merchant = data.merchant || {};
+      document.getElementById('bestName').textContent = best.card_name;
+      document.getElementById('bestValue').textContent = `≈ $${best.estimated_value_usd.toFixed(2)} reward 价值`;
+      const storeLine = merchant.merchantName
+        ? `${merchant.merchantName} → ${data.resolved_category}`
+        : data.resolved_category;
+      document.getElementById('bestMeta').textContent =
+        `$${amount_usd.toFixed(2)} · ${storeLine} · ${best.multiplier}x · ${best.reason}`;
+      document.getElementById('rankHead').textContent =
+        `全库 ${data.card_count} 张卡排名（official CPP）`;
+      document.getElementById('rankings').innerHTML = data.rankings.map(r => `
+        <div class="rank-row ${r.rank === 1 ? 'top' : ''}">
+          <div class="rank-num">#${r.rank}</div>
+          <div>
+            <div class="rank-name">${esc(r.card_name)}</div>
+            <div class="rank-sub">${r.multiplier}x · ${esc(r.reason)}</div>
+          </div>
+          <div class="rank-usd">$${r.estimated_value_usd.toFixed(2)}</div>
+        </div>
+      `).join('');
+      resultEl.classList.add('show');
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      markInputsForReentry();
+    }
+
+    document.getElementById('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorEl = document.getElementById('error');
+      const go = document.getElementById('go');
+      errorEl.classList.remove('show');
+      document.getElementById('result').classList.remove('show');
+      go.disabled = true;
+
+      pendingAmount = parseFloat(document.getElementById('amount').value);
+      const body = {};
+
+      if (activeTab === 'url') {
+        const url = document.getElementById('merchantUrl').value.trim();
+        if (!url) {
+          errorEl.textContent = '请粘贴结账页 URL';
+          errorEl.classList.add('show');
+          go.disabled = false;
+          return;
+        }
+        body.merchant_url = url;
+      } else {
+        const name = document.getElementById('merchantName').value.trim();
+        if (!name) {
+          errorEl.textContent = '请输入店名';
+          errorEl.classList.add('show');
+          go.disabled = false;
+          return;
+        }
+        body.merchant_name = name;
+      }
+
+      try {
+        const res = await fetch('/api/merchant/resolve', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Request failed');
+
+        if (data.needsConfirmation || activeTab === 'url') {
+          showConfirmModal(data);
+        } else {
+          await runRecommend(data.best, pendingAmount);
+        }
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.classList.add('show');
+      } finally {
+        go.disabled = false;
+        markInputsForReentry();
+      }
+    });
+
+    document.getElementById('confirmGo').addEventListener('click', async () => {
+      const btn = document.getElementById('confirmGo');
+      btn.disabled = true;
+      try {
+        hideConfirmModal();
+        await runRecommend(selectedPick, pendingAmount);
+      } catch (err) {
+        document.getElementById('error').textContent = err.message;
+        document.getElementById('error').classList.add('show');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('confirmCancel').addEventListener('click', () => {
+      markInputsForReentry();
+      hideConfirmModal(true);
+    });
+    document.getElementById('confirmModal').addEventListener('click', (e) => {
+      if (e.target.id === 'confirmModal') {
+        markInputsForReentry();
+        hideConfirmModal(true);
+      }
+    });
+
+    loadMerchants();
+  </script>
+</body>
+</html>

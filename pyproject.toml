@@ -1,0 +1,38 @@
+[project]
+name = "credit-rewards"
+version = "0.1.0"
+description = "Payment-moment credit card reward recommendations"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "typer>=0.15.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "beautifulsoup4>=4.12.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "pytest-asyncio>=0.24.0"]
+
+[project.scripts]
+credit-rewards = "credit_rewards.cli:app"
+credit-rewards-db = "credit_rewards.ingest.cli:app"
+credit-rewards-web = "credit_rewards.web.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.editable]
+dev-mode-dirs = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/credit_rewards"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

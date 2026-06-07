@@ -1,0 +1,2305 @@
+{
+  "generated_at": "2026-06-07T00:47:17.558969+00:00",
+  "independent_ready": true,
+  "independent_blockers": [],
+  "l2_blockers": [],
+  "ship_ready": true,
+  "blockers": [],
+  "layers": [
+    {
+      "id": "l1",
+      "name": "L1 \u2014 DB \u2194 Reference",
+      "description": "Imported runtime data matches Rewards CC reference JSON",
+      "independent": true,
+      "pass_count": 20,
+      "total": 20,
+      "rate": 100.0,
+      "gate_pct": 100.0,
+      "status": "pass"
+    },
+    {
+      "id": "l2",
+      "name": "L2 \u2014 Reference verified",
+      "description": "Reference earn rows confirmed (match or issuer-backed reference)",
+      "independent": false,
+      "pass_count": 94,
+      "total": 104,
+      "rate": 90.4,
+      "gate_pct": 90.0,
+      "status": "pass"
+    },
+    {
+      "id": "l3",
+      "name": "L3 \u2014 Golden recommend",
+      "description": "Wallet scenarios pick expected best card",
+      "independent": true,
+      "pass_count": 22,
+      "total": 22,
+      "rate": 100.0,
+      "gate_pct": 95.0,
+      "status": "pass"
+    },
+    {
+      "id": "cpp",
+      "name": "CPP sources",
+      "description": "Official cents-per-point table coverage",
+      "independent": true,
+      "pass_count": 7,
+      "total": 7,
+      "rate": 100.0,
+      "gate_pct": 100.0,
+      "status": "pass"
+    },
+    {
+      "id": "mcc",
+      "name": "MCC coverage",
+      "description": "Top 24 checkout MCC codes mapped",
+      "independent": true,
+      "pass_count": 24,
+      "total": 24,
+      "rate": 100.0,
+      "gate_pct": 100.0,
+      "status": "pass"
+    }
+  ],
+  "cards": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "card_name": "Chase Freedom Unlimited Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "card_name": "Chase Sapphire Preferred Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "card_name": "Chase Freedom Flex Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "card_name": "Chase Sapphire Reserve Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "amex-gold",
+      "card_name": "The American Express\u00ae Gold Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "amex-platinum",
+      "card_name": "Platinum Card\u00ae",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "citi-double-cash",
+      "card_name": "Citi Double Cash\u00ae Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 0.0,
+      "l2_aligned": false,
+      "blocker": "L2 low"
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "card_name": "Venture X Rewards",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "capital-one-venture",
+      "card_name": "Venture Rewards Travel Card \u2014 Apply Today",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "card_name": "SavorOne Rewards: Cash Back on Dining & Grocery Stores",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "card_name": "Discover it\u00ae Cash Back Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "card_name": "Cash Back Credit Card - Active Cash Visa\u00ae Card Wells Fargo",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 0.0,
+      "l2_aligned": false,
+      "blocker": "L2 low"
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "card_name": "Our Best Rewards Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "card_name": "Blue Cash Preferred\u00ae\u202fCard",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "card_name": "Citi Custom Cash\u00ae Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "card_name": "Citi Strata Premier\u00ae - Travel Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "card_name": "Bank of America\u00ae Customized Cash Rewards Credit Card",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "apple-card",
+      "card_name": "Apple Card - Apple",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "card_name": "Blue Business Plus Credit Card from American Express",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "card_name": "Bilt Card - Earn the richest rewards - Bilt Rewards",
+      "source_type": "scrape",
+      "l1_ok": true,
+      "l1_diff_count": 0,
+      "l2_verified_pct": 100.0,
+      "l2_aligned": true,
+      "blocker": ""
+    }
+  ],
+  "l1": {
+    "pass_count": 20,
+    "total": 20,
+    "results": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "chase-sapphire-preferred",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "chase-sapphire-reserve",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "amex-gold",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "amex-platinum",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "citi-double-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "capital-one-venture-x",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "capital-one-venture",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "capital-one-savorone",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "discover-it-cash-back",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "wells-fargo-active-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "wells-fargo-autograph",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "amex-blue-cash-preferred",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "citi-custom-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "citi-strata-premier",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "bofa-customized-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "apple-card",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "amex-blue-business-plus",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      },
+      {
+        "card_key": "bilt-mastercard",
+        "ok": true,
+        "diff_count": 0,
+        "notes": [],
+        "diffs": []
+      }
+    ]
+  },
+  "l2": {
+    "verified_pct": 90.4,
+    "scraped_card_count": 20,
+    "cards": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "card_name": "Chase Freedom Unlimited Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 3,
+        "total_rows": 3,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#chase-freedom-unlimited"
+      },
+      {
+        "card_key": "chase-sapphire-preferred",
+        "card_name": "Chase Sapphire Preferred Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#chase-sapphire-preferred"
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "card_name": "Chase Freedom Flex Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#chase-freedomflex"
+      },
+      {
+        "card_key": "chase-sapphire-reserve",
+        "card_name": "Chase Sapphire Reserve Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#chase-sapphire-reserve"
+      },
+      {
+        "card_key": "amex-gold",
+        "card_name": "The American Express\u00ae Gold Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 4,
+        "total_rows": 4,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#amex-gold"
+      },
+      {
+        "card_key": "amex-platinum",
+        "card_name": "Platinum Card\u00ae",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#amex-platinum"
+      },
+      {
+        "card_key": "citi-double-cash",
+        "card_name": "Citi Double Cash\u00ae Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 0.0,
+        "verified_rows": 0,
+        "total_rows": 6,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true,
+        "compare_url": "/compare#citi-double-cash"
+      },
+      {
+        "card_key": "capital-one-venture-x",
+        "card_name": "Venture X Rewards",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 3,
+        "total_rows": 3,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#capital-one-venture-x"
+      },
+      {
+        "card_key": "capital-one-venture",
+        "card_name": "Venture Rewards Travel Card \u2014 Apply Today",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#capital-one-venture"
+      },
+      {
+        "card_key": "capital-one-savorone",
+        "card_name": "SavorOne Rewards: Cash Back on Dining & Grocery Stores",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 7,
+        "total_rows": 7,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#capital-one-savorone"
+      },
+      {
+        "card_key": "discover-it-cash-back",
+        "card_name": "Discover it\u00ae Cash Back Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#discover-it-cash-back"
+      },
+      {
+        "card_key": "wells-fargo-active-cash",
+        "card_name": "Cash Back Credit Card - Active Cash Visa\u00ae Card Wells Fargo",
+        "source_type": "scrape",
+        "verified_pct": 0.0,
+        "verified_rows": 0,
+        "total_rows": 4,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true,
+        "compare_url": "/compare#wells-fargo-active-cash"
+      },
+      {
+        "card_key": "wells-fargo-autograph",
+        "card_name": "Our Best Rewards Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 7,
+        "total_rows": 7,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#wells-fargo-autograph"
+      },
+      {
+        "card_key": "amex-blue-cash-preferred",
+        "card_name": "Blue Cash Preferred\u00ae\u202fCard",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#amex-blue-cash-preferred"
+      },
+      {
+        "card_key": "citi-custom-cash",
+        "card_name": "Citi Custom Cash\u00ae Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#citi-custom-cash"
+      },
+      {
+        "card_key": "citi-strata-premier",
+        "card_name": "Citi Strata Premier\u00ae - Travel Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 8,
+        "total_rows": 8,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#citi-strata-premier"
+      },
+      {
+        "card_key": "bofa-customized-cash",
+        "card_name": "Bank of America\u00ae Customized Cash Rewards Credit Card",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#bofa-customized-cash"
+      },
+      {
+        "card_key": "apple-card",
+        "card_name": "Apple Card - Apple",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#apple-card"
+      },
+      {
+        "card_key": "amex-blue-business-plus",
+        "card_name": "Blue Business Plus Credit Card from American Express",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 1,
+        "total_rows": 1,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#amex-blue-business-plus"
+      },
+      {
+        "card_key": "bilt-mastercard",
+        "card_name": "Bilt Card - Earn the richest rewards - Bilt Rewards",
+        "source_type": "scrape",
+        "verified_pct": 100.0,
+        "verified_rows": 1,
+        "total_rows": 1,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "compare_url": "/compare#bilt-mastercard"
+      }
+    ]
+  },
+  "l3": {
+    "configured": true,
+    "path": "/Users/canliu/Documents/GitHub/creditRewards/data/validation/golden_cases.yaml",
+    "total": 22,
+    "passed": 22,
+    "pass_rate": 1.0,
+    "cases": [
+      {
+        "id": "amex_gold_dining_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Dining",
+        "amount_usd": 100.0,
+        "reason": "4x MR beats 3x UR and 1x on dining",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          }
+        ]
+      },
+      {
+        "id": "amex_gold_grocery_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Grocery Stores",
+        "amount_usd": 100.0,
+        "reason": "4x on US supermarkets",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 3.0,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "csr_travel_500",
+        "ok": true,
+        "expected_winner": "chase-sapphire-reserve",
+        "actual_winner": "chase-sapphire-reserve",
+        "actual_value_usd": 80.0,
+        "category": "Travel",
+        "amount_usd": 500.0,
+        "reason": "CSR travel multiplier + UR CPP",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 80.0,
+            "multiplier": 8.0
+          },
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 22.0,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "cfu_base_50",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 1.7,
+        "category": "All Purchases",
+        "amount_usd": 50.0,
+        "reason": "Double Cash base earn vs CFU 1x (official CPP path)",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.7,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.5,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "mcc_grocery_5411",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 7.04,
+        "category": "Grocery Stores",
+        "amount_usd": 80.0,
+        "reason": "MCC maps to Grocery Stores",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 7.04,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 2.4,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "mcc_dining_5812",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 10.56,
+        "category": "Dining",
+        "amount_usd": 120.0,
+        "reason": "MCC maps to Dining",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 10.56,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 7.2,
+            "multiplier": 3.0
+          }
+        ]
+      },
+      {
+        "id": "csp_airfare_400",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 26.4,
+        "category": "Airfare",
+        "amount_usd": 400.0,
+        "reason": "Amex Gold airfare 3x MR @ official CPP beats CSP 2x",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 26.4,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 8.0,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "csr_gas_60",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 1.8,
+        "category": "Gas Stations",
+        "amount_usd": 60.0,
+        "reason": "CFU 1x beats CSR base on gas in reference rules",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.8,
+            "multiplier": 1.5
+          },
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 1.2,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "amex_bcp_grocery_100",
+        "ok": true,
+        "expected_winner": "amex-blue-cash-preferred",
+        "actual_winner": "amex-blue-cash-preferred",
+        "actual_value_usd": 6.0,
+        "category": "Grocery Stores",
+        "amount_usd": 100.0,
+        "reason": "BCP grocery category multiplier",
+        "rankings": [
+          {
+            "card_key": "amex-blue-cash-preferred",
+            "estimated_value_usd": 6.0,
+            "multiplier": 6.0
+          },
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 3.4,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "cap1_vx_travel_300",
+        "ok": true,
+        "expected_winner": "chase-sapphire-preferred",
+        "actual_winner": "chase-sapphire-preferred",
+        "actual_value_usd": 30.0,
+        "category": "Travel",
+        "amount_usd": 300.0,
+        "reason": "CSP travel beats Venture X in reference import",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 30.0,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "capital-one-venture-x",
+            "estimated_value_usd": 27.75,
+            "multiplier": 5.0
+          }
+        ]
+      },
+      {
+        "id": "discover_dining_75",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 4.5,
+        "category": "Dining",
+        "amount_usd": 75.0,
+        "reason": "Reference rules rank CFU above Discover on dining",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 4.5,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "discover-it-cash-back",
+            "estimated_value_usd": 3.75,
+            "multiplier": 5.0
+          }
+        ]
+      },
+      {
+        "id": "bilt_dining_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Dining",
+        "amount_usd": 100.0,
+        "reason": "Amex Gold dining beats Bilt base",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "bilt-mastercard",
+            "estimated_value_usd": 2.2,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "citi_custom_gas_50",
+        "ok": true,
+        "expected_winner": "citi-custom-cash",
+        "actual_winner": "citi-custom-cash",
+        "actual_value_usd": 2.5,
+        "category": "Gas Stations",
+        "amount_usd": 50.0,
+        "reason": "Custom Cash top category gas",
+        "rankings": [
+          {
+            "card_key": "citi-custom-cash",
+            "estimated_value_usd": 2.5,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.7,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "wf_autograph_travel_200",
+        "ok": true,
+        "expected_winner": "wells-fargo-autograph",
+        "actual_winner": "wells-fargo-autograph",
+        "actual_value_usd": 6.0,
+        "category": "Travel",
+        "amount_usd": 200.0,
+        "reason": "Autograph travel multiplier",
+        "rankings": [
+          {
+            "card_key": "wells-fargo-autograph",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "wells-fargo-active-cash",
+            "estimated_value_usd": 4.0,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "streaming_15",
+        "ok": true,
+        "expected_winner": "chase-sapphire-preferred",
+        "actual_winner": "chase-sapphire-preferred",
+        "actual_value_usd": 0.9,
+        "category": "Streaming Services",
+        "amount_usd": 15.0,
+        "reason": "CSP streaming category",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 0.9,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 0.45,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "transit_25",
+        "ok": true,
+        "expected_winner": "wells-fargo-autograph",
+        "actual_winner": "wells-fargo-autograph",
+        "actual_value_usd": 0.75,
+        "category": "Transit",
+        "amount_usd": 25.0,
+        "reason": "Autograph transit category",
+        "rankings": [
+          {
+            "card_key": "wells-fargo-autograph",
+            "estimated_value_usd": 0.75,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 0.75,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "hotels_400",
+        "ok": true,
+        "expected_winner": "amex-platinum",
+        "actual_winner": "amex-platinum",
+        "actual_value_usd": 44.0,
+        "category": "Hotels",
+        "amount_usd": 400.0,
+        "reason": "Platinum hotels multiplier in reference",
+        "rankings": [
+          {
+            "card_key": "amex-platinum",
+            "estimated_value_usd": 44.0,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 32.0,
+            "multiplier": 4.0
+          }
+        ]
+      },
+      {
+        "id": "online_120",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 3.6,
+        "category": "Online Shopping",
+        "amount_usd": 120.0,
+        "reason": "Reference online category mapping",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 3.6,
+            "multiplier": 1.5
+          },
+          {
+            "card_key": "chase-freedomflex",
+            "estimated_value_usd": 2.4,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "apple_base_100",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 3.4,
+        "category": "All Purchases",
+        "amount_usd": 100.0,
+        "reason": "Double Cash official CPP path beats Apple Card base",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 3.4,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "apple-card",
+            "estimated_value_usd": 1.0,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_gas_5541",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 1.36,
+        "category": "Gas Stations",
+        "amount_usd": 40.0,
+        "reason": "MCC gas \u2192 category earn path",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.36,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "chase-freedomflex",
+            "estimated_value_usd": 0.8,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_drug_5912",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 1.8,
+        "category": "Drugstores",
+        "amount_usd": 30.0,
+        "reason": "Drugstore MCC mapping + wallet ranking",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.8,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "amex-blue-cash-preferred",
+            "estimated_value_usd": 0.3,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_air_4511",
+        "ok": true,
+        "expected_winner": "chase-sapphire-reserve",
+        "actual_winner": "chase-sapphire-reserve",
+        "actual_value_usd": 64.0,
+        "category": "Airfare",
+        "amount_usd": 800.0,
+        "reason": "Airline MCC \u2192 airfare/travel earn",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 64.0,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "capital-one-venture-x",
+            "estimated_value_usd": 29.6,
+            "multiplier": 2.0
+          }
+        ]
+      }
+    ]
+  },
+  "cpp": {
+    "version": "2026-06-02",
+    "program_count": 7,
+    "programs_with_source": 7,
+    "card_override_count": 3,
+    "coverage_pct": 100.0,
+    "gate": 1.0,
+    "status": "pass",
+    "programs": [
+      {
+        "program": "American Express Membership Rewards",
+        "has_source": true
+      },
+      {
+        "program": "Chase Ultimate Rewards",
+        "has_source": true
+      },
+      {
+        "program": "Citi ThankYou Rewards",
+        "has_source": true
+      },
+      {
+        "program": "Capital One Miles",
+        "has_source": true
+      },
+      {
+        "program": "Bilt Points",
+        "has_source": true
+      },
+      {
+        "program": "Wells Fargo Go Far Rewards",
+        "has_source": true
+      },
+      {
+        "program": "Cash",
+        "has_source": true
+      }
+    ],
+    "overrides": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "use_program": "Chase Ultimate Rewards"
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "use_program": "Chase Ultimate Rewards"
+      },
+      {
+        "card_key": "citi-double-cash",
+        "use_program": "Citi ThankYou Rewards"
+      }
+    ]
+  },
+  "mcc": {
+    "total_checked": 24,
+    "mapped_count": 24,
+    "coverage_pct": 100.0,
+    "gate": 1.0,
+    "status": "pass",
+    "rows": [
+      {
+        "mcc": "5411",
+        "label": "Grocery",
+        "category": "Grocery Stores",
+        "description": "Grocery Stores, Supermarkets",
+        "mapped": true
+      },
+      {
+        "mcc": "5812",
+        "label": "Restaurant",
+        "category": "Dining",
+        "description": "Eating Places, Restaurants",
+        "mapped": true
+      },
+      {
+        "mcc": "5814",
+        "label": "Fast food",
+        "category": "Dining",
+        "description": "Fast Food Restaurants",
+        "mapped": true
+      },
+      {
+        "mcc": "5541",
+        "label": "Gas station",
+        "category": "Gas Stations",
+        "description": "Service Stations (with or without ancillary services)",
+        "mapped": true
+      },
+      {
+        "mcc": "5542",
+        "label": "Automated fuel",
+        "category": "Gas Stations",
+        "description": "Automated Fuel Dispensers",
+        "mapped": true
+      },
+      {
+        "mcc": "5912",
+        "label": "Drugstore",
+        "category": "Drugstores",
+        "description": "Drug Stores and Pharmacies",
+        "mapped": true
+      },
+      {
+        "mcc": "5310",
+        "label": "Discount store",
+        "category": "Grocery Stores",
+        "description": "Discount Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "5499",
+        "label": "Misc food",
+        "category": "Grocery Stores",
+        "description": "Miscellaneous Food Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "4121",
+        "label": "Taxicabs",
+        "category": "Lyft",
+        "description": "Taxicabs and Limousines",
+        "mapped": true
+      },
+      {
+        "mcc": "4131",
+        "label": "Bus lines",
+        "category": "Transit",
+        "description": "Bus Lines, Including Charters, Tour Buses",
+        "mapped": true
+      },
+      {
+        "mcc": "4511",
+        "label": "Airlines",
+        "category": "Airfare",
+        "description": "Airlines, Air Carriers",
+        "mapped": true
+      },
+      {
+        "mcc": "7011",
+        "label": "Hotels",
+        "category": "Hotels",
+        "description": "Lodging \u2014 Hotels, Motels, Resorts",
+        "mapped": true
+      },
+      {
+        "mcc": "4784",
+        "label": "Tolls",
+        "category": "Transit",
+        "description": "Tolls and Bridge Fees",
+        "mapped": true
+      },
+      {
+        "mcc": "5732",
+        "label": "Electronics",
+        "category": "Online Shopping",
+        "description": "Electronics Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "5651",
+        "label": "Clothing",
+        "category": "All Purchases",
+        "description": "Family Clothing Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "5999",
+        "label": "Misc retail",
+        "category": "All Purchases",
+        "description": "Miscellaneous and Specialty Retail Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "7523",
+        "label": "Parking",
+        "category": "Transit",
+        "description": "Parking Lots, Parking Meters and Garages",
+        "mapped": true
+      },
+      {
+        "mcc": "7832",
+        "label": "Motion pictures",
+        "category": "Entertainment",
+        "description": "Motion Picture Theaters",
+        "mapped": true
+      },
+      {
+        "mcc": "7997",
+        "label": "Recreation clubs",
+        "category": "Entertainment",
+        "description": "Membership Clubs, Recreation Sports, Private Golf",
+        "mapped": true
+      },
+      {
+        "mcc": "8299",
+        "label": "Schools",
+        "category": "All Purchases",
+        "description": "Schools and Educational Services",
+        "mapped": true
+      },
+      {
+        "mcc": "5311",
+        "label": "Department store",
+        "category": "All Purchases",
+        "description": "Department Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "5813",
+        "label": "Bars",
+        "category": "Dining",
+        "description": "Drinking Places (Alcoholic Beverages)",
+        "mapped": true
+      },
+      {
+        "mcc": "5977",
+        "label": "Cosmetics",
+        "category": "Drugstores",
+        "description": "Cosmetic Stores",
+        "mapped": true
+      },
+      {
+        "mcc": "7230",
+        "label": "Beauty shops",
+        "category": "Drugstores",
+        "description": "Beauty and Barber Shops",
+        "mapped": true
+      }
+    ]
+  },
+  "l1_snapshot": {
+    "date": "2026-06-07",
+    "pass_count": 20,
+    "total": 20,
+    "results": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "chase-sapphire-preferred",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "chase-sapphire-reserve",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "amex-gold",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "amex-platinum",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "citi-double-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "capital-one-venture-x",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "capital-one-venture",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "capital-one-savorone",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "discover-it-cash-back",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "wells-fargo-active-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "wells-fargo-autograph",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "amex-blue-cash-preferred",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "citi-custom-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "citi-strata-premier",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "bofa-customized-cash",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "apple-card",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "amex-blue-business-plus",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      },
+      {
+        "card_key": "bilt-mastercard",
+        "ok": true,
+        "diff_count": 0,
+        "notes": []
+      }
+    ]
+  },
+  "l2_scrape": {
+    "date": "2026-06-07",
+    "scraped_count": 20,
+    "reference_only_count": 0,
+    "scrape_attempt": {
+      "skipped": false,
+      "scraped": [
+        {
+          "card_key": "chase-freedom-unlimited",
+          "rules": 3
+        },
+        {
+          "card_key": "chase-sapphire-preferred",
+          "rules": 6
+        },
+        {
+          "card_key": "chase-freedomflex",
+          "rules": 6
+        },
+        {
+          "card_key": "chase-sapphire-reserve",
+          "rules": 6
+        },
+        {
+          "card_key": "amex-gold",
+          "rules": 4
+        },
+        {
+          "card_key": "amex-platinum",
+          "rules": 2
+        },
+        {
+          "card_key": "citi-double-cash",
+          "rules": 6
+        },
+        {
+          "card_key": "capital-one-venture-x",
+          "rules": 3
+        },
+        {
+          "card_key": "capital-one-venture",
+          "rules": 2
+        },
+        {
+          "card_key": "capital-one-savorone",
+          "rules": 7
+        },
+        {
+          "card_key": "discover-it-cash-back",
+          "rules": 2
+        },
+        {
+          "card_key": "wells-fargo-active-cash",
+          "rules": 4
+        },
+        {
+          "card_key": "wells-fargo-autograph",
+          "rules": 7
+        },
+        {
+          "card_key": "amex-blue-cash-preferred",
+          "rules": 6
+        },
+        {
+          "card_key": "citi-custom-cash",
+          "rules": 10
+        },
+        {
+          "card_key": "citi-strata-premier",
+          "rules": 8
+        },
+        {
+          "card_key": "bofa-customized-cash",
+          "rules": 10
+        },
+        {
+          "card_key": "apple-card",
+          "rules": 10
+        },
+        {
+          "card_key": "amex-blue-business-plus",
+          "rules": 1
+        },
+        {
+          "card_key": "bilt-mastercard",
+          "rules": 1
+        }
+      ],
+      "failed": []
+    },
+    "cards": [
+      {
+        "card_key": "chase-freedom-unlimited",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 3,
+        "total_rows": 3,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "chase-sapphire-preferred",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "chase-freedomflex",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "chase-sapphire-reserve",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "amex-gold",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 4,
+        "total_rows": 4,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "amex-platinum",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "citi-double-cash",
+        "source_type": "scrape",
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true,
+        "verified_rows": 0,
+        "total_rows": 6,
+        "verified_pct": 0.0
+      },
+      {
+        "card_key": "capital-one-venture-x",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 3,
+        "total_rows": 3,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "capital-one-venture",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "capital-one-savorone",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 7,
+        "total_rows": 7,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "discover-it-cash-back",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 2,
+        "total_rows": 2,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "wells-fargo-active-cash",
+        "source_type": "scrape",
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true,
+        "verified_rows": 0,
+        "total_rows": 4,
+        "verified_pct": 0.0
+      },
+      {
+        "card_key": "wells-fargo-autograph",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 7,
+        "total_rows": 7,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "amex-blue-cash-preferred",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 6,
+        "total_rows": 6,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "citi-custom-cash",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "citi-strata-premier",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 8,
+        "total_rows": 8,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "bofa-customized-cash",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "apple-card",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 10,
+        "total_rows": 10,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "amex-blue-business-plus",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 1,
+        "total_rows": 1,
+        "verified_pct": 100.0
+      },
+      {
+        "card_key": "bilt-mastercard",
+        "source_type": "scrape",
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false,
+        "verified_rows": 1,
+        "total_rows": 1,
+        "verified_pct": 100.0
+      }
+    ]
+  },
+  "l3_snapshot": {
+    "configured": true,
+    "path": "/Users/canliu/Documents/GitHub/creditRewards/data/validation/golden_cases.yaml",
+    "total": 22,
+    "passed": 22,
+    "pass_rate": 1.0,
+    "cases": [
+      {
+        "id": "amex_gold_dining_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Dining",
+        "amount_usd": 100.0,
+        "reason": "4x MR beats 3x UR and 1x on dining",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          }
+        ]
+      },
+      {
+        "id": "amex_gold_grocery_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Grocery Stores",
+        "amount_usd": 100.0,
+        "reason": "4x on US supermarkets",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 3.0,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "csr_travel_500",
+        "ok": true,
+        "expected_winner": "chase-sapphire-reserve",
+        "actual_winner": "chase-sapphire-reserve",
+        "actual_value_usd": 80.0,
+        "category": "Travel",
+        "amount_usd": 500.0,
+        "reason": "CSR travel multiplier + UR CPP",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 80.0,
+            "multiplier": 8.0
+          },
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 22.0,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "cfu_base_50",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 1.7,
+        "category": "All Purchases",
+        "amount_usd": 50.0,
+        "reason": "Double Cash base earn vs CFU 1x (official CPP path)",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.7,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.5,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "mcc_grocery_5411",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 7.04,
+        "category": "Grocery Stores",
+        "amount_usd": 80.0,
+        "reason": "MCC maps to Grocery Stores",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 7.04,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 2.4,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "mcc_dining_5812",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 10.56,
+        "category": "Dining",
+        "amount_usd": 120.0,
+        "reason": "MCC maps to Dining",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 10.56,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 7.2,
+            "multiplier": 3.0
+          }
+        ]
+      },
+      {
+        "id": "csp_airfare_400",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 26.4,
+        "category": "Airfare",
+        "amount_usd": 400.0,
+        "reason": "Amex Gold airfare 3x MR @ official CPP beats CSP 2x",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 26.4,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 8.0,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "csr_gas_60",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 1.8,
+        "category": "Gas Stations",
+        "amount_usd": 60.0,
+        "reason": "CFU 1x beats CSR base on gas in reference rules",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.8,
+            "multiplier": 1.5
+          },
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 1.2,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "amex_bcp_grocery_100",
+        "ok": true,
+        "expected_winner": "amex-blue-cash-preferred",
+        "actual_winner": "amex-blue-cash-preferred",
+        "actual_value_usd": 6.0,
+        "category": "Grocery Stores",
+        "amount_usd": 100.0,
+        "reason": "BCP grocery category multiplier",
+        "rankings": [
+          {
+            "card_key": "amex-blue-cash-preferred",
+            "estimated_value_usd": 6.0,
+            "multiplier": 6.0
+          },
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 3.4,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "cap1_vx_travel_300",
+        "ok": true,
+        "expected_winner": "chase-sapphire-preferred",
+        "actual_winner": "chase-sapphire-preferred",
+        "actual_value_usd": 30.0,
+        "category": "Travel",
+        "amount_usd": 300.0,
+        "reason": "CSP travel beats Venture X in reference import",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 30.0,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "capital-one-venture-x",
+            "estimated_value_usd": 27.75,
+            "multiplier": 5.0
+          }
+        ]
+      },
+      {
+        "id": "discover_dining_75",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 4.5,
+        "category": "Dining",
+        "amount_usd": 75.0,
+        "reason": "Reference rules rank CFU above Discover on dining",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 4.5,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "discover-it-cash-back",
+            "estimated_value_usd": 3.75,
+            "multiplier": 5.0
+          }
+        ]
+      },
+      {
+        "id": "bilt_dining_100",
+        "ok": true,
+        "expected_winner": "amex-gold",
+        "actual_winner": "amex-gold",
+        "actual_value_usd": 8.8,
+        "category": "Dining",
+        "amount_usd": 100.0,
+        "reason": "Amex Gold dining beats Bilt base",
+        "rankings": [
+          {
+            "card_key": "amex-gold",
+            "estimated_value_usd": 8.8,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "bilt-mastercard",
+            "estimated_value_usd": 2.2,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "citi_custom_gas_50",
+        "ok": true,
+        "expected_winner": "citi-custom-cash",
+        "actual_winner": "citi-custom-cash",
+        "actual_value_usd": 2.5,
+        "category": "Gas Stations",
+        "amount_usd": 50.0,
+        "reason": "Custom Cash top category gas",
+        "rankings": [
+          {
+            "card_key": "citi-custom-cash",
+            "estimated_value_usd": 2.5,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.7,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "wf_autograph_travel_200",
+        "ok": true,
+        "expected_winner": "wells-fargo-autograph",
+        "actual_winner": "wells-fargo-autograph",
+        "actual_value_usd": 6.0,
+        "category": "Travel",
+        "amount_usd": 200.0,
+        "reason": "Autograph travel multiplier",
+        "rankings": [
+          {
+            "card_key": "wells-fargo-autograph",
+            "estimated_value_usd": 6.0,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "wells-fargo-active-cash",
+            "estimated_value_usd": 4.0,
+            "multiplier": 2.0
+          }
+        ]
+      },
+      {
+        "id": "streaming_15",
+        "ok": true,
+        "expected_winner": "chase-sapphire-preferred",
+        "actual_winner": "chase-sapphire-preferred",
+        "actual_value_usd": 0.9,
+        "category": "Streaming Services",
+        "amount_usd": 15.0,
+        "reason": "CSP streaming category",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-preferred",
+            "estimated_value_usd": 0.9,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 0.45,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "transit_25",
+        "ok": true,
+        "expected_winner": "wells-fargo-autograph",
+        "actual_winner": "wells-fargo-autograph",
+        "actual_value_usd": 0.75,
+        "category": "Transit",
+        "amount_usd": 25.0,
+        "reason": "Autograph transit category",
+        "rankings": [
+          {
+            "card_key": "wells-fargo-autograph",
+            "estimated_value_usd": 0.75,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 0.75,
+            "multiplier": 1.5
+          }
+        ]
+      },
+      {
+        "id": "hotels_400",
+        "ok": true,
+        "expected_winner": "amex-platinum",
+        "actual_winner": "amex-platinum",
+        "actual_value_usd": 44.0,
+        "category": "Hotels",
+        "amount_usd": 400.0,
+        "reason": "Platinum hotels multiplier in reference",
+        "rankings": [
+          {
+            "card_key": "amex-platinum",
+            "estimated_value_usd": 44.0,
+            "multiplier": 5.0
+          },
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 32.0,
+            "multiplier": 4.0
+          }
+        ]
+      },
+      {
+        "id": "online_120",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 3.6,
+        "category": "Online Shopping",
+        "amount_usd": 120.0,
+        "reason": "Reference online category mapping",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 3.6,
+            "multiplier": 1.5
+          },
+          {
+            "card_key": "chase-freedomflex",
+            "estimated_value_usd": 2.4,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "apple_base_100",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 3.4,
+        "category": "All Purchases",
+        "amount_usd": 100.0,
+        "reason": "Double Cash official CPP path beats Apple Card base",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 3.4,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "apple-card",
+            "estimated_value_usd": 1.0,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_gas_5541",
+        "ok": true,
+        "expected_winner": "citi-double-cash",
+        "actual_winner": "citi-double-cash",
+        "actual_value_usd": 1.36,
+        "category": "Gas Stations",
+        "amount_usd": 40.0,
+        "reason": "MCC gas \u2192 category earn path",
+        "rankings": [
+          {
+            "card_key": "citi-double-cash",
+            "estimated_value_usd": 1.36,
+            "multiplier": 2.0
+          },
+          {
+            "card_key": "chase-freedomflex",
+            "estimated_value_usd": 0.8,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_drug_5912",
+        "ok": true,
+        "expected_winner": "chase-freedom-unlimited",
+        "actual_winner": "chase-freedom-unlimited",
+        "actual_value_usd": 1.8,
+        "category": "Drugstores",
+        "amount_usd": 30.0,
+        "reason": "Drugstore MCC mapping + wallet ranking",
+        "rankings": [
+          {
+            "card_key": "chase-freedom-unlimited",
+            "estimated_value_usd": 1.8,
+            "multiplier": 3.0
+          },
+          {
+            "card_key": "amex-blue-cash-preferred",
+            "estimated_value_usd": 0.3,
+            "multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "id": "mcc_air_4511",
+        "ok": true,
+        "expected_winner": "chase-sapphire-reserve",
+        "actual_winner": "chase-sapphire-reserve",
+        "actual_value_usd": 64.0,
+        "category": "Airfare",
+        "amount_usd": 800.0,
+        "reason": "Airline MCC \u2192 airfare/travel earn",
+        "rankings": [
+          {
+            "card_key": "chase-sapphire-reserve",
+            "estimated_value_usd": 64.0,
+            "multiplier": 4.0
+          },
+          {
+            "card_key": "capital-one-venture-x",
+            "estimated_value_usd": 29.6,
+            "multiplier": 2.0
+          }
+        ]
+      }
+    ]
+  }
+}

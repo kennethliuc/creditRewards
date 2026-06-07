@@ -1,0 +1,83 @@
+[
+  {
+    "cardKey": "amex-biz-bluebusinessplus",
+    "cardIssuer": "American Express",
+    "cardName": "Blue Business® Plus",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Business",
+    "cardUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex",
+    "annualFee": 0,
+    "fxFee": 2.7,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "15000",
+    "signupBonusType": "American Express Membership Rewards",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 3000,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 15,000 Membership Rewards® points after you spend $3,000 in eligible purchases on the Card within your first 3 months of Card Membership.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Car Rental Loss and Damage Insurance",
+        "benefitDesc": "As a Card Member, you can be covered for Damage to or Theft of a Rental Vehicle in a Covered Territory when you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver (CDW) at the Rental Company counter. Please read important exclusions and restrictions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "With Extended Warranty♦︎ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Assist® Hotline",
+        "benefitDesc": "Whenever you travel more than 100 miles from home, you may be eligible for 24/7 emergency assistance and coordination services , including medical, legal, and passport referrals, emergency cash wires, and missing luggage assistance.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "When an American Express® Card Member charges a Covered Purchase with their Eligible Card, Purchase Protection can help protect their Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. The coverage is limited up to $1,000 per occurrence, up to $50,000 per Card Member account per calendar year.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - All",
+        "spendBonusCategoryName": "All",
+        "spendBonusCategoryId": 34569,
+        "spendBonusCategoryGroup": "All",
+        "spendBonusSubcategoryGroup": "All",
+        "spendBonusDesc": "Earn 2X points on the first $50,000 in eligible purchases per calendar year and 1X points thereafter",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 50000,
+        "spendLimitResetPeriod": "Year"
+      }
+    ],
+    "annualSpend": []
+  }
+]

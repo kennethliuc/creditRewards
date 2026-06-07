@@ -1,0 +1,138 @@
+# Golden wallet scenarios — L3 recommend validation (see docs/validation-cross-check-plan.md)
+updated: "2026-06-02"
+
+cases:
+  # Headline cases (must pass 100%)
+  - id: amex_gold_dining_100
+    wallet: [amex-gold, chase-sapphire-preferred, chase-freedom-unlimited]
+    spend: { category: Dining, amount_usd: 100 }
+    expected_winner: amex-gold
+    reason: "4x MR beats 3x UR and 1x on dining"
+
+  - id: amex_gold_grocery_100
+    wallet: [amex-gold, chase-freedom-unlimited]
+    spend: { category: Grocery Stores, amount_usd: 100 }
+    expected_winner: amex-gold
+    reason: "4x on US supermarkets"
+
+  - id: csr_travel_500
+    wallet: [chase-sapphire-reserve, amex-gold]
+    spend: { category: Travel, amount_usd: 500 }
+    expected_winner: chase-sapphire-reserve
+    reason: "CSR travel multiplier + UR CPP"
+
+  - id: cfu_base_50
+    wallet: [chase-freedom-unlimited, citi-double-cash]
+    spend: { category: "All Purchases", amount_usd: 50 }
+    expected_winner: citi-double-cash
+    reason: "Double Cash base earn vs CFU 1x (official CPP path)"
+
+  - id: mcc_grocery_5411
+    wallet: [amex-gold, chase-freedom-unlimited]
+    spend: { mcc: "5411", amount_usd: 80 }
+    expected_winner: amex-gold
+    reason: "MCC maps to Grocery Stores"
+
+  - id: mcc_dining_5812
+    wallet: [amex-gold, chase-sapphire-preferred]
+    spend: { mcc: "5812", amount_usd: 120 }
+    expected_winner: amex-gold
+    reason: "MCC maps to Dining"
+
+  # Category coverage
+  - id: csp_airfare_400
+    wallet: [chase-sapphire-preferred, amex-gold]
+    spend: { category: Airfare, amount_usd: 400 }
+    expected_winner: amex-gold
+    reason: "Amex Gold airfare 3x MR @ official CPP beats CSP 2x"
+
+  - id: csr_gas_60
+    wallet: [chase-sapphire-reserve, chase-freedom-unlimited]
+    spend: { category: Gas Stations, amount_usd: 60 }
+    expected_winner: chase-freedom-unlimited
+    reason: "CFU 1x beats CSR base on gas in reference rules"
+
+  - id: amex_bcp_grocery_100
+    wallet: [amex-blue-cash-preferred, citi-double-cash]
+    spend: { category: Grocery Stores, amount_usd: 100 }
+    expected_winner: amex-blue-cash-preferred
+    reason: "BCP grocery category multiplier"
+
+  - id: cap1_vx_travel_300
+    wallet: [capital-one-venture-x, chase-sapphire-preferred]
+    spend: { category: Travel, amount_usd: 300 }
+    expected_winner: chase-sapphire-preferred
+    reason: "CSP travel beats Venture X in reference import"
+
+  - id: discover_dining_75
+    wallet: [discover-it-cash-back, chase-freedom-unlimited]
+    spend: { category: Dining, amount_usd: 75 }
+    expected_winner: chase-freedom-unlimited
+    reason: "Reference rules rank CFU above Discover on dining"
+
+  - id: bilt_dining_100
+    wallet: [bilt-mastercard, amex-gold]
+    spend: { category: Dining, amount_usd: 100 }
+    expected_winner: amex-gold
+    reason: "Amex Gold dining beats Bilt base"
+
+  - id: citi_custom_gas_50
+    wallet: [citi-custom-cash, citi-double-cash]
+    spend: { category: Gas Stations, amount_usd: 50 }
+    expected_winner: citi-custom-cash
+    reason: "Custom Cash top category gas"
+
+  - id: wf_autograph_travel_200
+    wallet: [wells-fargo-autograph, wells-fargo-active-cash]
+    spend: { category: Travel, amount_usd: 200 }
+    expected_winner: wells-fargo-autograph
+    reason: "Autograph travel multiplier"
+
+  - id: streaming_15
+    wallet: [chase-sapphire-preferred, chase-freedom-unlimited]
+    spend: { category: Streaming Services, amount_usd: 15 }
+    expected_winner: chase-sapphire-preferred
+    reason: "CSP streaming category"
+
+  - id: transit_25
+    wallet: [wells-fargo-autograph, chase-freedom-unlimited]
+    spend: { category: Transit, amount_usd: 25 }
+    expected_winner: wells-fargo-autograph
+    reason: "Autograph transit category"
+
+  - id: hotels_400
+    wallet: [chase-sapphire-reserve, amex-platinum]
+    spend: { category: Hotels, amount_usd: 400 }
+    expected_winner: amex-platinum
+    reason: "Platinum hotels multiplier in reference"
+
+  - id: online_120
+    wallet: [chase-freedomflex, chase-freedom-unlimited]
+    spend: { category: Online Shopping, amount_usd: 120 }
+    expected_winner: chase-freedom-unlimited
+    reason: "Reference online category mapping"
+
+  - id: apple_base_100
+    wallet: [apple-card, citi-double-cash]
+    spend: { category: "All Purchases", amount_usd: 100 }
+    expected_winner: citi-double-cash
+    reason: "Double Cash official CPP path beats Apple Card base"
+
+  # MCC coverage
+  - id: mcc_gas_5541
+    wallet: [chase-freedomflex, citi-double-cash]
+    spend: { mcc: "5541", amount_usd: 40 }
+    expected_winner: citi-double-cash
+    reason: "MCC gas → category earn path"
+
+  - id: mcc_drug_5912
+    wallet: [amex-blue-cash-preferred, chase-freedom-unlimited]
+    spend: { mcc: "5912", amount_usd: 30 }
+    expected_winner: chase-freedom-unlimited
+    reason: "Drugstore MCC mapping + wallet ranking"
+
+  - id: mcc_air_4511
+    wallet: [chase-sapphire-reserve, capital-one-venture-x]
+    spend: { mcc: "4511", amount_usd: 800 }
+    expected_winner: chase-sapphire-reserve
+    reason: "Airline MCC → airfare/travel earn"

@@ -1,0 +1,53 @@
+{
+  "version": "2026-06-02",
+  "program_count": 7,
+  "programs_with_source": 7,
+  "card_override_count": 3,
+  "coverage_pct": 100.0,
+  "gate": 1.0,
+  "status": "pass",
+  "programs": [
+    {
+      "program": "American Express Membership Rewards",
+      "has_source": true
+    },
+    {
+      "program": "Chase Ultimate Rewards",
+      "has_source": true
+    },
+    {
+      "program": "Citi ThankYou Rewards",
+      "has_source": true
+    },
+    {
+      "program": "Capital One Miles",
+      "has_source": true
+    },
+    {
+      "program": "Bilt Points",
+      "has_source": true
+    },
+    {
+      "program": "Wells Fargo Go Far Rewards",
+      "has_source": true
+    },
+    {
+      "program": "Cash",
+      "has_source": true
+    }
+  ],
+  "overrides": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "use_program": "Chase Ultimate Rewards"
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "use_program": "Chase Ultimate Rewards"
+    },
+    {
+      "card_key": "citi-double-cash",
+      "use_program": "Citi ThankYou Rewards"
+    }
+  ]
+}

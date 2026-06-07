@@ -1,0 +1,140 @@
+{
+  "card_key": "amex-gold",
+  "card_name": "American Express\u00ae Gold",
+  "issuer": "American Express",
+  "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1120466653,
+      "spend_bonus_category_name": "amextravel.com",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 4.0,
+      "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 4.0,
+      "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1120466653,
+      "spend_bonus_category_name": "amextravel.com",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 4.0,
+      "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1132334901,
+      "spend_bonus_category_name": "Grocery Stores",
+      "earn_multiplier": 4.0,
+      "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+      "spend_bonus_category_group": "Shopping"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "3x on flights booked directly with airlines or on amextravel.com",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1120466653,
+        "spend_bonus_category_name": "amextravel.com",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1120466653,
+        "spend_bonus_category_name": "amextravel.com",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 4.0,
+        "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 4.0,
+        "spend_bonus_desc": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 4.0,
+        "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1132334901,
+        "spend_bonus_category_name": "Grocery Stores",
+        "earn_multiplier": 4.0,
+        "spend_bonus_desc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar year, then 1X points for the rest of the year",
+        "spend_bonus_category_group": "Shopping"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "goldmansachs-applecard",
+    "cardName": "Apple Card",
+    "cardIssuer": "Goldman Sachs",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Single Category - Uber",
+    "spendBonusCategoryName": "Uber",
+    "spendBonusCategoryId": 698047,
+    "spendBonusDesc": "Save on everything you buy from Apple and at select merchants when you use Apple Card with Apple Pay",
+    "earnMultiplier": 3.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  },
+  {
+    "cardKey": "barclays-ubervisa",
+    "cardName": "Uber Visa",
+    "cardIssuer": "Barclays",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Uber",
+    "spendBonusCategoryName": "Uber",
+    "spendBonusCategoryId": 698047,
+    "spendBonusDesc": "",
+    "earnMultiplier": 5.0,
+    "spendType": "Uber Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

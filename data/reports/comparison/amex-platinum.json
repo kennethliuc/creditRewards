@@ -1,0 +1,80 @@
+{
+  "card_key": "amex-platinum",
+  "card_name": "The Platinum Card\u00ae",
+  "issuer": "American Express",
+  "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1534293716,
+      "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 2013874334,
+      "spend_bonus_category_name": "Airfare",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1534293716,
+      "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 2013874334,
+        "spend_bonus_category_name": "Airfare",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Membership Rewards\u00ae points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1534293716,
+        "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1534293716,
+        "spend_bonus_category_name": "Prepaid Hotels (amextravel.com)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Membership Rewards\u00ae points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

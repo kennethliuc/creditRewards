@@ -1,0 +1,40 @@
+[
+  {
+    "cardKey": "amex-gold",
+    "cardIssuer": "American Express",
+    "cardName": "American Express® Gold",
+    "cardNetwork": "American Express",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusDesc": "4x at restaurants worldwide, on up to $50K in purchases",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 50000,
+        "spendLimitResetPeriod": "Year"
+      },
+      {
+        "spendBonusCategoryName": "Grocery Stores",
+        "spendBonusCategoryId": 1132334901,
+        "spendBonusDesc": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per year",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 25000,
+        "spendLimitResetPeriod": "Year"
+      }
+    ]
+  }
+]

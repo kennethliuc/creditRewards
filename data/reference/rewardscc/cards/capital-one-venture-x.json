@@ -1,0 +1,262 @@
+[
+  {
+    "cardKey": "capitalone-venturex",
+    "cardIssuer": "Capital One",
+    "cardName": "Venture X Rewards",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Infinite®",
+    "cardType": "Personal",
+    "cardUrl": "https://www.capitalone.com/credit-cards/venture-x/",
+    "annualFee": 395,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Capital One Miles",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.8,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.5,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "75000",
+    "signupBonusType": "Capital One Miles",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 4000,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 395,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening.",
+    "trustedTraveler": "Receive up to a $120 credit for Global Entry or TSA PreCheck",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "Capital One Lounges - Escape the airport crowd by visiting our all-inclusive Lounges—enjoy unlimited complimentary access for you and 2 guests per visit. Partner Lounge Network - Enjoy unlimited access for you and 2 guests to 1,300+ lounges worldwide from Priority Pass™ and Plaza Premium Group.",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$300 Annual Travel Credit",
+        "benefitDesc": "Receive an annual $300 credit for bookings through Capital One Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "10,000 Miles Anniversary Bonus",
+        "benefitDesc": "Get 10,000 bonus miles (equal to $100 towards travel) every year, starting on your first anniversary.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto rental collision coverage",
+        "benefitDesc": "Get reimbursed for damage or theft when you pay for a rental car with the Venture X card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "When you use your covered Visa card to rent a vehicle, you’ll get built-in Auto Rental Coverage. You can be covered for physical damage, theft, reasonable and customary towing and loss-of-use charges. Decline the Collision Damage Waiver coverage offered by the rental agency and make sure your name is listed as the primary renter on the auto rental contract.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Capital One Dining",
+        "benefitDesc": "Cardholders enjoy access to exclusive reservations at award-winning restaurants and tickets to unforgettable culinary experiences.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Entertainment",
+        "benefitDesc": "Cardholders can experience events across, music, sports and dining with exclusive access to pre-sales, tickets and more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Capital One Lounges",
+        "benefitDesc": "Escape the airport crowd by visiting our all-inclusive Lounges—enjoy unlimited complimentary access for you and 2 guests per visit.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Cell Phone Protection",
+        "benefitDesc": "Protect your cell phone every time you pay your bill with your Venture X card. If it’s stolen or damaged, you’ll get reimbursed up to $800.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Complimentary membership to The Cultivist",
+        "benefitDesc": "Unlock the world of art. Get access to over 60 of the world’s best museums with a 6-month complimentary Enthusiast membership to The Cultivist (a $220 value).",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Complimentary PRIOR Subscription",
+        "benefitDesc": "Access extraordinary travel experiences, destination guides and more with a complimentary PRIOR Subscription (a $149 value).",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Extended Warranty Protection",
+        "benefitDesc": "When you use your covered Visa card for your eligible purchases Extended Warranty Protection will extend the term of your eligible manufacturer’s U.S. warranty by 1 additional year on eligible warranties of 3 years or less; for a manufacturer’s warranty of 3 months, the term is extended an additional 12 months for a combined total of 15 months of coverage; for warranties of one year or more an additional year of coverage is provided.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global Entry or TSA PreCheck® Credit",
+        "benefitDesc": "Receive up to a $120 credit for Global Entry or TSA PreCheck®.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Entry Statement Credit",
+        "benefitDesc": "Apply for Global Entry, a U.S. Customs and Border Protection program and use your Visa Infinite card to pay the application fee (currently $120) to receive a $120 statement credit. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Golf Benefits from Troon Rewards®",
+        "benefitDesc": "Your Visa Infinite card entitles you to automatic Platinum Status when you sign up for Troon Rewards®, for 20% saving on golf fees, merchandise and lessons at over 150 golf courses across the United States and world.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Hertz President’s Circle® status",
+        "benefitDesc": "Skip the rental counter and enjoy the widest selection of cars with a complimentary upgrade.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lifestyle Collection",
+        "benefitDesc": "Unlock premium benefits with every stay, like a $50 experience credit, room upgrades when available and more. Plus, earn 10X miles on hotel stays booked through Capital One Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lost Luggage Reimbursement",
+        "benefitDesc": "When you use your covered card to purchase an airline or common carrier ticket, you can be eligible to receive reimbursement for your checked luggage or carry-on baggage and their contents in the event of theft or misdirection by the airline or common carrier.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Miles Redemption",
+        "benefitDesc": "Use your Venture X miles to easily cover travel expenses, including flights, hotels, rental cars and more—plus transfer miles to your choice of 15+ travel loyalty programs.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Partner Lounge Network",
+        "benefitDesc": "Enjoy unlimited access for you and 2 guests to 1,300+ lounges worldwide from Priority Pass™ and Plaza Premium Group.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Premier Collection",
+        "benefitDesc": "Enjoy a $100 experience credit, daily breakfast for 2 and other premium benefits, plus earn 10X miles on hotel stays booked through Capital One Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Relais & Châteaux",
+        "benefitDesc": "Visa Infinite cardholders receive special privileges from Relais & Châteaux, a highly prestigious association of approximately 500 luxury properties worldwide.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "When you use your covered Visa card to make an eligible purchase, you can get return protection if you are dissatisfied with your item within 90 days of purchase and the merchant will not accept the return.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program; available 24x7; Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Stay connected in over 175 countries",
+        "benefitDesc": "Eligible Visa cardholders can now use the GigSky app to access complimentary or discounted global mobile data, in 175+ countries and destinations worldwide as well as on over 200 of the world’s top cruise ships. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Add peace of mind to your itinerary. Purchase your airline ticket with your covered Visa card and you can enjoy Travel Accident Insurance.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center, 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad. Keep in mind this program provides assistance only. Cardholders are responsible for the cost of any services received.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Cancellation / Interruption",
+        "benefitDesc": "When you purchase your travel ticket with a covered Visa card and you must cancel or interrupt your trip, this benefit can help reimburse for the non-refundable cost of your passenger fare. This coverage applies to more than air travel. It also can be in place when a covered Visa card is used to purchase a ticket for travel via other forms of eligible transportation, such as a ferry, rail, bus or cruise ship.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Delay Reimbursement",
+        "benefitDesc": "Anticipate delays when you purchase air travel with your covered Visa card. With Trip Delay coverage, you can receive up to $500.00 when you’re stuck for more than 6 hours due to a covered hazard such as equipment failure, inclement weather, strike and hijacking/skyjacking.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Concierge Services",
+        "benefitDesc": "Enjoy 24/7 personalized assistance for travel planning, dinner reservations, sports, entertainment tickets and more. Available 365 days a year from home or abroad.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Luxury Hotel Collection",
+        "benefitDesc": "The Visa Luxury Hotel Collection offers an unparalleled experience with an extraordinary collection of benefits like VIP status, complimentary breakfast daily, an upgrade when available and a special amenity unique to each property.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Rental car privileges",
+        "benefitDesc": "Book with your Visa Infinite card and get VIP amenities and discounts with Avis, Hertz, and National®.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Air Travel (Capital One)",
+        "spendBonusCategoryName": "Air Travel (Capital One)",
+        "spendBonusCategoryId": 1396855303,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Airfare",
+        "spendBonusDesc": "5X Miles on flights booked through Capital One Travel",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Car Rentals (Capital One)",
+        "spendBonusCategoryName": "Car Rentals (Capital One)",
+        "spendBonusCategoryId": 670145462,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Car Rental",
+        "spendBonusDesc": "10X Miles on rental cars booked through Capital One Travel",
+        "earnMultiplier": 10.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels (Capital One)",
+        "spendBonusCategoryName": "Hotels (Capital One)",
+        "spendBonusCategoryId": 1517218866,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel",
+        "spendBonusDesc": "10X Miles on hotels booked through Capital One Travel",
+        "earnMultiplier": 10.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": [
+      {
+        "annualSpendDesc": "Get 10,000 bonus miles (equal to $100 towards travel) every year, starting on your first anniversary"
+      }
+    ]
+  }
+]

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Validation Dashboard — CreditRewards</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0f14;
+      --card: #151b24;
+      --text: #eef2f7;
+      --muted: #93a0b0;
+      --accent: #3dd68c;
+      --border: #243041;
+      --pass: #3dd68c;
+      --fail: #ff7b7b;
+      --pending: #e6c84a;
+      --bar-bg: #1e2836;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      padding: 1rem;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+    p.sub { color: var(--muted); margin: 0 0 1rem; line-height: 1.4; }
+    a { color: var(--accent); }
+    .nav { margin-bottom: 1rem; font-size: .9rem; }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+    }
+    .ship-badge {
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: .5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .ship-badge.ready { color: var(--pass); border-color: var(--pass); }
+    .ship-badge.blocked { color: var(--fail); border-color: var(--fail); }
+    .ship-badge.pending { color: var(--pending); border-color: var(--pending); }
+    .meta-line { color: var(--muted); font-size: .85rem; }
+    .blockers { margin-top: .5rem; font-size: .85rem; color: var(--fail); }
+    .layers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+    }
+    .layer {
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .layer h2 { font-size: .85rem; margin: 0 0 .35rem; }
+    .layer p { font-size: .75rem; color: var(--muted); margin: 0 0 .75rem; line-height: 1.35; }
+    .layer .pct { font-size: 1.5rem; font-weight: 700; }
+    .layer .pct.pass { color: var(--pass); }
+    .layer .pct.fail { color: var(--fail); }
+    .layer .pct.pending { color: var(--pending); }
+    .bar {
+      height: 6px;
+      border-radius: 999px;
+      background: var(--bar-bg);
+      margin: .5rem 0;
+      overflow: hidden;
+    }
+    .bar > span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+    .bar.fail > span { background: var(--fail); }
+    .gate { font-size: .72rem; color: var(--muted); }
+    section {
+      margin-bottom: 1.25rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    section h2 { font-size: 1rem; margin: 0 0 .75rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    th, td {
+      text-align: left;
+      padding: .45rem .35rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 500; }
+    .ok { color: var(--pass); }
+    .bad { color: var(--fail); }
+    .tag {
+      display: inline-block;
+      font-size: .7rem;
+      padding: .15rem .45rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .tag.pass { color: var(--pass); border-color: var(--pass); }
+    .tag.fail { color: var(--fail); border-color: var(--fail); }
+    .mcc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: .5rem;
+    }
+    .mcc-cell {
+      padding: .5rem .65rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: .78rem;
+    }
+    .mcc-cell.mapped { border-color: rgba(61,214,140,.4); }
+    .mcc-cell.gap { border-color: rgba(255,123,123,.4); color: var(--fail); }
+    .golden-fail { background: rgba(255,123,123,.06); }
+    .loading { color: var(--muted); }
+    .error { color: var(--fail); display: none; margin-top: 1rem; }
+    .error.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="/">Recommend</a> · <a href="/compare">Scrape vs API</a> · <a href="/validation-report">Report</a> · <strong>Validation</strong></div>
+    <h1>Validation Dashboard</h1>
+    <p class="sub">Cross-check earn rules, CPP, MCC coverage, and golden recommend scenarios. One page to see if the data layer is reliable enough to ship.</p>
+
+    <div id="hero" class="hero loading">Loading validation…</div>
+    <div id="layers" class="layers"></div>
+
+    <section>
+      <h2>Card matrix (L1 + L2)</h2>
+      <div style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Card</th>
+              <th>L1 DB↔Ref</th>
+              <th>L2 verified</th>
+              <th>Aligned</th>
+              <th>Blocker</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="matrix"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Golden recommend (L3)</h2>
+      <div id="golden"></div>
+    </section>
+
+    <section>
+      <h2>MCC coverage</h2>
+      <div id="mcc" class="mcc-grid"></div>
+    </section>
+
+    <div id="error" class="error"></div>
+  </div>
+
+  <script>
+    const heroEl = document.getElementById('hero');
+    const layersEl = document.getElementById('layers');
+    const matrixEl = document.getElementById('matrix');
+    const goldenEl = document.getElementById('golden');
+    const mccEl = document.getElementById('mcc');
+    const errorEl = document.getElementById('error');
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s ?? '';
+      return d.innerHTML;
+    }
+
+    function statusClass(status) {
+      if (status === 'pass') return 'pass';
+      if (status === 'pending') return 'pending';
+      return 'fail';
+    }
+
+    function renderHero(data) {
+      const indep = data.independent_ready;
+      const shipClass = data.ship_ready ? 'ready' : (indep ? 'pending' : 'blocked');
+      const shipLabel = data.ship_ready ? 'Ship ready' : (indep ? 'L2 pending' : 'Fix independent first');
+      const indepBadge = indep
+        ? '<div class="ship-badge ready">Independent OK</div>'
+        : '<div class="ship-badge blocked">Independent blocked</div>';
+      const indepBlockers = (data.independent_blockers || []).length
+        ? `<div class="blockers">${data.independent_blockers.map(b => `• ${esc(b)}`).join('<br>')}</div>` : '';
+      const l2Blockers = (data.l2_blockers || []).length
+        ? `<div class="blockers" style="color:var(--pending)">${data.l2_blockers.map(b => `• ${esc(b)}`).join('<br>')}</div>` : '';
+      heroEl.classList.remove('loading');
+      heroEl.innerHTML = `
+        ${indepBadge}
+        <div class="ship-badge ${shipClass}">${shipLabel}</div>
+        <div>
+          <div class="meta-line">Generated ${esc(new Date(data.generated_at).toLocaleString())}</div>
+          ${indepBlockers}
+          ${l2Blockers}
+        </div>`;
+    }
+
+    function renderLayers(data) {
+      layersEl.innerHTML = (data.layers || []).map(layer => {
+        const cls = statusClass(layer.status);
+        const width = Math.min(100, layer.rate);
+        return `<article class="layer">
+          <h2>${esc(layer.name)}</h2>
+          <p>${esc(layer.description)}</p>
+          <div class="pct ${cls}">${layer.rate}%</div>
+          <div class="bar ${layer.status === 'pass' ? '' : 'fail'}"><span style="width:${width}%"></span></div>
+          <div class="gate">${layer.pass_count}/${layer.total} · gate ≥ ${layer.gate_pct}% · <span class="${cls}">${esc(layer.status)}</span></div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderMatrix(data) {
+      matrixEl.innerHTML = (data.cards || []).map(row => {
+        const l1 = row.l1_ok ? '<span class="ok">✓</span>' : `<span class="bad">✗ (${row.l1_diff_count})</span>`;
+        const l2cls = row.l2_verified_pct == null ? '' : (row.l2_verified_pct >= 90 ? 'ok' : 'bad');
+        const l2 = row.l2_verified_pct == null ? '—' : `${row.l2_verified_pct}%`;
+        return `<tr>
+          <td><strong>${esc(row.card_name)}</strong><br><span style="color:var(--muted)">${esc(row.card_key)} · ${esc(row.source_type || '')}</span></td>
+          <td>${l1}</td>
+          <td class="${l2cls}">${l2}</td>
+          <td>${row.l2_aligned === true ? '<span class="ok">yes</span>' : row.l2_aligned === false ? '—' : 'n/a'}</td>
+          <td>${row.blocker ? `<span class="bad">${esc(row.blocker)}</span>` : '—'}</td>
+          <td><a href="/compare">compare</a></td>
+        </tr>`;
+      }).join('');
+    }
+
+    function renderGolden(l3) {
+      if (!l3.configured) {
+        goldenEl.innerHTML = `<p class="meta-line">${esc(l3.message || 'No golden cases configured')}</p>`;
+        return;
+      }
+      const summary = `<p class="meta-line">${l3.passed}/${l3.total} passed (${Math.round(l3.pass_rate * 100)}%)</p>`;
+      const rows = (l3.cases || []).map(c => {
+        const cls = c.ok ? 'pass' : 'fail';
+        const detail = c.ok
+          ? `Winner <strong>${esc(c.actual_winner)}</strong> · $${c.actual_value_usd} · ${esc(c.category)}`
+          : c.error
+          ? esc(c.error)
+          : `Expected ${esc(c.expected_winner)}, got ${esc(c.actual_winner)}`;
+        return `<tr class="${c.ok ? '' : 'golden-fail'}">
+          <td>${esc(c.id)}</td>
+          <td><span class="tag ${cls}">${c.ok ? 'pass' : 'fail'}</span></td>
+          <td>${detail}</td>
+        </tr>`;
+      }).join('');
+      goldenEl.innerHTML = summary + `<table><thead><tr><th>Case</th><th>Status</th><th>Detail</th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+
+    function renderMcc(mcc) {
+      mccEl.innerHTML = (mcc.rows || []).map(r => {
+        const cls = r.mapped ? 'mapped' : 'gap';
+        return `<div class="mcc-cell ${cls}">
+          <strong>${esc(r.mcc)}</strong> ${esc(r.label)}<br>
+          <span style="color:var(--muted)">${esc(r.category)}</span>
+        </div>`;
+      }).join('');
+    }
+
+    async function load() {
+      try {
+        const res = await fetch('/api/validation');
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Request failed');
+        renderHero(data);
+        renderLayers(data);
+        renderMatrix(data);
+        renderGolden(data.l3 || {});
+        renderMcc(data.mcc || {});
+      } catch (err) {
+        heroEl.classList.remove('loading');
+        heroEl.textContent = '';
+        errorEl.textContent = err.message;
+        errorEl.classList.add('show');
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>

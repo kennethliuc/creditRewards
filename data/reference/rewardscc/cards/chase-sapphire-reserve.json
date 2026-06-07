@@ -1,0 +1,373 @@
+[
+  {
+    "cardKey": "chase-sapphirereserve",
+    "cardIssuer": "Chase",
+    "cardName": "Chase Sapphire Reserve® Credit Card",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Infinite®",
+    "cardType": "Personal",
+    "cardUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+    "annualFee": 795,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Chase Ultimate Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "150000",
+    "signupBonusType": "Chase Ultimate Rewards",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 6000,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 795,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 150,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
+    "trustedTraveler": "Receive one statement credit of up to $120 every four years as reimbursement for the application fee charged to your card.\r\n",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "Enjoy complimentary access to every Chase Sapphire Lounge by The Club with up to two guests, plus access to 1,300+ Priority Pass airport lounges worldwide. Also get access to select Air Canada Maple Leaf Lounges and Air Canada Cafés in the U.S., Canada and Europe with an eligible boarding pass.\r\n",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$120 in Lyft credits",
+        "benefitDesc": "Get access to up to $10 in monthly in-app credits, up to $120 annually, to use on Lyft rides through September 30, 2027.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$250 Shops at Chase credit",
+        "benefitDesc": "Get up to $250 in statement credits on purchases through The Shops at Chase after you spend $75,000 on your Sapphire Reserve card each calendar year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$300 Annual Dining Credit",
+        "benefitDesc": "Get up to $150 in statement credits from January through June and again from July through December for a maximum of $300 annually for dining at restaurants that are part of the Sapphire Reserve Exclusive Tables program.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$300 Annual Travel Credit",
+        "benefitDesc": "Get the most flexible travel creditopens overlay compared to any other card, with up to $300 in statement credits for travel purchases each account anniversary year. Purchases that qualify will not earn points.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$500 credit for stays with The Edit",
+        "benefitDesc": "Get up to $250 in statement credits from January through June, and again from July through December for a maximum of $500 annually for prepaid bookings made with The Edit.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$500 Southwest Airlines Credit",
+        "benefitDesc": "Get a $500 Southwest Airlines Credit through Chase Travel after you spend $75,000 on your Sapphire Reserve card each calendar year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "A-List Status with Southwest Airlines",
+        "benefitDesc": "Get Southwest A-List status after you spend $75,000 on your Sapphire Reserve card each year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Apple TV+ and Apple Music",
+        "benefitDesc": "Complimentary subscriptions to Apple TV+* and Apple Music through June 22, 2027, a value of $250 annually.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "When you use your covered Visa card to rent a vehicle, you’ll get built-in Auto Rental Coverage. You can be covered for physical damage, theft, reasonable and customary towing and loss-of-use charges. Decline the Collision Damage Waiver coverage offered by the rental agency and make sure your name is listed as the primary renter on the auto rental contract.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Auto Rental Coverage",
+        "benefitDesc": "Decline the rental company’s collision insurance and charge the entire rental cost to your card. Coverage is primary and provides reimbursement up to $75,000 for theft and collision damage for most rental vehicles in the U.S. and abroad.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Baggage Delay Insurance",
+        "benefitDesc": "Reimburses you up to $100 a day for up to 5 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Chase Sapphire Reserve Lounge Network",
+        "benefitDesc": "Enjoy complimentary access to every Chase Sapphire Lounge by The Club with up to two guests, plus access to 1,300+ Priority Pass airport lounges worldwide. Also get access to select Air Canada Maple Leaf Lounges and Air Canada Cafés in the U.S., Canada and Europe with an eligible boarding pass.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "DoorDash",
+        "benefitDesc": "Up to $300 annually in monthly DoorDash promos. Get up to $25 each month to spend on DoorDash, which includes a $5 monthly promo to spend on restaurant orders and two $10 promos each month to save on groceries, retail orders and more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Emergency Evacuation and Transportation",
+        "benefitDesc": "If you or a covered traveler are injured or become sick during a trip 100 miles or more from home that results in an emergency evacuation, you can be covered for medical services and transportation up to $100,000",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "Extends the time period of the manufacturer’s U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty Protection",
+        "benefitDesc": "When you use your covered Visa card for your eligible purchases Extended Warranty Protection will extend the term of your eligible manufacturer’s U.S. warranty by 1 additional year on eligible warranties of 3 years or less; for a manufacturer’s warranty of 3 months, the term is extended an additional 12 months for a combined total of 15 months of coverage; for warranties of one year or more an additional year of coverage is provided.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global Entry or TSA PreCheck® or NEXUS fee credit",
+        "benefitDesc": "Receive one statement credit of up to $120 every four years as reimbursement for the application fee charged to your card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Entry Statement Credit",
+        "benefitDesc": "Apply for Global Entry, a U.S. Customs and Border Protection program and use your Visa Infinite card to pay the application fee (currently $120) to receive a $120 statement credit. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Golf Benefits from Troon Rewards®",
+        "benefitDesc": "Your Visa Infinite card entitles you to automatic Platinum Status when you sign up for Troon Rewards®, for 20% saving on golf fees, merchandise and lessons at over 150 golf courses across the United States and world.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "IHG One Rewards Diamond Elite status",
+        "benefitDesc": "Get IHG One Rewards Diamond Elite status after you spend $75,000 on your Sapphire Reserve card each calendar year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "IHG One Rewards Platinum Elite status",
+        "benefitDesc": "Hotel stays just got even better. Chase Sapphire Reserve cardmembers are rewarded with complimentary IHG® Platinum Elite status until December 21, 2027.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lost Luggage Reimbursement",
+        "benefitDesc": "When you use your covered card to purchase an airline or common carrier ticket, you can be eligible to receive reimbursement for your checked luggage or carry-on baggage and their contents in the event of theft or misdirection by the airline or common carrier.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Peleton",
+        "benefitDesc": "Get up to $120 in annual statement credits towards Peloton memberships, including All-Access Membership, App One, App+, Guide or Strength+",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Relais & Châteaux",
+        "benefitDesc": "Visa Infinite cardholders receive special privileges from Relais & Châteaux, a highly prestigious association of approximately 500 luxury properties worldwide.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Reserve Travel Designers",
+        "benefitDesc": "Build and book a custom itinerary that unlocks hidden gems and new experiences around the world with a Reserve Travel Designer. This personalized service is valued at up to $300 per trip.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "When you use your covered Visa card to make an eligible purchase, you can get return protection if you are dissatisfied with your item within 90 days of purchase and the merchant will not accept the return.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "You can be reimbursed for eligible items that the store won’t accept within 90 days of purchase, up to $500 per item and up to $1,000 total per 12-month period.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Roadside Assistance",
+        "benefitDesc": "If you have a roadside emergency, you can call for a tow, battery assistance, tire change, locksmith or gas. You’re covered up to $50 per incident 4 times a year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program; available 24x7; Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sapphire Reserve Exclusive Tables",
+        "benefitDesc": "Access the most coveted dining experiences. Sapphire Reserve Exclusive Tables secures reservations for cardmembers at some of the most sought-after and hardest-to-book restaurants in major cities. This includes held tables at select restaurants through the Visa Dining Collection on OpenTable—a list of over 275 top dining spots across the U.S. curated by The Infatuation.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Sapphire Reserve Experiences",
+        "benefitDesc": "From world-class dining to once-in-a-lifetime events, Sapphire Reserve gives you access to the most sought-after destinations and gatherings—designed exclusively for Sapphire Reserve cardmembers.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Stay connected in over 175 countries",
+        "benefitDesc": "Eligible Visa cardholders can now use the GigSky app to access complimentary or discounted global mobile data, in 175+ countries and destinations worldwide as well as on over 200 of the world’s top cruise ships. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "StubHub",
+        "benefitDesc": "Get up to $300 in annual statement credits on concert and event tickets purchased on StubHub and viagogo",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "The Edit",
+        "benefitDesc": "Stay with The Edit by Chase Travel, our hand-picked collection of unforgettable hotels and resorts, with complimentary benefits like a $100 property credit, daily breakfast for 2, a room upgrade (if available) and more. From solo city indulgences and romantic wine country escapes to family-friendly beachfronts and outdoor adventures, you’ll find the perfect stay with The Edit.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Add peace of mind to your itinerary. Purchase your airline ticket with your covered Visa card and you can enjoy Travel Accident Insurance.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center, 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad. Keep in mind this program provides assistance only. Cardholders are responsible for the cost of any services received.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Cancellation / Interruption",
+        "benefitDesc": "When you purchase your travel ticket with a covered Visa card and you must cancel or interrupt your trip, this benefit can help reimburse for the non-refundable cost of your passenger fare. This coverage applies to more than air travel. It also can be in place when a covered Visa card is used to purchase a ticket for travel via other forms of eligible transportation, such as a ferry, rail, bus or cruise ship.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip cancellation and Interruption Insurance",
+        "benefitDesc": "If your trip is canceled or cut short by sickness, severe weather or other covered situations, you can be reimbursed up to $10,000 per covered traveler and $20,000 per trip for your pre-paid, non-refundable travel expenses, including passenger fares, tours and hotels.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Delay Reimbursement",
+        "benefitDesc": "Anticipate delays when you purchase air travel with your covered Visa card. With Trip Delay coverage, you can receive up to $500.00 when you’re stuck for more than 6 hours due to a covered hazard such as equipment failure, inclement weather, strike and hijacking/skyjacking.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Delay Reimbursement",
+        "benefitDesc": "If your common carrier travel is delayed more than 6 hours or requires an overnight stay, you are covered for unreimbursed expenses, such as meals and lodging, up to $500 per covered traveler.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Visa Infinite Concierge Services",
+        "benefitDesc": "Enjoy 24/7 personalized assistance for travel planning, dinner reservations, sports, entertainment tickets and more. Available 365 days a year from home or abroad.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Luxury Hotel Collection",
+        "benefitDesc": "The Visa Luxury Hotel Collection offers an unparalleled experience with an extraordinary collection of benefits like VIP status, complimentary breakfast daily, an upgrade when available and a special amenity unique to each property.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Rental car privileges",
+        "benefitDesc": "Book with your Visa Infinite card and get VIP amenities and discounts with Avis, Hertz, and National®.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "World of Hyatt Explorist status",
+        "benefitDesc": "Get World of Hyatt Explorist status after you spend $75,000 on your Chase Sapphire Reserve card each calendar year.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Airfare",
+        "spendBonusCategoryName": "Airfare",
+        "spendBonusCategoryId": 2013874334,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "All Airfare",
+        "spendBonusDesc": "4x points on flights purchased direct",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - All Travel (Ultimate Rewards)",
+        "spendBonusCategoryName": "All Travel (Ultimate Rewards)",
+        "spendBonusCategoryId": 605657763,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusDesc": "8x points on Chase Travel",
+        "earnMultiplier": 8.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Dining",
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusCategoryGroup": "Dining",
+        "spendBonusSubcategoryGroup": "All Dining",
+        "spendBonusDesc": "3x points on dining worldwide",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels",
+        "spendBonusCategoryName": "Hotels",
+        "spendBonusCategoryId": 164006704,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Hotel",
+        "spendBonusDesc": "4x points on hotels purchased direct\r\n",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Lyft",
+        "spendBonusCategoryName": "Lyft",
+        "spendBonusCategoryId": 606097,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Rideshare",
+        "spendBonusDesc": "5x total points on all eligible Lyft purchases",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 1,
+        "limitBeginDate": "2022-03-01",
+        "limitEndDate": "2027-09-30",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Peloton",
+        "spendBonusCategoryName": "Peloton",
+        "spendBonusCategoryId": 1800378277,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Sporting Goods",
+        "spendBonusDesc": "10x points on eligible Peloton hardware and accessory purchases",
+        "earnMultiplier": 10.0,
+        "isDateLimit": 1,
+        "limitBeginDate": "2022-03-01",
+        "limitEndDate": "2027-09-30",
+        "isSpendLimit": 1,
+        "spendLimit": 5000,
+        "spendLimitResetPeriod": "Year"
+      }
+    ],
+    "annualSpend": []
+  }
+]

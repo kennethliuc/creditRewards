@@ -1,0 +1,16 @@
+[
+  {
+    "transferPartnerName": "Hilton Honors",
+    "transferPartnerId": 1722165547,
+    "cardKey": "amex-platinum",
+    "cardName": "The Platinum Card®",
+    "cardIssuer": "American Express",
+    "rewardProgramName": "American Express Membership Rewards",
+    "baseSpendAmount": 1.0,
+    "spendTotal": 2.0,
+    "transferRatio": 2.0,
+    "bonusRatio": 0.0,
+    "totalRatio": 2.0,
+    "bonusDateEnd": ""
+  }
+]

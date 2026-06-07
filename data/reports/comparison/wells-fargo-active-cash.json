@@ -1,0 +1,17 @@
+{
+  "card_key": "wells-fargo-active-cash",
+  "card_name": "Wells Fargo Active Cash\u00ae",
+  "issuer": "Wells Fargo",
+  "source_url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+  "scraped_at": "2026-06-07T00:27:14+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [],
+  "reference_rules": [],
+  "matched": [],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

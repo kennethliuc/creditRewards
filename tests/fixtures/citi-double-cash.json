@@ -1,0 +1,14 @@
+[
+  {
+    "cardKey": "citi-double-cash",
+    "cardIssuer": "Citi",
+    "cardName": "Citi Double Cash® Card",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Cash Back",
+    "baseSpendEarnCurrency": "cash",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "spendBonusCategory": []
+  }
+]

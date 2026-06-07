@@ -1,0 +1,200 @@
+{
+  "card_key": "chase-sapphire-preferred",
+  "card_name": "Chase Sapphire Preferred\u00ae Credit Card",
+  "issuer": "Chase",
+  "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1565859350,
+      "spend_bonus_category_name": "Grocery Delivery",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 606097,
+      "spend_bonus_category_name": "Lyft",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on select streaming services",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Earn 2x on travel purchases",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 605657763,
+      "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 160378660,
+      "spend_bonus_category_name": "Dining",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+      "spend_bonus_category_group": "Dining"
+    },
+    {
+      "spend_bonus_category_id": 1565859350,
+      "spend_bonus_category_name": "Grocery Delivery",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+      "spend_bonus_category_group": "Shopping"
+    },
+    {
+      "spend_bonus_category_id": 606097,
+      "spend_bonus_category_name": "Lyft",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 248970942,
+      "spend_bonus_category_name": "Streaming Services",
+      "earn_multiplier": 3.0,
+      "spend_bonus_desc": "Earn 3x points on select streaming services",
+      "spend_bonus_category_group": "Telecom"
+    },
+    {
+      "spend_bonus_category_id": 176638649,
+      "spend_bonus_category_name": "Travel",
+      "earn_multiplier": 2.0,
+      "spend_bonus_desc": "Earn 2x on travel purchases",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 605657763,
+        "spend_bonus_category_name": "All Travel (Ultimate Rewards)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, excluding hotel purchases that qualify for the $50 Annual Ultimate Rewards Hotel Credit",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+        "spend_bonus_category_group": "Dining"
+      },
+      "reference": {
+        "spend_bonus_category_id": 160378660,
+        "spend_bonus_category_name": "Dining",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on dining, including eligible delivery services, takeout and dining out",
+        "spend_bonus_category_group": "Dining"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1565859350,
+        "spend_bonus_category_name": "Grocery Delivery",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+        "spend_bonus_category_group": "Shopping"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1565859350,
+        "spend_bonus_category_name": "Grocery Delivery",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on online grocery purchases (excluding Target, Walmart and wholesale clubs)",
+        "spend_bonus_category_group": "Shopping"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 606097,
+        "spend_bonus_category_name": "Lyft",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 606097,
+        "spend_bonus_category_name": "Lyft",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "Earn 5x points on Lyft rides through September 30, 2027",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on select streaming services",
+        "spend_bonus_category_group": "Telecom"
+      },
+      "reference": {
+        "spend_bonus_category_id": 248970942,
+        "spend_bonus_category_name": "Streaming Services",
+        "earn_multiplier": 3.0,
+        "spend_bonus_desc": "Earn 3x points on select streaming services",
+        "spend_bonus_category_group": "Telecom"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Earn 2x on travel purchases",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 176638649,
+        "spend_bonus_category_name": "Travel",
+        "earn_multiplier": 2.0,
+        "spend_bonus_desc": "Earn 2x on travel purchases",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

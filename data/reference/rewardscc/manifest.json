@@ -1,0 +1,222 @@
+{
+  "synced_at": "2026-06-07T01:39:18+00:00",
+  "scope": "registry",
+  "provider": "rewardscc",
+  "base_url": "https://rewards-credit-card-api.p.rapidapi.com",
+  "api_calls": 65,
+  "cards": {
+    "chase-freedom-unlimited": {
+      "path": "cards/chase-freedom-unlimited.json",
+      "rule_count": 3,
+      "rewards_cc_card_key": "chase-freedomunlimited",
+      "issuer": "Chase"
+    },
+    "chase-sapphire-preferred": {
+      "path": "cards/chase-sapphire-preferred.json",
+      "rule_count": 6,
+      "rewards_cc_card_key": "chase-sapphirepreferred",
+      "issuer": "Chase"
+    },
+    "chase-freedomflex": {
+      "path": "cards/chase-freedomflex.json",
+      "rule_count": 6,
+      "rewards_cc_card_key": "chase-freedomflex",
+      "issuer": "Chase"
+    },
+    "chase-sapphire-reserve": {
+      "path": "cards/chase-sapphire-reserve.json",
+      "rule_count": 6,
+      "rewards_cc_card_key": "chase-sapphirereserve",
+      "issuer": "Chase"
+    },
+    "amex-gold": {
+      "path": "cards/amex-gold.json",
+      "rule_count": 4,
+      "rewards_cc_card_key": "amex-gold",
+      "issuer": "American Express"
+    },
+    "amex-platinum": {
+      "path": "cards/amex-platinum.json",
+      "rule_count": 2,
+      "rewards_cc_card_key": "amex-platinum",
+      "issuer": "American Express"
+    },
+    "citi-double-cash": {
+      "path": "cards/citi-double-cash.json",
+      "rule_count": 0,
+      "rewards_cc_card_key": "citi-doublecash",
+      "issuer": "Citi"
+    },
+    "capital-one-venture-x": {
+      "path": "cards/capital-one-venture-x.json",
+      "rule_count": 3,
+      "rewards_cc_card_key": "capitalone-venturex",
+      "issuer": "Capital One"
+    },
+    "capital-one-venture": {
+      "path": "cards/capital-one-venture.json",
+      "rule_count": 2,
+      "rewards_cc_card_key": "capitalone-venture",
+      "issuer": "Capital One"
+    },
+    "capital-one-savorone": {
+      "path": "cards/capital-one-savorone.json",
+      "rule_count": 7,
+      "rewards_cc_card_key": "capitalone-savorone",
+      "issuer": "Capital One"
+    },
+    "discover-it-cash-back": {
+      "path": "cards/discover-it-cash-back.json",
+      "rule_count": 2,
+      "rewards_cc_card_key": "discover-cashback",
+      "issuer": "Discover"
+    },
+    "wells-fargo-active-cash": {
+      "path": "cards/wells-fargo-active-cash.json",
+      "rule_count": 0,
+      "rewards_cc_card_key": "wellsfargo-activecash",
+      "issuer": "Wells Fargo"
+    },
+    "wells-fargo-autograph": {
+      "path": "cards/wells-fargo-autograph.json",
+      "rule_count": 7,
+      "rewards_cc_card_key": "wellsfargo-autograph",
+      "issuer": "Wells Fargo"
+    },
+    "amex-blue-cash-preferred": {
+      "path": "cards/amex-blue-cash-preferred.json",
+      "rule_count": 6,
+      "rewards_cc_card_key": "amex-bluecashpreferred",
+      "issuer": "American Express"
+    },
+    "citi-custom-cash": {
+      "path": "cards/citi-custom-cash.json",
+      "rule_count": 10,
+      "rewards_cc_card_key": "citi-customcash",
+      "issuer": "Citi"
+    },
+    "citi-strata-premier": {
+      "path": "cards/citi-strata-premier.json",
+      "rule_count": 8,
+      "rewards_cc_card_key": "citi-premier",
+      "issuer": "Citi"
+    },
+    "bofa-customized-cash": {
+      "path": "cards/bofa-customized-cash.json",
+      "rule_count": 10,
+      "rewards_cc_card_key": "boa-customizedcashrewards",
+      "issuer": "Bank of America"
+    },
+    "apple-card": {
+      "path": "cards/apple-card.json",
+      "rule_count": 10,
+      "rewards_cc_card_key": "goldmansachs-applecard",
+      "issuer": "Goldman Sachs"
+    },
+    "amex-blue-business-plus": {
+      "path": "cards/amex-blue-business-plus.json",
+      "rule_count": 1,
+      "rewards_cc_card_key": "amex-biz-bluebusinessplus",
+      "issuer": "American Express"
+    },
+    "bilt-mastercard": {
+      "path": "cards/bilt-mastercard.json",
+      "rule_count": 1,
+      "rewards_cc_card_key": "cardless-biltblue",
+      "issuer": "Wells Fargo"
+    }
+  },
+  "endpoints": {
+    "category_list": "category_list.json",
+    "category_34569": "category_34569.json",
+    "category_601874": "category_601874.json",
+    "category_606097": "category_606097.json",
+    "category_698047": "category_698047.json",
+    "category_8864770": "category_8864770.json",
+    "category_9651961": "category_9651961.json",
+    "category_10026075": "category_10026075.json",
+    "category_11030576": "category_11030576.json",
+    "category_141708891": "category_141708891.json",
+    "category_156707710": "category_156707710.json",
+    "category_158645550": "category_158645550.json",
+    "category_160378660": "category_160378660.json",
+    "category_164006704": "category_164006704.json",
+    "category_176638649": "category_176638649.json",
+    "category_248970942": "category_248970942.json",
+    "category_494985384": "category_494985384.json",
+    "category_605657763": "category_605657763.json",
+    "category_646993658": "category_646993658.json",
+    "category_670145462": "category_670145462.json",
+    "category_773320415": "category_773320415.json",
+    "category_823114854": "category_823114854.json",
+    "category_875851528": "category_875851528.json",
+    "category_923252904": "category_923252904.json",
+    "category_929639080": "category_929639080.json",
+    "category_1096261883": "category_1096261883.json",
+    "category_1120466653": "category_1120466653.json",
+    "category_1132334901": "category_1132334901.json",
+    "category_1140889025": "category_1140889025.json",
+    "category_1386466601": "category_1386466601.json",
+    "category_1396855303": "category_1396855303.json",
+    "category_1455345350": "category_1455345350.json",
+    "category_1464813222": "category_1464813222.json",
+    "category_1468589631": "category_1468589631.json",
+    "category_1517218866": "category_1517218866.json",
+    "category_1534293716": "category_1534293716.json",
+    "category_1550080980": "category_1550080980.json",
+    "category_1565859350": "category_1565859350.json",
+    "category_1576799624": "category_1576799624.json",
+    "category_1754717276": "category_1754717276.json",
+    "category_1800378277": "category_1800378277.json",
+    "category_1809425434": "category_1809425434.json",
+    "category_1893120956": "category_1893120956.json",
+    "category_1982334500": "category_1982334500.json",
+    "category_2013874334": "category_2013874334.json"
+  },
+  "category_ids_synced": [
+    34569,
+    601874,
+    606097,
+    698047,
+    8864770,
+    9651961,
+    10026075,
+    11030576,
+    141708891,
+    156707710,
+    158645550,
+    160378660,
+    164006704,
+    176638649,
+    248970942,
+    494985384,
+    605657763,
+    646993658,
+    670145462,
+    773320415,
+    823114854,
+    875851528,
+    923252904,
+    929639080,
+    1096261883,
+    1120466653,
+    1132334901,
+    1140889025,
+    1386466601,
+    1396855303,
+    1455345350,
+    1464813222,
+    1468589631,
+    1517218866,
+    1534293716,
+    1550080980,
+    1565859350,
+    1576799624,
+    1754717276,
+    1800378277,
+    1809425434,
+    1893120956,
+    1982334500,
+    2013874334
+  ]
+}

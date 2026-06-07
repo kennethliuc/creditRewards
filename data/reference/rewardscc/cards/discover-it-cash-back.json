@@ -1,0 +1,93 @@
+[
+  {
+    "cardKey": "discover-cashback",
+    "cardIssuer": "Discover",
+    "cardName": "Discover it® Cash Back",
+    "cardNetwork": "Discover",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.discover.com/credit-cards/cash-back/it-card.html",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Discover Cashback Match",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "2 x Cash Back with Cashback Match, get an unlimited dollar-for-dollar match of all the cash back you've earned at the end of your first year, automatically",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "5% Cash Back",
+        "benefitDesc": "Earn 5% cash back on everyday purchases at different places you shop each quarter like grocery stores, restaurants, gas stations, and more, up to the quarterly maximum when you activate. Plus, earn 1% cash back on all other purchases.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "FICO® Credit Score",
+        "benefitDesc": "Discover gives cardmembers a FICO ® Credit score for free on monthly statements, mobile and online.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Unlimited Cashback Match",
+        "benefitDesc": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match. So you could turn $50 cash back into $100. Or $100 into $200.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Multi Category",
+        "spendBonusCategoryName": "Dining",
+        "spendBonusCategoryId": 160378660,
+        "spendBonusCategoryGroup": "Dining",
+        "spendBonusSubcategoryGroup": "All Dining",
+        "spendBonusDesc": "Earn 5% Cashback Bonus at Restaurants",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 1,
+        "limitBeginDate": "2026-04-01",
+        "limitEndDate": "2026-06-30",
+        "isSpendLimit": 1,
+        "spendLimit": 1500,
+        "spendLimitResetPeriod": "Quarter"
+      },
+      {
+        "spendBonusCategoryType": "Multi Category",
+        "spendBonusCategoryName": "Home Improvement",
+        "spendBonusCategoryId": 1550080980,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "All Home Improvement",
+        "spendBonusDesc": "Earn 5% Cashback Bonus at Home Improvement stores",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 1,
+        "limitBeginDate": "2026-04-01",
+        "limitEndDate": "2026-06-30",
+        "isSpendLimit": 1,
+        "spendLimit": 1500,
+        "spendLimitResetPeriod": "Quarter"
+      }
+    ],
+    "annualSpend": []
+  }
+]

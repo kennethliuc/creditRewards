@@ -1,0 +1,110 @@
+{
+  "card_key": "capital-one-venture-x",
+  "card_name": "Venture X Rewards",
+  "issuer": "Capital One",
+  "source_url": "https://www.capitalone.com/credit-cards/venture-x/",
+  "scraped_at": "2026-06-07T00:27:13+00:00",
+  "reference_synced_at": "2026-06-03T05:05:12+00:00",
+  "scraped_rules": [
+    {
+      "spend_bonus_category_id": 1396855303,
+      "spend_bonus_category_name": "Air Travel (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 670145462,
+      "spend_bonus_category_name": "Car Rentals (Capital One)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1517218866,
+      "spend_bonus_category_name": "Hotels (Capital One)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "reference_rules": [
+    {
+      "spend_bonus_category_id": 1396855303,
+      "spend_bonus_category_name": "Air Travel (Capital One)",
+      "earn_multiplier": 5.0,
+      "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 670145462,
+      "spend_bonus_category_name": "Car Rentals (Capital One)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    },
+    {
+      "spend_bonus_category_id": 1517218866,
+      "spend_bonus_category_name": "Hotels (Capital One)",
+      "earn_multiplier": 10.0,
+      "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+      "spend_bonus_category_group": "Travel"
+    }
+  ],
+  "matched": [
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1396855303,
+        "spend_bonus_category_name": "Air Travel (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1396855303,
+        "spend_bonus_category_name": "Air Travel (Capital One)",
+        "earn_multiplier": 5.0,
+        "spend_bonus_desc": "5X Miles on flights booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 670145462,
+        "spend_bonus_category_name": "Car Rentals (Capital One)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 670145462,
+        "spend_bonus_category_name": "Car Rentals (Capital One)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "10X Miles on rental cars booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    },
+    {
+      "scraped": {
+        "spend_bonus_category_id": 1517218866,
+        "spend_bonus_category_name": "Hotels (Capital One)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      },
+      "reference": {
+        "spend_bonus_category_id": 1517218866,
+        "spend_bonus_category_name": "Hotels (Capital One)",
+        "earn_multiplier": 10.0,
+        "spend_bonus_desc": "10X Miles on hotels booked through Capital One Travel",
+        "spend_bonus_category_group": "Travel"
+      }
+    }
+  ],
+  "mismatches": [],
+  "extra_scraped": [],
+  "extra_reference": [],
+  "aligned": true,
+  "scrape_verified": true,
+  "parser_fix_needed": false
+}

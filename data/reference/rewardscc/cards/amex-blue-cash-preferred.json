@@ -1,0 +1,163 @@
+[
+  {
+    "cardKey": "amex-bluecashpreferred",
+    "cardIssuer": "American Express",
+    "cardName": "Blue Cash Preferred®",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred",
+    "annualFee": 95,
+    "fxFee": 2.7,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "250",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Cash",
+    "signupBonusSpend": 3000,
+    "signupBonusLength": 6,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 1,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn $250 back after you spend $3,000 in purchases on your new Card within the first 6 months of Card Membership. You will receive the $250 back in the form of a statement credit.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$120 Disney Streaming Credit",
+        "benefitDesc": "Get up to a $10 monthly statement credit after using your enrolled Blue Cash Preferred Card for a subscription purchase, including a bundle subscription purchase, at Disneyplus.com, Hulu.com, or Plus.espn.com U.S. websites.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$120 Equinox+ Credit",
+        "benefitDesc": "Work out at home with Equinox+ and get up to $120 back annually. Use your Blue Cash Preferred® Card to pay for a subscription1 to Equinox+ at equinoxplus.com and receive $10 in monthly statement credits.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Car Rental Loss and Damage Insurance",
+        "benefitDesc": "Getting into your Rental Vehicle can be the start of a great vacation. When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver at the rental Company counter, you can be covered for Damage to or Theft of a Rental Vehicle in a Covered Territory. Please read important exclusions and restrictions. Not all vehicle types or rentals are covered. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand. This product provides secondary coverage and does not include liability coverage.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Assist® Hotline",
+        "benefitDesc": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 medical, legal, financial and other select emergency assistance and coordination services, such as medical and legal referrals, emergency cash wires, and missing luggage assistance. Card Members are responsible for the costs charged by third'party service providers.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "With Return Protection, you may return eligible purchases to American Express if the seller won't take them back up to 90 days from the date of purchase. American Express may refund the full purchase price excluding shipping and handling, up to $300 per item, up to a maximum of $1,000 per calendar year per Card account, if you purchased it entirely with your eligible American Express® Card. Purchases must be made in the U.S. or its territories.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Gas Stations",
+        "spendBonusCategoryName": "Gas Stations",
+        "spendBonusCategoryId": 1455345350,
+        "spendBonusCategoryGroup": "Auto",
+        "spendBonusSubcategoryGroup": "All Gas Stations",
+        "spendBonusDesc": "Earn 3% cash back at U.S. gas stations.",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Grocery Stores",
+        "spendBonusCategoryName": "Grocery Stores",
+        "spendBonusCategoryId": 1132334901,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Grocery",
+        "spendBonusDesc": "Earn 6% cash back at U.S. supermarkets on up to $6,000 per calendar year in purchases (then 1%).",
+        "earnMultiplier": 6.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 6000,
+        "spendLimitResetPeriod": "Year"
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Ridesharing",
+        "spendBonusCategoryName": "Ridesharing",
+        "spendBonusCategoryId": 1982334500,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Rideshare",
+        "spendBonusDesc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Streaming Services",
+        "spendBonusCategoryName": "Streaming Services",
+        "spendBonusCategoryId": 248970942,
+        "spendBonusCategoryGroup": "Telecom",
+        "spendBonusSubcategoryGroup": "Media",
+        "spendBonusDesc": "Earn 6% cash back on select U.S. streaming subscriptions.",
+        "earnMultiplier": 6.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Tolls",
+        "spendBonusCategoryName": "Tolls",
+        "spendBonusCategoryId": 11030576,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Transportation",
+        "spendBonusDesc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Transit",
+        "spendBonusCategoryName": "Transit",
+        "spendBonusCategoryId": 1468589631,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Transportation",
+        "spendBonusDesc": "Earn 3% cash back on transit including taxis/rideshare, parking, tolls, trains, buses and more.",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

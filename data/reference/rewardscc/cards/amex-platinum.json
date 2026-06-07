@@ -1,0 +1,263 @@
+[
+  {
+    "cardKey": "amex-platinum",
+    "cardIssuer": "American Express",
+    "cardName": "The Platinum Card®",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.americanexpress.com/us/credit-cards/card/platinum",
+    "annualFee": 895,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "80000",
+    "signupBonusType": "American Express Membership Rewards",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 12000,
+    "signupBonusLength": 6,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 895,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 80,000 Membership Rewards® points after you spend $12,000 on purchases on your new Card in your first 6 months of Card Membership.",
+    "trustedTraveler": "Fee Credit for Global Entry or TSA Precheck - Stay focused on getting where you need to go. Receive either a $120 statement credit for Global Entry or a statement credit for up to $85 for TSA PreCheck® through any Authorized Enrollment Provider for a 5-year plan only. TSA PreCheck can expedite security screening and Global Entry can reduce wait time at US Customs at select airports. And if you are approved for Global Entry you will also receive access to TSA PreCheck at no additional charge. Only one credit will be given in a 4 year period for Global Entry or in a 4.5 year period for TSA PreCheck for whichever application fee is charged to your Platinum Card first",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "The Global Lounge Collection - The American Express Global Lounge Collection® can provide an escape at the airport, with more than 1,400 airport lounges across 650 cities in 140 countries and counting",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$100 Saks Credit",
+        "benefitDesc": "Get up to $100 in statement credits annually for purchases at Saks Fifth Avenue or saks.com on your Platinum Card®. That's up to $50 on a semi-annual basis. Enrollment required.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$120 Uber One Credit",
+        "benefitDesc": "As a Platinum Card® Member, you can get up to $120 in statement credits each calendar year after you purchase an auto-renewing Uber One membership with the Card. Terms apply.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$155 Walmart+ Credit",
+        "benefitDesc": "A Walmart+ membership can get you free shipping with no order minimum on eligible items shipped by Walmart, free same-day delivery of groceries from store (where available, subject to order minimum), & more. Use your Platinum Card® to pay for a monthly Walmart+ membership (subject to auto-renewal) and receive a statement credit for $12.95 (plus applicable taxes) that covers the full cost (excluding any Plus Up Benefits) each month.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$200 Airline Fee Credit",
+        "benefitDesc": "Earn up to $200 per calendar year in statement credits after incidental fees are charged by your one selected qualifying airline to you Card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$200 Oura Ring Credit",
+        "benefitDesc": "Oura Ring can help you meet your health goals. You can receive up to $200 in statements credits when you use the Platinum Card® to purchase an Oura Ring at Ouraring.com each calendar year.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$200 Uber Cash",
+        "benefitDesc": "Add your Platinum Card® to your Uber account to start receiving $15 in Uber Cash each month, plus a bonus $20 in December, to use on rides and orders in the U.S. when you select an Amex Card for your transaction.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$209 CLEAR® Plus Credit",
+        "benefitDesc": "You can receive up to $209 in statement credits per calendar year after you sign up and pay for a CLEAR Plus Membership (subject to auto-renewal) with your eligible American Express Card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$300 Digital Entertainment Credit",
+        "benefitDesc": "Get up to $25 in statement credits each month after you pay for eligible purchases with the Platinum Card® at participating partners.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$300 Equinox Credit",
+        "benefitDesc": "Get up to $300 in statement credits each year when you pay for an Equinox+ digital subscription with live and on-demand classes, or an Equinox club membership (subject to auto-renewal) with your Platinum Card®.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$300 lululemon Credit",
+        "benefitDesc": "You can receive up to $75 in statement credits each quarter when you use the Card for eligible purchases at U.S. lululemon retail stores (excluding outlets) and lululemon.com.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$400 Resy Credit",
+        "benefitDesc": "Get up to $100 in statement credits each quarter when you use the Platinum Card® to make eligible purchases with Resy, including dining purchases at over 10,000 U.S. Resy restaurants\r\n.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$600 Hotel Credit",
+        "benefitDesc": "With over 3,000 hotels – and more hotels than any other credit card company1 where you can access a suite of special benefits – get up to $300 back in statement credits semi-annually on prepaid Fine Hotels + Resorts® or The Hotel Collection bookings through Amex Travel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "By Invitation Only®",
+        "benefitDesc": "Your Platinum Card® is your key to specially curated By Invitation Only® experiences. We customize once-in-a-lifetime events exclusively for our Platinum and Centurion Card Members, including Additional Centurion Cards. RSVP is required.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Car Rental Loss and Damage Insurance",
+        "benefitDesc": "Getting into your Rental Vehicle can be the start of a great vacation. When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver at the rental Company counter, you can be covered for Damage to or Theft of a Rental Vehicle in a Covered Territory. Please read important exclusions and restrictions. Not all vehicle types or rentals are covered. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand. This product provides secondary coverage and does not include liability coverage.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Car Rental Privileges",
+        "benefitDesc": "Enjoy complimentary membership in premium car rental programs, including special upgrades and discounts.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Cell Phone Protection",
+        "benefitDesc": "Fixing a cracked screen can be expensive. With Cell Phone Protection14, you can be reimbursed for your cost to repair or replace your damaged or stolen cell phone, including a cracked screen, for a maximum of up to $800 per claim with a limit of 2 approved claims per 12-month period when your cell phone line is listed on a wireless bill and the prior month's wireless bill was paid by an Eligible Card Account. A $50 deductible will apply to each approved claim.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "Why is it that as soon as a Manufacturer's Warranty runs out, something always seem to happen? Use your Eligible Card for Covered Purchases and you can have warranty protection for longer. Extended Warranty♦ matches the Original Manufacturer's Warranty for up to one additional year when you use your Eligible Card. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Fee Credit for Global Entry or TSA PreCheck",
+        "benefitDesc": "Stay focused on getting where you need to go. Receive either a statement credit available every 4 years after you apply for Global Entry ($120) or a statement credit available every 4.5 years after you apply for a five-year membership through any Authorized Enrollment Provider for TSA Pre'® (up to $85) with an eligible Card. If approved for Global Entry, at no additional charge, you will receive access to TSA Pre'®. Each Additional Card on eligible Card accounts is also eligible for one statement credit for an application fee for a five'year membership every 4 years for Global Entry or every 4.5 years for TSA Pre'®. To receive the statement credit, the application fee must be charged on the eligible Additional Card.To read the full terms and conditions, visit www.americanexpress.com/expeditedtravel.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Fine Hotels + Resorts® Program",
+        "benefitDesc": "With over 1,800 properties worldwide, when you book Fine Hotels + Resorts® through AmexTravel.com, you can receive a suite of benefits with an average total value of $550 in perks.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Dining Access by Resy",
+        "benefitDesc": "Get special access to sought-after restaurants when you add your Platinum Card® to your Resy profile. Access to Exclusive reservations, premium dining experiences, Priority Notify, and more, all from Resy.com or the Resy app.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Dining Collection",
+        "benefitDesc": "With the Global Dining Collection, you get special access to reservations and extraordinary experiences at restaurants that Platinum Card Members love, as well as the opportunity to meet some of your favorite chefs at exclusive culinary events.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Hilton Honors Gold Status",
+        "benefitDesc": "As a Platinum Card Member, enroll to receive complimentary Hilton Honors Gold Status.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Marriott Bonvoy Gold Elite Status",
+        "benefitDesc": "With Marriott Bonvoy Gold Elite status, you can receive upgrades to enhanced rooms upon check-in when available.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Platinum Card Concierge",
+        "benefitDesc": "Platinum Card Concierge is available 24/7 to help with anything from assisting with special dinner reservations to finding the perfect gift - simply call the number on the back of your Card and say \"Concierge\"\" when prompted or send your Concierge request to PlatinumRequests@concierge.americanexpress.com from the e-mail associated with your American Express account.\"",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Platinum Nights by Resy",
+        "benefitDesc": "With your Platinum Card®, you get access to Platinum Nights by Resy which offers you sought after reservations at participating top Resy restaurants on select nights. Add your eligible Card to your Resy profile to explore and book Platinum Nights reservations.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Platinum Travel Service",
+        "benefitDesc": "Platinum Travel counselors specialize in providing custom itineraries and tailored recommendations to help you make the most of your travels.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Preferred Access",
+        "benefitDesc": "With Preferred Seating, you will have access to premium seats for select cultural and sporting events, based on availability. For more information, please visit americanexpress.com/entertainment.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Premium Global Assist® Hotline",
+        "benefitDesc": "When you travel more than 100 miles from home, we can provide you with 24/7 medical, legal, financial or other select emergency coordination and assistance services. Emergency medical transportation assistance may be provided at no cost, if authorized and arranged by Premium Global Assist Hotline. Card Members may be responsible for the costs charged by third-party service providers. Emergency medical transportation assistance may be provided at no cost only if approved and coordinated by Premium Global Assist Hotline.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "Sometimes your favorite new purchase gets stolen, accidentally damaged, or lost. But when you use your Eligible Card for Covered Purchases, your Membership can help protect them for up to 90 days from the Covered Purchase date.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "With Return Protection, you may return eligible purchases to American Express if the seller won't take them back up to 90 days from the date of purchase.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "ShopRunner",
+        "benefitDesc": "Get free 2-day shipping13 on eligible items at a growing network of 100+ online stores with ShopRunner. Enroll in complimentary membership as a benefit of your eligible Card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "SoulCycle At-Home Bike Credit",
+        "benefitDesc": "Bring the experience of SoulCycle home with you. Get a $300 statement credit11 after you use your Platinum Card® to purchase a SoulCycle at-home bike.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "The Centurion® Lounge",
+        "benefitDesc": "Discover a sanctuary in the airport. Welcome to The Centurion® Lounge. From the moment you walk in, you'll see that this isn't the usual airport lounge. Unexpected touches like a locally-inspired fare meet productive workspaces, high-speed Wi-Fi and service that's second to none. And of course it's complimentary for Platinum Card® Members.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "The Global Lounge Collection®",
+        "benefitDesc": "The American Express Global Lounge Collection® can provide an escape at the airport. With more than 1,300 airport lounges across 140 countries and counting, you have more lounge options than any other credit card on the market.  As of 8/2020",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "The Hotel Collection",
+        "benefitDesc": "Delight your senses when you book The Hotel Collection with American Express Travel. Get a $100 experience credit for qualifying activities like dining or spa treatments. Minimum 2-night stay required to be eligible for the benefit. Experience credits vary by property.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Cancellation and Interruption",
+        "benefitDesc": "Despite our best efforts, sometimes things happen that are out of our control. If you purchase a round trip entirely with your eligible Card on or after January 1, 2020, and a covered reason cancels or interrupts your trip, Trip Cancellation and Interruption Insurance can help reimburse your non-refundable expenses purchased with the same eligible Card, up to $10,000 per trip and up to $20,000 per eligible Card per 12 consecutive month period. Terms, conditions and limitations apply.  Coverage is provided by New Hampshire Insurance Company, an AIG Company.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Delay Insurance",
+        "benefitDesc": "Booking the trip is easy. Avoiding delays is next to impossible. If a round-trip is paid for entirely with your eligible Card on or after January 1, 2020, and a covered reason delays your trip more than 6 hours, Trip Delay Insurance can help reimburse certain additional expenses purchased with your same eligible Card, up to $500 per trip, maximum 2 claims per eligible Card per 12 consecutive month period. Terms, conditions and limitations apply.  Coverage is provided by New Hampshire Insurance Company, an AIG Company.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Airfare",
+        "spendBonusCategoryName": "Airfare",
+        "spendBonusCategoryId": 2013874334,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "All Airfare",
+        "spendBonusDesc": "5X Membership Rewards® points on up to $500,000 per calendar year on flights booked directly with airlines or with American Express Travel via AmexTravel.com (then 1X)",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 500000,
+        "spendLimitResetPeriod": "Year"
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Prepaid Hotels (amextravel.com)",
+        "spendBonusCategoryName": "Prepaid Hotels (amextravel.com)",
+        "spendBonusCategoryId": 1534293716,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel",
+        "spendBonusDesc": "5X Membership Rewards® points on eligible prepaid hotels booked with American Express Travel, including The Hotel Collection.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

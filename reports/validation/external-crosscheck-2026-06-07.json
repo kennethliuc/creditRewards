@@ -1,0 +1,1702 @@
+{
+  "ok": true,
+  "cross_verified_pct": 90.6,
+  "gate_pct": 90.0,
+  "scraped_count": 20,
+  "cards": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "card_name": "Chase Freedom Unlimited Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 0,
+      "aligned": false,
+      "cross_verified_rows": 3,
+      "total_rows": 3,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "card_name": "Chase Sapphire Preferred Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 8,
+      "aligned": false,
+      "cross_verified_rows": 6,
+      "total_rows": 6,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "card_name": "Chase Freedom Flex Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 8,
+      "aligned": false,
+      "cross_verified_rows": 5,
+      "total_rows": 6,
+      "cross_verified_pct": 83.3
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "card_name": "Chase Sapphire Reserve Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 5,
+      "aligned": false,
+      "cross_verified_rows": 4,
+      "total_rows": 6,
+      "cross_verified_pct": 66.7
+    },
+    {
+      "card_key": "amex-gold",
+      "card_name": "The American Express\u00ae Gold Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 3,
+      "aligned": false,
+      "cross_verified_rows": 4,
+      "total_rows": 4,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-platinum",
+      "card_name": "Platinum Card\u00ae",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 17,
+      "aligned": false,
+      "cross_verified_rows": 2,
+      "total_rows": 2,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-double-cash",
+      "card_name": "Citi Double Cash\u00ae Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 0,
+      "aligned": true,
+      "cross_verified_rows": 1,
+      "total_rows": 1,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "card_name": "Venture X Rewards",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 4,
+      "aligned": false,
+      "cross_verified_rows": 3,
+      "total_rows": 3,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "capital-one-venture",
+      "card_name": "Venture Rewards Travel Card \u2014 Apply Today",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 11,
+      "aligned": false,
+      "cross_verified_rows": 2,
+      "total_rows": 2,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "card_name": "SavorOne Rewards: Cash Back on Dining & Grocery Stores",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 4,
+      "aligned": false,
+      "cross_verified_rows": 5,
+      "total_rows": 7,
+      "cross_verified_pct": 71.4
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "card_name": "Discover it\u00ae Cash Back Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 1,
+      "aligned": false,
+      "cross_verified_rows": 2,
+      "total_rows": 2,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "card_name": "Cash Back Credit Card - Active Cash Visa\u00ae Card Wells Fargo",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 4,
+      "aligned": false,
+      "cross_verified_rows": 1,
+      "total_rows": 1,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "card_name": "Our Best Rewards Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 1,
+      "aligned": false,
+      "cross_verified_rows": 7,
+      "total_rows": 7,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "card_name": "Blue Cash Preferred\u00ae\u202fCard",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 6,
+      "aligned": true,
+      "cross_verified_rows": 6,
+      "total_rows": 6,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "card_name": "Citi Custom Cash\u00ae Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 10,
+      "aligned": false,
+      "cross_verified_rows": 10,
+      "total_rows": 10,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "card_name": "Citi Strata Premier\u00ae - Travel Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 6,
+      "aligned": false,
+      "cross_verified_rows": 5,
+      "total_rows": 8,
+      "cross_verified_pct": 62.5
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "card_name": "Bank of America\u00ae Customized Cash Rewards Credit Card",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 10,
+      "aligned": false,
+      "cross_verified_rows": 10,
+      "total_rows": 10,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "apple-card",
+      "card_name": "Apple Card - Apple",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 5,
+      "aligned": false,
+      "cross_verified_rows": 10,
+      "total_rows": 10,
+      "cross_verified_pct": 100.0
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "card_name": "Blue Business Plus Credit Card from American Express",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 10,
+      "aligned": false,
+      "cross_verified_rows": 0,
+      "total_rows": 1,
+      "cross_verified_pct": 0.0
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "card_name": "Bilt \u2013 Earn rewards on rent and mortgage.",
+      "scrape_ok": true,
+      "scrape_error": "",
+      "raw_rule_count": 1,
+      "aligned": true,
+      "cross_verified_rows": 1,
+      "total_rows": 1,
+      "cross_verified_pct": 100.0
+    }
+  ],
+  "rows": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_id": 605657763,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedom-unlimited",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedom-unlimited",
+      "category_name": "Drugstores",
+      "category_id": 1096261883,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "Lyft",
+      "category_id": 606097,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "Travel",
+      "category_id": 176638649,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_id": 605657763,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "category_name": "Grocery Delivery",
+      "category_id": 1565859350,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "Drugstores",
+      "category_id": 1096261883,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "both_supported",
+      "note": "Issuer page mentions both rates \u2014 wording may be ambiguous or conditional."
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_id": 605657763,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "Amazon",
+      "category_id": 141708891,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "Feeding America",
+      "category_id": 494985384,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_id": 605657763,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "Airfare",
+      "category_id": 2013874334,
+      "multiplier": 4.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "Lyft",
+      "category_id": 606097,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "both_supported",
+      "note": "Issuer page mentions both rates \u2014 wording may be ambiguous or conditional."
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "All Travel (Ultimate Rewards)",
+      "category_id": 605657763,
+      "multiplier": 8.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "Hotels",
+      "category_id": 164006704,
+      "multiplier": 4.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "category_name": "Peloton",
+      "category_id": 1800378277,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "amex-gold",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 4.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-gold",
+      "category_name": "Airfare",
+      "category_id": 2013874334,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-gold",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 4.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-gold",
+      "category_name": "amextravel.com",
+      "category_id": 1120466653,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "amex-platinum",
+      "category_name": "Airfare",
+      "category_id": 2013874334,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-platinum",
+      "category_name": "Prepaid Hotels (amextravel.com)",
+      "category_id": 1534293716,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "citi-double-cash",
+      "category_name": "All Purchases (base)",
+      "category_id": 0,
+      "multiplier": 0.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "base-only card; base rate matches reference (bonus rules empty)"
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "category_name": "Air Travel (Capital One)",
+      "category_id": 1396855303,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "category_name": "Hotels (Capital One)",
+      "category_id": 1517218866,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "category_name": "Car Rentals (Capital One)",
+      "category_id": 670145462,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-venture",
+      "category_name": "Hotels (Capital One)",
+      "category_id": 1517218866,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-venture",
+      "category_name": "Car Rentals (Capital One)",
+      "category_id": 670145462,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Entertainment (Capital One)",
+      "category_id": 823114854,
+      "multiplier": 8.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Entertainment",
+      "category_id": 1754717276,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Car Rentals (Capital One)",
+      "category_id": 670145462,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "category_name": "Hotels (Capital One)",
+      "category_id": 1517218866,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "category_name": "Home Improvement",
+      "category_id": 1550080980,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "category_name": "All Purchases (base)",
+      "category_id": 0,
+      "multiplier": 0.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "base-only card; base rate matches reference (bonus rules empty)"
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Gas Stations",
+      "category_id": 1455345350,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Telecom",
+      "category_id": 1464813222,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Tolls",
+      "category_id": 11030576,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Transit",
+      "category_id": 1468589631,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "category_name": "Travel",
+      "category_id": 176638649,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 6.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Ridesharing",
+      "category_id": 1982334500,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Transit",
+      "category_id": 1468589631,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 6.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Tolls",
+      "category_id": 11030576,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "category_name": "Gas Stations",
+      "category_id": 1455345350,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Travel",
+      "category_id": 176638649,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Drugstores",
+      "category_id": 1096261883,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Fitness Clubs",
+      "category_id": 1576799624,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Gas Stations",
+      "category_id": 1455345350,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Home Improvement",
+      "category_id": 1550080980,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Live Entertainment",
+      "category_id": 929639080,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "category_name": "Transit",
+      "category_id": 1468589631,
+      "multiplier": 5.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Gas Stations",
+      "category_id": 1455345350,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Hotels",
+      "category_id": 164006704,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "scrape_supported",
+      "note": "Website evidence supports scraped 10.0x; no clear support for reference 3.0x."
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Airfare",
+      "category_id": 2013874334,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Attractions (CitiTravel.com)",
+      "category_id": 923252904,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Car Rentals (CitiTravel.com)",
+      "category_id": 646993658,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "category_name": "Hotels (CitiTravel.com)",
+      "category_id": 773320415,
+      "multiplier": 10.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Grocery Stores",
+      "category_id": 1132334901,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Wholesale Clubs",
+      "category_id": 1386466601,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Gas Stations",
+      "category_id": 1455345350,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Dining",
+      "category_id": 160378660,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Drugstores",
+      "category_id": 1096261883,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Home Improvement",
+      "category_id": 1550080980,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Online Shopping",
+      "category_id": 158645550,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Streaming Services",
+      "category_id": 248970942,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Telecom",
+      "category_id": 1464813222,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "category_name": "Travel",
+      "category_id": 176638649,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Apple",
+      "category_id": 8864770,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Apple Pay",
+      "category_id": 1140889025,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Exxon",
+      "category_id": 10026075,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Mobil",
+      "category_id": 9651961,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Nike",
+      "category_id": 601874,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Panera",
+      "category_id": 156707710,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "T-Mobile",
+      "category_id": 875851528,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Uber",
+      "category_id": 698047,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Uber Eats",
+      "category_id": 1809425434,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "apple-card",
+      "category_name": "Walgreens",
+      "category_id": 1893120956,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "reference_supported",
+      "note": "Issuer page supports API rate; scraper missed this category."
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "category_name": "All",
+      "category_id": 34569,
+      "multiplier": 2.0,
+      "signals": [
+        "reference",
+        "issuer_page"
+      ],
+      "cross_verified": false,
+      "evidence_verdict": "unclear",
+      "note": "No clear issuer-page snippet for either side \u2014 manual review."
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "category_name": "Lyft",
+      "category_id": 606097,
+      "multiplier": 3.0,
+      "signals": [
+        "reference",
+        "raw_scrape",
+        "issuer_page"
+      ],
+      "cross_verified": true,
+      "evidence_verdict": "aligned",
+      "note": "raw scrape aligned with reference"
+    }
+  ],
+  "blockers": [],
+  "date": "2026-06-07",
+  "summary": {
+    "cross_verified_rows": 87,
+    "total_rows": 96,
+    "legacy_reference_verification": [
+      {
+        "verified_rows": 4,
+        "total_rows": 4,
+        "verified_pct": 100.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 6,
+        "total_rows": 10,
+        "verified_pct": 60.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 5,
+        "total_rows": 12,
+        "verified_pct": 41.7,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 4,
+        "total_rows": 8,
+        "verified_pct": 50.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 4,
+        "total_rows": 4,
+        "verified_pct": 100.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 2,
+        "total_rows": 18,
+        "verified_pct": 11.1,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 0,
+        "total_rows": 0,
+        "verified_pct": 100.0,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false
+      },
+      {
+        "verified_rows": 4,
+        "total_rows": 5,
+        "verified_pct": 80.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 3,
+        "total_rows": 12,
+        "verified_pct": 25.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 5,
+        "total_rows": 8,
+        "verified_pct": 62.5,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 2,
+        "total_rows": 4,
+        "verified_pct": 50.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 0,
+        "total_rows": 4,
+        "verified_pct": 0.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 7,
+        "total_rows": 8,
+        "verified_pct": 87.5,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 6,
+        "total_rows": 6,
+        "verified_pct": 100.0,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false
+      },
+      {
+        "verified_rows": 10,
+        "total_rows": 11,
+        "verified_pct": 90.9,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": false
+      },
+      {
+        "verified_rows": 4,
+        "total_rows": 11,
+        "verified_pct": 36.4,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 10,
+        "total_rows": 11,
+        "verified_pct": 90.9,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": false
+      },
+      {
+        "verified_rows": 10,
+        "total_rows": 16,
+        "verified_pct": 62.5,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": true
+      },
+      {
+        "verified_rows": 0,
+        "total_rows": 11,
+        "verified_pct": 0.0,
+        "aligned": false,
+        "scrape_verified": false,
+        "parser_fix_needed": false
+      },
+      {
+        "verified_rows": 1,
+        "total_rows": 1,
+        "verified_pct": 100.0,
+        "aligned": true,
+        "scrape_verified": true,
+        "parser_fix_needed": false
+      }
+    ]
+  }
+}

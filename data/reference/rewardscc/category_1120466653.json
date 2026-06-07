@@ -1,0 +1,20 @@
+[
+  {
+    "cardKey": "amex-gold",
+    "cardName": "American Express\u00ae Gold",
+    "cardIssuer": "American Express",
+    "cardNetwork": "American Express",
+    "categoryType": "Single Category - amextravel.com",
+    "spendBonusCategoryName": "amextravel.com",
+    "spendBonusCategoryId": 1120466653,
+    "spendBonusDesc": "2x on prepaid hotels and other eligible travel purchases, booked through AmexTravel.com",
+    "earnMultiplier": 2.0,
+    "spendType": "American Express Membership Rewards",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "date": "2026-06-07",
+  "pass_count": 20,
+  "total": 20,
+  "results": [
+    {
+      "card_key": "chase-freedom-unlimited",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "chase-sapphire-preferred",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "chase-freedomflex",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "chase-sapphire-reserve",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "amex-gold",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "amex-platinum",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "citi-double-cash",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "capital-one-venture-x",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "capital-one-venture",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "capital-one-savorone",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "discover-it-cash-back",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "wells-fargo-active-cash",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "wells-fargo-autograph",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "amex-blue-cash-preferred",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "citi-custom-cash",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "citi-strata-premier",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "bofa-customized-cash",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "apple-card",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "amex-blue-business-plus",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    },
+    {
+      "card_key": "bilt-mastercard",
+      "ok": true,
+      "diff_count": 0,
+      "notes": []
+    }
+  ]
+}
