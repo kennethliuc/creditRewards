@@ -98,9 +98,12 @@ def import_catalog_wallet_to_db(*, limit: int | None = None) -> dict[str, Any]:
     """
     Pre-load wallet catalog cards into SQLite (reference JSON + category snapshots).
     Run at Docker build so production recommend works without live API for ~380+ cards.
+    Skips cards that need live API (imported on first recommend when REWARDS_CC_API_KEY is set).
     """
     from credit_rewards.card_catalog import load_catalog_index
+    from credit_rewards.client import CardDataClient
 
+    api_available = CardDataClient(use_local=False).is_configured
     rows = load_catalog_index()
     if limit is not None:
         rows = rows[:limit]
@@ -122,4 +125,5 @@ def import_catalog_wallet_to_db(*, limit: int | None = None) -> dict[str, Any]:
         "imported_count": len(imported),
         "skipped_count": len(skipped),
         "total": len(rows),
+        "live_api": api_available,
     }
