@@ -8,7 +8,9 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Iterator
 
-DEFAULT_DB_PATH = Path(__file__).resolve().parents[3] / "data" / "carddata.db"
+from credit_rewards.paths import data_dir
+
+DEFAULT_DB_PATH = data_dir() / "carddata.db"
 
 
 def db_path() -> Path:

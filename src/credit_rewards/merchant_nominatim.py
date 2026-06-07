@@ -13,7 +13,9 @@ from typing import Any
 import httpx
 import yaml
 
-OSM_MAP_PATH = Path(__file__).resolve().parents[2] / "data" / "merchants" / "osm_category_map.yaml"
+from credit_rewards.paths import data_dir
+
+OSM_MAP_PATH = data_dir() / "merchants" / "osm_category_map.yaml"
 NOMINATIM_URL = os.getenv(
     "CREDITREWARDS_NOMINATIM_URL",
     "https://nominatim.openstreetmap.org/search",

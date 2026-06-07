@@ -11,7 +11,9 @@ from credit_rewards.benchmarks import load_program_benchmarks
 if TYPE_CHECKING:
     from credit_rewards.models import CardProfile
 
-OFFICIAL_CPP_PATH = Path(__file__).resolve().parents[2] / "data" / "curated" / "official_cpp.yaml"
+from credit_rewards.paths import data_dir
+
+OFFICIAL_CPP_PATH = data_dir() / "curated" / "official_cpp.yaml"
 CASH_PROGRAM = "Cash"
 
 

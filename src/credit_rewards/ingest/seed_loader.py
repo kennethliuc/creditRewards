@@ -6,7 +6,9 @@ from pathlib import Path
 from credit_rewards.datastore.db import init_db, session
 from credit_rewards.datastore.repository import CardDataRepository
 
-SEED_DIR = Path(__file__).resolve().parents[3] / "data" / "seed"
+from credit_rewards.paths import data_dir
+
+SEED_DIR = data_dir() / "seed"
 
 
 def seed_database(db_path: Path | None = None) -> dict[str, int]:

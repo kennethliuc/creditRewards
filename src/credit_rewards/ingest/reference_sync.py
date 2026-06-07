@@ -8,7 +8,9 @@ from typing import Any
 
 from credit_rewards.client import CardDataClient, RewardsCCError
 
-REFERENCE_DIR = Path(__file__).resolve().parents[3] / "data" / "reference" / "rewardscc"
+from credit_rewards.paths import data_dir
+
+REFERENCE_DIR = data_dir() / "reference" / "rewardscc"
 
 def _category_ids_from_detail(detail: dict[str, Any]) -> set[int]:
     ids: set[int] = set()

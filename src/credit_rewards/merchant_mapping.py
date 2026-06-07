@@ -22,9 +22,9 @@ from credit_rewards.merchant_url_parse import (
     url_haystack,
 )
 
-MERCHANT_DATA_PATH = (
-    Path(__file__).resolve().parents[2] / "data" / "merchants" / "merchant_categories.yaml"
-)
+from credit_rewards.paths import data_dir
+
+MERCHANT_DATA_PATH = data_dir() / "merchants" / "merchant_categories.yaml"
 
 CONFIDENCE_HIGH = "high"
 CONFIDENCE_MEDIUM = "medium"

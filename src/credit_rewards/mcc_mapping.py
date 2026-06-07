@@ -6,7 +6,9 @@ from typing import Any
 
 import yaml
 
-MCC_DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "mcc" / "visa_mcc_categories.yaml"
+from credit_rewards.paths import data_dir
+
+MCC_DATA_PATH = data_dir() / "mcc" / "visa_mcc_categories.yaml"
 
 
 @dataclass(frozen=True)
