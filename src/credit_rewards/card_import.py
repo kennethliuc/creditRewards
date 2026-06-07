@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from typing import Any
 
 from credit_rewards.card_catalog import resolve_wallet_card_key
@@ -72,18 +73,24 @@ def ensure_card_in_db(card_key: str) -> bool:
     if not client.is_configured:
         return False
 
-    try:
-        payload = client.card_detail(rc_key)
-    except RewardsCCError:
-        return False
-    if not payload:
-        return False
+    for attempt in range(3):
+        try:
+            payload = client.card_detail(rc_key)
+        except RewardsCCError:
+            if attempt < 2:
+                time.sleep(0.4 * (attempt + 1))
+                continue
+            return False
+        if not payload:
+            return False
 
-    detail = dict(payload[0] if isinstance(payload, list) else payload)
-    detail["cardKey"] = wallet_key
-    url = str(detail.get("cardUrl") or "")
-    _upsert_detail(detail, source_type="rewardscc", source_url=url)
-    return True
+        detail = dict(payload[0] if isinstance(payload, list) else payload)
+        detail["cardKey"] = wallet_key
+        url = str(detail.get("cardUrl") or "")
+        _upsert_detail(detail, source_type="rewardscc", source_url=url)
+        return True
+
+    return False
 
 
 def ensure_wallet_cards_in_db(card_keys: list[str]) -> list[str]:

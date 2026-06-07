@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import httpx
@@ -71,7 +72,7 @@ class CatalogRecommendAgent(BaseQAAgent):
 
         passed = 0
         failed: list[tuple[str, str]] = []
-        workers = max(1, min(ctx.recommend_workers, 12))
+        workers = max(1, min(ctx.recommend_workers, 4))
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = {
@@ -87,6 +88,24 @@ class CatalogRecommendAgent(BaseQAAgent):
                     passed += 1
                 else:
                     failed.append((key, detail))
+
+        # Sequential retry — parallel import can race Rewards CC API rate limits.
+        retry_passed = 0
+        still_failed: list[tuple[str, str]] = []
+        for key, _detail in failed:
+            ok = False
+            last_detail = _detail
+            for _ in range(3):
+                _key, ok, last_detail = self._recommend_one(ctx.base_url, merchant_id, key)
+                if ok:
+                    retry_passed += 1
+                    break
+                time.sleep(0.25)
+            if not ok:
+                still_failed.append((key, last_detail))
+
+        passed += retry_passed
+        failed = still_failed
 
         fail_count = len(failed)
         results.append(

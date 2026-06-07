@@ -35,8 +35,8 @@ def main() -> int:
     parser.add_argument(
         "--workers",
         type=int,
-        default=8,
-        help="Concurrent recommend workers for full catalog sweep (default: 8)",
+        default=4,
+        help="Concurrent recommend workers for catalog sweep (default: 4; retries failures sequentially)",
     )
     parser.add_argument(
         "--agents",
