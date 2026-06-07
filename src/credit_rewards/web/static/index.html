@@ -106,12 +106,13 @@
             </div>
             <input id="merchantName" type="text" dir="ltr"
               data-i18n-placeholder="pay.storePlaceholder"
-              placeholder="Walmart, Nike, Central Market…" list="merchant-name-hints" autocomplete="off" />
+              placeholder="Walmart, Nike, Central Market…" autocomplete="off" spellcheck="false"
+              aria-autocomplete="list" aria-controls="merchantSuggestions" />
+            <div id="merchantSuggestions" class="merchant-suggestions hidden" role="listbox"></div>
             <div id="nearbyStores" class="nearby-stores hidden">
               <div id="nearbyStoresList" class="nearby-scroll"></div>
             </div>
           </div>
-          <datalist id="merchant-name-hints"></datalist>
           <button type="submit" class="primary form-submit" id="go" data-i18n="pay.submit">Recommend card</button>
           <div class="amount-field">
             <label for="amount" data-i18n="pay.amountLabel">Amount (USD, optional)</label>

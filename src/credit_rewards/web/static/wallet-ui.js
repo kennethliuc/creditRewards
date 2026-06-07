@@ -541,12 +541,17 @@
     updateLocationStatus();
     updateLastMerchantChip();
     if (activeTab === 'name') refreshNearbyStores();
-    else hideNearbyStores();
+    else hideStoreAssistPanels();
   }
 
   function hideNearbyStores() {
     const panel = $('nearbyStores');
     if (panel) panel.classList.add('hidden');
+  }
+
+  function hideStoreAssistPanels() {
+    hideMerchantSuggestions();
+    hideNearbyStores();
   }
 
   function formatDistance(meters) {
@@ -555,18 +560,19 @@
     return `${(meters / 1000).toFixed(1)} km`;
   }
 
-  function renderNearbyStoresList() {
+  function renderNearbyStoresList(places = nearbyPlaces) {
     const list = $('nearbyStoresList');
     const panel = $('nearbyStores');
     if (!list || !panel) return;
-    if (!nearbyPlaces.length) {
+    const visible = nearbyPlacesForInput(places);
+    if (!visible.length) {
       panel.classList.add('hidden');
       return;
     }
-    list.innerHTML = nearbyPlaces
+    list.innerHTML = visible
       .map(
         (p, i) => `
-      <button type="button" class="nearby-chip" data-idx="${i}" title="${esc(p.displayName)}">
+      <button type="button" class="nearby-chip" data-idx="${nearbyPlaces.indexOf(p)}" title="${esc(p.displayName)}">
         ${esc(p.displayName)}${p.distanceMeters != null ? ` · ${esc(formatDistance(p.distanceMeters))}` : ''}
       </button>`,
       )
@@ -616,6 +622,8 @@
   async function selectNearbyStore(place) {
     if (!place) return;
     $('merchantName').value = place.displayName || place.merchantName || '';
+    hideMerchantSuggestions();
+    hideNearbyStores();
     syncPendingAmount();
     const go = $('go');
     const errorEl = $('error');
@@ -781,28 +789,110 @@
     selectAllOnNextFocus = true;
   }
 
-  function renderMerchantHints(items) {
-    $('merchant-name-hints').innerHTML = (items || [])
+  function normalizeStoreName(text) {
+    return (text || '')
+      .trim()
+      .toLowerCase()
+      .replace(/[^\w\s']/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function storeNamesMatch(a, b) {
+    const left = normalizeStoreName(a);
+    const right = normalizeStoreName(b);
+    if (!left || !right) return false;
+    if (left === right) return true;
+    if (left.length >= 4 && right.length >= 4) {
+      return left.startsWith(right) || right.startsWith(left);
+    }
+    return false;
+  }
+
+  function merchantNameInputValue() {
+    return ($('merchantName')?.value || '').trim();
+  }
+
+  function hideMerchantSuggestions() {
+    $('merchantSuggestions')?.classList.add('hidden');
+  }
+
+  function renderMerchantSuggestions(items) {
+    const panel = $('merchantSuggestions');
+    if (!panel) return;
+    const query = merchantNameInputValue();
+    if (query.length < 2) {
+      hideMerchantSuggestions();
+      return;
+    }
+    const filtered = (items || []).filter((m) => {
+      const name = m.name || '';
+      return name && !storeNamesMatch(query, name);
+    });
+    if (!filtered.length) {
+      hideMerchantSuggestions();
+      return;
+    }
+    panel.innerHTML = filtered
+      .slice(0, 6)
       .map((m) => {
         const cat = m.category || m.inStoreCategory || '';
-        return `<option value="${esc(m.name)}">${esc(cat)}</option>`;
+        return `<button type="button" class="merchant-suggest-row" data-name="${esc(m.name)}" role="option">
+          ${esc(m.name)}${cat ? `<span class="merchant-suggest-meta">${esc(cat)}</span>` : ''}
+        </button>`;
       })
       .join('');
+    panel.querySelectorAll('.merchant-suggest-row').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        $('merchantName').value = btn.dataset.name || '';
+        hideMerchantSuggestions();
+        updateNearbyForInput();
+        markInputsForReentry();
+      });
+    });
+    panel.classList.remove('hidden');
   }
 
   let suggestTimer = null;
-  async function refreshMerchantHints(query) {
+  async function refreshMerchantSuggestions(query) {
     const q = (query || '').trim();
+    if (q.length < 2) {
+      hideMerchantSuggestions();
+      return;
+    }
     const channel = purchaseChannelForTab();
-    const url =
-      q.length >= 2
-        ? `/api/merchants?q=${encodeURIComponent(q)}&purchase_channel=${encodeURIComponent(channel)}`
-        : '/api/merchants';
     try {
-      const res = await fetch(url);
+      const res = await fetch(
+        `/api/merchants?q=${encodeURIComponent(q)}&purchase_channel=${encodeURIComponent(channel)}`,
+      );
       const data = await res.json();
-      renderMerchantHints(q.length >= 2 ? data.suggestions || [] : data.merchants || []);
-    } catch (_) {}
+      if (!res.ok) {
+        hideMerchantSuggestions();
+        return;
+      }
+      renderMerchantSuggestions(data.suggestions || []);
+    } catch (_) {
+      hideMerchantSuggestions();
+    }
+  }
+
+  function syncMerchantSuggestionsSoon() {
+    clearTimeout(suggestTimer);
+    suggestTimer = setTimeout(() => refreshMerchantSuggestions(merchantNameInputValue()), 200);
+  }
+
+  function nearbyPlacesForInput(places = nearbyPlaces) {
+    const query = merchantNameInputValue();
+    if (!query) return places;
+    return places.filter((p) => !storeNamesMatch(query, p.displayName || p.merchantName || ''));
+  }
+
+  function updateNearbyForInput() {
+    if (activeTab !== 'name') {
+      hideNearbyStores();
+      return;
+    }
+    renderNearbyStoresList(nearbyPlacesForInput());
   }
 
   function bindReentryInput(el) {
@@ -1148,8 +1238,11 @@
     bindReentryInput($('merchantUrl'));
     bindReentryInput($('merchantName'));
     $('merchantName').addEventListener('input', () => {
-      clearTimeout(suggestTimer);
-      suggestTimer = setTimeout(() => refreshMerchantHints($('merchantName').value), 200);
+      syncMerchantSuggestionsSoon();
+      updateNearbyForInput();
+    });
+    $('merchantName').addEventListener('blur', () => {
+      setTimeout(hideMerchantSuggestions, 160);
     });
     bindReentryInput($('amount'));
 
@@ -1321,8 +1414,6 @@
       const cfgRes = await fetch('/api/merchant/config');
       if (cfgRes.ok) merchantConfig = await cfgRes.json();
     } catch (_) {}
-
-    await refreshMerchantHints('');
 
     await loadCatalog();
     void ensureCatalogImages();

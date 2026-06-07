@@ -642,17 +642,59 @@ button.danger {
 .quick-chip { display: none; }
 
 /* ── Nearby ── */
-.nearby-stores { margin: .5rem 0 0; }
+.nearby-stores {
+  margin: .5rem 0 0;
+  max-width: 100%;
+  overflow: hidden;
+}
 
 .nearby-scroll {
   display: flex;
+  flex-wrap: wrap;
   gap: .4rem;
-  overflow-x: auto;
-  padding-bottom: .1rem;
+  max-width: 100%;
+  overflow-x: visible;
+  padding-bottom: 0;
   scrollbar-width: none;
 }
 
 .nearby-scroll::-webkit-scrollbar { display: none; }
+
+.merchant-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin: .45rem 0 0;
+  max-width: 100%;
+}
+
+.merchant-suggest-row {
+  width: 100%;
+  text-align: left;
+  padding: .55rem .7rem;
+  margin: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font: inherit;
+  font-size: .86rem;
+  cursor: pointer;
+  transition: border-color .15s var(--ease), background .15s var(--ease);
+}
+
+.merchant-suggest-row:hover,
+.merchant-suggest-row:focus {
+  border-color: rgba(62, 224, 163, 0.35);
+  background: var(--accent-soft);
+}
+
+.merchant-suggest-meta {
+  display: block;
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: .12rem;
+}
 
 .nearby-chip {
   flex-shrink: 0;
