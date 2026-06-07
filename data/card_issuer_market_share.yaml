@@ -1,0 +1,74 @@
+# Approximate US general-purpose credit card outstandings share (mid-2024 industry estimates).
+# Used to report catalog issuer coverage vs ~90%+ market goal.
+updated: "2026-06-07"
+issuers:
+  - name: Chase
+    share_pct: 17.3
+    aliases: [JPMorgan Chase, JP Morgan]
+  - name: American Express
+    share_pct: 12.3
+    aliases: [Amex]
+  - name: Citi
+    share_pct: 10.9
+    aliases: [Citibank]
+  - name: Capital One
+    share_pct: 10.7
+  - name: Bank of America
+    share_pct: 9.4
+    aliases: [BofA, BOA]
+  - name: Discover
+    share_pct: 8.0
+  - name: Wells Fargo
+    share_pct: 4.0
+  - name: U.S. Bank
+    share_pct: 4.0
+    aliases: [US Bank, U.S. Bank National Association]
+  - name: Barclays
+    share_pct: 2.5
+  - name: Synchrony Bank
+    share_pct: 2.0
+    aliases: [Synchrony]
+  - name: Goldman Sachs
+    share_pct: 1.5
+    aliases: [Apple Card]
+  - name: Navy Federal Credit Union
+    share_pct: 1.5
+    aliases: [Navy Federal]
+  - name: PNC
+    share_pct: 1.2
+  - name: Truist
+    share_pct: 1.2
+  - name: TD Bank
+    share_pct: 1.0
+  - name: USAA
+    share_pct: 1.0
+  - name: Bread Financial
+    share_pct: 0.8
+  - name: Credit One Bank
+    share_pct: 0.8
+  - name: Regions Bank
+    share_pct: 0.7
+  - name: Huntington National Bank
+    share_pct: 0.6
+  - name: Fifth Third Bank
+    share_pct: 0.6
+  - name: KeyBank
+    share_pct: 0.5
+  - name: Citizens Bank
+    share_pct: 0.5
+  - name: Comerica
+    share_pct: 0.4
+  - name: HSBC
+    share_pct: 0.3
+  - name: Santander
+    share_pct: 0.3
+  - name: First National Bank of Omaha
+    share_pct: 0.3
+    aliases: [FNBO]
+  - name: Merrick Bank
+    share_pct: 0.3
+  - name: First Citizens Bank
+    share_pct: 0.3
+  - name: BMO
+    share_pct: 0.3
+    aliases: [BMO Harris]

@@ -19,13 +19,23 @@ def load_fixture_card(card_key: str) -> CardProfile:
 
 
 def _load_from_db(card_key: str) -> CardProfile | None:
+    from credit_rewards.card_catalog import resolve_wallet_card_key
     from credit_rewards.datastore.db import session
     from credit_rewards.datastore.repository import CardDataRepository
 
+    resolved = resolve_wallet_card_key(card_key)
+    keys_to_try = [resolved["card_key"], resolved["rewards_cc_card_key"], card_key]
+    seen: set[str] = set()
     with session() as conn:
-        detail = CardDataRepository(conn).get_card_detail(card_key)
-        if detail:
-            return normalize_card_detail(detail)
+        repo = CardDataRepository(conn)
+        for key in keys_to_try:
+            k = str(key).strip()
+            if not k or k in seen:
+                continue
+            seen.add(k)
+            detail = repo.get_card_detail(k)
+            if detail:
+                return normalize_card_detail(detail)
     return None
 
 

@@ -4,6 +4,29 @@ from credit_rewards.merchant_google_places import GooglePlaceMatch
 from credit_rewards.merchant_mapping import lookup_merchant_category, resolve_merchant
 
 
+def test_catalog_exact_match_skips_google_with_location(monkeypatch):
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
+    monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    called = {"n": 0}
+
+    def fake_lookup(*args, **kwargs):
+        called["n"] += 1
+        return None
+
+    monkeypatch.setattr("credit_rewards.merchant_mapping._google_places_resolve", fake_lookup)
+
+    result = resolve_merchant(
+        merchant_name="Walmart",
+        latitude=30.27,
+        longitude=-97.74,
+    )
+    assert called["n"] == 0
+    assert result.best
+    assert result.best.merchant_id == "walmart"
+    assert result.best.source == "catalog"
+    assert result.needs_confirmation is False
+
+
 def test_resolve_name_with_google_location(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
@@ -24,11 +47,11 @@ def test_resolve_name_with_google_location(monkeypatch):
 
     monkeypatch.setattr(
         "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
-        lambda queries, lat, lng: fake if any("chipotle" in q.lower() for q in queries) else (),
+        lambda queries, lat, lng: fake if any("grill" in q.lower() for q in queries) else (),
     )
 
     result = resolve_merchant(
-        merchant_name="chipotle",
+        merchant_name="Mystery Local Grill",
         latitude=37.3382,
         longitude=-121.8863,
     )
@@ -166,6 +189,91 @@ def test_lookup_web_confirmed_category():
     )
     assert match.source == "url_parse"
     assert match.spend_bonus_category_name == "Online Shopping"
+
+
+def test_nearby_api_returns_places(monkeypatch):
+    from credit_rewards.merchant_google_places import lookup_nearby_stores
+
+    fake = [
+        {
+            "merchantId": "gmaps:ChIJtest",
+            "merchantName": "Target",
+            "displayName": "Target",
+            "shortAddress": "123 Main St",
+            "formattedAddress": "123 Main St, Austin, TX",
+            "spendBonusCategoryName": "Department Stores",
+            "confidence": "high",
+            "distanceMeters": 120,
+            "source": "google_places",
+        }
+    ]
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
+    monkeypatch.setattr(
+        "credit_rewards.merchant_google_places.lookup_nearby_stores",
+        lambda lat, lng, limit=5: fake,
+    )
+
+    from fastapi.testclient import TestClient
+
+    from credit_rewards.web.app import app
+
+    res = TestClient(app).get(
+        "/api/merchant/nearby",
+        params={"latitude": 30.27, "longitude": -97.74, "limit": 5},
+    )
+    assert res.status_code == 200
+    body = res.json()
+    assert body["places"][0]["displayName"] == "Target"
+    assert body["places"][0]["distanceMeters"] == 120
+
+
+def test_nearby_api_disabled(monkeypatch):
+    from fastapi.testclient import TestClient
+
+    from credit_rewards.web.app import app
+
+    monkeypatch.setattr(
+        "credit_rewards.merchant_google_places.google_places_enabled",
+        lambda: False,
+    )
+    res = TestClient(app).get(
+        "/api/merchant/nearby",
+        params={"latitude": 30.27, "longitude": -97.74},
+    )
+    assert res.status_code == 200
+    assert res.json()["places"] == []
+
+
+def test_lookup_nearby_stores_sorts_by_distance(monkeypatch):
+    from credit_rewards.merchant_google_places import lookup_nearby_stores
+
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
+
+    def fake_nearby(lat, lng, *, radius_m=600, max_results=5):
+        return [
+            {
+                "id": "places/far",
+                "displayName": {"text": "Far Store"},
+                "formattedAddress": "Far Rd",
+                "primaryType": "supermarket",
+                "types": ["supermarket"],
+                "location": {"latitude": lat + 0.01, "longitude": lng},
+            },
+            {
+                "id": "places/near",
+                "displayName": {"text": "Near Store"},
+                "formattedAddress": "Near Rd",
+                "primaryType": "supermarket",
+                "types": ["supermarket"],
+                "location": {"latitude": lat + 0.0001, "longitude": lng},
+            },
+        ]
+
+    monkeypatch.setattr("credit_rewards.merchant_google_places._places_search_nearby", fake_nearby)
+    places = lookup_nearby_stores(30.0, -97.0, limit=2)
+    assert len(places) == 2
+    assert places[0]["displayName"] == "Near Store"
+    assert places[0]["distanceMeters"] < places[1]["distanceMeters"]
 
 
 def test_lookup_gmaps_confirmed_category():

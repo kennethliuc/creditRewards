@@ -16,7 +16,26 @@ from credit_rewards.paths import data_dir
 
 GOOGLE_MAP_PATH = data_dir() / "merchants" / "google_place_category_map.yaml"
 PLACES_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText"
+PLACES_NEARBY_URL = "https://places.googleapis.com/v1/places:searchNearby"
 DEFAULT_RADIUS_M = float(os.getenv("CREDITREWARDS_GOOGLE_PLACES_RADIUS_M", "8000"))
+NEARBY_RADIUS_M = float(os.getenv("CREDITREWARDS_NEARBY_RADIUS_M", "600"))
+NEARBY_STORE_TYPES = (
+    "supermarket",
+    "grocery_store",
+    "department_store",
+    "shopping_mall",
+    "restaurant",
+    "cafe",
+    "coffee_shop",
+    "fast_food_restaurant",
+    "pharmacy",
+    "convenience_store",
+    "clothing_store",
+    "electronics_store",
+    "home_goods_store",
+    "hardware_store",
+    "gas_station",
+)
 
 
 def _api_key() -> str:
@@ -291,3 +310,107 @@ def google_match_to_category_match(gm: GooglePlaceMatch, *, input_kind: str, mat
         score=gm.score,
         source="google_places",
     )
+
+
+def _haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    import math
+
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    return 6371000.0 * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def _place_location(row: dict[str, Any]) -> tuple[float, float] | None:
+    loc = row.get("location") or {}
+    lat = loc.get("latitude")
+    lng = loc.get("longitude")
+    if lat is None or lng is None:
+        return None
+    return float(lat), float(lng)
+
+
+def _places_search_nearby(
+    latitude: float,
+    longitude: float,
+    *,
+    radius_m: float = NEARBY_RADIUS_M,
+    max_results: int = 5,
+) -> list[dict[str, Any]]:
+    if not google_places_enabled():
+        return []
+
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": _api_key(),
+        "X-Goog-FieldMask": (
+            "places.id,places.displayName,places.formattedAddress,"
+            "places.types,places.primaryType,places.location,places.websiteUri"
+        ),
+    }
+    body: dict[str, Any] = {
+        "includedTypes": list(NEARBY_STORE_TYPES),
+        "maxResultCount": max(max_results, 5),
+        "rankPreference": "DISTANCE",
+        "languageCode": "en",
+        "locationRestriction": {
+            "circle": {
+                "center": {"latitude": latitude, "longitude": longitude},
+                "radius": radius_m,
+            }
+        },
+    }
+    try:
+        response = httpx.post(PLACES_NEARBY_URL, headers=headers, json=body, timeout=12.0)
+        response.raise_for_status()
+        payload = response.json()
+        return list(payload.get("places") or [])
+    except httpx.HTTPError:
+        return []
+
+
+def _nearby_place_dict(
+    match: GooglePlaceMatch,
+    *,
+    distance_m: float | None,
+) -> dict[str, Any]:
+    short_address = match.formatted_address.split(",", 1)[0] if match.formatted_address else ""
+    return {
+        "merchantId": match.merchant_id,
+        "merchantName": match.display_name,
+        "displayName": match.display_name,
+        "shortAddress": short_address,
+        "formattedAddress": match.formatted_address,
+        "spendBonusCategoryName": match.spend_bonus_category_name,
+        "confidence": match.confidence,
+        "distanceMeters": round(distance_m) if distance_m is not None else None,
+        "source": "google_places",
+    }
+
+
+def lookup_nearby_stores(
+    latitude: float,
+    longitude: float,
+    *,
+    limit: int = 5,
+    radius_m: float | None = None,
+) -> list[dict[str, Any]]:
+    """Return nearby retail/food POIs for in-store quick pick (sorted by distance)."""
+    radius = radius_m if radius_m is not None else NEARBY_RADIUS_M
+    rows = _places_search_nearby(latitude, longitude, radius_m=radius, max_results=max(limit, 5))
+    ranked: list[tuple[float, GooglePlaceMatch]] = []
+    seen: set[str] = set()
+    for rank, row in enumerate(rows):
+        match = _row_to_match(row, rank=rank)
+        if not match or match.place_id in seen:
+            continue
+        seen.add(match.place_id)
+        loc = _place_location(row)
+        distance = _haversine_m(latitude, longitude, loc[0], loc[1]) if loc else float(rank)
+        ranked.append((distance, match))
+    ranked.sort(key=lambda item: item[0])
+    out: list[dict[str, Any]] = []
+    for distance, match in ranked[:limit]:
+        out.append(_nearby_place_dict(match, distance_m=distance))
+    return out

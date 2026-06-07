@@ -695,18 +695,6 @@ def _match_by_name(
     search_queries = expand_store_name_queries(name)
     query_variants = {_normalize_name(q) for q in search_queries}
 
-    if latitude is not None and longitude is not None and purchase_channel == PURCHASE_IN_STORE:
-        google_result = _google_places_resolve(
-            name,
-            latitude=latitude,
-            longitude=longitude,
-            input_kind="name",
-            matched_on=name,
-            text_queries=search_queries,
-        )
-        if google_result:
-            return google_result
-
     exact: list[MerchantCategoryMatch] = []
     seen_exact: set[str] = set()
     for row in merchants:
@@ -774,15 +762,21 @@ def _match_by_name(
         catalog_result = MerchantResolveResult(
             best=partial[0],
             candidates=partial[:8],
-            needs_confirmation=True,
+            needs_confirmation=len(partial) > 1,
         )
-        if latitude is not None and longitude is not None and purchase_channel == PURCHASE_IN_STORE:
+        if (
+            len(partial) > 1
+            and latitude is not None
+            and longitude is not None
+            and purchase_channel == PURCHASE_IN_STORE
+        ):
             google_result = _google_places_resolve(
                 name,
                 latitude=latitude,
                 longitude=longitude,
                 input_kind="name",
                 matched_on=name,
+                text_queries=search_queries,
             )
             if google_result:
                 return google_result
@@ -807,6 +801,7 @@ def _match_by_name(
             longitude=longitude,
             input_kind="name",
             matched_on=name,
+            text_queries=search_queries,
         )
         if google_result:
             return google_result

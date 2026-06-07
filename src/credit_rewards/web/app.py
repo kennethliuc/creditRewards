@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
+import threading
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,22 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from credit_rewards.card_catalog import (
+    catalog_coverage_stats,
+    enrich_registry_cards,
+    list_issuers,
+    search_cards_by_issuer,
+)
+from credit_rewards.card_image import (
+    apply_local_image_urls,
+    fetch_card_image_url,
+    fetch_card_image_urls,
+    local_image_path,
+    media_type_for_card_image,
+    warm_card_images,
+    warm_registry_card_images,
+)
+from credit_rewards.card_import import ensure_wallet_cards_in_db
 from credit_rewards.client import CardDataClient, RewardsCCError
 from credit_rewards.ingest.compare import (
     CardComparisonReport,
@@ -62,6 +79,26 @@ app = FastAPI(title="CreditRewards", version="0.1.0")
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
+def _warm_images_async(card_keys: list[str] | None = None) -> None:
+    keys = [k.strip() for k in (card_keys or []) if k and k.strip()]
+
+    def _run() -> None:
+        try:
+            if keys:
+                warm_card_images(keys)
+            else:
+                warm_registry_card_images()
+        except Exception:
+            pass
+
+    threading.Thread(target=_run, daemon=True).start()
+
+
+@app.on_event("startup")
+def _startup_warm_registry_images() -> None:
+    _warm_images_async()
+
+
 class RecommendRequest(BaseModel):
     card_keys: list[str] | None = Field(default=None, min_length=1)
     category: str | None = Field(default=None, min_length=1)
@@ -100,6 +137,10 @@ class LoginRequest(BaseModel):
 
 class WalletUpdateRequest(BaseModel):
     cards: list[WalletCardInput] = Field(min_length=1)
+
+
+class CardImagesRequest(BaseModel):
+    card_keys: list[str] = Field(min_length=1, max_length=48)
 
 
 def _card_display_name(card_key: str) -> str:
@@ -215,6 +256,23 @@ def _enrich_wallet(cards):
 @app.get("/")
 def index() -> FileResponse:
     return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/manifest.webmanifest")
+def web_manifest() -> FileResponse:
+    return FileResponse(
+        STATIC_DIR / "manifest.webmanifest",
+        media_type="application/manifest+json",
+    )
+
+
+@app.get("/sw.js")
+def service_worker() -> FileResponse:
+    return FileResponse(
+        STATIC_DIR / "sw.js",
+        media_type="application/javascript",
+        headers={"Cache-Control": "no-cache"},
+    )
 
 
 @app.get("/compare")
@@ -420,17 +478,57 @@ def health() -> dict[str, object]:
 
 @app.get("/api/cards")
 def api_cards() -> dict[str, object]:
-    cards = []
-    for entry in load_card_registry():
-        cards.append(
-            {
-                "card_key": entry["card_key"],
-                "card_name": _card_display_name(entry["card_key"]),
-                "issuer": entry.get("issuer") or "",
-                "reward_program": entry.get("reward_program") or "",
-            }
-        )
+    cards = apply_local_image_urls(enrich_registry_cards())
     return {"total": len(cards), "cards": cards}
+
+
+@app.get("/api/cards/issuers")
+def api_card_issuers() -> dict[str, object]:
+    return {"issuers": list_issuers()}
+
+
+@app.get("/api/cards/coverage")
+def api_cards_coverage() -> dict[str, object]:
+    return catalog_coverage_stats()
+
+
+@app.get("/api/cards/by-issuer")
+def api_cards_by_issuer(q: str, limit: int = 48) -> dict[str, object]:
+    query = (q or "").strip()
+    if len(query) < 2:
+        raise HTTPException(status_code=400, detail="Enter at least 2 characters for bank name")
+    matches = search_cards_by_issuer(query, limit=min(limit, 40))
+    return {"query": query, "matches": matches, "total": len(matches)}
+
+
+@app.get("/api/cards/image")
+def api_card_image(card_key: str) -> dict[str, object]:
+    key = card_key.strip()
+    if not key:
+        raise HTTPException(status_code=400, detail="card_key required")
+    url = fetch_card_image_url(key)
+    return {"card_key": key, "image_url": url}
+
+
+@app.get("/api/cards/image/file")
+def api_card_image_file(card_key: str) -> FileResponse:
+    key = card_key.strip()
+    if not key:
+        raise HTTPException(status_code=400, detail="card_key required")
+    path = local_image_path(key)
+    if not path:
+        raise HTTPException(status_code=404, detail="Image not cached")
+    return FileResponse(
+        path,
+        media_type=media_type_for_card_image(key),
+        headers={"Cache-Control": "public, max-age=604800, immutable"},
+    )
+
+
+@app.post("/api/cards/images")
+def api_card_images(body: CardImagesRequest) -> dict[str, object]:
+    images = fetch_card_image_urls(body.card_keys)
+    return {"images": images}
 
 
 @app.get("/api/merchants")
@@ -473,6 +571,25 @@ def api_merchant_resolve(body: MerchantResolveRequest) -> dict[str, object]:
     return payload
 
 
+@app.get("/api/merchant/nearby")
+def api_merchant_nearby(
+    latitude: float,
+    longitude: float,
+    limit: int = 5,
+) -> dict[str, object]:
+    from credit_rewards.merchant_google_places import google_places_enabled, lookup_nearby_stores
+
+    if not google_places_enabled():
+        return {"places": [], "googlePlacesEnabled": False}
+    capped = min(max(limit, 1), 8)
+    places = lookup_nearby_stores(latitude, longitude, limit=capped)
+    return {
+        "places": places,
+        "googlePlacesEnabled": True,
+        "limit": capped,
+    }
+
+
 @app.get("/api/merchant/config")
 def api_merchant_config() -> dict[str, object]:
     from credit_rewards.merchant_google_places import google_places_enabled
@@ -483,6 +600,7 @@ def api_merchant_config() -> dict[str, object]:
         "googlePlacesEnabled": enabled,
         "nominatimEnabled": NOMINATIM_ENABLED,
         "locationRecommended": enabled,
+        "nearbyStoresEnabled": enabled,
     }
 
 
@@ -491,6 +609,8 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
     try:
         category, merchant_info = _resolve_purchase_category(body)
         card_keys = body.card_keys if body.card_keys else _all_registry_card_keys()
+        if body.card_keys:
+            ensure_wallet_cards_in_db(card_keys)
         wallet = _enrich_wallet(load_wallet(card_keys, CardDataClient()))
         purchase = PurchaseContext(category=category, amount_usd=body.amount_usd)
         results = recommend_best_cards(wallet, purchase)
@@ -580,6 +700,15 @@ def api_put_wallet(body: WalletUpdateRequest, request: Request) -> dict[str, obj
     if not user_id:
         raise HTTPException(status_code=401, detail="Not logged in")
     try:
-        return save_user_wallet(user_id, [c.model_dump() for c in body.cards])
+        result = save_user_wallet(user_id, [c.model_dump() for c in body.cards])
+        keys = [c["card_key"] for c in result["cards"]]
+        missing = ensure_wallet_cards_in_db(keys)
+        if missing:
+            result["import_warnings"] = [
+                f"Reward data not loaded for: {', '.join(missing)}. Recommend may skip these cards."
+            ]
+        apply_local_image_urls(result["cards"])
+        _warm_images_async(keys)
+        return result
     except AccountError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc

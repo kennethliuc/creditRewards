@@ -8,8 +8,9 @@ import secrets
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
+from credit_rewards.card_catalog import catalog_card_keys, resolve_wallet_card_key
+from credit_rewards.card_image import apply_local_image_urls, card_image_url_for_display
 from credit_rewards.datastore.db import session, utc_now
-from credit_rewards.ingest.scrape.registry import load_card_registry
 
 SESSION_COOKIE = "cr_session"
 SESSION_DAYS = 30
@@ -20,12 +21,12 @@ class AccountError(ValueError):
     pass
 
 
-def _registry_keys() -> set[str]:
-    return {entry["card_key"] for entry in load_card_registry()}
+def _allowed_card_keys() -> set[str]:
+    return catalog_card_keys()
 
 
 def _card_label(card_key: str) -> str:
-    return card_key.replace("-", " ").title()
+    return resolve_wallet_card_key(card_key)["card_name"]
 
 
 def ensure_account_schema() -> None:
@@ -79,7 +80,7 @@ def _verify_password(password: str, stored: str) -> bool:
 
 
 def normalize_wallet_cards(cards: list[dict[str, Any]]) -> list[dict[str, str]]:
-    allowed = _registry_keys()
+    allowed = _allowed_card_keys()
     if not cards:
         raise AccountError("Select at least one card")
     seen: set[str] = set()
@@ -197,6 +198,7 @@ def _fetch_wallet(conn, user_id: int) -> list[dict[str, str]]:
             "card_name": _card_label(row["card_key"]),
             "nickname": row["nickname"] or "",
             "last4": row["last4"] or "",
+            "image_url": card_image_url_for_display(row["card_key"]),
         }
         for row in rows
     ]

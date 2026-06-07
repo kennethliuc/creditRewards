@@ -1,0 +1,61 @@
+# Issuer name aliases for fuzzy bank search (wallet add flow)
+aliases:
+  Chase:
+    - chase bank
+    - jpmorgan chase
+    - jp morgan
+  American Express:
+    - amex
+    - american express
+  Citi:
+    - citibank
+    - citi bank
+  Capital One:
+    - capitalone
+  Bank of America:
+    - bofa
+    - boa
+  Wells Fargo:
+    - wellsfargo
+  Discover:
+    - discover bank
+  U.S. Bank:
+    - us bank
+    - usbank
+  Goldman Sachs:
+    - goldman
+    - apple card issuer
+  Barclays:
+    - barclays bank
+  Synchrony Bank:
+    - synchrony
+  Navy Federal Credit Union:
+    - navy federal
+    - nfcu
+  PNC:
+    - pnc bank
+  Truist:
+    - truist bank
+  TD Bank:
+    - td bank
+  USAA:
+    - usaa federal savings bank
+  Bread Financial:
+    - bread
+    - comenity
+  Credit One Bank:
+    - credit one
+  Regions Bank:
+    - regions
+  Huntington National Bank:
+    - huntington
+  Fifth Third Bank:
+    - fifth third
+  KeyBank:
+    - key bank
+  Citizens Bank:
+    - citizens
+  BMO:
+    - bmo harris
+  First National Bank of Omaha:
+    - fnbo

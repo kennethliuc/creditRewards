@@ -1,16 +1,282 @@
 (() => {
   const STORAGE_KEY = 'creditrewards_wallet_v1';
-  const views = ['welcome', 'local-setup', 'register', 'login', 'pay', 'manage'];
+  const IMAGE_CACHE_KEY = 'creditrewards_card_images_v1';
+  const PAY_TAB_KEY = 'creditrewards_pay_tab_v1';
+  const LAST_MERCHANT_KEY = 'creditrewards_last_merchant_v1';
+  const DEFAULT_AMOUNT = 100;
+  const views = ['language', 'local-setup', 'pay', 'savings-history', 'manage'];
+  let languageReturnView = 'bootstrap';
+  let savingsReturnView = 'pay';
+  let selectedSavingsIds = new Set();
+
+  function t(key, vars) {
+    return window.CR_I18N?.t(key, vars) ?? key;
+  }
+
+  function applyPageI18n() {
+    window.CR_I18N?.apply(document);
+    window.CR_PWA?.refreshInstallBanner();
+    updateLocationStatus();
+    updatePaySub();
+    updateWalletNav();
+    renderSavingsBanner();
+    renderWalletSavingsPanel();
+  }
+
+  function updatePaySub() {
+    const el = $('paySub');
+    if (!el) return;
+    el.textContent = t('pay.sub', { count: walletState?.cards?.length || 0 });
+    updateWalletNav();
+  }
+
+  function updateWalletNav() {
+    const label = $('walletNavLabel');
+    if (!label) return;
+    label.textContent = t('nav.walletBtn', { count: walletState?.cards?.length || 0 });
+  }
+
+  function savingsApi() {
+    return window.CR_SAVINGS;
+  }
+
+  function renderSavingsStatRow(labelKey, bucket) {
+    const api = savingsApi();
+    if (!api || !bucket.count) return '';
+    return `
+      <div class="savings-stat">
+        <div>
+          <div class="savings-stat-label">${esc(t(labelKey))}</div>
+          <div class="savings-stat-meta">${esc(t('savings.times', { count: bucket.count }))}</div>
+        </div>
+        <div class="savings-stat-value">~$${esc(api.formatUsd(bucket.reward_usd))}</div>
+      </div>`;
+  }
+
+  function formatHistoryDate(ts) {
+    const loc =
+      window.CR_I18N?.locale === 'zh' ? 'zh-Hans' : window.CR_I18N?.locale === 'es' ? 'es' : 'en';
+    return new Date(ts).toLocaleString(loc, {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+    });
+  }
+
+  function historyRowLabel(row, api) {
+    const merchant = row.merchant || row.category || '—';
+    const parts = [formatHistoryDate(row.ts), merchant];
+    if (row.card_name) parts.push(row.card_name);
+    if (!row.amount_provided) {
+      parts.push(t('savings.historyRowEst', { amount: api.formatUsd(row.purchase_amount_usd) }));
+    }
+    return parts.join(' · ');
+  }
+
+  function updateRemoveSavingsButton() {
+    const btn = $('btnRemoveSavingsSelected');
+    if (!btn) return;
+    btn.disabled = selectedSavingsIds.size === 0;
+  }
+
+  function renderSavingsHistory() {
+    const api = savingsApi();
+    const list = $('savingsHistoryList');
+    const empty = $('savingsHistoryEmpty');
+    const summary = $('savingsHistorySummary');
+    if (!api || !list) return;
+
+    const stats = api.getStats();
+    const rows = api.listAll();
+    selectedSavingsIds = new Set([...selectedSavingsIds].filter((id) => rows.some((r) => r.id === id)));
+
+    if (summary) {
+      summary.innerHTML =
+        renderSavingsStatRow('savings.month', stats.month) +
+        renderSavingsStatRow('savings.quarter', stats.quarter) +
+        renderSavingsStatRow('savings.allTime', stats.allTime);
+    }
+
+    if (!rows.length) {
+      list.innerHTML = '';
+      empty?.classList.remove('hidden');
+    } else {
+      empty?.classList.add('hidden');
+      list.innerHTML = rows
+        .map((row) => {
+          const checked = selectedSavingsIds.has(row.id);
+          return `
+        <label class="savings-history-row ${checked ? 'selected' : ''}" data-id="${esc(row.id)}">
+          <input type="checkbox" data-id="${esc(row.id)}" ${checked ? 'checked' : ''} />
+          <div class="savings-history-main">
+            <div class="savings-history-title">${esc(row.merchant || row.category || '—')}</div>
+            <div class="savings-history-meta">${esc(historyRowLabel(row, api))}</div>
+            <div class="savings-history-reward">${esc(
+              t('savings.historyRowReward', { amount: api.formatUsd(row.reward_usd) }),
+            )}</div>
+          </div>
+        </label>`;
+        })
+        .join('');
+    }
+
+    list.querySelectorAll('.savings-history-row input[type="checkbox"]').forEach((box) => {
+      box.addEventListener('change', () => {
+        const id = box.dataset.id;
+        if (!id) return;
+        if (box.checked) selectedSavingsIds.add(id);
+        else selectedSavingsIds.delete(id);
+        box.closest('.savings-history-row')?.classList.toggle('selected', box.checked);
+        updateRemoveSavingsButton();
+      });
+    });
+
+    updateRemoveSavingsButton();
+  }
+
+  function openSavingsHistory(from = 'pay') {
+    savingsReturnView = from;
+    selectedSavingsIds = new Set();
+    renderSavingsHistory();
+    showView('savings-history');
+  }
+
+  function removeSelectedSavings() {
+    const api = savingsApi();
+    if (!api || !selectedSavingsIds.size) return;
+    api.removeByIds([...selectedSavingsIds]);
+    selectedSavingsIds = new Set();
+    renderSavingsHistory();
+    renderSavingsUI(null);
+  }
+
+  function renderSavingsBanner() {
+    const banner = $('savingsBanner');
+    const api = savingsApi();
+    if (!banner || !api) return;
+    const { month } = api.getStats();
+    if (!month.count) {
+      banner.classList.add('hidden');
+      banner.textContent = '';
+      const paySub = $('paySub');
+      if (paySub) paySub.classList.remove('hidden');
+      return;
+    }
+    banner.innerHTML =
+      t('savings.bannerMonth', { amount: `<strong>$${esc(api.formatUsd(month.reward_usd))}</strong>` }) +
+      `<div class="savings-banner-sub">${esc(t('savings.bannerTimes', { count: month.count }))} · ${esc(t('savings.bannerHint'))}</div>`;
+    banner.classList.remove('hidden');
+    banner.disabled = false;
+    const paySub = $('paySub');
+    if (paySub) paySub.classList.add('hidden');
+  }
+
+  function renderWalletSavingsPanel() {
+    const panel = $('walletSavingsPanel');
+    const section = $('walletSavingsSection');
+    const api = savingsApi();
+    if (!panel || !api) return;
+    const stats = api.getStats();
+    if (!stats.allTime.count) {
+      panel.classList.add('hidden');
+      panel.innerHTML = '';
+      section?.classList.add('hidden');
+      $('btnWalletSavingsHistory')?.classList.add('hidden');
+      return;
+    }
+    section?.classList.remove('hidden');
+    const historyLink = $('btnWalletSavingsHistory');
+    historyLink?.classList.remove('hidden');
+    panel.innerHTML =
+      renderSavingsStatRow('savings.month', stats.month) +
+      renderSavingsStatRow('savings.quarter', stats.quarter) +
+      renderSavingsStatRow('savings.allTime', stats.allTime) +
+      `<p class="savings-disclaimer">${esc(
+        t('savings.disclaimer', { default: `$${api.DEFAULT_AMOUNT}` }),
+      )}</p>`;
+    panel.classList.remove('hidden');
+  }
+
+  function renderSavingsUI(latestRewardUsd) {
+    renderSavingsBanner();
+    renderWalletSavingsPanel();
+    const note = $('savingsResultNote');
+    if (!note) return;
+    if (latestRewardUsd == null) {
+      note.classList.add('hidden');
+      note.textContent = '';
+      return;
+    }
+    const api = savingsApi();
+    if (!api) return;
+    const { month } = api.getStats();
+    note.textContent = t('savings.resultAdded', {
+      amount: api.formatUsd(latestRewardUsd),
+      monthTotal: api.formatUsd(month.reward_usd),
+    });
+    note.classList.remove('hidden');
+  }
+
+  function recordSavingsLookup(data, best, amount_usd, pick) {
+    const api = savingsApi();
+    if (!api || !best) return;
+    const merchant = data.merchant || {};
+    const recorded = api.recordLookup({
+      reward_usd: best.estimated_value_usd,
+      purchase_amount_usd: amount_usd,
+      amount_provided: amountProvided,
+      merchant: merchant.merchantName || pick?.merchantName || '',
+      card_name: best.card_name,
+      category: data.resolved_category || pick?.spendBonusCategoryName || '',
+    });
+    renderSavingsUI(recorded.row?.reward_usd);
+  }
 
   let catalog = [];
-  let walletState = null; // { mode: 'local'|'account', email?, cards: [] }
-  let activeTab = 'url';
-  let pendingAmount = 0;
+  let catalogByKey = {};
+  let issuerHints = [];
+  function loadImageUrlCache() {
+    try {
+      const raw = localStorage.getItem(IMAGE_CACHE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function saveImageUrlCache() {
+    try {
+      localStorage.setItem(IMAGE_CACHE_KEY, JSON.stringify(imageCache));
+    } catch (_) {}
+  }
+
+  function seedImageCache(entries) {
+    let changed = false;
+    (entries || []).forEach((row) => {
+      const key = row?.card_key;
+      const url = row?.image_url;
+      if (key && url && imageCache[key] !== url) {
+        imageCache[key] = url;
+        changed = true;
+      }
+    });
+    if (changed) saveImageUrlCache();
+  }
+
+  const imageCache = {};
+  Object.assign(imageCache, loadImageUrlCache());
+  let walletState = null; // { mode: 'local', cards: [] }
+  let activeTab = 'name';
+  let pendingAmount = DEFAULT_AMOUNT;
+  let amountProvided = false;
   let selectedPick = null;
   let selectAllOnNextFocus = false;
   let manageDraft = [];
+  let localSetupSelected = new Set();
   let userLocation = null; // { lat, lng } | null
-  let merchantConfig = { googlePlacesEnabled: false, locationRecommended: false };
+  let merchantConfig = { googlePlacesEnabled: false, locationRecommended: false, nearbyStoresEnabled: false };
+  let nearbyPlaces = [];
 
   const $ = (id) => document.getElementById(id);
 
@@ -25,6 +291,124 @@
       const el = $('view-' + v);
       if (el) el.classList.toggle('hidden', v !== name);
     });
+    const settingsBtn = $('btnWalletSettings');
+    if (settingsBtn) settingsBtn.classList.toggle('hidden', name === 'language');
+    const homeBtn = $('btnHome');
+    if (homeBtn) homeBtn.classList.toggle('nav-home-muted', name === 'pay');
+  }
+
+  async function goHome() {
+    if (!window.CR_I18N.hasChosenLocale()) {
+      showView('language');
+      return;
+    }
+    const payView = $('view-pay');
+    if (payView && !payView.classList.contains('hidden')) {
+      $('result')?.classList.remove('show');
+      $('error')?.classList.remove('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const w = resolveWallet();
+    if (w) {
+      walletState = w;
+      await enterPayFlow();
+      return;
+    }
+    showView('local-setup');
+    renderLocalCardTiles();
+  }
+
+  function loadPayTab() {
+    try {
+      const tab = localStorage.getItem(PAY_TAB_KEY);
+      return tab === 'url' || tab === 'name' ? tab : 'name';
+    } catch {
+      return 'name';
+    }
+  }
+
+  function savePayTab(tab) {
+    try {
+      localStorage.setItem(PAY_TAB_KEY, tab);
+    } catch (_) {}
+  }
+
+  function loadLastMerchant() {
+    try {
+      const raw = localStorage.getItem(LAST_MERCHANT_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function saveLastMerchant(entry) {
+    try {
+      localStorage.setItem(LAST_MERCHANT_KEY, JSON.stringify(entry));
+    } catch (_) {}
+    updateLastMerchantChip();
+  }
+
+  function clearLastMerchant() {
+    localStorage.removeItem(LAST_MERCHANT_KEY);
+    updateLastMerchantChip();
+  }
+
+  function lastMerchantShortcutName(last) {
+    if (!last) return '';
+    if (last.tab === 'url' && last.merchantUrl) {
+      try {
+        return new URL(
+          last.merchantUrl.includes('://') ? last.merchantUrl : `https://${last.merchantUrl}`,
+        ).hostname.replace(/^www\./, '');
+      } catch (_) {
+        return last.merchantUrl;
+      }
+    }
+    if (last.merchantName) return last.merchantName;
+    return '';
+  }
+
+  function updateLastMerchantChip() {
+    const storeBtn = $('btnLastMerchant');
+    const urlBtn = $('btnLastMerchantUrl');
+    const last = loadLastMerchant();
+    [storeBtn, urlBtn].forEach((btn) => {
+      if (!btn) return;
+      btn.classList.add('hidden');
+      btn.textContent = '';
+    });
+    if (!last) return;
+    const name = lastMerchantShortcutName(last);
+    if (!name) return;
+    const label = t('pay.useLast', { name });
+    if (last.tab === 'name' && last.merchantName && storeBtn) {
+      storeBtn.textContent = label;
+      storeBtn.classList.toggle('hidden', activeTab !== 'name');
+    }
+    if (last.tab === 'url' && last.merchantUrl && urlBtn) {
+      urlBtn.textContent = label;
+      urlBtn.classList.toggle('hidden', activeTab !== 'url');
+    }
+  }
+
+  function applyLastMerchant() {
+    const last = loadLastMerchant();
+    if (!last) return;
+    if (last.tab === 'url' || last.tab === 'name') {
+      applyPayTab(last.tab);
+    }
+    if (last.tab === 'url' && last.merchantUrl) {
+      $('merchantUrl').value = last.merchantUrl;
+    }
+    if (last.tab === 'name' && last.merchantName) {
+      $('merchantName').value = last.merchantName;
+    }
+    if (last.amount != null && last.amount !== '') {
+      applySavedAmount(last);
+    }
+    $('amount').focus();
   }
 
   function loadLocalWallet() {
@@ -44,22 +428,11 @@
     localStorage.removeItem(STORAGE_KEY);
   }
 
-  async function fetchAccountSession() {
-    const res = await fetch('/api/auth/me', { credentials: 'include' });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.authenticated ? data : null;
-  }
-
-  async function resolveWallet() {
-    const account = await fetchAccountSession();
-    if (account?.cards?.length) {
-      walletState = { mode: 'account', email: account.email, cards: account.cards };
-      return walletState;
-    }
+  function resolveWallet() {
     const local = loadLocalWallet();
     if (local?.cards?.length) {
       walletState = { mode: 'local', cards: local.cards };
+      seedImageCache(walletState.cards);
       return walletState;
     }
     walletState = null;
@@ -80,6 +453,7 @@
         (pos) => {
           userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
           updateLocationStatus();
+          if (activeTab === 'name') refreshNearbyStores();
           resolve(userLocation);
         },
         () => resolve(null),
@@ -91,22 +465,45 @@
   function updateLocationStatus() {
     const el = $('locationStatus');
     if (!el) return;
-    if (activeTab === 'url') {
-      el.textContent = '网站模式：按网购 reward 分类（未知网址默认 Online Shopping）';
-      el.className = 'hints location-ok';
+    if (activeTab !== 'name' || userLocation) {
+      el.classList.add('hidden');
+      el.textContent = '';
       return;
     }
-    if (userLocation) {
-      el.textContent = '实体店模式：已通过 Google Maps 匹配附近门店';
-      el.className = 'hints location-ok';
-      return;
-    }
-    el.textContent = '实体店模式：请允许定位，以便匹配附近门店';
-    el.className = 'hints location-warn';
+    el.textContent = t('loc.storeWarn');
+    el.className = 'pay-mode-hint location-warn';
+    el.classList.remove('hidden');
   }
 
   function purchaseChannelForTab() {
     return activeTab === 'url' ? 'online' : 'in_store';
+  }
+
+  function readAmountFromForm() {
+    const raw = $('amount').value.trim();
+    if (!raw) return { amount: DEFAULT_AMOUNT, provided: false };
+    const n = parseFloat(raw);
+    if (!Number.isFinite(n) || n <= 0) return { amount: DEFAULT_AMOUNT, provided: false };
+    return { amount: n, provided: true };
+  }
+
+  function syncPendingAmount() {
+    const parsed = readAmountFromForm();
+    pendingAmount = parsed.amount;
+    amountProvided = parsed.provided;
+    return parsed;
+  }
+
+  function applySavedAmount(entry) {
+    if (entry?.amount != null && entry.amount !== '') {
+      $('amount').value = entry.amount;
+    }
+  }
+
+  function formatResultMeta(amount_usd, storeLine, best) {
+    const tail = `${storeLine} · ${best.multiplier}x · ${best.reason}`;
+    if (amountProvided) return `$${amount_usd.toFixed(2)} · ${tail}`;
+    return `${t('pay.amountEstimateNote', { amount: amount_usd.toFixed(0) })} · ${tail}`;
   }
 
   function attachLocationToBody(body) {
@@ -121,82 +518,221 @@
     return body;
   }
 
-  function walletSummaryLabel() {
-    const n = walletState?.cards?.length || 0;
-    if (walletState?.mode === 'account') {
-      return `${walletState.email} · ${n} 张卡`;
-    }
-    return `本机 · ${n} 张卡`;
+  async function openWalletView() {
+    manageDraft = (walletState?.cards || []).map((c) => ({ ...c }));
+    if (!catalog.length) await loadCatalog();
+    await loadIssuerHints();
+    renderManageList();
+    renderManageQuickAdd();
+    $('issuerResults').innerHTML = '';
+    $('issuerQuery').value = '';
+    $('manageError').classList.remove('show');
+    showView('manage');
+    renderWalletSavingsPanel();
   }
 
-  function updateWalletBar() {
-    $('walletSummary').textContent = walletSummaryLabel();
+  function applyPayTab(tab) {
+    activeTab = tab === 'url' ? 'url' : 'name';
+    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === activeTab));
+    $('panel-url').classList.toggle('active', activeTab === 'url');
+    $('panel-name').classList.toggle('active', activeTab === 'name');
+    savePayTab(activeTab);
+    updateLocationStatus();
+    updateLastMerchantChip();
+    if (activeTab === 'name') refreshNearbyStores();
+    else hideNearbyStores();
+  }
+
+  function hideNearbyStores() {
+    const panel = $('nearbyStores');
+    if (panel) panel.classList.add('hidden');
+  }
+
+  function formatDistance(meters) {
+    if (meters == null || Number.isNaN(meters)) return '';
+    if (meters < 1000) return `${Math.round(meters)} m`;
+    return `${(meters / 1000).toFixed(1)} km`;
+  }
+
+  function renderNearbyStoresList() {
+    const list = $('nearbyStoresList');
+    const panel = $('nearbyStores');
+    if (!list || !panel) return;
+    if (!nearbyPlaces.length) {
+      panel.classList.add('hidden');
+      return;
+    }
+    list.innerHTML = nearbyPlaces
+      .map(
+        (p, i) => `
+      <button type="button" class="nearby-chip" data-idx="${i}" title="${esc(p.displayName)}">
+        ${esc(p.displayName)}${p.distanceMeters != null ? ` · ${esc(formatDistance(p.distanceMeters))}` : ''}
+      </button>`,
+      )
+      .join('');
+    list.querySelectorAll('.nearby-chip').forEach((btn) => {
+      btn.addEventListener('click', () => selectNearbyStore(nearbyPlaces[Number(btn.dataset.idx)]));
+    });
+    panel.classList.remove('hidden');
+  }
+
+  async function refreshNearbyStores() {
+    const panel = $('nearbyStores');
+    const list = $('nearbyStoresList');
+    if (!panel || !list || activeTab !== 'name') {
+      hideNearbyStores();
+      return;
+    }
+    if (!merchantConfig.nearbyStoresEnabled && !merchantConfig.googlePlacesEnabled) {
+      hideNearbyStores();
+      return;
+    }
+    if (!userLocation) {
+      hideNearbyStores();
+      return;
+    }
+    list.innerHTML = '';
+    panel.classList.remove('hidden');
+    try {
+      const { lat, lng } = userLocation;
+      const res = await fetch(
+        `/api/merchant/nearby?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lng)}&limit=5`,
+      );
+      const data = await res.json();
+      if (!res.ok || !(data.places || []).length) {
+        hideNearbyStores();
+        nearbyPlaces = [];
+        return;
+      }
+      nearbyPlaces = data.places;
+      renderNearbyStoresList();
+    } catch (_) {
+      hideNearbyStores();
+      nearbyPlaces = [];
+    }
+  }
+
+  async function selectNearbyStore(place) {
+    if (!place) return;
+    $('merchantName').value = place.displayName || place.merchantName || '';
+    syncPendingAmount();
+    const go = $('go');
+    const errorEl = $('error');
+    errorEl.classList.remove('show');
+    $('result').classList.remove('show');
+    go.disabled = true;
+    try {
+      await runRecommend(
+        {
+          merchantId: place.merchantId,
+          merchantName: place.merchantName || place.displayName,
+          spendBonusCategoryName: place.spendBonusCategoryName,
+        },
+        pendingAmount,
+      );
+    } catch (err) {
+      errorEl.textContent = err.message;
+      errorEl.classList.add('show');
+    } finally {
+      go.disabled = false;
+    }
   }
 
   async function loadCatalog() {
     const res = await fetch('/api/cards');
     const data = await res.json();
     catalog = data.cards || [];
-    $('paySub').textContent =
-      `输入店家和金额，在你钱包的 ${walletState?.cards?.length || 0} 张卡里找出 reward 价值最高的一张。`;
+    catalogByKey = Object.fromEntries(catalog.map((c) => [c.card_key, c]));
+    seedImageCache(catalog);
+    updatePaySub();
   }
 
-  function renderCardPicker(containerId, { showDetails = false, preselected = [] } = {}) {
-    const container = $(containerId);
-    const selected = new Set(preselected.map((c) => c.card_key));
-    const detailMap = Object.fromEntries(preselected.map((c) => [c.card_key, c]));
+  function cardMeta(cardKey, fallbackName) {
+    const fromCatalog = catalogByKey[cardKey] || {};
+    const fromWallet = (manageDraft || []).find((c) => c.card_key === cardKey) || {};
+    return {
+      card_key: cardKey,
+      card_name: fromWallet.card_name || fromCatalog.card_name || fallbackName || cardKey,
+      issuer: fromCatalog.issuer || '',
+      image_url: fromWallet.image_url || fromCatalog.image_url || '',
+    };
+  }
 
-    container.innerHTML = catalog
-      .map((c) => {
-        const checked = selected.has(c.card_key) ? 'checked' : '';
-        const det = detailMap[c.card_key] || {};
-        const detailBlock = showDetails
-          ? `<div class="card-detail-fields" data-detail-for="${esc(c.card_key)}" style="${checked ? '' : 'display:none'}">
-              <input type="text" class="nick" placeholder="昵称 (可选)" value="${esc(det.nickname || '')}" maxlength="40" />
-              <input type="text" class="last4" placeholder="末四位 (可选)" value="${esc(det.last4 || '')}" maxlength="4" inputmode="numeric" dir="ltr" />
-            </div>`
-          : '';
-        return `<div class="card-pick-row" data-key="${esc(c.card_key)}">
-          <label class="card-pick-label">
-            <input type="checkbox" class="card-pick-cb" value="${esc(c.card_key)}" ${checked} />
-            <span><strong>${esc(c.card_name)}</strong><br><span class="muted">${esc(c.issuer)}</span></span>
-          </label>${detailBlock}
-        </div>`;
-      })
-      .join('');
-
-    if (showDetails) {
-      container.querySelectorAll('.card-pick-cb').forEach((cb) => {
-        cb.addEventListener('change', () => {
-          const row = container.querySelector(`[data-detail-for="${cb.value}"]`);
-          if (row) row.style.display = cb.checked ? '' : 'none';
-        });
-      });
+  function cardThumbHtml(meta, { small = false } = {}) {
+    const name = meta.card_name || meta.card_key;
+    const cls = small ? 'card-thumb card-thumb-sm' : 'card-thumb';
+    const key = esc(meta.card_key);
+    const slotCls = small ? 'card-thumb-slot card-thumb-sm' : 'card-thumb-slot';
+    const cached = imageCache[meta.card_key] || meta.image_url;
+    if (cached) {
+      return `<div class="${slotCls}" data-card-key="${key}"><img class="${cls}" src="${esc(cached)}" alt="${esc(name)}" loading="lazy" /></div>`;
     }
+    const initial = (name.replace(/[^A-Za-z0-9]/g, '').charAt(0) || '?').toUpperCase();
+    return `<div class="${slotCls}" data-card-key="${key}"><div class="${cls} card-thumb-fallback" aria-hidden="true">${esc(initial)}</div></div>`;
   }
 
-  function readPickerCards(containerId, withDetails) {
-    const container = $(containerId);
-    const cards = [];
-    container.querySelectorAll('.card-pick-cb:checked').forEach((cb) => {
-      const key = cb.value;
-      const meta = catalog.find((c) => c.card_key === key) || {};
-      const card = {
-        card_key: key,
-        card_name: meta.card_name || key,
-        nickname: '',
-        last4: '',
-      };
-      if (withDetails) {
-        const fields = container.querySelector(`[data-detail-for="${key}"]`);
-        if (fields) {
-          card.nickname = fields.querySelector('.nick')?.value.trim() || '';
-          card.last4 = (fields.querySelector('.last4')?.value || '').replace(/\D/g, '').slice(0, 4);
+  async function hydrateCardImages(rootEl) {
+    if (!rootEl) return;
+    const keys = [
+      ...new Set(
+        [...rootEl.querySelectorAll('[data-card-key]')]
+          .map((el) => el.dataset.cardKey)
+          .filter(Boolean),
+      ),
+    ];
+    const need = keys.filter((k) => !imageCache[k] && !catalogByKey[k]?.image_url);
+    if (!need.length) return;
+    try {
+      const res = await fetch('/api/cards/images', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ card_keys: need.slice(0, 48) }),
+      });
+      const data = await res.json();
+      if (!res.ok) return;
+      Object.assign(imageCache, data.images || {});
+      saveImageUrlCache();
+      rootEl.querySelectorAll('[data-card-key]').forEach((slot) => {
+        const url = imageCache[slot.dataset.cardKey];
+        if (!url) return;
+        const name =
+          slot.closest('.manage-row')?.querySelector('strong')?.textContent ||
+          slot.closest('.card-tile')?.querySelector('.card-tile-name')?.textContent ||
+          slot.dataset.cardKey;
+        const cls = slot.classList.contains('card-thumb-sm') ? 'card-thumb card-thumb-sm' : 'card-thumb';
+        slot.innerHTML = `<img class="${cls}" src="${esc(url)}" alt="${esc(name)}" loading="lazy" />`;
+      });
+    } catch (_) {}
+  }
+
+  function cardTileHtml(card, { inWallet = false, selected = false } = {}) {
+    const meta = cardMeta(card.card_key, card.card_name);
+    const disabled = inWallet ? ' in-wallet' : '';
+    const sel = selected ? ' selected' : '';
+    return `<button type="button" class="card-tile${disabled}${sel}" data-key="${esc(card.card_key)}" ${inWallet ? 'disabled' : ''}>
+      ${cardThumbHtml(meta)}
+      <div class="card-tile-name">${esc(meta.card_name)}</div>
+    </button>`;
+  }
+
+  function renderLocalCardTiles() {
+    const grid = $('localCardPicker');
+    if (!grid) return;
+    localSetupSelected = new Set();
+    grid.innerHTML = catalog.map((c) => cardTileHtml(c)).join('');
+    grid.querySelectorAll('.card-tile').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key;
+        if (localSetupSelected.has(key)) {
+          localSetupSelected.delete(key);
+          btn.classList.remove('selected');
+        } else {
+          localSetupSelected.add(key);
+          btn.classList.add('selected');
         }
-      }
-      cards.push(card);
+      });
     });
-    return cards;
+    hydrateCardImages(grid);
   }
 
   function activeInputEl() {
@@ -251,9 +787,22 @@
   }
 
   function confidenceLabel(c) {
-    if (c === 'high') return '<span class="confidence-high">高置信度</span>';
-    if (c === 'medium') return '<span class="confidence-medium">中置信度 — 请核对</span>';
-    return '<span class="confidence-low">低置信度 — 请仔细核对</span>';
+    if (c === 'high') return t('conf.high');
+    if (c === 'medium') return t('conf.medium');
+    return t('conf.low');
+  }
+
+  function channelSuffix(purchaseChannel) {
+    if (purchaseChannel === 'online') return t('modal.online');
+    if (purchaseChannel === 'in_store') return t('modal.inStore');
+    return '';
+  }
+
+  function shouldConfirmMerchant(data) {
+    const alts = (data.candidates || []).filter((c) => c.merchantId !== data.best?.merchantId);
+    if (!data.needsConfirmation) return false;
+    if (data.best?.confidence === 'high' && !alts.length) return false;
+    return true;
   }
 
   function showConfirmModal(data) {
@@ -262,19 +811,8 @@
     selectedPick = best;
 
     $('confirmMerchant').textContent = best.merchantName;
-    $('confirmCategory').textContent = `→ ${best.spendBonusCategoryName}${data.purchaseChannel === 'online' ? '（网站）' : data.purchaseChannel === 'in_store' ? '（实体店）' : ''}`;
-    const hostLine = data.parsedHost ? `页面 host: ${data.parsedHost} · ` : '';
-    const parsedLine = data.parsedStoreName
-      ? `从网址解析: ${esc(data.parsedStoreName)}${data.parsedStoreDomain ? ` (${esc(data.parsedStoreDomain)})` : ''} · `
-      : '';
-    const channelLine = data.purchaseChannel === 'online'
-      ? '网站 · '
-      : data.purchaseChannel === 'in_store' ? '实体店 · ' : '';
-    const sourceLine = best.source === 'nominatim' ? ' · OpenStreetMap 推断'
-      : best.source === 'google_places' ? ' · Google Maps 门店'
-      : best.source === 'url_parse' ? ' · 官网网购推断' : '';
-    $('confirmMeta').innerHTML =
-      `${channelLine}${parsedLine}匹配: ${esc(best.matchedOn)} (${esc(best.matchType)}) · ${confidenceLabel(best.confidence)}${sourceLine}`;
+    $('confirmCategory').textContent = `→ ${best.spendBonusCategoryName}${channelSuffix(data.purchaseChannel)}`;
+    $('confirmMeta').textContent = confidenceLabel(best.confidence);
 
     const candidates = (data.candidates || []).filter((c) => c.merchantId !== best.merchantId);
     const block = $('candidateBlock');
@@ -290,7 +828,6 @@
               ${c.merchantId === selectedPick.merchantId ? 'checked' : ''} />
             <span>
               <strong>${esc(c.merchantName)}</strong> → ${esc(c.spendBonusCategoryName)}
-                <br><span style="color:var(--muted);font-size:.78rem">${esc(c.matchType)} · ${esc(c.confidence)}${c.source === 'nominatim' ? ' · OSM' : ''}${c.source === 'google_places' ? ' · Google Maps' : ''}</span>
             </span>
           </label>
         </li>`
@@ -303,7 +840,7 @@
           list.querySelectorAll('label').forEach((l) => l.classList.remove('selected'));
           radio.closest('label').classList.add('selected');
           $('confirmMerchant').textContent = selectedPick.merchantName;
-          $('confirmCategory').textContent = `→ ${selectedPick.spendBonusCategoryName}${data.purchaseChannel === 'online' ? '（网站）' : data.purchaseChannel === 'in_store' ? '（实体店）' : ''}`;
+          $('confirmCategory').textContent = `→ ${selectedPick.spendBonusCategoryName}${channelSuffix(data.purchaseChannel)}`;
         });
       });
     } else {
@@ -323,15 +860,29 @@
     });
   }
 
+  function rememberLastMerchantFromForm() {
+    const entry = {
+      tab: activeTab,
+    };
+    if (amountProvided) entry.amount = pendingAmount;
+    if (activeTab === 'url') {
+      entry.merchantUrl = $('merchantUrl').value.trim();
+    } else {
+      entry.merchantName = $('merchantName').value.trim();
+    }
+    saveLastMerchant(entry);
+  }
+
   async function runRecommend(pick, amount_usd) {
     const errorEl = $('error');
     const resultEl = $('result');
+    const go = $('go');
     errorEl.classList.remove('show');
     resultEl.classList.remove('show');
 
     const keys = walletCardKeys();
     if (!keys.length) {
-      throw new Error('请先添加至少一张卡');
+      throw new Error(t('pay.errorNoCards'));
     }
 
     const payload = {
@@ -350,18 +901,19 @@
       body: JSON.stringify(payload),
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.detail || 'Request failed');
+    if (!res.ok) throw new Error(data.detail || t('pay.errorRequest'));
+
+    rememberLastMerchantFromForm();
 
     const best = data.best;
     const merchant = data.merchant || {};
     $('bestName').textContent = best.card_name;
-    $('bestValue').textContent = `≈ $${best.estimated_value_usd.toFixed(2)} reward 价值`;
+    $('bestValue').textContent = t('result.value', { amount: best.estimated_value_usd.toFixed(2) });
     const storeLine = merchant.merchantName
       ? `${merchant.merchantName} → ${data.resolved_category}`
       : data.resolved_category;
-    $('bestMeta').textContent =
-      `$${amount_usd.toFixed(2)} · ${storeLine} · ${best.multiplier}x · ${best.reason}`;
-    $('rankHead').textContent = `钱包 ${data.card_count} 张卡排名（official CPP）`;
+    $('bestMeta').textContent = formatResultMeta(amount_usd, storeLine, best);
+    $('rankHead').textContent = t('result.rankHead', { count: data.card_count });
     $('rankings').innerHTML = data.rankings
       .map(
         (r) => `
@@ -376,6 +928,7 @@
       )
       .join('');
     resultEl.classList.add('show');
+    recordSavingsLookup(data, best, amount_usd, pick);
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     markInputsForReentry();
   }
@@ -383,19 +936,26 @@
   function renderManageList() {
     const list = $('manageCardList');
     list.innerHTML = manageDraft
-      .map(
-        (c, i) => `
+      .map((c, i) => {
+        const meta = cardMeta(c.card_key, c.card_name);
+        return `
       <div class="manage-row" data-idx="${i}">
-        <div class="manage-row-head"><strong>${esc(c.card_name || c.card_key)}</strong>
-          <button type="button" class="link-btn remove-card" data-idx="${i}">移除</button></div>
-      </div>`
-      )
+        ${cardThumbHtml(meta, { small: true })}
+        <div class="manage-row-main">
+          <div class="manage-row-head">
+            <strong>${esc(meta.card_name)}</strong>
+            <button type="button" class="link-btn remove-card" data-idx="${i}">${esc(t('wallet.remove'))}</button>
+          </div>
+          ${meta.issuer ? `<div class="manage-row-sub">${esc(meta.issuer)}</div>` : ''}
+        </div>
+      </div>`;
+      })
       .join('');
     list.querySelectorAll('.remove-card').forEach((btn) => {
       btn.addEventListener('click', async () => {
         $('manageError').classList.remove('show');
         if (manageDraft.length <= 1) {
-          $('manageError').textContent = '至少保留一张卡';
+          $('manageError').textContent = t('wallet.errorMin');
           $('manageError').classList.add('show');
           return;
         }
@@ -403,54 +963,144 @@
         try {
           await persistManageDraft();
           renderManageList();
-          renderAddCardSelect();
+          renderManageQuickAdd();
         } catch (err) {
           $('manageError').textContent = err.message;
           $('manageError').classList.add('show');
         }
       });
     });
+    hydrateCardImages(list);
   }
 
-  function renderAddCardSelect() {
-    const sel = $('addCardSelect');
+  function renderManageQuickAdd() {
+    const grid = $('manageQuickAdd');
     const inWallet = new Set(manageDraft.map((c) => c.card_key));
     const available = catalog.filter((c) => !inWallet.has(c.card_key));
-    sel.innerHTML =
-      '<option value="">— 添加一张卡 —</option>' +
-      available.map((c) => `<option value="${esc(c.card_key)}">${esc(c.card_name)} (${esc(c.issuer)})</option>`).join('');
+    grid.innerHTML = available.map((c) => cardTileHtml(c)).join('');
+    grid.querySelectorAll('.card-tile:not(.in-wallet)').forEach((btn) => {
+      btn.addEventListener('click', () => addCardToWallet(btn.dataset.key));
+    });
+    hydrateCardImages(grid);
+  }
+
+  async function loadIssuerHints() {
+    try {
+      const res = await fetch('/api/cards/issuers');
+      const data = await res.json();
+      issuerHints = data.issuers || [];
+      $('issuer-hints').innerHTML = issuerHints.map((i) => `<option value="${esc(i)}">`).join('');
+    } catch (_) {
+      issuerHints = [];
+    }
+  }
+
+  async function searchIssuerCards() {
+    const q = $('issuerQuery').value.trim();
+    const resultsEl = $('issuerResults');
+    $('manageError').classList.remove('show');
+    if (q.length < 2) {
+      $('manageError').textContent = t('wallet.errorIssuerLen');
+      $('manageError').classList.add('show');
+      resultsEl.innerHTML = '';
+      return;
+    }
+    resultsEl.innerHTML = '<p class="hints">' + esc(t('wallet.searching')) + '</p>';
+    try {
+      const res = await fetch(`/api/cards/by-issuer?q=${encodeURIComponent(q)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || 'Search failed');
+      const inWallet = new Set(manageDraft.map((c) => c.card_key));
+      const matches = (data.matches || []).filter((c) => !inWallet.has(c.card_key));
+      if (!matches.length) {
+        resultsEl.innerHTML = '<p class="hints">' + esc(t('wallet.noIssuerMatch')) + '</p>';
+        return;
+      }
+      matches.forEach((c) => {
+        catalogByKey[c.card_key] = { ...catalogByKey[c.card_key], ...c };
+      });
+      resultsEl.innerHTML = matches.map((c) => cardTileHtml(c)).join('');
+      resultsEl.querySelectorAll('.card-tile').forEach((btn) => {
+        btn.addEventListener('click', () => addCardToWallet(btn.dataset.key, catalogByKey[btn.dataset.key]));
+      });
+      hydrateCardImages(resultsEl);
+    } catch (err) {
+      resultsEl.innerHTML = '';
+      $('manageError').textContent = err.message;
+      $('manageError').classList.add('show');
+    }
+  }
+
+  async function addCardToWallet(cardKey, metaOverride) {
+    $('manageError').classList.remove('show');
+    if (manageDraft.some((c) => c.card_key === cardKey)) return;
+    const meta = metaOverride || catalogByKey[cardKey] || {};
+    manageDraft.push({
+      card_key: cardKey,
+      card_name: meta.card_name || cardKey,
+      nickname: '',
+      last4: '',
+      image_url: meta.image_url || imageCache[cardKey] || '',
+    });
+    try {
+      await persistManageDraft();
+      renderManageList();
+      renderManageQuickAdd();
+      const resultsEl = $('issuerResults');
+      if (resultsEl) {
+        resultsEl.querySelectorAll(`.card-tile[data-key="${cardKey}"]`).forEach((el) => {
+          el.classList.add('in-wallet');
+          el.disabled = true;
+        });
+      }
+    } catch (err) {
+      manageDraft.pop();
+      $('manageError').textContent = err.message;
+      $('manageError').classList.add('show');
+    }
   }
 
   async function persistManageDraft() {
-    if (!manageDraft.length) throw new Error('至少保留一张卡');
-
-    if (walletState?.mode === 'account') {
-      const res = await fetch('/api/wallet', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ cards: manageDraft }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.detail || 'Save failed');
-      walletState.cards = data.cards;
-      manageDraft = walletState.cards.map((c) => ({ ...c }));
-    } else {
-      saveLocalWallet(manageDraft);
-      walletState = { mode: 'local', cards: manageDraft.map((c) => ({ ...c })) };
-    }
-    updateWalletBar();
+    if (!manageDraft.length) throw new Error(t('wallet.errorMin'));
+    saveLocalWallet(manageDraft);
+    walletState = { mode: 'local', cards: manageDraft.map((c) => ({ ...c })) };
+    updatePaySub();
     await loadCatalog();
   }
 
   async function enterPayFlow() {
     await loadCatalog();
-    updateWalletBar();
+    applyPayTab(loadPayTab());
+    applyPageI18n();
     showView('pay');
+    renderSavingsBanner();
     if (activeTab === 'name' && !userLocation) {
       await requestUserLocation();
     }
     updateLocationStatus();
+    updateLastMerchantChip();
+    if (activeTab === 'name') await refreshNearbyStores();
+    else hideNearbyStores();
+  }
+
+  function continueAfterLanguage() {
+    applyPageI18n();
+    const w = resolveWallet();
+    if (w) enterPayFlow();
+    else {
+      showView('local-setup');
+      renderLocalCardTiles();
+    }
+  }
+
+  function finishLanguagePick(code) {
+    window.CR_I18N.setLocale(code);
+    if (languageReturnView === 'wallet') {
+      applyPageI18n();
+      showView('manage');
+      return;
+    }
+    continueAfterLanguage();
   }
 
   async function init() {
@@ -464,153 +1114,107 @@
 
     document.querySelectorAll('.tab').forEach((btn) => {
       btn.addEventListener('click', () => {
-        activeTab = btn.dataset.tab;
-        document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === activeTab));
-        $('panel-url').classList.toggle('active', activeTab === 'url');
-        $('panel-name').classList.toggle('active', activeTab === 'name');
-        updateLocationStatus();
+        applyPayTab(btn.dataset.tab);
       });
     });
 
-    $('btnLocal').addEventListener('click', async () => {
-      if (!catalog.length) await loadCatalog();
-      renderCardPicker('localCardPicker', { showDetails: false });
-      showView('local-setup');
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => finishLanguagePick(btn.dataset.lang));
     });
-    $('localBack').addEventListener('click', () => showView('welcome'));
-    $('btnRegister').addEventListener('click', async () => {
-      if (!catalog.length) await loadCatalog();
-      renderCardPicker('registerCardPicker', { showDetails: true });
-      showView('register');
+
+    $('btnChangeLanguage')?.addEventListener('click', () => {
+      languageReturnView = 'wallet';
+      showView('language');
     });
-    $('btnLogin').addEventListener('click', () => showView('login'));
+
+    $('btnLastMerchant')?.addEventListener('click', () => applyLastMerchant());
+    $('btnLastMerchantUrl')?.addEventListener('click', () => applyLastMerchant());
 
     $('localSave').addEventListener('click', () => {
-      const cards = readPickerCards('localCardPicker', false);
-      if (!cards.length) {
-        $('localSetupError').textContent = '请至少选择一张卡';
+      if (!localSetupSelected.size) {
+        $('localSetupError').textContent = t('setup.errorMin');
         $('localSetupError').classList.add('show');
         return;
       }
+      const cards = [...localSetupSelected].map((key) => {
+        const meta = catalogByKey[key] || {};
+        return {
+          card_key: key,
+          card_name: meta.card_name || key,
+          nickname: '',
+          last4: '',
+        };
+      });
       saveLocalWallet(cards);
       walletState = { mode: 'local', cards };
       $('localSetupError').classList.remove('show');
       enterPayFlow();
     });
 
-    $('registerSubmit').addEventListener('click', async () => {
-      $('registerError').classList.remove('show');
-      const email = $('regEmail').value.trim();
-      const password = $('regPassword').value;
-      const cards = readPickerCards('registerCardPicker', true);
-      if (!cards.length) {
-        $('registerError').textContent = '请至少选择一张卡';
-        $('registerError').classList.add('show');
-        return;
-      }
-      try {
-        const res = await fetch('/api/auth/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          credentials: 'include',
-          body: JSON.stringify({ email, password, cards }),
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.detail || 'Register failed');
-        walletState = { mode: 'account', email: data.email, cards: data.cards };
-        enterPayFlow();
-      } catch (err) {
-        $('registerError').textContent = err.message;
-        $('registerError').classList.add('show');
-      }
-    });
+    $('btnWalletSettings').addEventListener('click', () => openWalletView());
+    $('btnHome')?.addEventListener('click', () => goHome());
 
-    $('loginSubmit').addEventListener('click', async () => {
-      $('loginError').classList.remove('show');
-      try {
-        const res = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          credentials: 'include',
-          body: JSON.stringify({
-            email: $('loginEmail').value.trim(),
-            password: $('loginPassword').value,
-          }),
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.detail || 'Login failed');
-        walletState = { mode: 'account', email: data.email, cards: data.cards };
-        if (!data.cards?.length) {
-          renderCardPicker('registerCardPicker', { showDetails: true, preselected: [] });
-          showView('register');
-          return;
-        }
-        enterPayFlow();
-      } catch (err) {
-        $('loginError').textContent = err.message;
-        $('loginError').classList.add('show');
-      }
-    });
-
-    $('btnManage').addEventListener('click', () => {
-      manageDraft = (walletState?.cards || []).map((c) => ({ ...c }));
-      renderManageList();
-      renderAddCardSelect();
-      $('manageError').classList.remove('show');
-      $('manageAccountActions').style.display = walletState?.mode === 'account' ? 'block' : 'none';
-      $('manageLocalActions').style.display = walletState?.mode === 'local' ? 'block' : 'none';
-      showView('manage');
-    });
+    $('savingsBanner')?.addEventListener('click', () => openSavingsHistory('pay'));
+    $('btnWalletSavingsHistory')?.addEventListener('click', () => openSavingsHistory('manage'));
+    $('savingsHistoryBack')?.addEventListener('click', () => showView(savingsReturnView));
+    $('btnRemoveSavingsSelected')?.addEventListener('click', () => removeSelectedSavings());
 
     $('manageBack').addEventListener('click', () => showView('pay'));
-
-    $('addCardBtn').addEventListener('click', async () => {
-      const key = $('addCardSelect').value;
-      if (!key) return;
-      $('manageError').classList.remove('show');
-      const meta = catalog.find((c) => c.card_key === key);
-      manageDraft.push({
-        card_key: key,
-        card_name: meta?.card_name || key,
-        nickname: '',
-        last4: '',
-      });
-      try {
-        await persistManageDraft();
-        renderManageList();
-        renderAddCardSelect();
-      } catch (err) {
-        manageDraft.pop();
-        $('manageError').textContent = err.message;
-        $('manageError').classList.add('show');
+    $('issuerSearchBtn').addEventListener('click', () => searchIssuerCards());
+    $('issuerQuery').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        searchIssuerCards();
       }
     });
 
-    $('btnLogout').addEventListener('click', async () => {
-      await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
-      walletState = null;
-      showView('welcome');
+    let issuerDebounce = null;
+    $('issuerQuery').addEventListener('input', () => {
+      clearTimeout(issuerDebounce);
+      issuerDebounce = setTimeout(() => {
+        const q = $('issuerQuery').value.trim();
+        if (q.length >= 2) searchIssuerCards();
+      }, 300);
     });
 
     $('btnResetLocal').addEventListener('click', () => {
+      $('resetModal').classList.add('show');
+    });
+
+    function performLocalReset() {
       clearLocalWallet();
+      localStorage.removeItem(IMAGE_CACHE_KEY);
+      clearLastMerchant();
+      savingsApi()?.clear();
+      Object.keys(imageCache).forEach((k) => delete imageCache[k]);
       walletState = null;
-      showView('welcome');
+      renderSavingsUI(null);
+      $('resetModal').classList.remove('show');
+      showView('local-setup');
+      renderLocalCardTiles();
+    }
+
+    $('resetConfirm').addEventListener('click', () => performLocalReset());
+    $('resetCancel').addEventListener('click', () => $('resetModal').classList.remove('show'));
+    $('resetModal').addEventListener('click', (e) => {
+      if (e.target.id === 'resetModal') $('resetModal').classList.remove('show');
     });
 
     $('form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const errorEl = $('error');
       const go = $('go');
+      const submitLabel = go.textContent;
       errorEl.classList.remove('show');
       $('result').classList.remove('show');
       go.disabled = true;
-      pendingAmount = parseFloat($('amount').value);
+      go.textContent = t('pay.submitting');
+      syncPendingAmount();
       const body = {};
       if (activeTab === 'url') {
         const url = $('merchantUrl').value.trim();
         if (!url) {
-          errorEl.textContent = '请粘贴结账页 URL';
+          errorEl.textContent = t('pay.errorUrl');
           errorEl.classList.add('show');
           go.disabled = false;
           return;
@@ -619,7 +1223,7 @@
       } else {
         const name = $('merchantName').value.trim();
         if (!name) {
-          errorEl.textContent = '请输入店名';
+          errorEl.textContent = t('pay.errorStore');
           errorEl.classList.add('show');
           go.disabled = false;
           return;
@@ -627,23 +1231,22 @@
         body.merchant_name = name;
       }
       try {
-        if (activeTab === 'name' && !userLocation) {
-          await requestUserLocation();
-        }
         const res = await fetch('/api/merchant/resolve', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(attachLocationToBody(body)),
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.detail || 'Request failed');
-        if (data.needsConfirmation || activeTab === 'url') showConfirmModal(data);
+        if (!res.ok) throw new Error(data.detail || t('pay.errorRequest'));
+        rememberLastMerchantFromForm();
+        if (shouldConfirmMerchant(data)) showConfirmModal(data);
         else await runRecommend(data.best, pendingAmount);
       } catch (err) {
         errorEl.textContent = err.message;
         errorEl.classList.add('show');
       } finally {
         go.disabled = false;
+        go.textContent = submitLabel || t('pay.submit');
         markInputsForReentry();
       }
     });
@@ -681,9 +1284,21 @@
     await refreshMerchantHints('');
 
     await loadCatalog();
-    const w = await resolveWallet();
+
+    if (!window.CR_I18N.hasChosenLocale()) {
+      languageReturnView = 'bootstrap';
+      showView('language');
+      return;
+    }
+
+    window.CR_I18N.setLocale(window.CR_I18N.loadLocale());
+    applyPageI18n();
+    const w = resolveWallet();
     if (w) enterPayFlow();
-    else showView('welcome');
+    else {
+      showView('local-setup');
+      renderLocalCardTiles();
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

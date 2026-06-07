@@ -30,8 +30,37 @@ def _wallet_loader(db_path):
 def test_index_page_loads():
     res = client.get("/")
     assert res.status_code == 200
-    assert "仅在本机使用" in res.text
+    assert "i18n.js" in res.text
+    assert "app.css" in res.text
+    assert "savings.js" in res.text
     assert "wallet-ui.js" in res.text
+    assert "pwa.js" in res.text
+    assert "manifest.webmanifest" in res.text
+    assert "apple-touch-icon" in res.text
+    assert "view-language" in res.text
+    assert "savingsBanner" in res.text
+
+
+def test_pwa_assets():
+    manifest = client.get("/manifest.webmanifest")
+    assert manifest.status_code == 200
+    assert manifest.headers["content-type"].startswith("application/manifest+json")
+    assert "CreditRewards" in manifest.text
+    assert "standalone" in manifest.text
+
+    sw = client.get("/sw.js")
+    assert sw.status_code == 200
+    assert "serviceWorker" not in sw.text  # is the worker itself
+    assert "fetch" in sw.text
+
+    for path in (
+        "/static/icons/icon.svg",
+        "/static/icons/apple-touch-icon.png",
+        "/static/icons/icon-192.png",
+        "/static/icons/icon-512.png",
+    ):
+        icon = client.get(path)
+        assert icon.status_code == 200, path
 
 
 def test_merchant_resolve_url():

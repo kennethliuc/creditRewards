@@ -1,295 +1,208 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#06080d" />
+  <meta name="description" content="At checkout, pick the credit card that earns the most rewards." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CreditRewards" />
   <title>CreditRewards — Which card?</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0b0f14;
-      --card: #151b24;
-      --text: #eef2f7;
-      --muted: #93a0b0;
-      --accent: #3dd68c;
-      --border: #243041;
-      --fail: #ff7b7b;
-      --pending: #e6c84a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100dvh;
-      padding: 1rem;
-    }
-    .wrap { max-width: 480px; margin: 0 auto; }
-    .hidden { display: none !important; }
-    .nav { margin-bottom: 1rem; font-size: .85rem; color: var(--muted); }
-    .nav a { color: var(--accent); text-decoration: none; margin-right: .75rem; }
-    h1 { font-size: 1.45rem; margin: 0 0 .25rem; }
-    p.sub { color: var(--muted); margin: 0 0 1.25rem; line-height: 1.45; font-size: .95rem; }
-    .wallet-bar {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: .65rem .85rem; border-radius: 12px; border: 1px solid var(--border);
-      background: var(--card); margin-bottom: 1rem; font-size: .85rem;
-    }
-    .wallet-bar span { color: var(--muted); }
-    .link-btn {
-      background: none; border: none; color: var(--accent); cursor: pointer;
-      font: inherit; padding: 0; width: auto;
-    }
-    .mode-grid { display: flex; flex-direction: column; gap: .65rem; margin: 1rem 0; }
-    .mode-btn {
-      text-align: left; padding: 1rem; border-radius: 14px; border: 1px solid var(--border);
-      background: var(--card); color: var(--text); cursor: pointer; width: 100%;
-    }
-    .mode-btn strong { display: block; margin-bottom: .25rem; }
-    .mode-btn span { color: var(--muted); font-size: .85rem; line-height: 1.35; }
-    .tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
-    .tab {
-      flex: 1; padding: .65rem; border-radius: 10px;
-      border: 1px solid var(--border); background: var(--card);
-      color: var(--muted); cursor: pointer; font: inherit; text-align: center;
-    }
-    .tab.active { color: var(--text); border-color: var(--accent); background: rgba(61,214,140,.08); }
-    label { display: block; font-size: .82rem; color: var(--muted); margin: .65rem 0 .35rem; }
-    input, select, button {
-      width: 100%; font: inherit; border-radius: 12px;
-      border: 1px solid var(--border); background: var(--card);
-      color: var(--text); padding: .85rem 1rem;
-    }
-    input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
-      direction: ltr; text-align: left; unicode-bidi: isolate;
-    }
-    #form { direction: ltr; }
-    input:focus { outline: 2px solid rgba(61,214,140,.35); border-color: var(--accent); }
-    .panel { display: none; }
-    .panel.active { display: block; }
-    .hints { font-size: .78rem; color: var(--muted); margin-top: .35rem; line-height: 1.35; }
-    .location-ok { color: var(--accent); }
-    .location-warn { color: var(--pending); }
-    button.primary {
-      margin-top: 1.1rem; background: var(--accent); color: #04130a;
-      font-weight: 700; border: none; cursor: pointer;
-    }
-    button.primary:disabled { opacity: .5; cursor: wait; }
-    button.secondary {
-      margin-top: .65rem; background: transparent; color: var(--muted);
-      border: 1px solid var(--border); cursor: pointer;
-    }
-    .error { color: var(--fail); margin-top: 1rem; font-size: .9rem; display: none; line-height: 1.4; }
-    .error.show { display: block; }
-    .card-picker {
-      max-height: 320px; overflow-y: auto; border: 1px solid var(--border);
-      border-radius: 14px; background: var(--card); margin-top: .5rem;
-    }
-    .card-pick-row { border-top: 1px solid var(--border); padding: .55rem .75rem; }
-    .card-pick-row:first-child { border-top: none; }
-    .card-pick-label { display: flex; gap: .65rem; align-items: flex-start; margin: 0; cursor: pointer; }
-    .card-pick-label input { width: auto; margin-top: .2rem; }
-    .card-detail-fields { display: grid; grid-template-columns: 1fr 5rem; gap: .45rem; margin: .45rem 0 0 1.6rem; }
-    .card-detail-fields input { padding: .5rem .65rem; font-size: .85rem; }
-    .manage-row { border: 1px solid var(--border); border-radius: 12px; padding: .65rem .75rem; margin-bottom: .55rem; }
-    .manage-row-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: .45rem; }
-    .manage-fields { display: grid; grid-template-columns: 1fr 5rem; gap: .45rem; }
-    .manage-fields input { padding: .55rem .65rem; font-size: .88rem; }
-    .add-card-row { display: grid; grid-template-columns: 1fr auto; gap: .5rem; margin-top: .75rem; align-items: center; }
-    .add-card-row button { width: auto; padding: .65rem 1rem; margin: 0; }
-    .result { margin-top: 1.25rem; display: none; }
-    .result.show { display: block; }
-    .hero {
-      padding: 1.1rem 1.15rem; border-radius: 16px;
-      background: linear-gradient(135deg, rgba(61,214,140,.14), rgba(61,214,140,.04));
-      border: 1px solid rgba(61,214,140,.35); margin-bottom: 1rem;
-    }
-    .hero-label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-    .hero-card { font-size: 1.2rem; font-weight: 700; margin: .25rem 0; }
-    .hero-value { font-size: 1.65rem; font-weight: 800; color: var(--accent); }
-    .hero-meta { font-size: .85rem; color: var(--muted); margin-top: .5rem; line-height: 1.4; }
-    .rank-head { font-size: .82rem; color: var(--muted); margin: .5rem 0 .35rem; }
-    .rank-list {
-      border: 1px solid var(--border); border-radius: 14px; background: var(--card);
-      overflow: hidden; max-height: 360px; overflow-y: auto;
-    }
-    .rank-row {
-      display: grid; grid-template-columns: 2rem 1fr auto; gap: .5rem;
-      align-items: center; padding: .65rem .85rem;
-      border-top: 1px solid var(--border); font-size: .88rem;
-    }
-    .rank-row:first-child { border-top: none; }
-    .rank-row.top { background: rgba(61,214,140,.06); }
-    .rank-num { color: var(--muted); font-weight: 600; text-align: center; }
-    .rank-name { font-weight: 500; }
-    .rank-sub { font-size: .75rem; color: var(--muted); }
-    .rank-usd { font-weight: 700; color: var(--accent); white-space: nowrap; }
-    .modal-backdrop {
-      position: fixed; inset: 0; background: rgba(0,0,0,.55);
-      display: none; align-items: flex-end; justify-content: center;
-      padding: 1rem; z-index: 100;
-    }
-    .modal-backdrop.show { display: flex; }
-    .modal {
-      width: 100%; max-width: 480px; background: var(--card);
-      border: 1px solid var(--border); border-radius: 18px 18px 14px 14px;
-      padding: 1.15rem 1.15rem 1rem; max-height: 85dvh; overflow-y: auto;
-    }
-    .modal h2 { margin: 0 0 .35rem; font-size: 1.1rem; }
-    .modal p.lead { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; line-height: 1.4; }
-    .confirm-box {
-      border: 1px solid var(--border); border-radius: 14px;
-      padding: .9rem 1rem; margin-bottom: .85rem; background: var(--bg);
-    }
-    .confirm-merchant { font-size: 1.15rem; font-weight: 700; }
-    .confirm-category { color: var(--accent); font-weight: 600; margin-top: .25rem; }
-    .confirm-meta { font-size: .78rem; color: var(--muted); margin-top: .5rem; line-height: 1.4; word-break: break-all; }
-    .confidence-high { color: var(--accent); }
-    .confidence-medium { color: var(--pending); }
-    .confidence-low { color: var(--fail); }
-    .candidate-list { margin: .5rem 0 0; padding: 0; list-style: none; }
-    .candidate-list li { margin-bottom: .45rem; }
-    .candidate-list label {
-      display: flex; gap: .6rem; align-items: flex-start; margin: 0;
-      padding: .55rem .65rem; border-radius: 10px; border: 1px solid var(--border);
-      cursor: pointer; font-size: .88rem; color: var(--text);
-    }
-    .candidate-list input { width: auto; margin-top: .15rem; }
-    .candidate-list label.selected { border-color: var(--accent); background: rgba(61,214,140,.08); }
-  </style>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/static/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/static/app.css" />
 </head>
 <body>
+  <div class="app-bg" aria-hidden="true"></div>
   <div class="wrap">
-    <nav class="nav">
-      <strong>Recommend</strong>
-      <a href="/compare">Compare</a>
-      <a href="/validation">Validation</a>
+    <div id="installBanner" class="install-banner hidden" role="region" aria-labelledby="installBannerText">
+      <p id="installBannerText" data-i18n="pwa.installIos">Tap Share, then Add to Home Screen for the full app.</p>
+      <button type="button" class="install-dismiss" id="installDismiss" data-i18n-aria="pwa.dismiss" aria-label="Dismiss">×</button>
+    </div>
+    <nav class="nav-bar">
+      <button type="button" class="brand brand-btn" id="btnHome"
+        data-i18n-aria="nav.home" aria-label="Back to home" title="Back to home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+        </div>
+        <div class="brand-text">
+          <strong>CreditRewards</strong>
+          <span data-i18n="nav.recommend">Pick the best card</span>
+        </div>
+      </button>
+      <button type="button" class="nav-settings hidden" id="btnWalletSettings"
+        data-i18n-aria="nav.settings" aria-label="Wallet & settings" title="Wallet & settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <span id="walletNavLabel">Wallet</span>
+      </button>
     </nav>
 
-    <!-- Welcome -->
-    <section id="view-welcome">
-      <h1>这次用哪张卡？</h1>
-      <p class="sub">第一次使用：选一种方式设置你的钱包，之后每次打开直接推荐。</p>
-      <div class="mode-grid">
-        <button type="button" class="mode-btn" id="btnLocal">
-          <strong>仅在本机使用</strong>
-          <span>不注册。选择你持有的卡，数据只存在这台设备。</span>
+    <!-- Language (first use or settings) -->
+    <section id="view-language" class="hidden view-section">
+      <div class="page-head">
+        <h1 data-i18n="lang.title">Choose your language</h1>
+        <p class="sub" data-i18n="lang.sub">You can change this later in My wallet.</p>
+      </div>
+      <div class="lang-grid">
+        <button type="button" class="lang-btn" data-lang="en">
+          English
+          <span>English</span>
         </button>
-        <button type="button" class="mode-btn" id="btnRegister">
-          <strong>创建账号</strong>
-          <span>邮箱 + 密码，多设备同步；可为每张卡填昵称和末四位。</span>
+        <button type="button" class="lang-btn" data-lang="es">
+          Español
+          <span>Español</span>
         </button>
-        <button type="button" class="mode-btn" id="btnLogin">
-          <strong>已有账号，登录</strong>
-          <span>恢复你的云端钱包。</span>
+        <button type="button" class="lang-btn" data-lang="zh">
+          中文
+          <span>中文</span>
         </button>
       </div>
-      <p class="hints">我们不存储完整卡号或 CVV。</p>
     </section>
 
     <!-- Local setup -->
-    <section id="view-local-setup" class="hidden">
-      <h1>选择你的卡</h1>
-      <p class="sub">勾选你目前持有的 rewards 卡（至少 1 张）。</p>
-      <div id="localCardPicker" class="card-picker"></div>
+    <section id="view-local-setup" class="hidden view-section">
+      <div class="page-head">
+        <h1 data-i18n="setup.title">Pick your cards</h1>
+        <p class="sub" data-i18n="setup.sub">Tap to add at least one card you carry.</p>
+      </div>
+      <div id="localCardPicker" class="card-grid"></div>
       <div id="localSetupError" class="error"></div>
-      <button type="button" class="primary" id="localSave">保存并开始使用</button>
-      <button type="button" class="secondary" id="localBack">返回</button>
-    </section>
-
-    <!-- Register -->
-    <section id="view-register" class="hidden">
-      <h1>创建账号</h1>
-      <p class="sub">注册并选择你的卡；勾选后可填昵称和末四位（可选）。</p>
-      <label for="regEmail">邮箱</label>
-      <input id="regEmail" type="email" dir="ltr" autocomplete="email" />
-      <label for="regPassword">密码（至少 8 位）</label>
-      <input id="regPassword" type="password" dir="ltr" autocomplete="new-password" />
-      <label>我的卡</label>
-      <div id="registerCardPicker" class="card-picker"></div>
-      <div id="registerError" class="error"></div>
-      <button type="button" class="primary" id="registerSubmit">注册并开始使用</button>
-    </section>
-
-    <!-- Login -->
-    <section id="view-login" class="hidden">
-      <h1>登录</h1>
-      <label for="loginEmail">邮箱</label>
-      <input id="loginEmail" type="email" dir="ltr" autocomplete="email" />
-      <label for="loginPassword">密码</label>
-      <input id="loginPassword" type="password" dir="ltr" autocomplete="current-password" />
-      <div id="loginError" class="error"></div>
-      <button type="button" class="primary" id="loginSubmit">登录</button>
+      <button type="button" class="primary" id="localSave" data-i18n="setup.start">Get started</button>
     </section>
 
     <!-- Pay -->
-    <section id="view-pay" class="hidden">
-      <div class="wallet-bar">
-        <span id="walletSummary">我的卡</span>
-        <button type="button" class="link-btn" id="btnManage">管理我的卡</button>
+    <section id="view-pay" class="hidden view-section">
+      <div class="page-head page-head-compact">
+        <h1 data-i18n="pay.title">Which card to use?</h1>
+        <p class="sub" id="paySub"></p>
       </div>
-      <h1>这次用哪张卡？</h1>
-      <p class="sub" id="paySub">输入店家和金额，在你钱包的卡里找出最优的一张。</p>
-      <p class="hints" id="locationStatus"></p>
-      <div class="tabs">
-        <button type="button" class="tab active" data-tab="url">网站</button>
-        <button type="button" class="tab" data-tab="name">实体店</button>
+      <button type="button" id="savingsBanner" class="savings-banner savings-banner-btn hidden" aria-live="polite"></button>
+
+      <div class="glass-panel pay-panel">
+        <div class="pay-panel-top">
+          <div class="tabs tabs-compact">
+            <button type="button" class="tab" data-tab="url" data-i18n="pay.tabOnline">Website</button>
+            <button type="button" class="tab active" data-tab="name" data-i18n="pay.tabStore">In store</button>
+          </div>
+          <p class="pay-mode-hint hidden" id="locationStatus" aria-live="polite"></p>
+        </div>
+        <form id="form">
+          <div id="panel-url" class="panel">
+            <div class="field-head">
+              <label for="merchantUrl" data-i18n="pay.urlLabel">Checkout / store URL</label>
+              <button type="button" class="field-shortcut hidden" id="btnLastMerchantUrl"></button>
+            </div>
+            <input id="merchantUrl" type="text" inputmode="text" dir="ltr"
+              data-i18n-placeholder="pay.urlPlaceholder"
+              placeholder="walmart.com, nike.com…" autocomplete="off" spellcheck="false" />
+          </div>
+          <div id="panel-name" class="panel active">
+            <div class="field-head">
+              <label for="merchantName" data-i18n="pay.storeLabel">Store name</label>
+              <button type="button" class="field-shortcut hidden" id="btnLastMerchant"></button>
+            </div>
+            <input id="merchantName" type="text" dir="ltr"
+              data-i18n-placeholder="pay.storePlaceholder"
+              placeholder="Walmart, Nike, Central Market…" list="merchant-name-hints" autocomplete="off" />
+            <div id="nearbyStores" class="nearby-stores hidden">
+              <div id="nearbyStoresList" class="nearby-scroll"></div>
+            </div>
+          </div>
+          <datalist id="merchant-name-hints"></datalist>
+          <button type="submit" class="primary form-submit" id="go" data-i18n="pay.submit">Recommend card</button>
+          <div class="amount-field">
+            <label for="amount" data-i18n="pay.amountLabel">Amount (USD, optional)</label>
+            <input id="amount" type="number" dir="ltr" min="0.01" step="0.01"
+              data-i18n-placeholder="pay.amountPlaceholder" placeholder="100" inputmode="decimal" />
+            <p class="hints" data-i18n="pay.amountHint">For reward $ estimates. Leave blank to compare by category only.</p>
+          </div>
+        </form>
       </div>
-      <form id="form">
-        <div id="panel-url" class="panel active">
-          <label for="merchantUrl">结账页 / 官网 URL</label>
-          <input id="merchantUrl" type="text" inputmode="text" dir="ltr"
-            placeholder="walmart.com、nike.com 等" autocomplete="off" spellcheck="false" />
-          <p class="hints">粘贴网址 → 按<strong>网购</strong> reward 分类（含未知网站，默认 Online Shopping）。</p>
-        </div>
-        <div id="panel-name" class="panel">
-          <label for="merchantName">实体店名</label>
-          <input id="merchantName" type="text" dir="ltr" placeholder="Walmart, Nike, Central Market…" list="merchant-name-hints" autocomplete="off" />
-          <p class="hints">输入店名 → 按<strong>实体店</strong> reward 分类（可定位 Google Maps）。</p>
-        </div>
-        <datalist id="merchant-name-hints"></datalist>
-        <label for="amount">消费金额 (USD)</label>
-        <input id="amount" type="number" dir="ltr" min="0.01" step="0.01" value="100" required />
-        <button type="submit" class="primary" id="go">识别商家并继续</button>
-      </form>
       <div id="error" class="error"></div>
       <div id="result" class="result">
         <div class="hero">
-          <div class="hero-label">推荐使用</div>
+          <div class="hero-label" data-i18n="result.heroLabel">Use this card</div>
           <div class="hero-card" id="bestName"></div>
           <div class="hero-value" id="bestValue"></div>
           <div class="hero-meta" id="bestMeta"></div>
+          <div id="savingsResultNote" class="savings-result-note hidden" aria-live="polite"></div>
         </div>
         <div class="rank-head" id="rankHead"></div>
         <div class="rank-list" id="rankings"></div>
       </div>
     </section>
 
-    <!-- Manage wallet -->
-    <section id="view-manage" class="hidden">
-      <h1>管理我的卡</h1>
-      <p class="sub">添加或移除卡，更改会立即生效。</p>
-      <div id="manageCardList"></div>
-      <div class="add-card-row">
-        <select id="addCardSelect"></select>
-        <button type="button" class="primary" id="addCardBtn" style="margin-top:0">添加</button>
+    <!-- Savings history -->
+    <section id="view-savings-history" class="hidden view-section">
+      <div class="page-head page-head-compact">
+        <h1 data-i18n="savings.historyTitle">Rewards history</h1>
+        <p class="sub" data-i18n="savings.historySub">Uncheck lookups that were just tests — totals update instantly.</p>
       </div>
+      <div id="savingsHistorySummary" class="savings-panel"></div>
+      <div id="savingsHistoryEmpty" class="savings-history-empty hidden" data-i18n="savings.historyEmpty">No records yet.</div>
+      <div id="savingsHistoryList" class="savings-history-list"></div>
+      <button type="button" class="primary danger" id="btnRemoveSavingsSelected" disabled data-i18n="savings.removeSelected">Remove selected</button>
+      <button type="button" class="secondary" id="savingsHistoryBack" data-i18n="wallet.back">Back</button>
+    </section>
+
+    <!-- Wallet & settings -->
+    <section id="view-manage" class="hidden view-section">
+      <div class="page-head">
+        <h1 data-i18n="wallet.title">My wallet</h1>
+        <p class="sub" data-i18n="wallet.sub">Your cards, language, and data on this device.</p>
+      </div>
+
+      <div class="wallet-section" id="walletSavingsSection">
+        <p class="section-label" data-i18n="savings.sectionTitle">Rewards you've saved</p>
+        <div id="walletSavingsPanel" class="savings-panel hidden"></div>
+        <button type="button" class="link-btn savings-history-link hidden" id="btnWalletSavingsHistory" data-i18n="savings.viewHistory">View history</button>
+      </div>
+
+      <div class="wallet-section">
+        <p class="section-label" data-i18n="wallet.sectionCards">Your cards</p>
+        <div id="manageCardList"></div>
+      </div>
+
+      <div class="wallet-section glass-panel">
+        <p class="section-label" data-i18n="wallet.sectionAdd">Add a card</p>
+        <p class="subsection-label" data-i18n="wallet.popular">Popular cards</p>
+        <div id="manageQuickAdd" class="card-grid"></div>
+        <p class="subsection-label" data-i18n="wallet.missing">Don't see your card?</p>
+        <label for="issuerQuery" data-i18n="wallet.issuerLabel">Bank name</label>
+        <div class="issuer-search-row">
+          <input id="issuerQuery" type="text" dir="ltr"
+            data-i18n-placeholder="wallet.issuerPlaceholder"
+            placeholder="Chase" list="issuer-hints" autocomplete="off" />
+          <button type="button" class="primary" id="issuerSearchBtn" style="margin-top:0" data-i18n="wallet.search">Search</button>
+        </div>
+        <datalist id="issuer-hints"></datalist>
+        <div id="issuerResults" class="card-grid" style="margin-top:.65rem"></div>
+      </div>
+
       <div id="manageError" class="error"></div>
-      <button type="button" class="secondary" id="manageBack">返回付款页</button>
-      <div id="manageLocalActions" style="display:none">
-        <button type="button" class="secondary" id="btnResetLocal">清除本机数据并重新设置</button>
+
+      <div class="wallet-section">
+        <p class="section-label" data-i18n="wallet.sectionApp">App settings</p>
+        <div id="manageLocalActions">
+          <button type="button" class="secondary" id="btnChangeLanguage" data-i18n="wallet.language">Language</button>
+        </div>
       </div>
-      <div id="manageAccountActions" style="display:none">
-        <button type="button" class="secondary" id="btnLogout">退出登录</button>
+
+      <button type="button" class="secondary" id="manageBack" data-i18n="wallet.back">Back</button>
+
+      <div class="wallet-reset-zone">
+        <button type="button" class="wallet-reset-link" id="btnResetLocal" data-i18n="wallet.reset">Clear all data…</button>
       </div>
     </section>
   </div>
 
   <div id="confirmModal" class="modal-backdrop" aria-hidden="true">
     <div class="modal" role="dialog">
-      <h2>确认商家</h2>
-      <p class="lead">请确认店家和消费类别正确，再计算最优卡。</p>
+      <h2 data-i18n="modal.title">Confirm store</h2>
+      <p class="lead" data-i18n="modal.lead">Is this the right store?</p>
       <div class="confirm-box">
         <div class="confirm-merchant" id="confirmMerchant"></div>
         <div class="confirm-category" id="confirmCategory"></div>
@@ -298,11 +211,23 @@
       <div id="candidateBlock" style="display:none">
         <ul class="candidate-list" id="candidateList"></ul>
       </div>
-      <button type="button" class="primary" id="confirmGo">确认，推荐最优卡</button>
-      <button type="button" class="secondary" id="confirmCancel">返回修改</button>
+      <button type="button" class="primary" id="confirmGo" data-i18n="modal.confirm">Confirm & recommend</button>
+      <button type="button" class="secondary" id="confirmCancel" data-i18n="modal.cancel">Go back</button>
     </div>
   </div>
 
+  <div id="resetModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="resetModalTitle">
+      <h2 id="resetModalTitle" data-i18n="reset.title">Clear all data?</h2>
+      <p class="lead" data-i18n="reset.lead">This removes your cards, saved rewards, and settings from this device. This cannot be undone.</p>
+      <button type="button" class="primary danger" id="resetConfirm" data-i18n="reset.confirm">Clear everything</button>
+      <button type="button" class="secondary" id="resetCancel" data-i18n="reset.cancel">Cancel</button>
+    </div>
+  </div>
+
+  <script src="/static/i18n.js"></script>
+  <script src="/static/savings.js"></script>
+  <script src="/static/pwa.js"></script>
   <script src="/static/wallet-ui.js"></script>
 </body>
 </html>

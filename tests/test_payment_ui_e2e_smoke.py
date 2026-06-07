@@ -52,4 +52,7 @@ def test_homepage_has_confirm_flow():
     res = client.get("/")
     assert res.status_code == 200
     assert "confirmModal" in res.text
-    assert "api/merchant/resolve" in res.text
+    assert "wallet-ui.js" in res.text
+    js = client.get("/static/wallet-ui.js")
+    assert js.status_code == 200
+    assert "api/merchant/resolve" in js.text
