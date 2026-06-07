@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0.0", "pytest-asyncio>=0.24.0"]
+qa = ["pytest>=8.0.0", "httpx>=0.28.0", "playwright>=1.49.0"]
 
 [project.scripts]
 credit-rewards = "credit_rewards.cli:app"

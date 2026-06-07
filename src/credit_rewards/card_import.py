@@ -15,9 +15,23 @@ from credit_rewards.ingest.reference_sync import (
 
 
 def card_exists_in_db(card_key: str) -> bool:
+    import json
+
     with session() as conn:
-        row = conn.execute("SELECT 1 FROM cards WHERE card_key = ?", (card_key,)).fetchone()
-        return row is not None
+        row = conn.execute(
+            "SELECT detail_json FROM cards WHERE card_key = ?",
+            (card_key,),
+        ).fetchone()
+        if not row:
+            return False
+        try:
+            detail = json.loads(row["detail_json"])
+            if isinstance(detail, list):
+                detail = detail[0] if detail else {}
+            rules = detail.get("spendBonusCategory") if isinstance(detail, dict) else None
+            return bool(rules)
+        except (json.JSONDecodeError, TypeError, KeyError):
+            return False
 
 
 def _upsert_detail(detail: dict[str, Any], *, source_type: str, source_url: str = "") -> None:
@@ -78,3 +92,34 @@ def ensure_wallet_cards_in_db(card_keys: list[str]) -> list[str]:
         if not ensure_card_in_db(key):
             missing.append(key)
     return missing
+
+
+def import_catalog_wallet_to_db(*, limit: int | None = None) -> dict[str, Any]:
+    """
+    Pre-load wallet catalog cards into SQLite (reference JSON + category snapshots).
+    Run at Docker build so production recommend works without live API for ~380+ cards.
+    """
+    from credit_rewards.card_catalog import load_catalog_index
+
+    rows = load_catalog_index()
+    if limit is not None:
+        rows = rows[:limit]
+
+    imported: list[str] = []
+    skipped: list[str] = []
+    for row in rows:
+        key = str(row.get("card_key") or "").strip()
+        if not key:
+            continue
+        if ensure_card_in_db(key):
+            imported.append(key)
+        else:
+            skipped.append(key)
+
+    return {
+        "imported": imported,
+        "skipped": skipped,
+        "imported_count": len(imported),
+        "skipped_count": len(skipped),
+        "total": len(rows),
+    }

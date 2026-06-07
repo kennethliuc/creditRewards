@@ -14,6 +14,9 @@ from credit_rewards.validation.dashboard import build_validation_dashboard
 STATIC_INDEX = (
     Path(__file__).resolve().parents[1] / "web" / "static" / "index.html"
 )
+STATIC_WALLET_JS = (
+    Path(__file__).resolve().parents[1] / "web" / "static" / "wallet-ui.js"
+)
 APP_PY = Path(__file__).resolve().parents[1] / "web" / "app.py"
 
 MIN_MERCHANTS = 25
@@ -111,11 +114,12 @@ def check_page_track() -> list[PaymentUIGate]:
         ]
 
     html = STATIC_INDEX.read_text()
+    js = STATIC_WALLET_JS.read_text() if STATIC_WALLET_JS.exists() else ""
     checks = {
-        "confirm_modal": "confirmModal" in html and "api/merchant/resolve" in html,
-        "merchant_id_recommend": "merchant_id" in html,
-        "full_rankings": "rankings" in html and "card_count" in html,
-        "url_tab": "结账页 URL" in html or "checkout" in html.lower(),
+        "confirm_modal": "confirmModal" in html and "api/merchant/resolve" in js,
+        "merchant_id_recommend": "merchant_id" in js and "/api/recommend" in js,
+        "full_rankings": "rankings" in js and "card_count" in js,
+        "url_tab": 'data-tab="url"' in html or "panel-url" in html,
     }
     for gate_id, ok in checks.items():
         gates.append(
@@ -163,13 +167,15 @@ def check_recommend_track() -> list[PaymentUIGate]:
 
 
 def check_test_track(*, run_pytest: bool = True) -> PaymentUIGate:
-    if not run_pytest:
+    root = Path(__file__).resolve().parents[3]
+    tests_dir = root / "tests"
+    if not run_pytest or not tests_dir.is_dir():
         return PaymentUIGate(
             track="T",
             gate_id="pytest",
             name="Pay UI pytest",
             status="skip",
-            detail="skipped (--skip-tests)",
+            detail="skipped (no tests dir or --skip-tests)",
         )
 
     cmd = [
@@ -183,7 +189,6 @@ def check_test_track(*, run_pytest: bool = True) -> PaymentUIGate:
     ]
     import os
 
-    root = Path(__file__).resolve().parents[3]
     env = os.environ.copy()
     env["PYTHONPATH"] = str(root / "src")
     proc = subprocess.run(

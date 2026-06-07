@@ -19,6 +19,7 @@ from credit_rewards.card_catalog import (
     catalog_coverage_stats,
     enrich_registry_cards,
     list_issuers,
+    load_catalog_index,
     search_cards_by_issuer,
 )
 from credit_rewards.card_image import (
@@ -468,11 +469,14 @@ def api_compare_card(card_key: str) -> dict[str, object]:
 
 @app.get("/api/health")
 def health() -> dict[str, object]:
+    import os
+
     client = CardDataClient()
     return {
         "ok": True,
         "data_provider": client.provider,
         "live_api": client.is_configured,
+        "build": (os.environ.get("RAILWAY_GIT_COMMIT_SHA") or os.environ.get("GIT_COMMIT") or "")[:12],
     }
 
 
@@ -490,6 +494,13 @@ def api_card_issuers() -> dict[str, object]:
 @app.get("/api/cards/coverage")
 def api_cards_coverage() -> dict[str, object]:
     return catalog_coverage_stats()
+
+
+@app.get("/api/cards/catalog-keys")
+def api_cards_catalog_keys() -> dict[str, object]:
+    """All searchable catalog card keys (for QA sweeps)."""
+    keys = sorted({str(row["card_key"]) for row in load_catalog_index() if row.get("card_key")})
+    return {"count": len(keys), "keys": keys}
 
 
 @app.get("/api/cards/by-issuer")

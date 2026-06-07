@@ -299,6 +299,25 @@ def sync_reference_cmd(
     typer.echo("Next: credit-rewards-db import-reference")
 
 
+@app.command("import-catalog-wallet")
+def import_catalog_wallet_cmd(
+    limit: int = typer.Option(0, help="Max cards to import (0 = all catalog)"),
+) -> None:
+    """Import wallet catalog cards (category snapshots) into SQLite for production recommend."""
+    from credit_rewards.card_import import import_catalog_wallet_to_db
+
+    init_db()
+    cap = limit if limit > 0 else None
+    result = import_catalog_wallet_to_db(limit=cap)
+    typer.echo(
+        f"Catalog wallet import: {result['imported_count']}/{result['total']} imported, "
+        f"{result['skipped_count']} skipped (need live API or sync)"
+    )
+    if result["skipped_count"] and result["skipped_count"] <= 20:
+        for key in result["skipped"]:
+            typer.echo(f"  ✗ {key}")
+
+
 @app.command("import-reference")
 def import_reference_cmd(
     card_key: list[str] = typer.Option(

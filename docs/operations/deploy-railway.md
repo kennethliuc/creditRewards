@@ -24,8 +24,11 @@ Public demo URL for the payment homepage (`/`).
    | `CREDITREWARDS_USE_LOCAL_API` | `false` |
    | `CREDITREWARDS_FETCH_EVIDENCE` | `0` |
    | `CREDITREWARDS_NOMINATIM` | `1` |
+   | `REWARDS_CC_API_KEY` | *(recommended)* Your Rewards CC API key — enables recommend for all ~527 wallet catalog cards not pre-imported at build |
 
-   Do **not** set `REWARDS_CC_API_KEY`. Railway injects `PORT` automatically.
+   Without `REWARDS_CC_API_KEY`, registry (20) + category-snapshot cards (~380) work; remaining catalog cards fail recommend until the key is set.
+
+   Do **not** commit the API key to git. Railway injects `PORT` and `RAILWAY_GIT_COMMIT_SHA` automatically.
 
 5. **Settings → Networking → Generate Domain** → you get `https://….up.railway.app`.
 6. Share that URL; homepage is `/`.

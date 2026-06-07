@@ -5,3 +5,5 @@ __pycache__/
 .pytest_cache/
 data/carddata.db
 data/card_image_cache.json
+reports/qa/production-*.json
+reports/qa/production-*.md

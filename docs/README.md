@@ -10,6 +10,7 @@ Start here. Root-level **[idea.md](../idea.md)** (product) and **[plan.md](../pl
 | See architecture & phased checklist | [plan.md](../plan.md) |
 | Ship or test the payment homepage | [product/payment-ui.md](product/payment-ui.md) |
 | Deploy the public demo | [operations/deploy-railway.md](operations/deploy-railway.md) |
+| Run production QA | `python scripts/qa_production.py` · [validation/qa-production-plan.md](validation/qa-production-plan.md) |
 
 ## Product
 
