@@ -48,7 +48,10 @@ from credit_rewards.merchant_mapping import (
     merchant_suggestions,
     resolve_merchant,
 )
-from credit_rewards.merchant_co_brand import co_brand_bonus_categories_for_purchase
+from credit_rewards.merchant_co_brand import (
+    canonical_merchant_id_for_purchase,
+    purchase_bonus_categories,
+)
 from credit_rewards.models import PurchaseContext
 from credit_rewards.official_cpp import enrich_card_profile, fallback_program_table, resolve_card_official_cpp
 from credit_rewards.recommend import recommend_best_cards
@@ -649,7 +652,12 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
         if merchant_info:
             merchant_id = merchant_id or str(merchant_info.get("merchantId") or "")
             merchant_name = merchant_name or str(merchant_info.get("merchantName") or "")
-        bonus_categories = co_brand_bonus_categories_for_purchase(
+        canon_id = canonical_merchant_id_for_purchase(
+            merchant_id=merchant_id or None,
+            merchant_name=merchant_name,
+        )
+        bonus_categories = purchase_bonus_categories(
+            category,
             merchant_id=merchant_id or None,
             merchant_name=merchant_name,
         )
@@ -657,7 +665,7 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
             category=category,
             amount_usd=body.amount_usd,
             bonus_categories=bonus_categories,
-            merchant_id=merchant_id or None,
+            merchant_id=canon_id or merchant_id or None,
         )
         results = recommend_best_cards(wallet, purchase)
     except RewardsCCError as exc:

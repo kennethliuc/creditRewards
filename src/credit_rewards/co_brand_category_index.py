@@ -112,7 +112,7 @@ def _token_match(merchant_norm: str, cat_norm: str) -> bool:
     # Avoid "aa" matching "aaa" — require minimum length for substring hits.
     if len(shorter) >= 4 and shorter in longer:
         return True
-    stop = {"air", "airlines", "airline", "lines", "the", "stores", "store", "market"}
+    stop = {"air", "airlines", "airline", "lines", "the", "stores", "store", "market", "com", "net", "org", "www"}
     tokens = [t for t in merchant_norm.split() if t not in stop and len(t) > 2]
     if not tokens:
         return False
@@ -165,13 +165,11 @@ def resolve_co_brand_category_names(
 
 
 def co_brand_category_ids_for_merchants() -> dict[str, int]:
-    """All co-brand category IDs referenced by merchant catalog auto-match."""
+    """All co-brand category IDs — full Rewards CC index + merchant catalog overrides."""
     from credit_rewards.merchant_mapping import load_merchant_catalog
 
-    ids: dict[str, int] = {}
     index = load_co_brand_category_index()
-    norm_to_canonical = {k: v[0] for k, v in index.items()}
-    id_by_name = {v[0]: v[1] for v in index.values()}
+    ids: dict[str, int] = {name: cat_id for name, cat_id in index.values()}
 
     for row in load_merchant_catalog():
         names = resolve_co_brand_category_names(
@@ -180,7 +178,7 @@ def co_brand_category_ids_for_merchants() -> dict[str, int]:
             explicit=[str(x) for x in (row.get("co_brand_bonus_categories") or [])],
         )
         for name in names:
-            cat_id = id_by_name.get(name)
+            cat_id = ids.get(name)
             if cat_id is not None:
                 ids[name] = cat_id
     return ids

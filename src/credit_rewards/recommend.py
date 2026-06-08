@@ -31,7 +31,7 @@ def recommend_best_cards(
             )
         )
 
-    scored.sort(key=lambda r: r.estimated_value_usd, reverse=True)
+    scored.sort(key=lambda r: (r.estimated_value_usd, r.partner_bonus), reverse=True)
     for idx, item in enumerate(scored, start=1):
         item.rank = idx
     return scored

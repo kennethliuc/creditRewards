@@ -126,7 +126,8 @@ def compute_earn_value(
         reason = f"{multiplier:g}% cash back"
         if rule:
             reason = rule.description or f"{multiplier:g}% on {rule.category_name}"
-        return multiplier, multiplier * purchase.amount_usd / 100.0, value, reason, 1.0, False, False
+        partner_bonus = _partner_bonus_applied(rule, purchase)
+        return multiplier, multiplier * purchase.amount_usd / 100.0, value, reason, 1.0, False, partner_bonus
 
     program = card.resolved_program or card.reward_program
     partner_cpp = co_brand_redemption_cpp(

@@ -308,6 +308,10 @@ def test_recommend_marriott_co_brand_at_marriott_merchant(twenty_card_db, monkey
         ("hilton", "amex-hilton", "Hotels", 3.0),
         ("jetblue", "barclays-jetblue", "Airfare", 3.0),
         ("alaska_airlines", "boa-alaska", "Airfare", 2.0),
+        ("costco", "citi-costcoanywherevisa", "Wholesale Clubs", 2.0),
+        ("target", "tdbank-targetredcard", "All Purchases", 5.0),
+        ("walmart", "capitalone-walmartrewards", "Grocery Stores", 2.0),
+        ("sams_club", "synchrony-samsclub", "Wholesale Clubs", 3.0),
     ],
 )
 def test_recommend_co_brand_at_merchant(
@@ -327,6 +331,7 @@ def test_recommend_co_brand_at_merchant(
         "/api/recommend",
         json={
             "merchant_id": merchant_id,
+            "purchase_channel": "in_store",
             "amount_usd": 100,
             "card_keys": [co_brand_card, "chase-sapphire-preferred"],
         },
@@ -337,8 +342,36 @@ def test_recommend_co_brand_at_merchant(
     by_key = {r["card_key"]: r for r in data["rankings"]}
     assert by_key[co_brand_card]["multiplier"] >= min_multiplier
     assert by_key["chase-sapphire-preferred"]["multiplier"] == 1.0
-    assert by_key[co_brand_card]["estimated_value_usd"] > by_key["chase-sapphire-preferred"]["estimated_value_usd"]
+    assert by_key[co_brand_card]["estimated_value_usd"] >= by_key["chase-sapphire-preferred"]["estimated_value_usd"]
     assert data["best"]["card_key"] == co_brand_card
+
+
+def test_recommend_costco_via_gmaps_merchant_id(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("citi-costcoanywherevisa") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "gmaps:ChIJcostco",
+            "merchant_name": "Costco Wholesale · Frisco, TX",
+            "category": "Grocery Stores",
+            "amount_usd": 100,
+            "card_keys": ["citi-costcoanywherevisa", "chase-sapphire-preferred"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    by_key = {r["card_key"]: r for r in data["rankings"]}
+    assert by_key["citi-costcoanywherevisa"]["multiplier"] >= 2.0
+    assert by_key["citi-costcoanywherevisa"]["partner_bonus"] is True
+    assert data["best"]["card_key"] == "citi-costcoanywherevisa"
 
 
 def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):

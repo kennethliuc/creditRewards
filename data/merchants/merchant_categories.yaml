@@ -68,6 +68,7 @@ merchants:
     name: Whole Foods Market
     aliases: [whole foods, wholefoods]
     domains: [wholefoodsmarket.com]
+    co_brand_bonus_categories: [Whole Foods]
     spend_bonus_category_name: Grocery Stores
 
   - id: trader_joes
@@ -80,6 +81,7 @@ merchants:
     name: Kroger
     aliases: []
     domains: [kroger.com]
+    co_brand_bonus_categories: [Kroger]
     spend_bonus_category_name: Grocery Stores
 
   - id: safeway
@@ -99,6 +101,7 @@ merchants:
     name: Costco
     aliases: [costco wholesale]
     domains: [costco.com]
+    co_brand_bonus_categories: [Costco]
     spend_bonus_category_name: Online Shopping
     in_store_category: Wholesale Clubs
 
@@ -106,6 +109,7 @@ merchants:
     name: Sam's Club
     aliases: [sams club]
     domains: [samsclub.com]
+    co_brand_bonus_categories: ["Sam's Club"]
     spend_bonus_category_name: Online Shopping
     in_store_category: Wholesale Clubs
 
@@ -113,6 +117,7 @@ merchants:
     name: Walmart
     aliases: []
     domains: [walmart.com]
+    co_brand_bonus_categories: [Walmart]
     spend_bonus_category_name: Online Shopping
     in_store_category: Grocery Stores
 
@@ -120,6 +125,7 @@ merchants:
     name: Target
     aliases: []
     domains: [target.com]
+    co_brand_bonus_categories: [Target]
     spend_bonus_category_name: Online Shopping
     in_store_category: All Purchases
 
@@ -141,6 +147,7 @@ merchants:
     name: Amazon
     aliases: [amazon.com]
     domains: [amazon.com, smile.amazon.com]
+    co_brand_bonus_categories: [Amazon]
     spend_bonus_category_name: Online Shopping
 
   - id: apple

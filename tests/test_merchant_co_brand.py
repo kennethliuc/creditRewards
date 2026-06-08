@@ -10,8 +10,10 @@ from credit_rewards.co_brand_category_index import (
 )
 from credit_rewards.ingest.reference_sync import assemble_card_from_category_snapshots, load_reference_card
 from credit_rewards.merchant_co_brand import (
+    catalog_merchant_id_for_display_name,
     co_brand_bonus_categories_for_merchant,
     co_brand_bonus_categories_for_purchase,
+    canonical_merchant_id_for_purchase,
 )
 from credit_rewards.models import PurchaseContext
 from credit_rewards.normalize import normalize_card_detail
@@ -38,6 +40,9 @@ def test_co_brand_index_includes_major_merchants():
     assert "Marriott" in labels
     assert "Amazon" in labels
     assert "United Airlines" in labels
+    assert "Costco" in labels
+    assert "Target" in labels
+    assert "Walmart" in labels
 
 
 def test_resolve_delta_air_lines_to_delta_airlines_category():
@@ -67,6 +72,10 @@ def test_catalog_merchant_auto_match_starbucks():
         ("jetblue", "JetBlue"),
         ("alaska_airlines", "Alaska Airlines"),
         ("amazon", "Amazon"),
+        ("costco", "Costco"),
+        ("sams_club", "Sam's Club"),
+        ("target", "Target"),
+        ("walmart", "Walmart"),
     ],
 )
 def test_catalog_merchant_auto_match_co_brands(merchant_id, expected):
@@ -77,6 +86,49 @@ def test_catalog_merchant_auto_match_co_brands(merchant_id, expected):
 def test_purchase_fallback_matches_display_name_only():
     assert co_brand_bonus_categories_for_purchase(merchant_name="Marriott") == ["Marriott"]
     assert co_brand_bonus_categories_for_purchase(merchant_name="Delta Air Lines") == ["Delta Airlines"]
+
+
+def test_gmaps_costco_maps_to_catalog_co_brand():
+    assert catalog_merchant_id_for_display_name("Costco Wholesale · Dallas, TX") == "costco"
+    assert canonical_merchant_id_for_purchase(
+        merchant_id="gmaps:ChIJtest",
+        merchant_name="Costco · 123 Main St",
+    ) == "costco"
+    assert co_brand_bonus_categories_for_purchase(
+        merchant_id="gmaps:ChIJtest",
+        merchant_name="Costco · 123 Main St",
+    ) == ["Costco"]
+
+
+@pytest.mark.parametrize(
+    ("card_key", "merchant_id", "category", "bonus_cat", "min_mult"),
+    [
+        ("citi-costcoanywherevisa", "costco", "Wholesale Clubs", "Costco", 2.0),
+        ("tdbank-targetredcard", "target", "All Purchases", "Target", 5.0),
+        ("capitalone-walmartrewards", "walmart", "Grocery Stores", "Walmart", 2.0),
+        ("synchrony-samsclub", "sams_club", "Wholesale Clubs", "Sam's Club", 3.0),
+    ],
+)
+def test_store_co_brand_cards_use_partner_bucket(card_key, merchant_id, category, bonus_cat, min_mult):
+    card = _load_card(card_key)
+    mult, rule = best_multiplier(card, category, bonus_categories=[bonus_cat])
+    assert mult >= min_mult
+    assert rule is not None
+    assert rule.category_name == bonus_cat
+
+
+def test_costco_cash_card_partner_bonus_flag():
+    card = _load_card("citi-costcoanywherevisa")
+    purchase = PurchaseContext(
+        category="Wholesale Clubs",
+        amount_usd=100,
+        bonus_categories=["Wholesale Clubs", "Costco"],
+        merchant_id="costco",
+    )
+    mult, _, value, _, _, _, partner_bonus = compute_earn_value(card, purchase)
+    assert mult == 2.0
+    assert value == pytest.approx(2.0)
+    assert partner_bonus is True
 
 
 def test_starbucks_card_falls_back_to_base_without_co_brand_category():
