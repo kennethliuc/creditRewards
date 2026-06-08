@@ -127,6 +127,7 @@ def test_chick_fil_a_alias_in_store():
 
 def test_unknown_name_raises(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: False)
     with pytest.raises(MerchantNotFoundError):
         lookup_merchant_category(merchant_name="Mystery Store 999")
 
@@ -198,6 +199,14 @@ def test_nominatim_name_fallback(monkeypatch):
     from credit_rewards.merchant_nominatim import NominatimMatch
 
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", True)
+    monkeypatch.setattr(
+        "credit_rewards.merchant_mapping.lookup_places_text_queries",
+        lambda queries: (),
+    )
+    monkeypatch.setattr(
+        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
+        lambda *args, **kwargs: (),
+    )
 
     def fake_lookup(name):
         if "local cafe" in name.lower():

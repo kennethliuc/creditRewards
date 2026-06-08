@@ -248,6 +248,15 @@ def lookup_places_with_location_queries(
     return ()
 
 
+def lookup_places_text_queries(text_queries: list[str]) -> tuple[GooglePlaceMatch, ...]:
+    """Text search without GPS — same Places API as Google Maps name search."""
+    for query in text_queries:
+        matches = lookup_places_text_only(query)
+        if matches:
+            return matches
+    return ()
+
+
 def lookup_places_for_parsed_brand(
     parsed_brand: Any,
     *,

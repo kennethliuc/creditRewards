@@ -61,32 +61,51 @@ def test_resolve_name_with_google_location(monkeypatch):
     assert result.best.source == "google_places"
 
 
-def test_resolve_without_location_skips_google(monkeypatch):
+def test_resolve_without_location_uses_google_text_search(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
 
+    fake = (
+        GooglePlaceMatch(
+            place_id="places/ChIJlocal",
+            display_name="See U Morning",
+            formatted_address="123 Main St, Austin, TX",
+            spend_bonus_category_name="Dining",
+            primary_type="cafe",
+            types=("cafe", "restaurant"),
+            match_type="google_primary_type",
+            confidence="high",
+            score=12,
+        ),
+    )
+
     called = {"n": 0}
 
-    def fake_lookup(*args):
+    def fake_text_queries(queries):
         called["n"] += 1
-        return ()
+        return fake if any("morning" in q.lower() for q in queries) else ()
 
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
-        fake_lookup,
+        "credit_rewards.merchant_mapping.lookup_places_text_queries",
+        fake_text_queries,
     )
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_for_parsed_brand",
+        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
         lambda *args, **kwargs: (),
     )
 
-    resolve_merchant(merchant_name="Mystery Store XYZ")
-    assert called["n"] == 0
+    result = resolve_merchant(merchant_name="See you Morning", purchase_channel="in_store")
+    assert called["n"] == 1
+    assert result.best
+    assert result.best.merchant_id.startswith("gmaps:")
+    assert result.best.spend_bonus_category_name == "Dining"
+    assert result.best.source == "google_places"
 
 
 def test_resolve_url_includes_parsed_store_name(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    monkeypatch.setattr("credit_rewards.merchant_mapping.load_merchant_catalog", lambda: [])
 
     fake = (
         GooglePlaceMatch(
@@ -154,6 +173,7 @@ def test_resolve_nike_url_online():
 def test_resolve_url_google_maps_without_location(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    monkeypatch.setattr("credit_rewards.merchant_mapping.load_merchant_catalog", lambda: [])
 
     fake = (
         GooglePlaceMatch(

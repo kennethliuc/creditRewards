@@ -582,8 +582,12 @@ def api_merchant_resolve(body: MerchantResolveRequest) -> dict[str, object]:
         channel = body.purchase_channel or (
             "online" if body.merchant_url else "in_store"
         )
-        if channel == "in_store" and body.latitude is None and body.longitude is None:
+        from credit_rewards.merchant_google_places import google_places_enabled
+
+        if channel == "in_store" and not google_places_enabled():
             detail += " Allow location access for better nearby store matching."
+        elif channel == "in_store" and body.latitude is None and body.longitude is None:
+            detail += " Allow location to prefer nearby matches when names are ambiguous."
         raise HTTPException(status_code=404, detail=detail)
     payload = result.to_dict()
     payload["usedLocation"] = body.latitude is not None and body.longitude is not None

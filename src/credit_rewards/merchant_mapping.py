@@ -22,6 +22,7 @@ from credit_rewards.merchant_google_places import (
     google_match_to_category_match,
     google_places_enabled,
     lookup_places_for_parsed_brand,
+    lookup_places_text_queries,
     lookup_places_with_location_queries,
 )
 from credit_rewards.merchant_url_parse import (
@@ -528,8 +529,8 @@ def _google_maps_resolve_parsed_brand(
 def _google_places_resolve(
     text_query: str,
     *,
-    latitude: float,
-    longitude: float,
+    latitude: float | None = None,
+    longitude: float | None = None,
     input_kind: str,
     matched_on: str,
     text_queries: list[str] | None = None,
@@ -539,7 +540,10 @@ def _google_places_resolve(
     queries = text_queries or expand_store_name_queries(text_query)
     if not queries:
         return None
-    matches = lookup_places_with_location_queries(queries, latitude, longitude)
+    if latitude is not None and longitude is not None:
+        matches = lookup_places_with_location_queries(queries, latitude, longitude)
+    else:
+        matches = lookup_places_text_queries(queries)
     if not matches:
         return None
     candidates = [
@@ -789,12 +793,7 @@ def _match_by_name(
             candidates=partial[:8],
             needs_confirmation=len(partial) > 1,
         )
-        if (
-            len(partial) > 1
-            and latitude is not None
-            and longitude is not None
-            and purchase_channel == PURCHASE_IN_STORE
-        ):
+        if len(partial) > 1 and purchase_channel == PURCHASE_IN_STORE:
             google_result = _google_places_resolve(
                 name,
                 latitude=latitude,
@@ -819,7 +818,7 @@ def _match_by_name(
             needs_confirmation=True,
         )
 
-    if latitude is not None and longitude is not None and purchase_channel == PURCHASE_IN_STORE:
+    if purchase_channel == PURCHASE_IN_STORE:
         google_result = _google_places_resolve(
             name,
             latitude=latitude,

@@ -5,6 +5,7 @@ from fastapi.testclient import TestClient
 
 from credit_rewards.datastore.db import session
 from credit_rewards.datastore.repository import CardDataRepository
+from credit_rewards.merchant_google_places import GooglePlaceMatch
 from credit_rewards.normalize import normalize_card_detail
 from credit_rewards.web.app import app
 from tests.twenty_cards_fixtures import reference_files_ready, twenty_card_db
@@ -112,8 +113,38 @@ def test_merchant_resolve_haidilao_in_store():
     assert res.json()["best"]["spendBonusCategoryName"] == "Dining"
 
 
+def test_merchant_resolve_unknown_in_store_uses_google_text(monkeypatch):
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: True)
+    monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    fake = (
+        GooglePlaceMatch(
+            place_id="places/ChIJlocal",
+            display_name="See U Morning",
+            formatted_address="123 Main St",
+            spend_bonus_category_name="Dining",
+            primary_type="cafe",
+            types=("cafe",),
+            match_type="google_primary_type",
+            confidence="high",
+            score=12,
+        ),
+    )
+    monkeypatch.setattr(
+        "credit_rewards.merchant_mapping.lookup_places_text_queries",
+        lambda queries: fake if any("morning" in q.lower() for q in queries) else (),
+    )
+    res = client.post(
+        "/api/merchant/resolve",
+        json={"merchant_name": "See you Morning", "purchase_channel": "in_store"},
+    )
+    assert res.status_code == 200
+    assert res.json()["best"]["merchantId"].startswith("gmaps:")
+    assert res.json()["best"]["spendBonusCategoryName"] == "Dining"
+
+
 def test_merchant_resolve_unknown_404(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+    monkeypatch.setattr("credit_rewards.merchant_google_places.google_places_enabled", lambda: False)
     res = client.post("/api/merchant/resolve", json={"merchant_name": "Not A Real Store XYZ"})
     assert res.status_code == 404
 
