@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-08T02:19:41+00:00",
+  "updated": "2026-06-08T03:13:58+00:00",
   "source": "rewardscc_cardlist+categories",
-  "card_count": 535,
-  "issuer_count": 32,
-  "image_fetch_count": 0,
+  "card_count": 529,
+  "issuer_count": 31,
+  "image_fetch_count": 61,
   "discovery_sources": {
     "all_issuers": 1606,
-    "top_tier": 535,
+    "top_tier": 529,
     "Goldman Sachs": 3,
     "Synchrony Bank": 20,
     "American Express": 40,
@@ -29,7 +29,6 @@
     "Citizens Bank": 2,
     "Pegasus Bank": 6,
     "Comerica Bank": 6,
-    "A+ Federal Credit Union": 6,
     "Truist": 6,
     "Navy Federal Credit Union": 3,
     "PNC": 1,
@@ -44,48 +43,6 @@
     "reference_categories:/Users/canliu/Documents/GitHub/creditRewards/data/reference/rewardscc"
   ],
   "cards": [
-    {
-      "card_key": "aplusfcu-biz-cashpreffered",
-      "rewards_cc_card_key": "aplusfcu-biz-cashpreffered",
-      "card_name": "A+ Federal Credit Union Visa® Business Cash Preferred",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
-    {
-      "card_key": "aplusfcu-everyday",
-      "rewards_cc_card_key": "aplusfcu-everyday",
-      "card_name": "A+ Federal Credit Union Visa® Everyday Rewards+",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
-    {
-      "card_key": "aplusfcu-maxcashpreferred",
-      "rewards_cc_card_key": "aplusfcu-maxcashpreferred",
-      "card_name": "A+ Federal Credit Union Visa® Max Cash Preferred",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
-    {
-      "card_key": "aplusfcu-maxcashsecured",
-      "rewards_cc_card_key": "aplusfcu-maxcashsecured",
-      "card_name": "A+ Federal Credit Union Visa® Max Cash Secured",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
-    {
-      "card_key": "aplusfcu-reserve",
-      "rewards_cc_card_key": "aplusfcu-reserve",
-      "card_name": "A+ Federal Credit Union Visa® Reserve Rewards+ Card",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
-    {
-      "card_key": "aplusfcu-travel",
-      "rewards_cc_card_key": "aplusfcu-travel",
-      "card_name": "A+ Federal Credit Union Visa® Travel Rewards+",
-      "issuer": "A+ Federal Credit Union",
-      "in_registry": false
-    },
     {
       "card_key": "amex-biz-amazon",
       "rewards_cc_card_key": "amex-biz-amazon",
@@ -112,7 +69,8 @@
       "rewards_cc_card_key": "amex-gold",
       "card_name": "American Express® Gold",
       "issuer": "American Express",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1448069716.png"
     },
     {
       "card_key": "amex-green",
@@ -154,7 +112,8 @@
       "rewards_cc_card_key": "amex-biz-bluebusinessplus",
       "card_name": "Blue Business® Plus",
       "issuer": "American Express",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1313759782.png"
     },
     {
       "card_key": "amex-bluecasheveryday",
@@ -168,7 +127,8 @@
       "rewards_cc_card_key": "amex-bluecashpreferred",
       "card_name": "Blue Cash Preferred®",
       "issuer": "American Express",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/837101971.png"
     },
     {
       "card_key": "amex-blue",
@@ -364,7 +324,8 @@
       "rewards_cc_card_key": "amex-platinum",
       "card_name": "The Platinum Card®",
       "issuer": "American Express",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1872018642.png"
     },
     {
       "card_key": "bmo-biz-platrewards",
@@ -406,231 +367,264 @@
       "rewards_cc_card_key": "boa-aaa",
       "card_name": "AAA Member Rewards",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1435791247.png"
     },
     {
       "card_key": "boa-aaavisasignature",
       "rewards_cc_card_key": "boa-aaavisasignature",
       "card_name": "AAA Member Rewards Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1798886811.png"
     },
     {
       "card_key": "boa-amsacustomizedcash",
       "rewards_cc_card_key": "boa-amsacustomizedcash",
       "card_name": "AMSA Customized Cash Rewards Card",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1735308951.png"
     },
     {
       "card_key": "boa-airfranceklmworldelite",
       "rewards_cc_card_key": "boa-airfranceklmworldelite",
       "card_name": "Air France KLM World Elite Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/368722580.png"
     },
     {
       "card_key": "boa-biz-alaska",
       "rewards_cc_card_key": "boa-biz-alaska",
       "card_name": "Alaska Airlines Business",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1708760215.png"
     },
     {
       "card_key": "boa-alaska",
       "rewards_cc_card_key": "boa-alaska",
       "card_name": "Alaska Airlines Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1768502322.jpg"
     },
     {
       "card_key": "boa-allegiant",
       "rewards_cc_card_key": "boa-allegiant",
       "card_name": "Allways Rewards Visa®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1701296185.png"
     },
     {
       "card_key": "boa-amtrakplatinum",
       "rewards_cc_card_key": "boa-amtrakplatinum",
       "card_name": "Amtrak Guest Rewards® Platinum Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1159219258.png"
     },
     {
       "card_key": "boa-amtrakworld",
       "rewards_cc_card_key": "boa-amtrakworld",
       "card_name": "Amtrak Guest Rewards® World Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/403425776.png"
     },
     {
       "card_key": "boa-asiana",
       "rewards_cc_card_key": "boa-asiana",
       "card_name": "Asiana Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1932793775.png"
     },
     {
       "card_key": "boa-alaskaatmosascent",
       "rewards_cc_card_key": "boa-alaskaatmosascent",
       "card_name": "Atmos Rewards™ Ascent Visa Signature",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/2005974514.png"
     },
     {
       "card_key": "boa-alaskaatmossummit",
       "rewards_cc_card_key": "boa-alaskaatmossummit",
       "card_name": "Atmos™ Rewards Summit Visa Infinite®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/2114338290.png"
     },
     {
       "card_key": "boa-biz-alaskaatmos",
       "rewards_cc_card_key": "boa-biz-alaskaatmos",
       "card_name": "Atmos™ Rewards Visa® Business",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/default03.png"
     },
     {
       "card_key": "boa-elitevisa",
       "rewards_cc_card_key": "boa-elitevisa",
       "card_name": "Bank of America Elite Visa Infinite",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1342224065.png"
     },
     {
       "card_key": "bofa-customized-cash",
       "rewards_cc_card_key": "boa-customizedcashrewards",
       "card_name": "Bank of America® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1381670808.png"
     },
     {
       "card_key": "boa-customizedcashrewardssecured",
       "rewards_cc_card_key": "boa-customizedcashrewardssecured",
       "card_name": "Bank of America® Customized Cash Rewards Secured",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/534934928.png"
     },
     {
       "card_key": "boa-customizedcashrewardsstudents",
       "rewards_cc_card_key": "boa-customizedcashrewardsstudents",
       "card_name": "Bank of America® Customized Cash Rewards for Students",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/2090254884.png"
     },
     {
       "card_key": "boa-premiumrewards",
       "rewards_cc_card_key": "boa-premiumrewards",
       "card_name": "Bank of America® Premium Rewards®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1733112447.png"
     },
     {
       "card_key": "boa-premiumrewardselite",
       "rewards_cc_card_key": "boa-premiumrewardselite",
       "card_name": "Bank of America® Premium Rewards® Elite",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1021066058.png"
     },
     {
       "card_key": "boa-biz-customizedcashrewards",
       "rewards_cc_card_key": "boa-biz-customizedcashrewards",
       "card_name": "Business Advantage Customized Cash Rewards",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/788652368.png"
     },
     {
       "card_key": "boa-celecritycruises",
       "rewards_cc_card_key": "boa-celecritycruises",
       "card_name": "Celebrity Cruises Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1688613271.png"
     },
     {
       "card_key": "boa-freespirit",
       "rewards_cc_card_key": "boa-freespirit",
       "card_name": "Free Spirit® Travel More World Elite Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1664581163.png"
     },
     {
       "card_key": "boa-freespirittravelworld",
       "rewards_cc_card_key": "boa-freespirittravelworld",
       "card_name": "Free Spirit® Travel World Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1482777456.png"
     },
     {
       "card_key": "boa-mln",
       "rewards_cc_card_key": "boa-mln",
       "card_name": "MLB™",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/712577227.png"
     },
     {
       "card_key": "boa-nyuaacustomizedcash",
       "rewards_cc_card_key": "boa-nyuaacustomizedcash",
       "card_name": "NYUAA Customized Cash Rewards Credit Card",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/427959380.png"
     },
     {
       "card_key": "boa-norwegiancruiseline",
       "rewards_cc_card_key": "boa-norwegiancruiseline",
       "card_name": "Norwegian Cruise Line® World Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1202367029.png"
     },
     {
       "card_key": "boa-royalcarribean",
       "rewards_cc_card_key": "boa-royalcarribean",
       "card_name": "Royal Caribbean Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1099039346.png"
     },
     {
       "card_key": "boa-royaloneplus",
       "rewards_cc_card_key": "boa-royaloneplus",
       "card_name": "Royal ONE™ Plus Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1396804466.png"
     },
     {
       "card_key": "boa-royalone",
       "rewards_cc_card_key": "boa-royalone",
       "card_name": "Royal ONE™ Visa Signature®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1418563416.png"
     },
     {
       "card_key": "boa-sonesta",
       "rewards_cc_card_key": "boa-sonesta",
       "card_name": "Sonesta World Mastercard®",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/2006587096.png"
     },
     {
       "card_key": "boa-susankomen",
       "rewards_cc_card_key": "boa-susankomen",
       "card_name": "Susan G. Komen® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/404743142.jpg"
     },
     {
       "card_key": "boa-uspridecustomized",
       "rewards_cc_card_key": "boa-uspridecustomized",
       "card_name": "U.S. Pride® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1372083696.png"
     },
     {
       "card_key": "boa-worldwildlifefund",
       "rewards_cc_card_key": "boa-worldwildlifefund",
       "card_name": "World Wildlife Fund",
       "issuer": "Bank of America",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1580844354.jpg"
     },
     {
       "card_key": "barclays-aviatormastercard",
@@ -1043,7 +1037,8 @@
       "rewards_cc_card_key": "capitalone-savorone",
       "card_name": "Savor Rewards",
       "issuer": "Capital One",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/397863832.png"
     },
     {
       "card_key": "capitalone-savoronegoodcredit",
@@ -1134,7 +1129,8 @@
       "rewards_cc_card_key": "capitalone-venture",
       "card_name": "Venture Rewards",
       "issuer": "Capital One",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1557827741.png"
     },
     {
       "card_key": "capitalone-biz-venturex",
@@ -1148,7 +1144,8 @@
       "rewards_cc_card_key": "capitalone-venturex",
       "card_name": "Venture X Rewards",
       "issuer": "Capital One",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1020742267.png"
     },
     {
       "card_key": "capitalone-ventureone",
@@ -1218,14 +1215,16 @@
       "rewards_cc_card_key": "chase-freedomflex",
       "card_name": "Chase Freedom Flex® Credit Card",
       "issuer": "Chase",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/872692553.png"
     },
     {
       "card_key": "chase-freedom-unlimited",
       "rewards_cc_card_key": "chase-freedomunlimited",
       "card_name": "Chase Freedom Unlimited® Credit Card",
       "issuer": "Chase",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1435429562.png"
     },
     {
       "card_key": "chase-freedom",
@@ -1246,14 +1245,16 @@
       "rewards_cc_card_key": "chase-sapphirepreferred",
       "card_name": "Chase Sapphire Preferred® Credit Card",
       "issuer": "Chase",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/308260636.png"
     },
     {
       "card_key": "chase-sapphire-reserve",
       "rewards_cc_card_key": "chase-sapphirereserve",
       "card_name": "Chase Sapphire Reserve® Credit Card",
       "issuer": "Chase",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/145450788.png"
     },
     {
       "card_key": "chase-slate",
@@ -1624,7 +1625,8 @@
       "rewards_cc_card_key": "citi-customcash",
       "card_name": "Citi Custom Cash℠ ",
       "issuer": "Citi",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1648766412.png"
     },
     {
       "card_key": "citi-dividend",
@@ -1638,7 +1640,8 @@
       "rewards_cc_card_key": "citi-doublecash",
       "card_name": "Citi Double Cash®",
       "issuer": "Citi",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/637923020.png"
     },
     {
       "card_key": "citi-forward",
@@ -1694,7 +1697,8 @@
       "rewards_cc_card_key": "citi-premier",
       "card_name": "Citi Strata Premier®",
       "issuer": "Citi",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/685912792.png"
     },
     {
       "card_key": "citi-thankyoupreferred",
@@ -2765,7 +2769,8 @@
       "rewards_cc_card_key": "discover-cashback",
       "card_name": "Discover it® Cash Back",
       "issuer": "Discover",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/594770995.png"
     },
     {
       "card_key": "discover-chrome",
@@ -2954,35 +2959,40 @@
       "rewards_cc_card_key": "goldmansachs-applecard",
       "card_name": "Apple Card",
       "issuer": "Goldman Sachs",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1033032717.png"
     },
     {
       "card_key": "goldmansachs-biz-gmbusiness",
       "rewards_cc_card_key": "goldmansachs-biz-gmbusiness",
       "card_name": "GM Business Card™",
       "issuer": "Goldman Sachs",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1879725385.png"
     },
     {
       "card_key": "goldmansachs-mygm",
       "rewards_cc_card_key": "goldmansachs-mygm",
       "card_name": "My GM Rewards Card™",
       "issuer": "Goldman Sachs",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/174907285.png"
     },
     {
       "card_key": "hsbc-elite",
       "rewards_cc_card_key": "hsbc-elite",
       "card_name": "HSBC Elite",
       "issuer": "HSBC",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1585345148.jpeg"
     },
     {
       "card_key": "hsbc-premier",
       "rewards_cc_card_key": "hsbc-premier",
       "card_name": "HSBC Premier",
       "issuer": "HSBC",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/675689196.png"
     },
     {
       "card_key": "huntington-biz-voice",
@@ -3073,7 +3083,8 @@
       "rewards_cc_card_key": "pnc-cashrewardsvisa",
       "card_name": "PNC Cash Rewards®",
       "issuer": "PNC",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1276193770.png"
     },
     {
       "card_key": "pegasusbank-biz-cashpreffered",
@@ -3283,28 +3294,32 @@
       "rewards_cc_card_key": "tdbank-nordstrom",
       "card_name": "Nordstrom Rewards",
       "issuer": "TD Bank",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/2085094759.png"
     },
     {
       "card_key": "tdbank-cashcredit",
       "rewards_cc_card_key": "tdbank-cashcredit",
       "card_name": "TD Cash",
       "issuer": "TD Bank",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1975138871.png"
     },
     {
       "card_key": "tdbank-firstclass",
       "rewards_cc_card_key": "tdbank-firstclass",
       "card_name": "TD First Class℠  Visa Signature®",
       "issuer": "TD Bank",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/705663867.png"
     },
     {
       "card_key": "tdbank-targetredcard",
       "rewards_cc_card_key": "tdbank-targetredcard",
       "card_name": "Target Circle™️ Credit Card",
       "issuer": "TD Bank",
-      "in_registry": false
+      "in_registry": false,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1104891062.png"
     },
     {
       "card_key": "truist-biz-cashrewards",
@@ -3696,7 +3711,8 @@
       "rewards_cc_card_key": "cardless-biltblue",
       "card_name": "Bilt Blue Card",
       "issuer": "Wells Fargo",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1362746515.png"
     },
     {
       "card_key": "wellsfargo-choiceprivmc",
@@ -3731,7 +3747,8 @@
       "rewards_cc_card_key": "wellsfargo-activecash",
       "card_name": "Wells Fargo Active Cash®",
       "issuer": "Wells Fargo",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1779647940.png"
     },
     {
       "card_key": "wellsfargo-advisors",
@@ -3759,7 +3776,8 @@
       "rewards_cc_card_key": "wellsfargo-autograph",
       "card_name": "Wells Fargo Autograph℠ ",
       "issuer": "Wells Fargo",
-      "in_registry": true
+      "in_registry": true,
+      "image_url": "https://rewardsccapi.blob.core.windows.net/hun1956/1466751430.png"
     },
     {
       "card_key": "wellsfargo-microcenter",

@@ -8,6 +8,7 @@
   let languageReturnView = 'bootstrap';
   let savingsReturnView = 'pay';
   let selectedSavingsIds = new Set();
+  const $ = (id) => document.getElementById(id);
 
   function t(key, vars) {
     return window.CR_I18N?.t(key, vars) ?? key;
@@ -235,7 +236,6 @@
 
   let catalog = [];
   let catalogByKey = {};
-  let catalogImagesPromise = null;
   let issuerHints = [];
   function loadImageUrlCache() {
     try {
@@ -291,7 +291,7 @@
   }
 
   async function loadDemoWallet() {
-    await ensureCatalogImages();
+    await fetchMissingImageUrls(DEMO_CARD_KEYS);
     const cards = DEMO_CARD_KEYS.map(cardMetaFromKey);
     saveLocalWallet(cards);
     walletState = { mode: 'local', cards };
@@ -773,73 +773,105 @@
     return `<div class="${slotCls}" data-card-key="${key}"><div class="${cls} card-thumb-fallback" aria-hidden="true">${esc(initial)}</div></div>`;
   }
 
-  function browserPreloadImages(urls) {
-    const unique = [...new Set(urls.filter(Boolean))];
-    return Promise.all(
-      unique.map(
-        (url) =>
-          new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(true);
-            img.onerror = () => resolve(false);
-            img.src = url;
-          }),
-      ),
-    );
-  }
-
   async function fetchMissingImageUrls(keys) {
     const need = keys.filter((k) => k && !imageCache[k] && !catalogByKey[k]?.image_url);
     if (!need.length) return;
     try {
-      const res = await fetch('/api/cards/images', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ card_keys: need.slice(0, 48) }),
-      });
-      const data = await res.json();
-      if (!res.ok) return;
-      Object.assign(imageCache, data.images || {});
+      for (let i = 0; i < need.length; i += 48) {
+        const batch = need.slice(i, i + 48);
+        const res = await fetch('/api/cards/images', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ card_keys: batch }),
+        });
+        const data = await res.json();
+        if (!res.ok) return;
+        Object.assign(imageCache, data.images || {});
+      }
       saveImageUrlCache();
     } catch (_) {}
+  }
+
+  function fillCardImageSlot(slot, url) {
+    if (!slot || !url || slot.querySelector('img')) return;
+    const name =
+      slot.closest('.manage-row')?.querySelector('strong')?.textContent ||
+      slot.closest('.card-tile')?.querySelector('.card-tile-name')?.textContent ||
+      slot.dataset.cardKey ||
+      '';
+    const cls = slot.classList.contains('card-thumb-sm') ? 'card-thumb card-thumb-sm' : 'card-thumb';
+    slot.innerHTML = `<img class="${cls}" src="${esc(url)}" alt="${esc(name)}" loading="lazy" decoding="async" />`;
+  }
+
+  let cardImageObserver = null;
+
+  function ensureCardImageObserver() {
+    if (cardImageObserver) return cardImageObserver;
+    cardImageObserver = new IntersectionObserver(
+      (entries) => {
+        const keys = [];
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const slot = entry.target;
+          cardImageObserver.unobserve(slot);
+          const key = slot.dataset.cardKey;
+          if (key && !imageUrlForKey(key)) keys.push(key);
+        });
+        if (keys.length) void loadVisibleCardImages(keys);
+      },
+      { rootMargin: '240px' },
+    );
+    return cardImageObserver;
+  }
+
+  async function loadVisibleCardImages(keys) {
+    const unique = [...new Set(keys.filter(Boolean))];
+    if (!unique.length) return;
+    await fetchMissingImageUrls(unique);
+    unique.forEach((key) => {
+      const url = imageUrlForKey(key);
+      if (!url) return;
+      document.querySelectorAll(`.card-thumb-slot[data-card-key="${CSS.escape(key)}"]`).forEach((slot) => {
+        fillCardImageSlot(slot, url);
+      });
+    });
+  }
+
+  function observeCardImageSlots(rootEl) {
+    if (!rootEl) return;
+    const observer = ensureCardImageObserver();
+    rootEl.querySelectorAll('.card-thumb-slot[data-card-key]').forEach((slot) => {
+      if (slot.querySelector('img')) return;
+      const key = slot.dataset.cardKey;
+      const url = imageUrlForKey(key);
+      if (url) {
+        fillCardImageSlot(slot, url);
+        return;
+      }
+      observer.observe(slot);
+    });
+  }
+
+  async function ensureWalletImages() {
+    const keys = (walletState?.cards || []).map((c) => c.card_key).filter(Boolean);
+    if (!keys.length) return;
+    await fetchMissingImageUrls(keys);
+    keys.forEach((key) => {
+      const url = imageUrlForKey(key);
+      if (!url) return;
+      document.querySelectorAll(`.card-thumb-slot[data-card-key="${CSS.escape(key)}"]`).forEach((slot) => {
+        fillCardImageSlot(slot, url);
+      });
+    });
   }
 
   function imageUrlForKey(cardKey) {
     return imageCache[cardKey] || catalogByKey[cardKey]?.image_url || '';
   }
 
-  async function ensureCatalogImages() {
-    if (!catalogImagesPromise) {
-      catalogImagesPromise = (async () => {
-        if (!catalog.length) await loadCatalog();
-        const keys = catalog.map((c) => c.card_key);
-        await fetchMissingImageUrls(keys);
-        await browserPreloadImages(keys.map((k) => imageUrlForKey(k)));
-      })();
-    }
-    return catalogImagesPromise;
-  }
-
   async function hydrateCardImages(rootEl) {
     if (!rootEl) return;
-    const keys = [
-      ...new Set(
-        [...rootEl.querySelectorAll('[data-card-key]')]
-          .map((el) => el.dataset.cardKey)
-          .filter(Boolean),
-      ),
-    ];
-    await fetchMissingImageUrls(keys);
-    rootEl.querySelectorAll('[data-card-key]').forEach((slot) => {
-      const url = imageUrlForKey(slot.dataset.cardKey);
-      if (!url) return;
-      const name =
-        slot.closest('.manage-row')?.querySelector('strong')?.textContent ||
-        slot.closest('.card-tile')?.querySelector('.card-tile-name')?.textContent ||
-        slot.dataset.cardKey;
-      const cls = slot.classList.contains('card-thumb-sm') ? 'card-thumb card-thumb-sm' : 'card-thumb';
-      slot.innerHTML = `<img class="${cls}" src="${esc(url)}" alt="${esc(name)}" loading="eager" decoding="async" />`;
-    });
+    observeCardImageSlots(rootEl);
   }
 
   function cardTileHtml(card, { inWallet = false, selected = false } = {}) {
@@ -847,7 +879,7 @@
     const disabled = inWallet ? ' in-wallet' : '';
     const sel = selected ? ' selected' : '';
     return `<button type="button" class="card-tile${disabled}${sel}" data-key="${esc(card.card_key)}" ${inWallet ? 'disabled' : ''}>
-      ${cardThumbHtml(meta, { eager: true })}
+      ${cardThumbHtml(meta)}
       <div class="card-tile-name">${esc(meta.card_name)}</div>
     </button>`;
   }
@@ -876,7 +908,6 @@
   async function renderLocalCardTiles() {
     const grid = $('localCardPicker');
     if (!grid) return;
-    await ensureCatalogImages();
     await loadIssuerHints();
     localSetupSelected = new Set();
     grid.innerHTML = catalog.map((c) => cardTileHtml(c)).join('');
@@ -1053,6 +1084,7 @@
   }
 
   function bindReentryInput(el) {
+    if (!el) return;
     el.addEventListener('focus', () => {
       if (!selectAllOnNextFocus) return;
       selectAllOnNextFocus = false;
@@ -1383,6 +1415,7 @@
     if (activeTab === 'name') await refreshNearbyStores();
     else hideNearbyStores();
     if (startPayTour) maybeStartPayTour();
+    void ensureWalletImages();
   }
 
   function continueAfterLanguage() {
@@ -1393,7 +1426,6 @@
       enterPayFlow({ startPayTour: !window.CR_ONBOARDING?.isComplete() });
     } else {
       void (async () => {
-        await ensureCatalogImages();
         showView('local-setup');
         await renderLocalCardTiles();
         startSetupTour();
@@ -1413,6 +1445,7 @@
   }
 
   async function init() {
+    try {
     // Show a view immediately so the page is never blank while catalog loads.
     if (!window.CR_I18N?.hasChosenLocale()) {
       showView('language');
@@ -1424,11 +1457,11 @@
 
     bindReentryInput($('merchantUrl'));
     bindReentryInput($('merchantName'));
-    $('merchantName').addEventListener('input', () => {
+    $('merchantName')?.addEventListener('input', () => {
       syncMerchantSuggestionsSoon();
       updateNearbyForInput();
     });
-    $('merchantName').addEventListener('blur', () => {
+    $('merchantName')?.addEventListener('blur', () => {
       setTimeout(hideMerchantSuggestions, 160);
     });
     bindReentryInput($('amount'));
@@ -1658,7 +1691,6 @@
     } catch (_) {}
 
     await loadCatalog();
-    void ensureCatalogImages();
 
     if (!window.CR_I18N.hasChosenLocale()) {
       languageReturnView = 'bootstrap';
@@ -1684,6 +1716,7 @@
     }
     if (!window.CR_I18N?.hasChosenLocale()) showView('language');
     else showView('local-setup');
+  }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

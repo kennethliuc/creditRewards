@@ -26,6 +26,7 @@ from credit_rewards.ingest.card_catalog_sync import (  # noqa: E402
     normalize_bilt_catalog_rows,
     write_catalog_index,
 )
+from credit_rewards.card_image import apply_manifest_image_urls, manifest_image_count  # noqa: E402
 
 
 def _merge_rows(
@@ -73,7 +74,11 @@ def main() -> None:
     normalize_bilt_catalog_rows(rows)
 
     top_rows = {k: v for k, v in rows.items() if is_top_tier_issuer(str(v.get("issuer") or ""))}
+    image_count = apply_manifest_image_urls(top_rows)
     print(f"  Keeping {len(top_rows)} cards from top-tier issuers for wallet picker")
+    if image_count:
+        print(f"  Linked {image_count} manifest image URLs into catalog index")
+    print(f"  Manifest has {manifest_image_count()} issuer CDN URLs (lazy load; ~{image_count} in index)")
 
     by_issuer: dict[str, int] = {}
     for row in top_rows.values():
@@ -83,13 +88,13 @@ def main() -> None:
     dest = write_catalog_index(
         top_rows,
         errors=errors,
-        image_fetch_count=0,
+        image_fetch_count=image_count,
         discovery_sources={"all_issuers": len(rows), "top_tier": len(top_rows), **by_issuer},
     )
     clear_catalog_cache()
     stats = catalog_coverage_stats()
     print(f"Wrote {stats['cardCount']} cards ({stats['issuerCount']} issuers) to {dest}")
-    print("  Card images use bundled data/card_images/ (no upstream API at runtime).")
+    print("  Card images: card_image_urls.yaml + lazy CDN; SVG placeholder for the rest.")
     print(
         f"  Market coverage: {stats['marketShareCoveredPct']}% "
         f"of top-{len(stats['topIssuersMatched']) + len(stats['topIssuersMissing'])} issuers "

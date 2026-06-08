@@ -5,13 +5,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-import threading
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -24,12 +23,13 @@ from credit_rewards.card_catalog import (
 )
 from credit_rewards.card_image import (
     apply_local_image_urls,
-    fetch_card_image_url,
-    fetch_card_image_urls,
+    bundled_image_count,
     local_image_path,
+    manifest_image_count,
     media_type_for_card_image,
-    warm_card_images,
-    warm_registry_card_images,
+    render_placeholder_svg,
+    resolve_card_image_url,
+    resolve_card_image_urls,
 )
 from credit_rewards.card_import import ensure_wallet_cards_in_db
 from credit_rewards.client import CardDataClient, upstream_api_enabled, RewardsCCError
@@ -83,24 +83,14 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 app.include_router(analytics_router)
 
 
-def _warm_images_async(card_keys: list[str] | None = None) -> None:
-    keys = [k.strip() for k in (card_keys or []) if k and k.strip()]
-
-    def _run() -> None:
-        try:
-            if keys:
-                warm_card_images(keys)
-            else:
-                warm_registry_card_images()
-        except Exception:
-            pass
-
-    threading.Thread(target=_run, daemon=True).start()
-
-
 @app.on_event("startup")
-def _startup_warm_registry_images() -> None:
-    _warm_images_async()
+def _startup_log_card_images() -> None:
+    bundled = bundled_image_count()
+    manifest = manifest_image_count()
+    if bundled:
+        print(f"PayCue: {bundled} bundled card images in data/card_images/", flush=True)
+    elif manifest:
+        print(f"PayCue: {manifest} CDN URLs in card_image_urls.yaml", flush=True)
 
 
 class RecommendRequest(BaseModel):
@@ -514,9 +504,6 @@ def api_cards_by_issuer(q: str, limit: int = 0) -> dict[str, object]:
         raise HTTPException(status_code=400, detail="Enter at least 2 characters for bank name")
     cap = min(limit, 250) if limit and limit > 0 else 0
     matches = apply_local_image_urls(search_cards_by_issuer(query, limit=cap))
-    keys = [str(m["card_key"]) for m in matches if m.get("card_key")]
-    if keys:
-        _warm_images_async(keys)
     return {"query": query, "matches": matches, "total": len(matches)}
 
 
@@ -525,7 +512,7 @@ def api_card_image(card_key: str) -> dict[str, object]:
     key = card_key.strip()
     if not key:
         raise HTTPException(status_code=400, detail="card_key required")
-    url = fetch_card_image_url(key)
+    url = resolve_card_image_url(key)
     return {"card_key": key, "image_url": url}
 
 
@@ -544,9 +531,22 @@ def api_card_image_file(card_key: str) -> FileResponse:
     )
 
 
+@app.get("/api/cards/image/placeholder")
+def api_card_image_placeholder(card_key: str) -> Response:
+    key = card_key.strip()
+    if not key:
+        raise HTTPException(status_code=400, detail="card_key required")
+    svg = render_placeholder_svg(key)
+    return Response(
+        content=svg,
+        media_type="image/svg+xml",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
+
+
 @app.post("/api/cards/images")
 def api_card_images(body: CardImagesRequest) -> dict[str, object]:
-    images = fetch_card_image_urls(body.card_keys)
+    images = resolve_card_image_urls(body.card_keys)
     return {"images": images}
 
 
@@ -750,7 +750,6 @@ def api_put_wallet(body: WalletUpdateRequest, request: Request) -> dict[str, obj
                 f"Reward data not loaded for: {', '.join(missing)}. Recommend may skip these cards."
             ]
         apply_local_image_urls(result["cards"])
-        _warm_images_async(keys)
         return result
     except AccountError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc

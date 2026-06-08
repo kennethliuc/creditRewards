@@ -8,37 +8,45 @@ cards:
     rewards_cc_card_key: keybank-cashrewards
     card_name: Key Cash Rewards® Credit Card
     issuer: KeyBank
+    url: https://www.key.com/personal/credit-cards/key-cash-rewards-credit-card.jsp
   - card_key: keybank-key2more
     rewards_cc_card_key: keybank-key2more
     card_name: Key2More Rewards® Credit Card
     issuer: KeyBank
+    url: https://www.key.com/personal/credit-cards/key2more-rewards-credit-card.jsp
   - card_key: keybank-business
     rewards_cc_card_key: keybank-business
     card_name: Key Business Credit Card
     issuer: KeyBank
+    url: https://www.key.com/small-business/credit-cards/key-business-credit-card.jsp
 
   # --- P0: Santander ---
   - card_key: santander-ultimate-cashback
     rewards_cc_card_key: santander-ultimatecashback
     card_name: Santander® Ultimate Cash Back® credit card
     issuer: Santander
+    url: https://www.santanderbank.com/personal/credit-cards/ultimate-cash-back-credit-card
   - card_key: santander-world-mastercard
     rewards_cc_card_key: santander-worldmc
     card_name: Santander® World Mastercard®
     issuer: Santander
+    url: https://www.santanderbank.com/personal/credit-cards/world-mastercard
 
   # --- P1: Discover ---
   - card_key: discover-it-miles
     rewards_cc_card_key: discover-miles
     card_name: Discover it® Miles
     issuer: Discover
+    url: https://www.discover.com/credit-cards/travel/miles/it-miles.html
 
   # --- P1: Wells Fargo ---
   - card_key: wells-fargo-reflect
     rewards_cc_card_key: wellsfargo-reflect
     card_name: Wells Fargo Reflect® Card
     issuer: Wells Fargo
+    url: https://creditcards.wellsfargo.com/reflect-visa-credit-card/
   - card_key: wellsfargo-signify-business
     rewards_cc_card_key: wellsfargo-signifybusiness
     card_name: Wells Fargo Signify Business Cash℠ Card
     issuer: Wells Fargo
+    url: https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/

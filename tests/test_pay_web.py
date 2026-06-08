@@ -67,17 +67,14 @@ def test_pwa_assets():
 
 
 def test_api_cards_registry_image_urls_when_bundled():
-    from credit_rewards.card_image import local_image_path, registry_card_keys_for_images
+    from credit_rewards.ingest.scrape.registry import load_card_registry
 
-    keys = registry_card_keys_for_images()
-    if not keys or not all(local_image_path(k) for k in keys):
-        pytest.skip("Bundled data/card_images/ missing for registry")
-
+    keys = [str(e["card_key"]) for e in load_card_registry()]
     res = client.get("/api/cards")
     assert res.status_code == 200
     cards = res.json()["cards"]
     assert len(cards) == len(keys)
-    assert all(c.get("image_url", "").startswith("/api/cards/image/file") for c in cards)
+    assert all(c.get("image_url") for c in cards)
 
 
 def test_merchant_resolve_url():
