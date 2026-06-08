@@ -44,6 +44,7 @@ def normalize_card_detail(payload: list[dict[str, Any]] | dict[str, Any]) -> Car
         card_key=row.get("cardKey") or "",
         card_name=row.get("cardName") or "",
         card_issuer=row.get("cardIssuer") or "",
+        card_network=str(row.get("cardNetwork") or ""),
         reward_program=row.get("baseSpendEarnType") or "",
         base_spend_amount=float(row.get("baseSpendAmount") or 1.0),
         base_earn_currency=currency,

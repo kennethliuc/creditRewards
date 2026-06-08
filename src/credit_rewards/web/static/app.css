@@ -884,6 +884,14 @@ button.danger {
   margin: 0;
   font-size: .78rem;
   color: var(--muted);
+}
+
+.payment-note {
+  margin-top: .65rem;
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
   line-height: 1.45;
 }
 

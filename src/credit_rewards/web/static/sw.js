@@ -1,5 +1,5 @@
 /* PayCue — minimal service worker (network-first; recommendations need API). */
-const CACHE = 'paycue-shell-v7';
+const CACHE = 'paycue-shell-v8';
 const SHELL = [
   '/static/app.css',
   '/static/i18n.js',

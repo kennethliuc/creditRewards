@@ -374,6 +374,59 @@ def test_recommend_costco_via_gmaps_merchant_id(twenty_card_db, monkeypatch):
     assert data["best"]["card_key"] == "citi-costcoanywherevisa"
 
 
+def test_recommend_costco_gas_uses_4_percent(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("citi-costcoanywherevisa") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "costco",
+            "merchant_name": "Costco Gas",
+            "purchase_channel": "in_store",
+            "amount_usd": 100,
+            "card_keys": ["citi-costcoanywherevisa"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["resolved_category"] == "Gas Stations"
+    assert data["best"]["multiplier"] == 4.0
+    assert data["accepted_networks"] == ["Visa"]
+
+
+def test_recommend_costco_excludes_amex(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("citi-costcoanywherevisa") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "costco",
+            "purchase_channel": "in_store",
+            "amount_usd": 100,
+            "card_keys": ["citi-costcoanywherevisa", "amex-gold"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["best"]["card_key"] == "citi-costcoanywherevisa"
+    excluded = {row["card_key"] for row in data.get("excluded_cards") or []}
+    assert "amex-gold" in excluded
+
+
 def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):
     monkeypatch.setattr(
         "credit_rewards.web.app.load_wallet",

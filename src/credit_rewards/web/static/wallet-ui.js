@@ -593,10 +593,23 @@
             pts: Math.round(r.points_earned),
             rank: r.rank,
             merchant: merchantName,
-          })
-        )}</p>`
+          }),
+        )}</p>`,
       )
       .join('');
+  }
+
+  function renderPaymentNote(data) {
+    const el = $('paymentNote');
+    if (!el) return;
+    const note = data.payment_note || '';
+    if (!note) {
+      el.classList.add('hidden');
+      el.textContent = '';
+      return;
+    }
+    el.classList.remove('hidden');
+    el.textContent = note;
   }
 
   function attachLocationToBody(body) {
@@ -1250,6 +1263,7 @@
       )
       .join('');
     renderPartnerNotes(data.rankings, merchant.merchantName || '');
+    renderPaymentNote(data);
     resultEl.classList.add('show');
     recordSavingsLookup(data, best, amount_usd, pick);
     window.CR_ANALYTICS?.track('recommend', {

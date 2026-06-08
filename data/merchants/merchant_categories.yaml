@@ -104,6 +104,22 @@ merchants:
     co_brand_bonus_categories: [Costco]
     spend_bonus_category_name: Online Shopping
     in_store_category: Wholesale Clubs
+    accepted_networks:
+      in_store: [Visa]
+      online: [Visa, Mastercard, Discover]
+    payment_notes:
+      in_store: Costco warehouses accept Visa cards only (including Costco Anywhere Visa).
+      online: Costco.com accepts Visa, Mastercard, and Discover (not American Express).
+    spend_contexts:
+      default_in_store: Wholesale Clubs
+      default_online: Online Shopping
+      matches:
+        - patterns: [costco gas, costco fuel, costco gasoline, costco gas station, costco fuel station]
+          category: Gas Stations
+        - patterns: [costco food court, costco food, costco pizza, costco cafe, costco hot dog, costco bakery]
+          category: Dining
+        - patterns: [costco travel, costco vacation]
+          category: Travel
 
   - id: sams_club
     name: Sam's Club

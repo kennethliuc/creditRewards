@@ -52,6 +52,12 @@ from credit_rewards.merchant_co_brand import (
     canonical_merchant_id_for_purchase,
     purchase_bonus_categories,
 )
+from credit_rewards.merchant_payment_rules import (
+    accepted_networks_for_merchant,
+    partition_wallet_by_payment,
+    payment_restriction_note,
+    resolve_spend_category_for_merchant,
+)
 from credit_rewards.models import PurchaseContext
 from credit_rewards.official_cpp import enrich_card_profile, fallback_program_table, resolve_card_official_cpp
 from credit_rewards.recommend import recommend_best_cards
@@ -656,6 +662,15 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
             merchant_id=merchant_id or None,
             merchant_name=merchant_name,
         )
+        channel = body.purchase_channel or (
+            "online" if body.merchant_url else "in_store"
+        )
+        category = resolve_spend_category_for_merchant(
+            merchant_id=canon_id or merchant_id,
+            merchant_name=merchant_name,
+            purchase_channel=channel,
+            default_category=category,
+        )
         bonus_categories = purchase_bonus_categories(
             category,
             merchant_id=merchant_id or None,
@@ -667,7 +682,28 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
             bonus_categories=bonus_categories,
             merchant_id=canon_id or merchant_id or None,
         )
-        results = recommend_best_cards(wallet, purchase)
+        accepted_networks = accepted_networks_for_merchant(
+            merchant_id=canon_id or merchant_id,
+            merchant_name=merchant_name,
+            purchase_channel=channel,
+        )
+        eligible_wallet, excluded_cards = partition_wallet_by_payment(
+            wallet,
+            accepted_networks=accepted_networks,
+        )
+        if not eligible_wallet:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    payment_restriction_note(
+                        merchant_id=canon_id or merchant_id,
+                        merchant_name=merchant_name,
+                        purchase_channel=channel,
+                    )
+                    or "No wallet cards can be used at this merchant."
+                ),
+            )
+        results = recommend_best_cards(eligible_wallet, purchase)
     except RewardsCCError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
@@ -675,6 +711,11 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
         raise HTTPException(status_code=400, detail="No cards could be loaded.")
 
     top = results[0]
+    payment_note = payment_restriction_note(
+        merchant_id=canon_id or merchant_id,
+        merchant_name=merchant_name,
+        purchase_channel=channel,
+    )
     return {
         "best": top.model_dump(),
         "rankings": [r.model_dump() for r in results],
@@ -683,6 +724,9 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
         "merchant": merchant_info,
         "card_count": len(results),
         "full_library": body.card_keys is None,
+        "accepted_networks": accepted_networks,
+        "payment_note": payment_note,
+        "excluded_cards": excluded_cards,
     }
 
 

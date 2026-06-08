@@ -22,6 +22,7 @@ class CardProfile(BaseModel):
     card_key: str
     card_name: str
     card_issuer: str
+    card_network: str = ""
     reward_program: str
     base_spend_amount: float = 1.0
     base_earn_currency: str = "points"
