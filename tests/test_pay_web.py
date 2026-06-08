@@ -312,6 +312,7 @@ def test_recommend_marriott_co_brand_at_marriott_merchant(twenty_card_db, monkey
         ("target", "tdbank-targetredcard", "All Purchases", 5.0),
         ("walmart", "capitalone-walmartrewards", "Grocery Stores", 2.0),
         ("sams_club", "synchrony-samsclub", "Wholesale Clubs", 3.0),
+        ("bjs", "capitalone-bjsone", "Wholesale Clubs", 3.0),
     ],
 )
 def test_recommend_co_brand_at_merchant(
@@ -425,6 +426,33 @@ def test_recommend_costco_excludes_amex(twenty_card_db, monkeypatch):
     assert data["best"]["card_key"] == "citi-costcoanywherevisa"
     excluded = {row["card_key"] for row in data.get("excluded_cards") or []}
     assert "amex-gold" in excluded
+
+
+def test_recommend_sams_club_gas_uses_5_percent(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("synchrony-samsclub") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "sams_club",
+            "merchant_name": "Sam's Club Gas",
+            "purchase_channel": "in_store",
+            "amount_usd": 100,
+            "card_keys": ["synchrony-samsclub"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["resolved_category"] == "Gas Stations"
+    assert data["best"]["multiplier"] == 5.0
+    assert data.get("accepted_networks") in ([], None)
 
 
 def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):

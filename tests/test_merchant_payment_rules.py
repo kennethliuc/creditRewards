@@ -113,3 +113,69 @@ def test_partition_excludes_amex_at_costco():
 def test_infer_card_network_from_detail():
     card = _load_card("citi-costcoanywherevisa")
     assert infer_card_network(card) == "Visa"
+
+
+@pytest.mark.parametrize(
+    ("merchant_id", "merchant_name", "expected"),
+    [
+        ("sams_club", "Sam's Club Gas #4821", "Gas Stations"),
+        ("sams_club", "Sam's Club Cafe", "Dining"),
+        ("sams_club", "Sam's Club", "Wholesale Clubs"),
+        ("bjs", "BJ's Gas", "Gas Stations"),
+        ("bjs", "BJ's Wholesale Club", "Wholesale Clubs"),
+        ("walmart", "Walmart Fuel Center", "Gas Stations"),
+        ("walmart", "Murphy USA", "Gas Stations"),
+        ("kroger", "Kroger Fuel Center", "Gas Stations"),
+        ("target", "Target Starbucks", "Dining"),
+    ],
+)
+def test_spend_context_category_resolution(merchant_id, merchant_name, expected):
+    cat = resolve_spend_category_for_merchant(
+        merchant_id=merchant_id,
+        merchant_name=merchant_name,
+        purchase_channel="in_store",
+        default_category="Grocery Stores",
+    )
+    assert cat == expected
+
+
+def test_sams_club_gas_5_percent_on_co_brand_card():
+    card = _load_card("synchrony-samsclub")
+    mult, rule = best_multiplier(
+        card,
+        "Gas Stations",
+        bonus_categories=["Sam's Club"],
+    )
+    assert mult == 5.0
+    assert rule is not None
+    assert rule.category_name == "Gas Stations"
+
+
+def test_sams_club_dining_3_percent_on_co_brand_card():
+    card = _load_card("synchrony-samsclub")
+    mult, rule = best_multiplier(card, "Dining", bonus_categories=["Sam's Club"])
+    assert mult == 3.0
+    assert rule.category_name == "Dining"
+
+
+def test_sams_club_no_network_restriction():
+    nets = accepted_networks_for_merchant(
+        merchant_id="sams_club",
+        merchant_name="Sam's Club",
+        purchase_channel="in_store",
+    )
+    assert nets == []
+
+
+def test_bjs_co_brand_warehouse_3_percent():
+    card = _load_card("capitalone-bjsone")
+    purchase = PurchaseContext(
+        category="Wholesale Clubs",
+        amount_usd=100,
+        bonus_categories=["Wholesale Clubs", "BJ's"],
+        merchant_id="bjs",
+    )
+    mult, _, value, _, _, _, partner_bonus = compute_earn_value(card, purchase)
+    assert mult == 3.0
+    assert value == pytest.approx(3.0)
+    assert partner_bonus is True

@@ -70,6 +70,13 @@ merchants:
     domains: [wholefoodsmarket.com]
     co_brand_bonus_categories: [Whole Foods]
     spend_bonus_category_name: Grocery Stores
+    in_store_category: Grocery Stores
+    spend_contexts:
+      default_in_store: Grocery Stores
+      default_online: Grocery Stores
+      matches:
+        - patterns: [whole foods cafe, whole foods hot bar, whole foods prepared foods]
+          category: Dining
 
   - id: trader_joes
     name: Trader Joe's
@@ -83,6 +90,13 @@ merchants:
     domains: [kroger.com]
     co_brand_bonus_categories: [Kroger]
     spend_bonus_category_name: Grocery Stores
+    in_store_category: Grocery Stores
+    spend_contexts:
+      default_in_store: Grocery Stores
+      default_online: Grocery Stores
+      matches:
+        - patterns: [kroger fuel, kroger gas, kroger fuel center, kroger gasoline]
+          category: Gas Stations
 
   - id: safeway
     name: Safeway
@@ -128,6 +142,38 @@ merchants:
     co_brand_bonus_categories: ["Sam's Club"]
     spend_bonus_category_name: Online Shopping
     in_store_category: Wholesale Clubs
+    payment_notes:
+      in_store: Sam's Club accepts Visa, Mastercard, Discover, and American Express.
+      online: SamsClub.com accepts Visa, Mastercard, Discover, and American Express.
+    spend_contexts:
+      default_in_store: Wholesale Clubs
+      default_online: Online Shopping
+      matches:
+        - patterns: [sams club gas, sams gas, sams fuel, sams club fuel, sams gasoline]
+          category: Gas Stations
+        - patterns: [sams club cafe, sams cafe, sams food court, sams pizza, sams snack bar, sams member's mark cafe]
+          category: Dining
+        - patterns: [sams travel, sams vacation]
+          category: Travel
+
+  - id: bjs
+    name: BJ's Wholesale Club
+    aliases: [bjs, bjs wholesale, bj's wholesale]
+    domains: [bjs.com]
+    co_brand_bonus_categories: [BJ's]
+    spend_bonus_category_name: Online Shopping
+    in_store_category: Wholesale Clubs
+    payment_notes:
+      in_store: BJ's accepts Visa, Mastercard, Discover, and American Express.
+      online: BJs.com accepts Visa, Mastercard, Discover, and American Express.
+    spend_contexts:
+      default_in_store: Wholesale Clubs
+      default_online: Online Shopping
+      matches:
+        - patterns: [bjs gas, bjs fuel, bjs gasoline, bjs gas station, bjs fuel station]
+          category: Gas Stations
+        - patterns: [bjs cafe, bjs food court, bjs snack bar, bjs food]
+          category: Dining
 
   - id: walmart
     name: Walmart
@@ -136,6 +182,12 @@ merchants:
     co_brand_bonus_categories: [Walmart]
     spend_bonus_category_name: Online Shopping
     in_store_category: Grocery Stores
+    spend_contexts:
+      default_in_store: Grocery Stores
+      default_online: Online Shopping
+      matches:
+        - patterns: [walmart gas, walmart fuel, walmart gasoline, murphy usa, murphy express, walmart fuel center]
+          category: Gas Stations
 
   - id: target
     name: Target
@@ -144,6 +196,12 @@ merchants:
     co_brand_bonus_categories: [Target]
     spend_bonus_category_name: Online Shopping
     in_store_category: All Purchases
+    spend_contexts:
+      default_in_store: All Purchases
+      default_online: Online Shopping
+      matches:
+        - patterns: [target cafe, target starbucks, starbucks at target, target food]
+          category: Dining
 
   # Gas
   - id: shell

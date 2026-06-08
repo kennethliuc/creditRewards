@@ -43,6 +43,7 @@ def test_co_brand_index_includes_major_merchants():
     assert "Costco" in labels
     assert "Target" in labels
     assert "Walmart" in labels
+    assert "BJ's" in labels
 
 
 def test_resolve_delta_air_lines_to_delta_airlines_category():
@@ -74,6 +75,7 @@ def test_catalog_merchant_auto_match_starbucks():
         ("amazon", "Amazon"),
         ("costco", "Costco"),
         ("sams_club", "Sam's Club"),
+        ("bjs", "BJ's"),
         ("target", "Target"),
         ("walmart", "Walmart"),
     ],
@@ -107,6 +109,7 @@ def test_gmaps_costco_maps_to_catalog_co_brand():
         ("tdbank-targetredcard", "target", "All Purchases", "Target", 5.0),
         ("capitalone-walmartrewards", "walmart", "Grocery Stores", "Walmart", 2.0),
         ("synchrony-samsclub", "sams_club", "Wholesale Clubs", "Sam's Club", 3.0),
+        ("capitalone-bjsone", "bjs", "Wholesale Clubs", "BJ's", 3.0),
     ],
 )
 def test_store_co_brand_cards_use_partner_bucket(card_key, merchant_id, category, bonus_cat, min_mult):

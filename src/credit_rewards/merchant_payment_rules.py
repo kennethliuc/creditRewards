@@ -11,7 +11,17 @@ from credit_rewards.models import CardProfile
 
 
 def _normalize_label(text: str) -> str:
-    return re.sub(r"[^\w\s]+", " ", str(text or "").lower()).strip()
+    s = re.sub(r"[^\w\s]+", " ", str(text or "").lower()).strip()
+    s = re.sub(r"\s+", " ", s)
+    # Apostrophe brands normalize to spaced letters ("Sam's" → "sam s"); fold for pattern match.
+    for spaced, folded in (
+        ("sam s club", "sams club"),
+        ("sam s", "sams"),
+        ("bj s", "bjs"),
+        ("trader joe s", "trader joes"),
+    ):
+        s = s.replace(spaced, folded)
+    return s
 
 
 def normalize_card_network(raw: str) -> str:
