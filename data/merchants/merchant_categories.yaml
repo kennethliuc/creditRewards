@@ -45,6 +45,12 @@ merchants:
     domains: [7-eleven.com]
     spend_bonus_category_name: Dining
 
+  - id: haidilao
+    name: Haidilao
+    aliases: [haidilao hotpot, haidilao hot pot, haidilao hot pot, 海底捞]
+    domains: []
+    spend_bonus_category_name: Dining
+
   - id: doordash
     name: DoorDash
     aliases: [door dash]

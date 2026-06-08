@@ -222,3 +222,28 @@ def test_nominatim_name_fallback(monkeypatch):
     assert result.best.merchant_id == "osm:999"
     assert result.best.spend_bonus_category_name == "Dining"
     assert result.best.source == "nominatim"
+
+
+def test_haidilao_hotpot_catalog_in_store():
+    result = resolve_merchant(merchant_name="Haidilao hotpot", purchase_channel="in_store")
+    assert result.best
+    assert result.best.merchant_name == "Haidilao"
+    assert result.best.spend_bonus_category_name == "Dining"
+    assert result.needs_confirmation is False
+
+
+def test_dining_name_heuristic_without_catalog(monkeypatch):
+    monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
+
+    def no_google(*_a, **_k):
+        return None
+
+    monkeypatch.setattr("credit_rewards.merchant_mapping._google_places_resolve", no_google)
+    result = resolve_merchant(
+        merchant_name="Sichuan Hotpot House",
+        purchase_channel="in_store",
+    )
+    assert result.best
+    assert result.best.spend_bonus_category_name == "Dining"
+    assert result.best.match_type == "name_hint"
+    assert result.needs_confirmation is True

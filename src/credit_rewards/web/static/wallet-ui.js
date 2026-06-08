@@ -1636,6 +1636,9 @@
         body.merchant_name = name;
       }
       try {
+        if (activeTab === 'name' && !userLocation) {
+          await requestUserLocation();
+        }
         const res = await fetch('/api/merchant/resolve', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

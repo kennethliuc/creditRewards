@@ -47,6 +47,31 @@ CONFIDENCE_LOW = "low"
 PURCHASE_ONLINE = "online"
 PURCHASE_IN_STORE = "in_store"
 
+_DINING_NAME_HINTS = (
+    "hotpot",
+    "hot pot",
+    "bbq",
+    "barbecue",
+    "grill",
+    "kitchen",
+    "sushi",
+    "ramen",
+    "pizza",
+    "cafe",
+    "coffee",
+    "bistro",
+    "steakhouse",
+    "steak house",
+    "diner",
+    "taqueria",
+    "bakery",
+    "seafood",
+    "noodle",
+    "wok",
+    "dim sum",
+    "restaurant",
+)
+
 
 class MerchantNotFoundError(ValueError):
     """Raised when URL or store name cannot be mapped to a spend category."""
@@ -818,7 +843,34 @@ def _match_by_name(
                 needs_confirmation=True,
             )
 
+    if purchase_channel == PURCHASE_IN_STORE:
+        hinted = _dining_name_heuristic(name)
+        if hinted:
+            return hinted
+
     return MerchantResolveResult(best=None, candidates=[], needs_confirmation=False)
+
+
+def _dining_name_heuristic(name: str) -> MerchantResolveResult | None:
+    """Fallback when catalog / Google / Nominatim miss — common restaurant-shaped names."""
+    if not _normalize_name(name):
+        return None
+    norm = _normalize_name(name)
+    if not any(hint in norm for hint in _DINING_NAME_HINTS):
+        return None
+    slug = re.sub(r"[^\w]+", "-", norm).strip("-") or "store"
+    match = MerchantCategoryMatch(
+        merchant_id=f"dining:{slug[:48]}",
+        merchant_name=name.strip(),
+        spend_bonus_category_name="Dining",
+        match_type="name_hint",
+        matched_on=name.strip(),
+        input_kind="name",
+        confidence=CONFIDENCE_LOW,
+        score=80,
+        source="name_heuristic",
+    )
+    return MerchantResolveResult(best=match, candidates=[match], needs_confirmation=True)
 
 
 def resolve_merchant(

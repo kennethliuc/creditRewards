@@ -102,6 +102,16 @@ def test_merchant_resolve_name():
     assert res.json()["best"]["spendBonusCategoryName"] == "Dining"
 
 
+def test_merchant_resolve_haidilao_in_store():
+    res = client.post(
+        "/api/merchant/resolve",
+        json={"merchant_name": "Haidilao hotpot", "purchase_channel": "in_store"},
+    )
+    assert res.status_code == 200
+    assert res.json()["best"]["merchantName"] == "Haidilao"
+    assert res.json()["best"]["spendBonusCategoryName"] == "Dining"
+
+
 def test_merchant_resolve_unknown_404(monkeypatch):
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", False)
     res = client.post("/api/merchant/resolve", json={"merchant_name": "Not A Real Store XYZ"})
