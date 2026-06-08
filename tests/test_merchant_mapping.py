@@ -200,12 +200,8 @@ def test_nominatim_name_fallback(monkeypatch):
 
     monkeypatch.setattr("credit_rewards.merchant_mapping.NOMINATIM_ENABLED", True)
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_text_queries",
-        lambda queries: (),
-    )
-    monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
-        lambda *args, **kwargs: (),
+        "credit_rewards.merchant_mapping.lookup_places_for_store_name",
+        lambda queries, query_for_ranking, latitude=None, longitude=None: (),
     )
 
     def fake_lookup(name):

@@ -46,8 +46,10 @@ def test_resolve_name_with_google_location(monkeypatch):
     )
 
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
-        lambda queries, lat, lng: fake if any("grill" in q.lower() for q in queries) else (),
+        "credit_rewards.merchant_mapping.lookup_places_for_store_name",
+        lambda queries, query_for_ranking, latitude=None, longitude=None: fake
+        if any("grill" in q.lower() for q in queries)
+        else (),
     )
 
     result = resolve_merchant(
@@ -79,23 +81,14 @@ def test_resolve_without_location_uses_google_text_search(monkeypatch):
         ),
     )
 
-    called = {"n": 0}
-
-    def fake_text_queries(queries):
-        called["n"] += 1
-        return fake if any("morning" in q.lower() for q in queries) else ()
-
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_text_queries",
-        fake_text_queries,
-    )
-    monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_with_location_queries",
-        lambda *args, **kwargs: (),
+        "credit_rewards.merchant_mapping.lookup_places_for_store_name",
+        lambda queries, query_for_ranking, latitude=None, longitude=None: fake
+        if any("morning" in q.lower() for q in queries)
+        else (),
     )
 
     result = resolve_merchant(merchant_name="See you Morning", purchase_channel="in_store")
-    assert called["n"] == 1
     assert result.best
     assert result.best.merchant_id.startswith("gmaps:")
     assert result.best.spend_bonus_category_name == "Dining"

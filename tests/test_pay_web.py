@@ -130,8 +130,10 @@ def test_merchant_resolve_unknown_in_store_uses_google_text(monkeypatch):
         ),
     )
     monkeypatch.setattr(
-        "credit_rewards.merchant_mapping.lookup_places_text_queries",
-        lambda queries: fake if any("morning" in q.lower() for q in queries) else (),
+        "credit_rewards.merchant_mapping.lookup_places_for_store_name",
+        lambda queries, query_for_ranking, latitude=None, longitude=None: fake
+        if any("morning" in q.lower() for q in queries)
+        else (),
     )
     res = client.post(
         "/api/merchant/resolve",

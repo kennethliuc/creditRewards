@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 from dataclasses import dataclass
@@ -13,6 +14,8 @@ import httpx
 import yaml
 
 from credit_rewards.paths import data_dir
+
+logger = logging.getLogger(__name__)
 
 GOOGLE_MAP_PATH = data_dir() / "merchants" / "google_place_category_map.yaml"
 PLACES_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText"
@@ -143,7 +146,8 @@ def _places_search(
         response.raise_for_status()
         payload = response.json()
         return list(payload.get("places") or [])
-    except httpx.HTTPError:
+    except httpx.HTTPError as exc:
+        logger.warning("Google Places search failed for %r: %s", text_query[:80], exc)
         return []
 
 
@@ -255,6 +259,54 @@ def lookup_places_text_queries(text_queries: list[str]) -> tuple[GooglePlaceMatc
         if matches:
             return matches
     return ()
+
+
+def _normalize_place_query(text: str) -> str:
+    return re.sub(r"[^\w\s]+", " ", text.lower()).strip()
+
+
+def rank_google_matches_by_query(
+    query: str,
+    matches: tuple[GooglePlaceMatch, ...],
+) -> tuple[GooglePlaceMatch, ...]:
+    """Prefer POIs whose name best matches what the user typed."""
+    if not matches:
+        return ()
+    q_norm = _normalize_place_query(query)
+    q_tokens = set(q_norm.split())
+
+    def sort_key(match: GooglePlaceMatch) -> tuple[int, int, int, str]:
+        name_norm = _normalize_place_query(match.display_name)
+        name_tokens = set(name_norm.split())
+        overlap = len(q_tokens & name_tokens)
+        exact = q_norm == name_norm or q_norm in name_norm or name_norm in q_norm
+        return (0 if exact else 1, -overlap, match.score, match.display_name)
+
+    return tuple(sorted(matches, key=sort_key))
+
+
+def lookup_places_for_store_name(
+    text_queries: list[str],
+    *,
+    query_for_ranking: str,
+    latitude: float | None = None,
+    longitude: float | None = None,
+) -> tuple[GooglePlaceMatch, ...]:
+    """Google Maps parity: merge location-biased + global text search, rank by name."""
+    seen: set[str] = set()
+    collected: list[GooglePlaceMatch] = []
+
+    def add_matches(rows: tuple[GooglePlaceMatch, ...]) -> None:
+        for match in rows:
+            if match.place_id in seen:
+                continue
+            seen.add(match.place_id)
+            collected.append(match)
+
+    if latitude is not None and longitude is not None:
+        add_matches(lookup_places_with_location_queries(text_queries, latitude, longitude))
+    add_matches(lookup_places_text_queries(text_queries))
+    return rank_google_matches_by_query(query_for_ranking, tuple(collected))
 
 
 def lookup_places_for_parsed_brand(

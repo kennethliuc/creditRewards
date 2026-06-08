@@ -22,6 +22,7 @@ from credit_rewards.merchant_google_places import (
     google_match_to_category_match,
     google_places_enabled,
     lookup_places_for_parsed_brand,
+    lookup_places_for_store_name,
     lookup_places_text_queries,
     lookup_places_with_location_queries,
 )
@@ -540,10 +541,12 @@ def _google_places_resolve(
     queries = text_queries or expand_store_name_queries(text_query)
     if not queries:
         return None
-    if latitude is not None and longitude is not None:
-        matches = lookup_places_with_location_queries(queries, latitude, longitude)
-    else:
-        matches = lookup_places_text_queries(queries)
+    matches = lookup_places_for_store_name(
+        queries,
+        query_for_ranking=text_query,
+        latitude=latitude,
+        longitude=longitude,
+    )
     if not matches:
         return None
     candidates = [
