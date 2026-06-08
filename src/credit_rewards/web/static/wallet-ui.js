@@ -1413,6 +1413,15 @@
   }
 
   async function init() {
+    // Show a view immediately so the page is never blank while catalog loads.
+    if (!window.CR_I18N?.hasChosenLocale()) {
+      showView('language');
+    } else if (resolveWallet()) {
+      showView('pay');
+    } else {
+      showView('local-setup');
+    }
+
     bindReentryInput($('merchantUrl'));
     bindReentryInput($('merchantName'));
     $('merchantName').addEventListener('input', () => {
@@ -1660,12 +1669,21 @@
     window.CR_I18N.setLocale(window.CR_I18N.loadLocale());
     applyPageI18n();
     const w = resolveWallet();
-    if (w) enterPayFlow({ startPayTour: !window.CR_ONBOARDING?.isComplete() });
+    if (w) await enterPayFlow({ startPayTour: !window.CR_ONBOARDING?.isComplete() });
     else {
       showView('local-setup');
       await renderLocalCardTiles();
       startSetupTour();
     }
+  } catch (err) {
+    console.error('PayCue init failed', err);
+    const errorEl = $('error') || $('localSetupError');
+    if (errorEl) {
+      errorEl.textContent = err?.message || 'Failed to load PayCue. Please refresh.';
+      errorEl.classList.add('show');
+    }
+    if (!window.CR_I18N?.hasChosenLocale()) showView('language');
+    else showView('local-setup');
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

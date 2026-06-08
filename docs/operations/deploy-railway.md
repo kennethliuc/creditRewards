@@ -1,6 +1,8 @@
 # Deploy to Railway
 
-**Live demo:** https://paycue-production.up.railway.app
+**Live demo:** https://credit-rewards-production.up.railway.app
+
+> **Note:** `paycue-production.up.railway.app` is not configured on Railway and returns 404. Use the URL above.
 
 Public demo URL for the payment homepage (`/`).
 
