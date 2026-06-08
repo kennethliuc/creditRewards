@@ -1,0 +1,73 @@
+[
+  {
+    "cardKey": "synchrony-lowes",
+    "cardIssuer": "Synchrony Bank",
+    "cardName": "MyLowe’s Rewards",
+    "cardNetwork": "Store Card",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.lowes.com/l/Credit/consumer-credit-center",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Everyday Offers",
+        "benefitDesc": "5% Off Every Day or 6 Months Special Financing or 84 Fixed Monthly Payments",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "FREE Silver Key Status",
+        "benefitDesc": "Earn 1.25x points toward MyLowe's Money",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Lowe's",
+        "spendBonusCategoryName": "Lowe's",
+        "spendBonusCategoryId": 151441616,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Home Improvement",
+        "spendBonusDesc": "Save 5% everyday at Lowe's",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

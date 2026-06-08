@@ -34,18 +34,21 @@ def test_index_page_loads():
     assert "app.css" in res.text
     assert "savings.js" in res.text
     assert "wallet-ui.js" in res.text
+    assert "analytics.js" in res.text
     assert "pwa.js" in res.text
     assert "manifest.webmanifest" in res.text
     assert "apple-touch-icon" in res.text
     assert "view-language" in res.text
     assert "savingsBanner" in res.text
+    assert "valuationModal" in res.text
+    assert "btnValuationHelp" in res.text
 
 
 def test_pwa_assets():
     manifest = client.get("/manifest.webmanifest")
     assert manifest.status_code == 200
     assert manifest.headers["content-type"].startswith("application/manifest+json")
-    assert "CreditRewards" in manifest.text
+    assert "PayCue" in manifest.text
     assert "standalone" in manifest.text
 
     sw = client.get("/sw.js")
@@ -136,7 +139,166 @@ def test_recommend_with_catalog_starbucks_card(twenty_card_db, monkeypatch):
     assert rec.status_code == 200, rec.text
     data = rec.json()
     assert data["card_count"] == 2
-    assert any(r["card_key"] == "chase-starbucksrewardsvisa" for r in data["rankings"])
+    starbucks = next(r for r in data["rankings"] if r["card_key"] == "chase-starbucksrewardsvisa")
+    assert starbucks["multiplier"] == 3.0
+    assert starbucks["points_earned"] == 75.0
+
+
+def test_merchant_resolve_american_airlines_url():
+    res = client.post(
+        "/api/merchant/resolve",
+        json={"merchant_url": "https://www.aa.com/flights", "purchase_channel": "online"},
+    )
+    assert res.status_code == 200
+    best = res.json()["best"]
+    assert best["merchantId"] == "american_airlines"
+    assert best["spendBonusCategoryName"] == "Airfare"
+
+
+def test_recommend_aa_co_brand_at_american_airlines_merchant(twenty_card_db, monkeypatch):
+    """AA MileUp must use American Airlines bonus, not generic Airfare-only matching."""
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("citi-aaadvantagemileup") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "american_airlines",
+            "amount_usd": 100,
+            "card_keys": ["citi-aaadvantagemileup", "chase-sapphire-preferred"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["resolved_category"] == "Airfare"
+    by_key = {r["card_key"]: r for r in data["rankings"]}
+    assert by_key["citi-aaadvantagemileup"]["multiplier"] == 2.0
+    assert by_key["citi-aaadvantagemileup"]["points_earned"] == 200.0
+    assert by_key["chase-sapphire-preferred"]["multiplier"] == 1.0
+    assert data["best"]["card_key"] == "citi-aaadvantagemileup"
+
+
+def test_recommend_starbucks_co_brand_not_base_rate(twenty_card_db, monkeypatch):
+    """Starbucks Visa must earn 3x at Starbucks merchant, not 0.25x base."""
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("chase-starbucksrewardsvisa") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "starbucks",
+            "amount_usd": 100,
+            "card_keys": ["chase-starbucksrewardsvisa"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    best = rec.json()["best"]
+    assert best["card_key"] == "chase-starbucksrewardsvisa"
+    assert best["multiplier"] == 3.0
+    assert best["points_earned"] == 300.0
+    assert best["estimated_value_usd"] == pytest.approx(10.5)
+    assert best["cpp_used"] == 3.5
+
+
+def test_recommend_delta_co_brand_at_delta_merchant(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("amex-deltagold") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "delta",
+            "amount_usd": 100,
+            "card_keys": ["amex-deltagold", "chase-sapphire-preferred"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    by_key = {r["card_key"]: r for r in rec.json()["rankings"]}
+    assert by_key["amex-deltagold"]["multiplier"] >= 2.0
+    assert by_key["chase-sapphire-preferred"]["multiplier"] == 1.0
+
+
+def test_recommend_marriott_co_brand_at_marriott_merchant(twenty_card_db, monkeypatch):
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db("amex-marriottbonvoybevy") is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": "marriott",
+            "amount_usd": 100,
+            "card_keys": ["amex-marriottbonvoybevy", "chase-sapphire-preferred"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    by_key = {r["card_key"]: r for r in rec.json()["rankings"]}
+    assert by_key["amex-marriottbonvoybevy"]["multiplier"] >= 6.0
+    assert rec.json()["best"]["card_key"] == "amex-marriottbonvoybevy"
+
+
+@pytest.mark.parametrize(
+    ("merchant_id", "co_brand_card", "generic_category", "min_multiplier"),
+    [
+        ("united", "chase-unitedexplorer", "Airfare", 2.0),
+        ("southwest", "chase-southwestpriority", "Airfare", 2.0),
+        ("hilton", "amex-hilton", "Hotels", 3.0),
+        ("jetblue", "barclays-jetblue", "Airfare", 3.0),
+        ("alaska_airlines", "boa-alaska", "Airfare", 2.0),
+    ],
+)
+def test_recommend_co_brand_at_merchant(
+    twenty_card_db, monkeypatch, merchant_id, co_brand_card, generic_category, min_multiplier
+):
+    """Co-brand cards must use merchant-specific earn bucket, not generic category-only."""
+    monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(twenty_card_db))
+    monkeypatch.setattr(
+        "credit_rewards.card_import.CardDataClient",
+        lambda *a, **k: type("C", (), {"is_configured": False})(),
+    )
+    from credit_rewards.card_import import ensure_card_in_db
+
+    assert ensure_card_in_db(co_brand_card) is True
+
+    rec = client.post(
+        "/api/recommend",
+        json={
+            "merchant_id": merchant_id,
+            "amount_usd": 100,
+            "card_keys": [co_brand_card, "chase-sapphire-preferred"],
+        },
+    )
+    assert rec.status_code == 200, rec.text
+    data = rec.json()
+    assert data["resolved_category"] == generic_category
+    by_key = {r["card_key"]: r for r in data["rankings"]}
+    assert by_key[co_brand_card]["multiplier"] >= min_multiplier
+    assert by_key["chase-sapphire-preferred"]["multiplier"] == 1.0
+    assert by_key[co_brand_card]["estimated_value_usd"] > by_key["chase-sapphire-preferred"]["estimated_value_usd"]
+    assert data["best"]["card_key"] == co_brand_card
 
 
 def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):
@@ -153,6 +315,8 @@ def test_recommend_with_confirmed_merchant_id(twenty_card_db, monkeypatch):
     assert data["resolved_category"] == "Dining"
     assert data["merchant"]["merchantId"] == "chipotle"
     assert data["card_count"] == 20
+    assert "valuate_as_points" in data["best"]
+    assert data["best"]["valuate_as_points"] is True
 
 
 def test_recommend_with_osm_merchant(twenty_card_db, monkeypatch):
@@ -178,7 +342,7 @@ def test_recommend_with_osm_merchant(twenty_card_db, monkeypatch):
 
 @pytest.mark.skipif(
     not reference_files_ready(),
-    reason="Run: credit-rewards-db sync-reference && import-reference",
+    reason="Run: paycue-db sync-reference && import-reference",
 )
 def test_recommend_full_library_via_merchant_url(twenty_card_db, monkeypatch):
     monkeypatch.setattr(
@@ -201,7 +365,7 @@ def test_recommend_full_library_via_merchant_url(twenty_card_db, monkeypatch):
 
 @pytest.mark.skipif(
     not reference_files_ready(),
-    reason="Run: credit-rewards-db sync-reference && import-reference",
+    reason="Run: paycue-db sync-reference && import-reference",
 )
 def test_recommend_full_library_via_merchant_name(twenty_card_db, monkeypatch):
     monkeypatch.setattr(

@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = 'creditrewards_savings_v1';
+  const STORAGE_KEY = 'paycue_savings_v1';
   const DEFAULT_AMOUNT = 100;
 
   function newId() {

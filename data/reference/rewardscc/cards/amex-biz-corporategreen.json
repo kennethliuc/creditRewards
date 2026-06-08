@@ -1,0 +1,67 @@
+[
+  {
+    "cardKey": "amex-biz-corporategreen",
+    "cardIssuer": "American Express",
+    "cardName": "The American Express® Corporate Green Card",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Business",
+    "cardUrl": "https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/american-express-corporate-green-card-amex",
+    "annualFee": 75,
+    "fxFee": 2.5,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "0",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 75,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "3% Uber Cash",
+        "benefitDesc": "Make business rides with Uber or make orders through Uber Eats to earn Uber Cash back. Corporate Green Card Members enrolled in the Uber benefit can earn 3% Uber Cash on eligible rides with Uber and orders with Uber Eats when you book them through your business profile and charge them to your Corporate Green Card. You can use Uber Cash for personal rides with Uber and orders with Uber Eats in the U.S.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Baggage Insurance Plan",
+        "benefitDesc": "Baggage Insurance Plan coverage can be in effect for Covered Persons for lost, damaged, or stolen Baggage during their travel on a Common Carrier Vehicle (e.g. plane, train, ship, or bus) when the Entire Fare for a ticket for the trip (one-way or roundtrip) is charged to an Eligible Card. Coverage can be provided for up to $1,250 for carry-on Baggage and up to $500 for checked Baggage, in excess of coverage provided by the Common Carrier. For New York State residents, there is a $10,000 aggregate maximum limit for all Covered Persons per Covered Trip.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Assist® Hotline",
+        "benefitDesc": "Global Assist Hotline is available to you 24/7. We can help you prepare for your trip before you go – with important information specific to your destination. While you’re traveling more than 100 miles from your home in the United States, coordination and assistance with services such as lost passport replacement assistance, translation services, missing luggage assistance, and emergency legal and medical referrals are only a phone call away.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Hilton Honors™ Silver Status",
+        "benefitDesc": "Give your employees something that will help make their travel experience easier and more rewarding. Corporate Green and Gold Card Members receive complimentary Hilton HonorsTM Silver status. With Hilton Honors Silver Status, Card Members will receive up to 10 Base Points per $1 spent on eligible stays at Hilton, plus a Bonus on all Base Points earned, getting them to free nights for personal travel faster.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

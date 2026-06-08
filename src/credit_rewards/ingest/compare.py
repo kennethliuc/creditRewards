@@ -491,7 +491,7 @@ def _fetch_issuer_html(source_url: str) -> str:
     response = httpx.get(
         source_url,
         timeout=30.0,
-        headers={"User-Agent": "CreditRewardsBot/0.1 (+research; contact: local-dev)"},
+        headers={"User-Agent": "PayCueBot/0.1 (+research; contact: local-dev)"},
         follow_redirects=True,
     )
     response.raise_for_status()

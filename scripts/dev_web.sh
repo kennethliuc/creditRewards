@@ -18,7 +18,7 @@ if [[ -f "$PTH" ]]; then
   chflags nohidden "$PTH" 2>/dev/null || true
 fi
 
-echo "Starting CreditRewards web on http://127.0.0.1:8000"
+echo "Starting PayCue web on http://127.0.0.1:8000"
 echo "Optional CardData API: uvicorn credit_rewards.card_api.app:app --port 8080"
 echo "Recommend works with SQLite fallback if :8080 is down (data/carddata.db)"
 exec .venv/bin/uvicorn credit_rewards.web.app:app \

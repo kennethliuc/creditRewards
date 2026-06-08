@@ -1,0 +1,138 @@
+[
+  {
+    "cardKey": "capitalone-bjsone",
+    "cardIssuer": "Capital One",
+    "cardName": "BJ’s One™ Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Elite Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "https://www.capitalone.com/credit-cards/bjs-wholesale-club/",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.5,
+    "baseSpendEarnType": "BJ’s Rewards",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Gas Discount",
+        "benefitDesc": "10¢ off/gallon at BJ’s Gas®",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enroll in HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lyft",
+        "benefitDesc": "More rides means more adventure. Take three rides in a month with Lyft to earn a $5 credit.3* Plus, save 10% on all scheduled rides to or from U.S. airports when you pay with your World Elite or World Legend Mastercard. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to premium preferred seats and ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Peacock",
+        "benefitDesc": "Get $3 off Peacock Premium or Peacock Premium Plus each month when you use your World Elite or World Legend Mastercard to subscribe. Watch new movies from theaters, buzzworthy original series, hit TV shows, live sports and so much more. Eligibility restrictions, exclusions and terms apply. Offer expires 12/31/2027.1",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Pass",
+        "benefitDesc": "Get access to 1,700+ airport lounges worldwide and special offers and discounts in the terminal on dining, retail and spa experiences.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "World Elite Concierge",
+        "benefitDesc": "Complimentary 24/7 concierge agent for lifestyle needs, travel bookings and event access.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - BJ's",
+        "spendBonusCategoryName": "BJ's",
+        "spendBonusCategoryId": 550352,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Retail",
+        "spendBonusDesc": "3% back in rewards on most purchases at BJ’s",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

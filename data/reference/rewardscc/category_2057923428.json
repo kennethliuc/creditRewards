@@ -1,0 +1,20 @@
+[
+  {
+    "cardKey": "chase-doordash",
+    "cardName": "DoorDash Rewards Mastercard®",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Single Category - DoorDash",
+    "spendBonusCategoryName": "DoorDash",
+    "spendBonusCategoryId": 2057923428,
+    "spendBonusDesc": "Earn 4% cash back on DoorDash and Caviar orders",
+    "earnMultiplier": 4.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

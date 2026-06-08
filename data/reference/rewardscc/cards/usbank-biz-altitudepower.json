@@ -1,0 +1,133 @@
+[
+  {
+    "cardKey": "usbank-biz-altitudepower",
+    "cardIssuer": "U.S. Bank",
+    "cardName": "U.S. Bank Business Altitude™ Power Visa Signature®",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Signature®",
+    "cardType": "Business",
+    "cardUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-world-elite-mastercard.html",
+    "annualFee": 195,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "U.S. Bank Altitude points",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.5,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "75000",
+    "signupBonusType": "U.S. Bank Altitude points",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 10000,
+    "signupBonusLength": 120,
+    "signupBonusLengthPeriod": "Days",
+    "signupAnnualFee": 195,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 75,000 bonus points. Just spend $10,000 on the Account Owner’s card in the first 120 days of opening your account.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "Auto Rental Collision Damage Waiver (ARCDW) provides primary insurance coverage for physical damage and theft, reasonable and customary towing, and valid loss-of-use charges and administrative fees when you reserve and pay for a rental car with your covered Visa Business card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Golf Benefits from Troon Rewards®",
+        "benefitDesc": "Enjoy automatic Silver Status when you sign up for Troon Rewards®, for 10% savings on golf fees, merchandise and lessons at over 150 golf courses across the United States and the world.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lost Luggage Reimbursement",
+        "benefitDesc": "Lost Luggage Reimbursement will reimburse you up to $3,000 If your checked luggage or carry on baggage is lost due to theft or misdirection by the common carrier (e.g., airline, rail, bus, ferry). For New York residents coverage is limited to $2,000 per bag. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "OpenTable",
+        "benefitDesc": "Eligible Visa cardholders can enjoy special events access to the hottest dining events on OpenTable. Restrictions apply.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Purchase Security and Extended Protection",
+        "benefitDesc": "Purchase Security can replace, repair or reimburse you for an eligible item purchased with your covered card up to $10,000.00 per claim in the event your item is stolen or damaged. Extended Protection doubles the time period of the original manufacturer's written U.S. warranty up to 1 additional year on eligible warranties of 3 years or less.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program available 24x7. Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sofar Sounds",
+        "benefitDesc": "Enjoy a free ticket per show with the purchase of one or more tickets, plus you can access 7-day Visa Exclusive Presale opportunities.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Transfer points",
+        "benefitDesc": "Redeem points sooner when you transfer points between your business and personal Altitude credit cards.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Travel Accident Insurance provides accidental death and dismemberment coverage. Coverage is in effect on the common carrier (e.g., flight, rail, bus, ferry, cruise ship), as well as while on courtesy ground transportation to and from the airport (or train depot, bus, terminal, etc.) and between terminals, as well as when you are at the airport immediately before departure, or immediately after arrival, on any covered trip.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel and Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Concierge",
+        "benefitDesc": "Get assistance with travel planning, entertainment tickets and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Luxury Hotel Collection",
+        "benefitDesc": "Enjoy special guest status at 900+ Visa Signature Luxury Hotel properties worldwide.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Signature Rental Car Privileges",
+        "benefitDesc": "Book your next road trip with your Visa Signature card to receive up to 25% off base rates on qualifying rentals from Avis and Budget. Your card can also unlock complimentary upgrades (when available), waived Additional Driver Fee and 10% saving on XM Satellite radio during rental.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Digital Wallet",
+        "spendBonusCategoryName": "Digital Wallet",
+        "spendBonusCategoryId": 1287070698,
+        "spendBonusCategoryGroup": "Payment",
+        "spendBonusSubcategoryGroup": "Digital Wallet",
+        "spendBonusDesc": "2.5X points on up to $5,000 in mobile wallet purchases each quarter",
+        "earnMultiplier": 2.5,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 5000,
+        "spendLimitResetPeriod": "Quarter"
+      }
+    ],
+    "annualSpend": []
+  }
+]

@@ -57,8 +57,8 @@ flowchart TD
 ```bash
 cd creditRewards && source .venv/bin/activate
 
-credit-rewards-db validation-monitor-run   # V — must stay core_ready
-credit-rewards-db payment-ui-monitor       # M/P/R/T plan + gates
+paycue-db validation-monitor-run   # V — must stay core_ready
+paycue-db payment-ui-monitor       # M/P/R/T plan + gates
 pytest -q tests/test_merchant_mapping.py tests/test_pay_web.py tests/test_payment_ui_e2e_smoke.py
 
 bash scripts/dev_web.sh    # :8000 — use this instead of bare uvicorn
@@ -68,7 +68,7 @@ bash scripts/smoke_payment_ui.sh
 Autonomous re-check loop:
 
 ```bash
-credit-rewards-db payment-ui-monitor-run
+paycue-db payment-ui-monitor-run
 ```
 
 ---

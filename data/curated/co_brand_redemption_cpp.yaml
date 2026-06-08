@@ -1,0 +1,66 @@
+# Co-brand redemption CPP — value when points/miles are used at the partner merchant.
+#
+# Generic program CPP (official_cpp.yaml) covers flexible currencies (UR, MR).
+# Co-brand earn is usually redeemed at the same brand; use these rates at checkout
+# when merchant + card program match.
+#
+# Sources (May–Jun 2026): Upgraded Points, TPG monthly valuations, Points Analyst Q3 2025.
+# Starbucks Stars: ~150 Stars ≈ $5.50 handcrafted beverage tier → ~3.7¢/Star.
+version: "2026-06-02"
+sanity_cap_cpp: 3.5
+
+merchants:
+  american_airlines:
+    programs: ["American AAdvantage"]
+    redemption_cpp: 1.4
+    source: upgraded-points-2026-05
+
+  delta:
+    programs: ["Delta SkyMiles"]
+    redemption_cpp: 1.2
+    source: upgraded-points-2026-05
+
+  united:
+    programs: ["United MileagePlus"]
+    redemption_cpp: 1.1
+    source: upgraded-points-2026-05
+
+  southwest:
+    programs: ["Southwest Rapid Rewards"]
+    redemption_cpp: 1.4
+    source: pointalize-2025
+
+  jetblue:
+    programs:
+      - "JetBlue TrueBlue Rewards Program"
+      - "JetBlue TrueBlue"
+    redemption_cpp: 1.3
+    source: points-analyst-q3-2025
+
+  alaska_airlines:
+    programs:
+      - "Alaska Airlines Atmos Rewards"
+      - "Alaska Mileage Plan"
+    redemption_cpp: 1.6
+    source: upgraded-points-2026-05
+
+  marriott:
+    programs: ["Marriott Bonvoy"]
+    redemption_cpp: 0.8
+    source: tpg-2026-05
+
+  hilton:
+    programs: ["Hilton Honors"]
+    redemption_cpp: 0.6
+    source: upgraded-points-2026-05
+
+  hyatt:
+    programs: ["World of Hyatt"]
+    redemption_cpp: 1.8
+    source: points-analyst-q3-2025
+
+  starbucks:
+    programs: ["Starbucks"]
+    redemption_cpp: 3.5
+    source: starbucks-rewards-150-stars-tier
+    notes: Stars redeem at Starbucks only; ~150 Stars ≈ $5.50 tier; capped at sanity_cap_cpp

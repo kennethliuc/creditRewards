@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#06080d" />
+  <meta name="theme-color" content="#0F766E" />
   <meta name="description" content="At checkout, pick the credit card that earns the most rewards." />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="CreditRewards" />
-  <title>CreditRewards — Which card?</title>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="PayCue" />
+  <title>PayCue — Which card?</title>
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/static/icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png" />
@@ -29,7 +29,7 @@
           <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
         </div>
         <div class="brand-text">
-          <strong>CreditRewards</strong>
+          <strong>PayCue</strong>
           <span data-i18n="nav.recommend">Pick the best card</span>
         </div>
       </button>
@@ -68,7 +68,19 @@
         <h1 data-i18n="setup.title">Pick your cards</h1>
         <p class="sub" data-i18n="setup.sub">Tap to add at least one card you carry.</p>
       </div>
+      <p class="subsection-label" data-i18n="wallet.popular">Popular cards</p>
       <div id="localCardPicker" class="card-grid"></div>
+      <div class="setup-add-section">
+        <p class="subsection-label" data-i18n="wallet.missing">Don't see your card?</p>
+        <label for="setupIssuerQuery" data-i18n="wallet.issuerLabel">Bank name</label>
+        <div class="issuer-search-row">
+          <input id="setupIssuerQuery" type="text" dir="ltr"
+            data-i18n-placeholder="wallet.issuerPlaceholder"
+            placeholder="Chase" list="issuer-hints" autocomplete="off" />
+          <button type="button" class="primary" id="setupIssuerSearchBtn" style="margin-top:0" data-i18n="wallet.search">Search</button>
+        </div>
+        <div id="setupIssuerResults" class="card-grid setup-issuer-results"></div>
+      </div>
       <div id="localSetupError" class="error"></div>
       <button type="button" class="primary" id="localSave" data-i18n="setup.start">Get started</button>
     </section>
@@ -129,10 +141,12 @@
           <div class="hero-card" id="bestName"></div>
           <div class="hero-value" id="bestValue"></div>
           <div class="hero-meta" id="bestMeta"></div>
+          <button type="button" class="link-btn valuation-help-link hidden" id="btnValuationHelp" data-i18n="result.valuationHelp">How we estimate $</button>
           <div id="savingsResultNote" class="savings-result-note hidden" aria-live="polite"></div>
         </div>
         <div class="rank-head" id="rankHead"></div>
         <div class="rank-list" id="rankings"></div>
+        <div id="partnerNotes" class="partner-notes hidden" aria-live="polite"></div>
       </div>
     </section>
 
@@ -189,6 +203,7 @@
         <p class="section-label" data-i18n="wallet.sectionApp">App settings</p>
         <div id="manageLocalActions">
           <button type="button" class="secondary" id="btnChangeLanguage" data-i18n="wallet.language">Language</button>
+          <button type="button" class="secondary" id="btnReplayTour" data-i18n="onboarding.replay">How to use PayCue</button>
         </div>
       </div>
 
@@ -226,9 +241,42 @@
     </div>
   </div>
 
+  <div id="valuationModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="valuationModalTitle">
+      <h2 id="valuationModalTitle" data-i18n="result.valuationTitle">How we estimate $</h2>
+      <div class="valuation-help-body">
+        <p data-i18n="result.valuationIntro">We show one estimated dollar value so you can compare cards at checkout.</p>
+        <p data-i18n="result.valuationPoints">Points cards: points earned × official cents-per-point (CPP). Example: 400 pts × 2.2¢ ≈ $8.80.</p>
+        <p data-i18n="result.valuationPartner">At a partner store (e.g. delta.com), we value that brand's points at typical in-brand redemption rates—so your co-brand card's earn shows fairly in $.</p>
+        <p data-i18n="result.valuationCash">Cash-back cards: purchase × earn rate. Example: $100 × 6% = $6.00 cash back.</p>
+        <p class="hints" data-i18n="result.valuationNote">Not guaranteed cash. Redemption value varies by how you use rewards.</p>
+      </div>
+      <button type="button" class="secondary" id="valuationClose" data-i18n="result.valuationClose">Got it</button>
+    </div>
+  </div>
+
+  <div id="onboardingTour" class="onboarding hidden" aria-hidden="true">
+    <div class="onboarding-backdrop" id="onboardingBackdrop"></div>
+    <div class="onboarding-spotlight" id="onboardingSpotlight" hidden></div>
+    <div class="onboarding-panel" role="dialog" aria-labelledby="onboardingTitle" aria-describedby="onboardingBody">
+      <p class="onboarding-step" id="onboardingStep"></p>
+      <h2 id="onboardingTitle"></h2>
+      <p id="onboardingBody"></p>
+      <div class="onboarding-actions">
+        <button type="button" class="link-btn onboarding-skip" id="onboardingSkip" data-i18n="onboarding.skip">Skip tour</button>
+        <div class="onboarding-actions-main">
+          <button type="button" class="secondary" id="onboardingDemo" hidden data-i18n="onboarding.tryDemo">Try demo</button>
+          <button type="button" class="primary" id="onboardingNext" data-i18n="onboarding.next">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="/static/i18n.js"></script>
+  <script src="/static/onboarding.js"></script>
   <script src="/static/savings.js"></script>
   <script src="/static/pwa.js"></script>
+  <script src="/static/analytics.js"></script>
   <script src="/static/wallet-ui.js"></script>
 </body>
 </html>

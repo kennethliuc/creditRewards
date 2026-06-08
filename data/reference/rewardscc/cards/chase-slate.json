@@ -1,0 +1,67 @@
+[
+  {
+    "cardKey": "chase-slate",
+    "cardIssuer": "Chase",
+    "cardName": "Chase Slate®",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.chase.com/personal/credit-cards/slate/card-benefits",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Chase Ultimate Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Auto Rental Coverage",
+        "benefitDesc": "Auto Rental Collision Damage Waiver — Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is provided for theft and collision damage for most cars in the U.S. and abroad. In the U.S., coverage is secondary to your personal insurance.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty Protection",
+        "benefitDesc": "Extends the time period of the U.S. manufacturer’s warranty by an additional year, on eligible warranties of 3 years or less.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "Covers your new purchases for 120 days against damage or theft, up to $500 per claim and $50,000 per account.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Roadside Dispatch",
+        "benefitDesc": "If you have a roadside emergency, call 1-800-847-2869 anytime to dispatch the help you need — anything from a tow or jumpstart to a tire change, lockout service, winching or gas delivery. Roadside service fees will be provided when you call and will be billed to your card.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

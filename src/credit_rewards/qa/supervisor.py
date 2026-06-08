@@ -10,7 +10,7 @@ import httpx
 from credit_rewards.qa.agents import ALL_AGENTS
 from credit_rewards.qa.models import QAAgentReport, QAContext, QAResult, summarize_results
 
-DEFAULT_BASE_URL = "https://credit-rewards-production.up.railway.app"
+DEFAULT_BASE_URL = "https://paycue-production.up.railway.app"
 
 # Agents safe to run in parallel (separate concerns / no shared browser).
 PARALLEL_AGENTS = {"infra", "cards", "merchants", "auth", "aux"}

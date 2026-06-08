@@ -38,7 +38,7 @@ def twenty_card_db(tmp_path, monkeypatch):
     if not reference_files_ready():
         pytest.skip(
             "Missing reference JSON for 20 cards. Run: "
-            "credit-rewards-db sync-reference && credit-rewards-db import-reference"
+            "paycue-db sync-reference && paycue-db import-reference"
         )
     db_file = tmp_path / "twenty.db"
     monkeypatch.setenv("CREDITREWARDS_DB_PATH", str(db_file))

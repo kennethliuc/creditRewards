@@ -38,6 +38,79 @@ def load_official_cpp_config(path: Path | None = None) -> OfficialCppConfig:
     )
 
 
+_CASH_EARN_ALIASES = frozenset(
+    {
+        "cash",
+        "cash back",
+        "cashback",
+        "sam's cash",
+        "sams cash",
+    }
+)
+
+_ISSUER_PROGRAM_HINTS: tuple[tuple[str, str], ...] = (
+    ("american express", "American Express Membership Rewards"),
+    ("amex", "American Express Membership Rewards"),
+    ("chase", "Chase Ultimate Rewards"),
+    ("citi", "Citi ThankYou Rewards"),
+    ("capital one", "Capital One Miles"),
+    ("wells fargo", "Wells Fargo Go Far Rewards"),
+    ("bilt", "Bilt Points"),
+)
+
+_CASH_KEY_HINTS = (
+    "cash",
+    "secured",
+    "customizedcash",
+    "activecash",
+    "double-cash",
+    "doublecash",
+    "savorone",
+    "savor",
+    "discover-it",
+    "blue-cash",
+)
+
+
+def normalize_earn_type(raw: str) -> str:
+    """Map Rewards CC / snapshot spend labels to canonical program names."""
+    text = (raw or "").strip()
+    if not text:
+        return ""
+    lower = text.lower()
+    if lower in _CASH_EARN_ALIASES or lower.startswith("cash"):
+        return CASH_PROGRAM
+    return text
+
+
+def _looks_like_cash_card(card_key: str, earn_type: str) -> bool:
+    key = card_key.lower()
+    earn = earn_type.lower()
+    if earn == CASH_PROGRAM.lower() or "cash" in earn:
+        return True
+    return any(hint in key for hint in _CASH_KEY_HINTS)
+
+
+def infer_program_from_metadata(
+    card_key: str,
+    detail: dict[str, Any],
+) -> str | None:
+    """Best-effort program when upstream spendType is missing or generic."""
+    earn = normalize_earn_type(str(detail.get("baseSpendEarnType") or ""))
+    if earn and earn not in {CASH_PROGRAM, "Points", "points"}:
+        return earn
+
+    issuer = str(detail.get("cardIssuer") or "").lower()
+    key = card_key.lower()
+    if _looks_like_cash_card(card_key, earn):
+        return CASH_PROGRAM
+
+    for needle, program in _ISSUER_PROGRAM_HINTS:
+        if needle in issuer or needle.replace(" ", "") in key:
+            return program
+    return None
+
+
 def resolve_program_name(
     card_key: str,
     detail: dict[str, Any],
@@ -48,7 +121,22 @@ def resolve_program_name(
     use_program = override.get("use_program")
     if use_program:
         return str(use_program)
-    return str(detail.get("baseSpendEarnType") or CASH_PROGRAM)
+
+    currency = str(detail.get("baseSpendEarnCurrency") or "").lower()
+    if currency in {"cash", "cashback"}:
+        return CASH_PROGRAM
+
+    earn_type = normalize_earn_type(str(detail.get("baseSpendEarnType") or ""))
+    if earn_type == CASH_PROGRAM:
+        return CASH_PROGRAM
+    if earn_type:
+        return earn_type
+
+    inferred = infer_program_from_metadata(card_key, detail)
+    if inferred:
+        return inferred
+
+    return CASH_PROGRAM
 
 
 def valuate_as_points(resolved_program: str) -> bool:

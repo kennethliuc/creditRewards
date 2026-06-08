@@ -1,10 +1,23 @@
 (() => {
-  const LANG_KEY = 'creditrewards_lang_v1';
+  const LEGACY_PREFIX = 'creditrewards_';
+  const PREFIX = 'paycue_';
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i -= 1) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith(LEGACY_PREFIX)) continue;
+      const next = PREFIX + key.slice(LEGACY_PREFIX.length);
+      if (localStorage.getItem(next) == null) {
+        localStorage.setItem(next, localStorage.getItem(key));
+      }
+    }
+  } catch (_) {}
+
+  const LANG_KEY = 'paycue_lang_v1';
   const SUPPORTED = ['en', 'es', 'zh'];
 
   const MESSAGES = {
     en: {
-      'app.title': 'CreditRewards — Which card?',
+      'app.title': 'PayCue — Which card?',
       'nav.recommend': 'Pick the best card',
       'nav.home': 'Back to home',
       'nav.settings': 'Wallet & settings',
@@ -19,6 +32,35 @@
       'setup.sub': 'Tap to add at least one card you carry.',
       'setup.start': 'Get started',
       'setup.errorMin': 'Select at least one card',
+      'onboarding.step': 'Step {current} of {total}',
+      'onboarding.skip': 'Skip tour',
+      'onboarding.next': 'Next',
+      'onboarding.finish': 'Start using PayCue',
+      'onboarding.tryDemo': 'Try demo',
+      'onboarding.replay': 'How to use PayCue',
+      'onboarding.welcome.title': 'Welcome to PayCue',
+      'onboarding.welcome.body':
+        'At checkout, we tell you which card earns the most. No sign-up — your cards stay on this device only.',
+      'onboarding.cards.title': 'Step 1 · Add your cards',
+      'onboarding.cards.body':
+        'Tap any cards you carry from the popular list. You need at least one.',
+      'onboarding.search.title': 'Step 2 · Search by bank',
+      'onboarding.search.body':
+        'Co-brand cards (Hyatt, United, store cards)? Search the bank name — e.g. Chase, Amex, Citi.',
+      'onboarding.save.title': 'Step 3 · Save & continue',
+      'onboarding.save.body': 'When you are done picking cards, tap Get started.',
+      'onboarding.payStore.title': 'Enter the store',
+      'onboarding.payStore.body':
+        'Type where you are shopping — in store or paste a website URL on the Website tab.',
+      'onboarding.paySubmit.title': 'Get your recommendation',
+      'onboarding.paySubmit.body':
+        'Tap Recommend card. We rank your wallet and show estimated reward value in dollars.',
+      'onboarding.payWallet.title': 'Wallet & settings',
+      'onboarding.payWallet.body':
+        'Add or remove cards anytime from the wallet icon. Language and data live here too.',
+      'onboarding.done.title': 'You are ready',
+      'onboarding.done.body':
+        'Try a store like Chipotle or Walmart. Amount is optional — we compare categories either way.',
       'pay.title': 'Which card to use?',
       'pay.sub': 'Enter a store — we pick the best card from your {count} cards.',
       'pay.tabOnline': 'Website',
@@ -47,8 +89,25 @@
       'loc.storeOk': 'In-store mode: using GPS for nearby stores',
       'loc.storeWarn': 'Allow location for nearby stores',
       'result.heroLabel': 'Use this card',
+      'result.pointsValue': '{points} pts ≈ ${amount}',
+      'result.cashValue': '{pct}% cash back ≈ ${amount}',
+      'result.rankPoints': '{points} pts · ${amount}',
+      'result.rankCash': '${amount} cash back',
       'result.value': '≈ ${amount} reward value',
-      'result.rankHead': 'Your {count} cards ranked (official CPP)',
+      'result.rankHead': 'Your {count} cards ranked',
+      'result.rankPartnerEarn': '{mult}× partner earn · {pts} pts',
+      'result.partnerBadge': 'Partner earn',
+      'result.partnerRankNote':
+        'Your {card} still earns {mult}× at {merchant} ({pts} pts). Ranked #{rank} because another card has a higher estimated $ value on this purchase.',
+      'result.valuationHelp': 'How we estimate $',
+      'result.valuationTitle': 'How we estimate $',
+      'result.valuationIntro': 'We show one estimated dollar value so you can compare cards at checkout.',
+      'result.valuationPoints': 'Points cards: points earned × official cents-per-point (CPP). Example: 400 pts × 2.2¢ ≈ $8.80.',
+      'result.valuationPartner':
+        "At a partner store (e.g. delta.com), we value that brand's points at typical in-brand redemption rates—so your co-brand card's earn shows fairly in $.",
+      'result.valuationCash': 'Cash-back cards: purchase × earn rate. Example: $100 × 6% = $6.00 cash back.',
+      'result.valuationNote': 'Not guaranteed cash. Redemption value varies by how you use rewards.',
+      'result.valuationClose': 'Got it',
       'savings.bannerMonth': "This month you've saved ~${amount} in rewards",
       'savings.bannerTimes': '{count} times',
       'savings.bannerHint': 'Tap to review',
@@ -102,7 +161,7 @@
       'pwa.dismiss': 'Dismiss install tip',
     },
     es: {
-      'app.title': 'CreditRewards — ¿Qué tarjeta?',
+      'app.title': 'PayCue — ¿Qué tarjeta?',
       'nav.recommend': 'Elige la mejor tarjeta',
       'nav.home': 'Volver al inicio',
       'nav.settings': 'Cartera y ajustes',
@@ -117,6 +176,34 @@
       'setup.sub': 'Toca para añadir al menos una tarjeta.',
       'setup.start': 'Empezar',
       'setup.errorMin': 'Selecciona al menos una tarjeta',
+      'onboarding.step': 'Paso {current} de {total}',
+      'onboarding.skip': 'Saltar tour',
+      'onboarding.next': 'Siguiente',
+      'onboarding.finish': 'Empezar con PayCue',
+      'onboarding.tryDemo': 'Probar demo',
+      'onboarding.replay': 'Cómo usar PayCue',
+      'onboarding.welcome.title': 'Bienvenido a PayCue',
+      'onboarding.welcome.body':
+        'En la caja te decimos qué tarjeta rinde más. Sin registro — tus tarjetas quedan solo en este dispositivo.',
+      'onboarding.cards.title': 'Paso 1 · Añade tus tarjetas',
+      'onboarding.cards.body': 'Toca las tarjetas que usas. Necesitas al menos una.',
+      'onboarding.search.title': 'Paso 2 · Busca por banco',
+      'onboarding.search.body':
+        '¿Tarjetas co-brand (Hyatt, United)? Busca el banco — p. ej. Chase, Amex, Citi.',
+      'onboarding.save.title': 'Paso 3 · Guardar y continuar',
+      'onboarding.save.body': 'Cuando termines, pulsa Empezar.',
+      'onboarding.payStore.title': 'Indica la tienda',
+      'onboarding.payStore.body':
+        'Escribe dónde compras — en tienda o pega la URL en la pestaña Sitio web.',
+      'onboarding.paySubmit.title': 'Obtén la recomendación',
+      'onboarding.paySubmit.body':
+        'Pulsa Recomendar tarjeta. Ordenamos tu cartera y mostramos el valor estimado en $.',
+      'onboarding.payWallet.title': 'Cartera y ajustes',
+      'onboarding.payWallet.body':
+        'Añade o quita tarjetas desde el icono de cartera. Idioma y datos también ahí.',
+      'onboarding.done.title': 'Listo',
+      'onboarding.done.body':
+        'Prueba con Chipotle o Walmart. El importe es opcional — comparamos por categoría igualmente.',
       'pay.title': '¿Qué tarjeta usar?',
       'pay.sub': 'Indica la tienda — elegimos la mejor de tus {count} tarjetas.',
       'pay.tabOnline': 'Sitio web',
@@ -145,8 +232,25 @@
       'loc.storeOk': 'Modo tienda: GPS activo para tiendas cercanas',
       'loc.storeWarn': 'Modo tienda: permite ubicación para tiendas cercanas',
       'result.heroLabel': 'Usa esta tarjeta',
+      'result.pointsValue': '{points} pts ≈ ${amount}',
+      'result.cashValue': '{pct}% cashback ≈ ${amount}',
+      'result.rankPoints': '{points} pts · ${amount}',
+      'result.rankCash': '${amount} cashback',
       'result.value': '≈ ${amount} valor en recompensas',
-      'result.rankHead': 'Ranking de tus {count} tarjetas (CPP oficial)',
+      'result.rankHead': 'Ranking de tus {count} tarjetas',
+      'result.rankPartnerEarn': '{mult}× bonus socio · {pts} pts',
+      'result.partnerBadge': 'Bonus socio',
+      'result.partnerRankNote':
+        'Tu {card} sigue ganando {mult}× en {merchant} ({pts} pts). Puesto #{rank} porque otra tarjeta tiene mayor $ estimado en esta compra.',
+      'result.valuationHelp': 'Cómo estimamos $',
+      'result.valuationTitle': 'Cómo estimamos $',
+      'result.valuationIntro': 'Mostramos un valor en dólares para comparar tarjetas al pagar.',
+      'result.valuationPoints': 'Tarjetas de puntos: puntos × centavos por punto (CPP). Ej.: 400 pts × 2.2¢ ≈ $8.80.',
+      'result.valuationPartner':
+        'En tiendas asociadas (p. ej. delta.com), valoramos los puntos de esa marca según canje típico en la marca.',
+      'result.valuationCash': 'Cashback: compra × tasa. Ej.: $100 × 6% = $6.00.',
+      'result.valuationNote': 'No es efectivo garantizado. El valor real depende de cómo canjees.',
+      'result.valuationClose': 'Entendido',
       'savings.bannerMonth': 'Este mes has ahorrado ~${amount} en recompensas',
       'savings.bannerTimes': '{count} veces',
       'savings.bannerHint': 'Toca para revisar',
@@ -200,7 +304,7 @@
       'pwa.dismiss': 'Cerrar consejo de instalación',
     },
     zh: {
-      'app.title': 'CreditRewards — 用哪张卡？',
+      'app.title': 'PayCue — 用哪张卡？',
       'nav.recommend': '选出最优卡',
       'nav.home': '回到主页',
       'nav.settings': '钱包与设置',
@@ -215,6 +319,34 @@
       'setup.sub': '轻点卡片添加，至少选 1 张。',
       'setup.start': '开始用',
       'setup.errorMin': '请至少选择一张卡',
+      'onboarding.step': '第 {current} / {total} 步',
+      'onboarding.skip': '跳过引导',
+      'onboarding.next': '下一步',
+      'onboarding.finish': '开始使用 PayCue',
+      'onboarding.tryDemo': '体验一下',
+      'onboarding.replay': '使用说明',
+      'onboarding.welcome.title': '欢迎使用 PayCue',
+      'onboarding.welcome.body':
+        '结账时帮你选回报最高的卡。无需注册，卡包只保存在本机。',
+      'onboarding.cards.title': '第 1 步 · 添加你的卡',
+      'onboarding.cards.body': '从热门列表点选你常用的卡，至少选 1 张。',
+      'onboarding.search.title': '第 2 步 · 按银行搜索',
+      'onboarding.search.body':
+        '联名卡（Hyatt、United 等）？搜银行名即可，如 Chase、Amex、Citi。',
+      'onboarding.save.title': '第 3 步 · 保存并继续',
+      'onboarding.save.body': '选好后点「开始用」。',
+      'onboarding.payStore.title': '输入商家',
+      'onboarding.payStore.body':
+        '填写购物地点；网购可切到「网站」粘贴结账链接。',
+      'onboarding.paySubmit.title': '获取推荐',
+      'onboarding.paySubmit.body':
+        '点「推荐用卡」，我们会排序并显示预估回报（美元）。',
+      'onboarding.payWallet.title': '卡包与设置',
+      'onboarding.payWallet.body':
+        '右上角卡包可随时增删卡、改语言或清除数据。',
+      'onboarding.done.title': '可以开始了',
+      'onboarding.done.body':
+        '试试 Chipotle 或 Walmart。金额可留空，我们仍按消费类别比较。',
       'pay.title': '这次用哪张卡？',
       'pay.sub': '输入店家，在你 {count} 张卡里找出最优的一张。',
       'pay.tabOnline': '网站',
@@ -243,8 +375,25 @@
       'loc.storeOk': '实体店模式：已通过 Google Maps 匹配附近门店',
       'loc.storeWarn': '实体店模式：请允许定位，以便匹配附近门店',
       'result.heroLabel': '推荐使用',
+      'result.pointsValue': '{points} 分 ≈ ${amount}',
+      'result.cashValue': '{pct}% 返现 ≈ ${amount}',
+      'result.rankPoints': '{points} 分 · ${amount}',
+      'result.rankCash': '${amount} 返现',
       'result.value': '≈ ${amount} reward 价值',
-      'result.rankHead': '钱包 {count} 张卡排名（official CPP）',
+      'result.rankHead': '钱包 {count} 张卡排名',
+      'result.rankPartnerEarn': '合作商户 {mult}× · {pts} 分',
+      'result.partnerBadge': '联名奖励',
+      'result.partnerRankNote':
+        '你的 {card} 在此仍享 {mult}×（{pts} 分）。按预估 $ 排第 {rank}，因另一张卡在本笔消费上估值更高。',
+      'result.valuationHelp': '如何估算 $',
+      'result.valuationTitle': '如何估算 $',
+      'result.valuationIntro': '结账时用一个美元估值帮你比较各卡。',
+      'result.valuationPoints': '积分卡：积分 × 官方 CPP（分/点）。例：400 分 × 2.2¢ ≈ $8.80。',
+      'result.valuationPartner':
+        '在合作商户（如 delta.com）消费时，我们按该品牌常见兑换率估算积分，联名卡的回报会体现在 $ 估值中。',
+      'result.valuationCash': '返现卡：消费 × 返现比例。例：$100 × 6% = $6.00。',
+      'result.valuationNote': '非保证兑现；实际价值取决于兑换方式。',
+      'result.valuationClose': '知道了',
       'savings.bannerMonth': '本月已帮你省下 ~${amount} reward',
       'savings.bannerTimes': '{count} 次',
       'savings.bannerHint': '点击查看',

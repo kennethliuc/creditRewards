@@ -1,6 +1,13 @@
-/* CreditRewards — minimal service worker (network-first; recommendations need API). */
-const CACHE = 'creditrewards-shell-v1';
-const SHELL = ['/static/app.css', '/static/i18n.js', '/static/savings.js', '/static/wallet-ui.js', '/static/pwa.js'];
+/* PayCue — minimal service worker (network-first; recommendations need API). */
+const CACHE = 'paycue-shell-v2';
+const SHELL = [
+  '/static/app.css',
+  '/static/i18n.js',
+  '/static/onboarding.js',
+  '/static/savings.js',
+  '/static/wallet-ui.js',
+  '/static/pwa.js',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

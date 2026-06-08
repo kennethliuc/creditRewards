@@ -1,0 +1,163 @@
+[
+  {
+    "cardKey": "barclays-athleta",
+    "cardIssuer": "Barclays",
+    "cardName": "Athleta Encore Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "Standard Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://cards.barclaycardus.com/banking/cards/athleta-encore-mastercard/",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Gap Family",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Family of Brands Bonus",
+        "benefitDesc": "Unlock up to 2,000 bonus points annually when you shop at 2 or more of our Gap Inc. brands. 2 brands = 500 pts // 3 brands = 1,000 pts // 4 brands = 2,000 pts",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Free Fast Shipping",
+        "benefitDesc": "Free fast shipping on all online orders $50 or more",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Quarterly Bonus",
+        "benefitDesc": "Get bonus points each quarter that you make a purchase at Gap, Banana Republic, Old Navy, or Athleta",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Receive 20% Off",
+        "benefitDesc": "Receive 20% off your first purchase with your new credit card at the Gap Inc. family of brands",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Athleta",
+        "spendBonusCategoryName": "Athleta",
+        "spendBonusCategoryId": 2071197538,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Clothing",
+        "spendBonusDesc": "Earn 5 Points\r\n\r\nfor every $1 spent at Athleta",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Banana Republic",
+        "spendBonusCategoryName": "Banana Republic",
+        "spendBonusCategoryId": 334949575,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Clothing",
+        "spendBonusDesc": "Earn 5 Points\r\n\r\nfor every $1 spent at Banana Republic",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - GAP",
+        "spendBonusCategoryName": "GAP",
+        "spendBonusCategoryId": 40061,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Clothing",
+        "spendBonusDesc": "Earn 5 Points\r\n\r\nfor every $1 spent at Gap",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Old Navy",
+        "spendBonusCategoryName": "Old Navy",
+        "spendBonusCategoryId": 1345926303,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Clothing",
+        "spendBonusDesc": "Earn 5 Points\r\n\r\nfor every $1 spent at Old Navy",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

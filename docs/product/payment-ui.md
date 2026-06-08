@@ -1,7 +1,7 @@
 # Payment UI — Product Spec
 
 **Status:** Shipped (web + PWA + Railway) · **Last updated:** 2026-06-02  
-**Live:** https://credit-rewards-production.up.railway.app
+**Live:** https://paycue-production.up.railway.app
 
 ---
 
@@ -97,12 +97,12 @@ Language (first visit) → Pick cards (local wallet) → Pay
 
 | Key | Purpose |
 |-----|---------|
-| `creditrewards_wallet_v1` | Wallet cards |
-| `creditrewards_lang_v1` | Locale |
-| `creditrewards_pay_tab_v1` | Last tab (`url` \| `name`) |
-| `creditrewards_last_merchant_v1` | Last merchant + amount |
-| `creditrewards_savings_v1` | Saved reward lookups |
-| `creditrewards_install_dismiss_v1` | PWA install banner dismissed |
+| `paycue_wallet_v1` | Wallet cards |
+| `paycue_lang_v1` | Locale |
+| `paycue_pay_tab_v1` | Last tab (`url` \| `name`) |
+| `paycue_last_merchant_v1` | Last merchant + amount |
+| `paycue_savings_v1` | Saved reward lookups |
+| `paycue_install_dismiss_v1` | PWA install banner dismissed |
 
 ---
 
@@ -128,7 +128,7 @@ Language (first visit) → Pick cards (local wallet) → Pay
 
 ```bash
 pytest tests/test_pay_web.py tests/test_payment_ui_e2e_smoke.py tests/test_google_places.py -q
-curl -sS https://credit-rewards-production.up.railway.app/api/health
+curl -sS https://paycue-production.up.railway.app/api/health
 ```
 
 Prerequisite: validation **`core_ready`** — see [validation/status.md](../validation/status.md).

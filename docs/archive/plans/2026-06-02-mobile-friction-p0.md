@@ -27,10 +27,10 @@
 
 | Key | Purpose |
 |-----|---------|
-| `creditrewards_wallet_v1` | wallet cards |
-| `creditrewards_card_images_v1` | image URLs |
-| `creditrewards_pay_tab_v1` | `url` \| `name` (default `name`) |
-| `creditrewards_last_merchant_v1` | `{ tab, merchantUrl?, merchantName?, amount }` |
+| `paycue_wallet_v1` | wallet cards |
+| `paycue_card_images_v1` | image URLs |
+| `paycue_pay_tab_v1` | `url` \| `name` (default `name`) |
+| `paycue_last_merchant_v1` | `{ tab, merchantUrl?, merchantName?, amount }` |
 
 ## Verification (passed)
 

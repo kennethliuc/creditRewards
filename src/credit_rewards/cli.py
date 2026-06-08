@@ -12,7 +12,7 @@ from credit_rewards.official_cpp import (
 from credit_rewards.recommend import recommend_best_cards
 from credit_rewards.wallet import load_wallet
 
-app = typer.Typer(help="CreditRewards — which card at payment time?")
+app = typer.Typer(help="PayCue — which card at payment time?")
 
 
 def _enrich_wallet(cards, program_table=None):

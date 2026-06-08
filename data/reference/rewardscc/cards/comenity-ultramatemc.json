@@ -1,0 +1,98 @@
+[
+  {
+    "cardKey": "comenity-ultramatemc",
+    "cardIssuer": "Comenity",
+    "cardName": "Ultamate Rewards® Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "Standard Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://comenity.net/ultamaterewardsmastercard",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Fair",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "Ultamate Rewards",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "500",
+    "signupBonusType": "Ultamate Rewards",
+    "signupBonusCategory": "Retail",
+    "signUpBonusItem": "rewards",
+    "signupBonusSpend": 500,
+    "signupBonusLength": 90,
+    "signupBonusLengthPeriod": "Days",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "500 points when you spend $500 in the first 90 days outside of Ulta Beauty",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Ultamate",
+        "spendBonusCategoryName": "Ultamate",
+        "spendBonusCategoryId": 1281940344,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Beauty",
+        "spendBonusDesc": "Earn 2 points for every $1 spent at Ulta Beauty.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

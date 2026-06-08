@@ -32,7 +32,7 @@ from credit_rewards.card_image import (
     warm_registry_card_images,
 )
 from credit_rewards.card_import import ensure_wallet_cards_in_db
-from credit_rewards.client import CardDataClient, RewardsCCError
+from credit_rewards.client import CardDataClient, upstream_api_enabled, RewardsCCError
 from credit_rewards.ingest.compare import (
     CardComparisonReport,
     RuleRow,
@@ -48,6 +48,7 @@ from credit_rewards.merchant_mapping import (
     merchant_suggestions,
     resolve_merchant,
 )
+from credit_rewards.merchant_co_brand import co_brand_bonus_categories_for_purchase
 from credit_rewards.models import PurchaseContext
 from credit_rewards.official_cpp import enrich_card_profile, fallback_program_table, resolve_card_official_cpp
 from credit_rewards.recommend import recommend_best_cards
@@ -67,6 +68,7 @@ from credit_rewards.web.accounts import (
     save_user_wallet,
     user_id_from_session,
 )
+from credit_rewards.web.analytics_admin import router as analytics_router
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 COOKIE_SECURE = os.getenv("CREDITREWARDS_COOKIE_SECURE", "0").lower() in {"1", "true", "yes"}
@@ -76,8 +78,9 @@ FETCH_EVIDENCE = os.getenv("CREDITREWARDS_FETCH_EVIDENCE", "1").lower() not in {
     "no",
 }
 
-app = FastAPI(title="CreditRewards", version="0.1.0")
+app = FastAPI(title="PayCue", version="0.1.0")
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.include_router(analytics_router)
 
 
 def _warm_images_async(card_keys: list[str] | None = None) -> None:
@@ -246,6 +249,7 @@ def _enrich_wallet(cards):
     for card in cards:
         detail = {
             "cardKey": card.card_key,
+            "cardIssuer": card.card_issuer,
             "baseSpendEarnType": card.reward_program,
             "baseSpendEarnCurrency": card.base_earn_currency,
         }
@@ -471,11 +475,11 @@ def api_compare_card(card_key: str) -> dict[str, object]:
 def health() -> dict[str, object]:
     import os
 
-    client = CardDataClient()
     return {
         "ok": True,
-        "data_provider": client.provider,
-        "live_api": client.is_configured,
+        "data_provider": "sqlite+reference",
+        "upstream_api": upstream_api_enabled(),
+        "live_api": upstream_api_enabled(),
         "build": (os.environ.get("RAILWAY_GIT_COMMIT_SHA") or os.environ.get("GIT_COMMIT") or "")[:12],
     }
 
@@ -504,11 +508,12 @@ def api_cards_catalog_keys() -> dict[str, object]:
 
 
 @app.get("/api/cards/by-issuer")
-def api_cards_by_issuer(q: str, limit: int = 48) -> dict[str, object]:
+def api_cards_by_issuer(q: str, limit: int = 0) -> dict[str, object]:
     query = (q or "").strip()
     if len(query) < 2:
         raise HTTPException(status_code=400, detail="Enter at least 2 characters for bank name")
-    matches = apply_local_image_urls(search_cards_by_issuer(query, limit=min(limit, 40)))
+    cap = min(limit, 250) if limit and limit > 0 else 0
+    matches = apply_local_image_urls(search_cards_by_issuer(query, limit=cap))
     keys = [str(m["card_key"]) for m in matches if m.get("card_key")]
     if keys:
         _warm_images_async(keys)
@@ -635,7 +640,21 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
                     ),
                 )
         wallet = _enrich_wallet(load_wallet(card_keys, CardDataClient()))
-        purchase = PurchaseContext(category=category, amount_usd=body.amount_usd)
+        merchant_id = body.merchant_id
+        merchant_name = body.merchant_name
+        if merchant_info:
+            merchant_id = merchant_id or str(merchant_info.get("merchantId") or "")
+            merchant_name = merchant_name or str(merchant_info.get("merchantName") or "")
+        bonus_categories = co_brand_bonus_categories_for_purchase(
+            merchant_id=merchant_id or None,
+            merchant_name=merchant_name,
+        )
+        purchase = PurchaseContext(
+            category=category,
+            amount_usd=body.amount_usd,
+            bonus_categories=bonus_categories,
+            merchant_id=merchant_id or None,
+        )
         results = recommend_best_cards(wallet, purchase)
     except RewardsCCError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
@@ -647,7 +666,7 @@ def recommend(body: RecommendRequest) -> dict[str, object]:
     return {
         "best": top.model_dump(),
         "rankings": [r.model_dump() for r in results],
-        "live_api": CardDataClient().is_configured,
+        "live_api": upstream_api_enabled(),
         "resolved_category": category,
         "merchant": merchant_info,
         "card_count": len(results),

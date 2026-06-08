@@ -167,9 +167,33 @@ merchants:
 
   - id: marriott
     name: Marriott
-    aliases: [marriott hotels]
+    aliases: [marriott hotels, bonvoy]
     domains: [marriott.com]
     spend_bonus_category_name: Hotels
+
+  - id: hilton
+    name: Hilton
+    aliases: [hilton hotels, hilton honors]
+    domains: [hilton.com]
+    spend_bonus_category_name: Hotels
+
+  - id: hyatt
+    name: Hyatt
+    aliases: [hyatt hotels, world of hyatt]
+    domains: [hyatt.com]
+    spend_bonus_category_name: Hotels
+
+  - id: jetblue
+    name: JetBlue
+    aliases: [jet blue, jetblue airways]
+    domains: [jetblue.com]
+    spend_bonus_category_name: Airfare
+
+  - id: alaska_airlines
+    name: Alaska Airlines
+    aliases: [alaska air, alaska]
+    domains: [alaskaair.com]
+    spend_bonus_category_name: Airfare
 
   - id: expedia
     name: Expedia
@@ -181,6 +205,12 @@ merchants:
     name: Delta Air Lines
     aliases: [delta, delta airlines]
     domains: [delta.com]
+    spend_bonus_category_name: Airfare
+
+  - id: american_airlines
+    name: American Airlines
+    aliases: [american airlines, aa, aa.com]
+    domains: [aa.com, americanairlines.com]
     spend_bonus_category_name: Airfare
 
   - id: united

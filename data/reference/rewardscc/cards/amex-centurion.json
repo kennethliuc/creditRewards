@@ -1,0 +1,107 @@
+[
+  {
+    "cardKey": "amex-centurion",
+    "cardIssuer": "American Express",
+    "cardName": "Centurion® Card from American Express",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "http://www.centurion.com/",
+    "annualFee": 5000,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 15000,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "$189 statement credits on your CLEAR membership",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Airport lounge access",
+        "benefitDesc": "Centurion cardmembers receive complimentary access to Amex's Global Lounge Collection, which includes access to Centurion Lounges, Delta Sky Club lounges, Priority Pass Select lounges, Escape Lounges, Plaza Premium lounges, Lufthansa lounges and other Global Lounge Collection partner lounges.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Avis President's Club status",
+        "benefitDesc": "Avis President's Club status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Centurion concierge",
+        "benefitDesc": "Centurion concierge",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Clear Plus membership",
+        "benefitDesc": "Cardmembers receive an annual statement credit for up to $369 to cover a Clear Plus membership for them and up to three family members.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Delta SkyMiles Platinum Medallion status",
+        "benefitDesc": "Delta SkyMiles Platinum Medallion status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Equinox All-Access membership",
+        "benefitDesc": "Cardmembers receive up to $3,600 in credits annually for an Equinox All-Access membership.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Gym Membership",
+        "benefitDesc": "Equinox All Access Gym Membership",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Hertz Platinum status",
+        "benefitDesc": "Hertz Platinum status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Hilton Honors Diamond status",
+        "benefitDesc": "Hilton Honors Diamond status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "IHG One Rewards Platinum Elite status",
+        "benefitDesc": "IHG One Rewards Platinum Elite status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Marriott Bonvoy Gold Elite status",
+        "benefitDesc": "Marriott Bonvoy Gold Elite status",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Saks Fifth Avenue credits",
+        "benefitDesc": "Cardmembers receive up to $1,000 annually in credits for Saks Fifth Avenue purchases, distributed as quarterly credits of $250.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

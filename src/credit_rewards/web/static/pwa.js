@@ -1,5 +1,5 @@
 (() => {
-  const DISMISS_KEY = 'creditrewards_install_dismiss_v1';
+  const DISMISS_KEY = 'paycue_install_dismiss_v1';
 
   function isStandalone() {
     return (

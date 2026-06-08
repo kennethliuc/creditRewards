@@ -113,7 +113,7 @@ uvicorn credit_rewards.web.app:app --port 8000
 # → http://127.0.0.1:8000/validation
 ```
 
-Re-run: `credit-rewards-db validation-report`
+Re-run: `paycue-db validation-report`
 """
 
 

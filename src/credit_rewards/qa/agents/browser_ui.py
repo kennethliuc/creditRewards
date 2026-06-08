@@ -28,9 +28,9 @@ class BrowserUiAgent(BaseQAAgent):
         ]
         page.evaluate(
             """(payload) => {
-            localStorage.setItem('creditrewards_lang_v1', payload.lang);
-            localStorage.setItem('creditrewards_wallet_v1', JSON.stringify({ cards: payload.cards }));
-            localStorage.setItem('creditrewards_pay_tab_v1', payload.tab);
+            localStorage.setItem('paycue_lang_v1', payload.lang);
+            localStorage.setItem('paycue_wallet_v1', JSON.stringify({ cards: payload.cards }));
+            localStorage.setItem('paycue_pay_tab_v1', payload.tab);
           }""",
             {"lang": "en", "cards": cards, "tab": "name"},
         )
@@ -76,8 +76,8 @@ class BrowserUiAgent(BaseQAAgent):
             try:
                 page.goto(base, wait_until="networkidle")
                 self._seed_wallet(page, cards=[])
-                page.evaluate("localStorage.removeItem('creditrewards_wallet_v1')")
-                page.evaluate("localStorage.setItem('creditrewards_lang_v1','en')")
+                page.evaluate("localStorage.removeItem('paycue_wallet_v1')")
+                page.evaluate("localStorage.setItem('paycue_lang_v1','en')")
                 page.reload(wait_until="networkidle")
                 page.locator("#view-local-setup").wait_for(state="visible", timeout=8000)
                 tiles = page.locator("#localCardPicker .card-tile")

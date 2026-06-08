@@ -27,7 +27,7 @@ NOMINATIM_ENABLED = os.getenv("CREDITREWARDS_NOMINATIM", "1").lower() not in {
 }
 USER_AGENT = os.getenv(
     "CREDITREWARDS_USER_AGENT",
-    "CreditRewards/0.1 (payment-moment category lookup; contact: dev@localhost)",
+    "PayCue/0.1 (payment-moment category lookup; contact: dev@localhost)",
 )
 _LAST_CALL = 0.0
 _MIN_INTERVAL_S = 1.1  # Nominatim usage policy: max 1 req/s

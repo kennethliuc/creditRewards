@@ -31,13 +31,13 @@ Live scrape alignment is **L2 evidence**, not L1. Runtime uses reference import 
 
 ```bash
 # Full run → reports/validation/*.json + docs/validation/status.md
-credit-rewards-db validation-report
+paycue-db validation-report
 
 # Re-check gates only
-credit-rewards-db validation-monitor-run
+paycue-db validation-monitor-run
 
 # Compare scrape vs reference
-credit-rewards-db compare-all
+paycue-db compare-all
 
 # Web dashboard
 uvicorn credit_rewards.web.app:app --port 8000

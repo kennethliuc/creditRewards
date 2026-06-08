@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from credit_rewards.client import CardDataClient, RewardsCCClient, RewardsCCError
+from credit_rewards.client import CardDataClient, RewardsCCClient, RewardsCCError, upstream_api_enabled
 from credit_rewards.models import CardProfile
 from credit_rewards.normalize import normalize_card_detail
 
@@ -49,13 +49,13 @@ def load_wallet(card_keys: list[str], client: CardDataClient | None = None) -> l
         if not key:
             continue
         loaded: CardProfile | None = _load_from_db(key)
-        if loaded is None and client.is_configured:
+        if loaded is None and upstream_api_enabled():
             try:
                 from credit_rewards.card_catalog import resolve_wallet_card_key
 
                 resolved = resolve_wallet_card_key(key)
                 rc_key = str(resolved["rewards_cc_card_key"])
-                payload = client.card_detail(rc_key)
+                payload = CardDataClient(use_upstream=True).card_detail(rc_key)
                 loaded = normalize_card_detail(payload)
             except RewardsCCError:
                 loaded = None

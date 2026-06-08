@@ -1,6 +1,6 @@
 # Production QA Tester — Multi-Agent Plan
 
-**Target (required):** https://credit-rewards-production.up.railway.app  
+**Target (required):** https://paycue-production.up.railway.app  
 **Not allowed:** `localhost` / `127.0.0.1` — QA validates the **deployed** build only.  
 **Runner:** `python scripts/qa_production.py`  
 **Reports:** `reports/qa/production-latest.md`

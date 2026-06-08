@@ -1,0 +1,83 @@
+[
+  {
+    "cardKey": "capitalone-menards",
+    "cardIssuer": "Capital One",
+    "cardName": "Menards® BIG Card",
+    "cardNetwork": "Store Card",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.menards.com/main/menards-credit-programs/menards-big-card/c-14304.htm",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "",
+    "baseSpendEarnCategory": "",
+    "baseSpendEarnCurrency": "",
+    "baseSpendEarnValuation": 0.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$10 rebate",
+        "benefitDesc": "Apply today to get an additional $10 rebate on the first $100 you spend on your BIG Card®",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "1% rebate on gas and merchandise",
+        "benefitDesc": "Visit any of our BIG Network Partners like Speedway, Holiday, Kwik Trip, or Kwik Star to earn a 1% rebate on gas and merchandise when you use your BIG Card®.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "2% rebate ",
+        "benefitDesc": "Earn a 2% rebate on all Menards® purchases for savings on future purchases. Rebates are issued as Menards® merchandise certificates. 2% rebates are not earned on items purchased using promotional financing.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "No-interest financing",
+        "benefitDesc": "We offer special 6-month no-interest financing on purchases over $299 if paid in full in 6 months.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Menards",
+        "spendBonusCategoryName": "Menards",
+        "spendBonusCategoryId": 1816955216,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Grocery",
+        "spendBonusDesc": "2% rebate on Menards purchases",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

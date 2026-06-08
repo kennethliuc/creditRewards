@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "synchrony-walmartone",
+    "cardName": "Walmart OnePay CashRewards",
+    "cardIssuer": "Synchrony Bank",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Single Category - Walmart",
+    "spendBonusCategoryName": "Walmart",
+    "spendBonusCategoryId": 1401936047,
+    "spendBonusDesc": "Earn unlimited 5% cash back at Walmart as a Walmart+ member - 3% cash back at Walmart for everyone else.",
+    "earnMultiplier": 5.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  },
+  {
+    "cardKey": "capitalone-walmartrewards",
+    "cardName": "Capital One Walmart Rewards® Mastercard®",
+    "cardIssuer": "Capital One",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Single Category - Walmart",
+    "spendBonusCategoryName": "Walmart",
+    "spendBonusCategoryId": 1401936047,
+    "spendBonusDesc": "2% cash back in Walmart stores",
+    "earnMultiplier": 2.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

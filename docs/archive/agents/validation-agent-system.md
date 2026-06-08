@@ -80,10 +80,10 @@ flowchart TD
 cd creditRewards && source .venv/bin/activate
 pip install -e ".[dev]"
 
-credit-rewards-db validation-independent
-credit-rewards-db validation-external
-credit-rewards-db mcc-gap-report
-credit-rewards-db validation-monitor
+paycue-db validation-independent
+paycue-db validation-external
+paycue-db mcc-gap-report
+paycue-db validation-monitor
 
 pytest -q tests/test_validation_external.py tests/test_mcc_gap.py
 uvicorn credit_rewards.web.app:app --port 8000
@@ -94,7 +94,7 @@ uvicorn credit_rewards.web.app:app --port 8000
 ## Fixer prompts (Cursor Task)
 
 ### ExternalValidator
-> Run `credit-rewards-db validation-external`. No reference overlay. Write report to `reports/validation/external-crosscheck-*.json`.
+> Run `paycue-db validation-external`. No reference overlay. Write report to `reports/validation/external-crosscheck-*.json`.
 
 ### CrossValidate + Issuer
 > For each low cross-verify card: open `/compare`, read issuer evidence, classify reference_ok vs stale vs parser_bug.

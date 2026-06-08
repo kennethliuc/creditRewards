@@ -1,0 +1,57 @@
+[
+  {
+    "cardKey": "amex-blue",
+    "cardIssuer": "American Express",
+    "cardName": "Blue from American Express®",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 2.7,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Car Rental Loss and Damage Insurance",
+        "benefitDesc": "Getting into your Rental Vehicle can be the start of a great vacation. When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver at the rental Company counter, you can be covered for Damage to or Theft of a Rental Vehicle in a Covered Territory. Please read important exclusions and restrictions. Not all vehicle types or rentals are covered. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand. This product provides secondary coverage and does not include liability coverage.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Assist® Hotline",
+        "benefitDesc": "Whenever you travel more than 100 miles from home, you may be eligible for 24/7 emergency assistance and coordination services, including medical, legal, and passport referrals, emergency cash wires, and missing luggage assistance. Card Members are responsible for the costs charged by third-party service providers. Other terms and conditions apply.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

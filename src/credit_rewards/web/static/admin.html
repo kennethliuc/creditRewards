@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>PayCue — Trial Analytics</title>
+  <link rel="stylesheet" href="/static/app.css" />
+  <style>
+    .admin-wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    .admin-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .65rem; margin: 1rem 0; }
+    .stat-card { background: var(--surface-solid); border: 1px solid var(--border); border-radius: var(--radius-md); padding: .85rem; }
+    .stat-card strong { display: block; font-size: 1.35rem; color: var(--accent); }
+    .stat-card span { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .admin-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+    .admin-table th, .admin-table td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .admin-table th { color: var(--muted); font-weight: 600; }
+    .admin-section { margin-top: 1.5rem; }
+    .admin-login { max-width: 360px; margin: 4rem auto; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; word-break: break-all; }
+    .pill { display: inline-block; padding: .1rem .4rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: .68rem; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="app-bg" aria-hidden="true"></div>
+  <div class="admin-wrap">
+    <div id="loginPanel" class="admin-login glass-panel">
+      <h1>Trial analytics</h1>
+      <p class="sub">Admin password required.</p>
+      <label for="adminPassword">Password</label>
+      <input id="adminPassword" type="password" autocomplete="current-password" />
+      <button type="button" class="primary" id="adminLoginBtn" style="margin-top:.75rem">Sign in</button>
+      <div id="loginError" class="error"></div>
+    </div>
+
+    <div id="dashboardPanel" class="hidden">
+      <div class="page-head page-head-compact">
+        <h1>Trial analytics</h1>
+        <p class="sub" id="generatedAt"></p>
+      </div>
+      <div class="admin-stats" id="statsGrid"></div>
+
+      <div class="admin-section">
+        <p class="section-label">Events (last 7 days)</p>
+        <table class="admin-table" id="eventsByType"></table>
+      </div>
+
+      <div class="admin-section">
+        <p class="section-label">Recent devices</p>
+        <table class="admin-table" id="devicesTable"></table>
+      </div>
+
+      <div class="admin-section">
+        <p class="section-label">Recent activity</p>
+        <table class="admin-table" id="eventsTable"></table>
+      </div>
+
+      <button type="button" class="secondary" id="adminLogoutBtn" style="margin-top:1.5rem">Sign out</button>
+      <button type="button" class="link-btn" id="adminRefreshBtn" style="margin-left:.5rem">Refresh</button>
+    </div>
+  </div>
+  <script src="/static/admin.js"></script>
+</body>
+</html>

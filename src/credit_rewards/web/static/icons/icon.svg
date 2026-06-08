@@ -1,12 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CreditRewards">
-  <defs>
-    <linearGradient id="glow" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#3ee0a3" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#3ee0a3" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="112" fill="#06080d"/>
-  <ellipse cx="256" cy="120" rx="180" ry="100" fill="url(#glow)"/>
-  <rect x="96" y="168" width="320" height="176" rx="36" fill="none" stroke="#3ee0a3" stroke-width="14"/>
-  <line x1="96" y1="232" x2="416" y2="232" stroke="#3ee0a3" stroke-width="14"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PayCue">
+  <rect width="512" height="512" rx="112" fill="#F5F6F8"/>
+  <rect x="96" y="168" width="320" height="176" rx="36" fill="#FFFFFF" stroke="#0F766E" stroke-width="16"/>
+  <line x1="96" y1="232" x2="416" y2="232" stroke="#0F766E" stroke-width="16"/>
+  <circle cx="392" cy="296" r="28" fill="#0F766E"/>
 </svg>

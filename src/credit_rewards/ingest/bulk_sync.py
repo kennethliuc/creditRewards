@@ -72,9 +72,11 @@ def bulk_sync_rewardscc(
     One-shot download of Rewards CC credit-card data into local reference cache.
     Designed to burn monthly quota once, then develop offline against local files.
     """
-    client = CardDataClient(use_local=False)
+    client = CardDataClient(use_upstream=True)
     if not client.is_configured:
-        raise RewardsCCError("Set REWARDS_CC_API_KEY in .env before bulk-sync.")
+        raise RewardsCCError(
+            "Set CREDITREWARDS_USE_UPSTREAM_API=1 and REWARDS_CC_API_KEY before bulk-sync."
+        )
 
     root = output_dir or REFERENCE_DIR
     root.mkdir(parents=True, exist_ok=True)

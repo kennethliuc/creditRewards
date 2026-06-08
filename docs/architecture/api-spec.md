@@ -42,7 +42,7 @@ Optional third valuation source:
 
 ```bash
 # Requires AW commercial API credentials in .env
-credit-rewards-db sync-awardwallet
+paycue-db sync-awardwallet
 curl http://127.0.0.1:8080/creditcard-earnbonus-bycard/chase-freedom-unlimited
 ```
 
@@ -59,9 +59,9 @@ Single **official CPP** per program (`max` of Rewards CC, Upgraded Points, Award
 | **Aggregation** | `max(sources)` capped at 3.5¢ | Max获得感 — one number per program |
 
 ```bash
-credit-rewards-db import-reference      # also runs refresh-official-cpp
-credit-rewards-db refresh-official-cpp  # recompute after sync-reference / sync-awardwallet
-credit-rewards-db valuation-report
+paycue-db import-reference      # also runs refresh-official-cpp
+paycue-db refresh-official-cpp  # recompute after sync-reference / sync-awardwallet
+paycue-db valuation-report
 ```
 
 Formula: `dollar_value = points_earned × (official_cpp / 100)`
@@ -71,11 +71,11 @@ Formula: `dollar_value = points_earned × (official_cpp / 100)`
 Visa [ISO 18245](https://usa.visa.com/dam/VCOM/download/merchants/visa-merchant-data-standards-manual.pdf) MCC codes map to Rewards CC `spendBonusCategory*` via `data/mcc/visa_mcc_categories.yaml`.
 
 ```bash
-credit-rewards-db mcc-lookup 5411
+paycue-db mcc-lookup 5411
 curl http://127.0.0.1:8080/creditcard-mcc-lookup/5411
 ```
 
-Use the returned `spendBonusCategoryName` as the `category` input to `credit-rewards recommend` or `POST /api/recommend`.
+Use the returned `spendBonusCategoryName` as the `category` input to `paycue recommend` or `POST /api/recommend`.
 
 
 ```text
@@ -83,7 +83,7 @@ Issuer website (public)
     → ingest/scrape job (manual JSON or fetch+parse)
     → SQLite (data/carddata.db)
     → CardData API (port 8080)
-    → CreditRewards app / recommendation engine
+    → PayCue app / recommendation engine
 ```
 
 ## Coverage today vs target
@@ -97,8 +97,8 @@ Issuer website (public)
 ## Run locally
 
 ```bash
-credit-rewards-db init
-credit-rewards-db seed
+paycue-db init
+paycue-db seed
 uvicorn credit_rewards.card_api.app:app --host 0.0.0.0 --port 8080
 ```
 

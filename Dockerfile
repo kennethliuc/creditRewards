@@ -29,10 +29,10 @@ COPY src ./src
 COPY data ./data
 
 RUN pip install --no-cache-dir . \
-    && credit-rewards-db init \
-    && credit-rewards-db seed \
-    && credit-rewards-db import-reference \
-    && credit-rewards-db import-catalog-wallet
+    && paycue-db init \
+    && paycue-db seed \
+    && paycue-db import-reference \
+    && paycue-db import-catalog-wallet
 
 COPY scripts/start_web.sh ./scripts/start_web.sh
 RUN chmod +x ./scripts/start_web.sh

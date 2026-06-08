@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from credit_rewards.models import CardProfile, PurchaseContext, Recommendation
-from credit_rewards.valuation import compute_earn_value, effective_cpp
+from credit_rewards.valuation import compute_earn_value
 
 
 def recommend_best_cards(
@@ -11,17 +11,23 @@ def recommend_best_cards(
     scored: list[Recommendation] = []
 
     for card in wallet:
-        multiplier, points, value, reason = compute_earn_value(card, purchase)
+        multiplier, points, value, reason, cpp_used, partner_checkout, partner_bonus = compute_earn_value(
+            card, purchase
+        )
         scored.append(
             Recommendation(
                 card_key=card.card_key,
                 card_name=card.card_name,
                 multiplier=multiplier,
-                points_earned=points,
+                points_earned=round(points, 2),
                 estimated_value_usd=round(value, 2),
-                cpp_used=round(effective_cpp(card), 2),
+                cpp_used=round(cpp_used, 2),
                 reason=reason,
                 rank=0,
+                valuate_as_points=card.valuate_as_points,
+                resolved_program=card.resolved_program or card.reward_program,
+                partner_checkout=partner_checkout,
+                partner_bonus=partner_bonus,
             )
         )
 

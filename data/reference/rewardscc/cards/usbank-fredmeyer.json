@@ -1,0 +1,178 @@
+[
+  {
+    "cardKey": "usbank-fredmeyer",
+    "cardIssuer": "U.S. Bank",
+    "cardName": "Fred Meyer Rewards® World Elite Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Elite Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "https://www.freddysmastercard.com/",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "100",
+    "signupBonusType": "Cash",
+    "signupBonusCategory": "Cash",
+    "signUpBonusItem": "Cash",
+    "signupBonusSpend": 500,
+    "signupBonusLength": 90,
+    "signupBonusLengthPeriod": "Days",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn a $100 statement credit when you spend $500 with your card in the first 90 days.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "boost.",
+        "benefitDesc": "Earn 2x Fuel Points5 and $59 toward a FREE Next-Day Delivery Boost membership after you apply and are approved for the credit card, and complete your Boost enrollment.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Gas Savings",
+        "benefitDesc": "AFTER THE FIRST YEAR: SAVE UP TO $1.25 PER GALLON OF FUEL EVERY DAY.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enroll in HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lyft",
+        "benefitDesc": "More rides means more adventure. Take three rides in a month with Lyft to earn a $5 credit.3* Plus, save 10% on all scheduled rides to or from U.S. airports when you pay with your World Elite or World Legend Mastercard. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to premium preferred seats and ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "NEW CARDMEMBER OFFER: SAVE ON FUEL FOR THE FIRST YEAR.",
+        "benefitDesc": "Up to $1.55 per gallon",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Peacock",
+        "benefitDesc": "Get $3 off Peacock Premium or Peacock Premium Plus each month when you use your World Elite or World Legend Mastercard to subscribe. Watch new movies from theaters, buzzworthy original series, hit TV shows, live sports and so much more. Eligibility restrictions, exclusions and terms apply. Offer expires 12/31/2027.1",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Pass",
+        "benefitDesc": "Get access to 1,700+ airport lounges worldwide and special offers and discounts in the terminal on dining, retail and spa experiences.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "World Elite Concierge",
+        "benefitDesc": "Complimentary 24/7 concierge agent for lifestyle needs, travel bookings and event access.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Digital Wallet",
+        "spendBonusCategoryName": "Digital Wallet",
+        "spendBonusCategoryId": 1287070698,
+        "spendBonusCategoryGroup": "Payment",
+        "spendBonusSubcategoryGroup": "Digital Wallet",
+        "spendBonusDesc": "Mobile wallet transactions earn 5% on the first $3,000 in purchases each calendar year and 1% on amounts above that",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 3000,
+        "spendLimitResetPeriod": "Year"
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Fred Meyer",
+        "spendBonusCategoryName": "Fred Meyer",
+        "spendBonusCategoryId": 1282177511,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Department Store",
+        "spendBonusDesc": "2% cash back inside of our stores",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Kroger Pay",
+        "spendBonusCategoryName": "Kroger Pay",
+        "spendBonusCategoryId": 1572707408,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Grocery",
+        "spendBonusDesc": "Kroger Pay non-fuel transactions earn 5% cash back on the first $3,000 in purchases each calendar year and 2% on amounts above that.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 1,
+        "spendLimit": 3000,
+        "spendLimitResetPeriod": "Year"
+      }
+    ],
+    "annualSpend": []
+  }
+]

@@ -1,5 +1,5 @@
 [project]
-name = "credit-rewards"
+name = "paycue"
 version = "0.1.0"
 description = "Payment-moment credit card reward recommendations"
 readme = "README.md"
@@ -20,9 +20,9 @@ dev = ["pytest>=8.0.0", "pytest-asyncio>=0.24.0"]
 qa = ["pytest>=8.0.0", "httpx>=0.28.0", "playwright>=1.49.0"]
 
 [project.scripts]
-credit-rewards = "credit_rewards.cli:app"
-credit-rewards-db = "credit_rewards.ingest.cli:app"
-credit-rewards-web = "credit_rewards.web.server:main"
+paycue = "credit_rewards.cli:app"
+paycue-db = "credit_rewards.ingest.cli:app"
+paycue-web = "credit_rewards.web.server:main"
 
 [build-system]
 requires = ["hatchling"]

@@ -43,9 +43,15 @@ class Recommendation(BaseModel):
     cpp_used: float
     reason: str
     rank: int
+    valuate_as_points: bool = True
+    resolved_program: str = ""
+    partner_checkout: bool = False
+    partner_bonus: bool = False
 
 
 class PurchaseContext(BaseModel):
     category: str
     amount_usd: float = Field(gt=0)
     as_of: date | None = None
+    bonus_categories: list[str] = Field(default_factory=list)
+    merchant_id: str | None = None

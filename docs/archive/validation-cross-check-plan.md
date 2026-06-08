@@ -77,7 +77,7 @@ Each agent produces **one artifact** + updates the tracker. **Monitor** merges a
 | **Benchmark** | L2: community + issuer PDFs | Manual golden sheet (see §5) | `data/validation/golden_cases.yaml` + test file |
 | **CPP** | Official valuation cross-check | `refresh-official-cpp`, diff vs sources | `reports/validation/cpp-{date}.json` |
 | **MCC** | Mapping coverage | `mcc-lookup` CLI + API spot checks | `reports/validation/mcc-coverage-{date}.md` |
-| **Rank** | End-to-end recommend | `credit-rewards recommend`, `POST /api/recommend` | `tests/test_golden_recommend.py` (new) |
+| **Rank** | End-to-end recommend | `paycue recommend`, `POST /api/recommend` | `tests/test_golden_recommend.py` (new) |
 
 **Cross-validation rule:** No single agent owns truth. A row is **verified** only when ≥2 independent signals agree (e.g. reference + issuer evidence, or reference + golden case).
 
@@ -91,12 +91,12 @@ Each agent produces **one artifact** + updates the tracker. **Monitor** merges a
 
 ```bash
 cd creditRewards && source .venv/bin/activate
-credit-rewards-db init && credit-rewards-db seed
-credit-rewards-db sync-reference && credit-rewards-db import-reference
-credit-rewards-db refresh-official-cpp
+paycue-db init && paycue-db seed
+paycue-db sync-reference && paycue-db import-reference
+paycue-db refresh-official-cpp
 pytest -q
-credit-rewards-db validate-reference --all    # if CLI exists; else reference_validate in tests
-credit-rewards-db compare-all
+paycue-db validate-reference --all    # if CLI exists; else reference_validate in tests
+paycue-db compare-all
 ```
 
 Monitor records: pytest count, reference validate pass rate, compare aligned count (expect low on live scrape).

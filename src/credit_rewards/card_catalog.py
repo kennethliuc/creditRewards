@@ -16,6 +16,7 @@ from credit_rewards.paths import data_dir
 
 CATALOG_INDEX_PATH = data_dir() / "card_catalog_index.json"
 ISSUER_ALIASES_PATH = data_dir() / "card_issuer_aliases.yaml"
+CARD_SEARCH_ALIASES_PATH = data_dir() / "card_search_aliases.yaml"
 MARKET_SHARE_PATH = data_dir() / "card_issuer_market_share.yaml"
 
 # Common US issuers for index build + fuzzy hints.
@@ -51,11 +52,23 @@ def load_issuer_aliases() -> dict[str, list[str]]:
     return {str(k): [str(a) for a in (v or [])] for k, v in (data.get("aliases") or {}).items()}
 
 
+@lru_cache(maxsize=1)
+def load_card_search_aliases() -> dict[str, list[str]]:
+    if not CARD_SEARCH_ALIASES_PATH.exists():
+        return {}
+    data = yaml.safe_load(CARD_SEARCH_ALIASES_PATH.read_text()) or {}
+    return {
+        str(k): [str(a) for a in (v or [])]
+        for k, v in (data.get("card_aliases") or {}).items()
+    }
+
+
 def clear_catalog_cache() -> None:
     load_catalog_index.cache_clear()
     load_catalog_index_all.cache_clear()
     _top_tier_issuer_names_in_data.cache_clear()
     load_issuer_aliases.cache_clear()
+    load_card_search_aliases.cache_clear()
     load_market_share_issuers.cache_clear()
 
 
@@ -272,7 +285,7 @@ def catalog_coverage_stats() -> dict[str, Any]:
     }
 
 
-def list_issuers(*, limit: int = 30) -> list[str]:
+def list_issuers(*, limit: int = 0) -> list[str]:
     """Top-tier issuer names that have at least one card in the catalog."""
     catalog_issuers = {
         str(r.get("issuer") or "").strip()
@@ -286,37 +299,113 @@ def list_issuers(*, limit: int = 30) -> list[str]:
         if _issuer_in_catalog(catalog_issuers, name, aliases):
             names.append(name)
     names.sort(key=str.casefold)
-    return names[:limit]
+    if limit and limit > 0:
+        return names[:limit]
+    return names
+
+
+def catalog_cards_for_issuer(issuer_name: str) -> list[dict[str, Any]]:
+    """All catalog rows for a top-tier issuer (canonical market-share name)."""
+    aliases = []
+    for row in load_market_share_issuers():
+        if str(row.get("name") or "") == issuer_name:
+            aliases = [str(a) for a in (row.get("aliases") or [])]
+            break
+    return [
+        row
+        for row in load_catalog_index()
+        if _issuer_in_catalog({str(row.get("issuer") or "")}, issuer_name, aliases)
+    ]
+
+
+def _alias_score(query: str, aliases: list[str]) -> float:
+    q = _normalize(query)
+    if not q or not aliases:
+        return 0.0
+    best = 0.0
+    for alias in aliases:
+        a = _normalize(alias)
+        if not a:
+            continue
+        if q == a or q in a or a in q:
+            best = max(best, 0.98)
+        best = max(best, fuzzy_name_score(q, a))
+    return best
+
+
+def _card_name_score(
+    query: str,
+    card_name: str,
+    card_key: str = "",
+    *,
+    search_aliases: list[str] | None = None,
+) -> float:
+    q = _normalize(query)
+    if not q:
+        return 0.0
+    name = _normalize(card_name)
+    key = _normalize(card_key.replace("-", " "))
+    best = 0.0
+    if name and (q in name or name in q):
+        best = max(best, 0.96)
+    if key and q in key:
+        best = max(best, 0.94)
+    if name:
+        best = max(best, fuzzy_name_score(q, name))
+    if search_aliases:
+        best = max(best, _alias_score(query, search_aliases))
+    return best
+
+
+def _search_sort_key(item: tuple[float, float, dict[str, Any]]) -> tuple:
+    score, issuer_score, row = item
+    return (
+        -score,
+        -issuer_score,
+        -int(row.get("in_registry") or False),
+        str(row.get("card_name") or "").casefold(),
+    )
 
 
 def search_cards_by_issuer(
     issuer_query: str,
     *,
-    limit: int = 48,
+    limit: int = 0,
     min_score: float = 0.72,
 ) -> list[dict[str, Any]]:
+    """Match by bank (issuer) or card / co-brand name. No row cap when browsing an issuer."""
     query = issuer_query.strip()
     if len(_normalize(query)) < 2:
         return []
 
-    scored: list[tuple[float, dict[str, Any]]] = []
+    scored: list[tuple[float, float, dict[str, Any]]] = []
     seen: set[str] = set()
+    card_aliases = load_card_search_aliases()
     for row in load_catalog_index():
         card_key = str(row.get("card_key") or "")
         if not card_key or card_key in seen:
             continue
         issuer = str(row.get("issuer") or "")
-        ratio = _issuer_score(query, issuer)
-        if ratio < min_score:
+        card_name = str(row.get("card_name") or card_key)
+        issuer_score = _issuer_score(query, issuer)
+        name_score = _card_name_score(
+            query,
+            card_name,
+            card_key,
+            search_aliases=card_aliases.get(card_key),
+        )
+        score = max(issuer_score, name_score)
+        if score < min_score:
             continue
         seen.add(card_key)
         scored.append(
             (
-                ratio,
+                score,
+                issuer_score,
                 {
                     "card_key": card_key,
                     "rewards_cc_card_key": str(row.get("rewards_cc_card_key") or card_key),
-                    "card_name": str(row.get("card_name") or card_key),
+                    "card_name": card_name,
                     "issuer": issuer,
                     "image_url": str(row.get("image_url") or ""),
                     "in_registry": bool(row.get("in_registry")),
@@ -324,13 +413,16 @@ def search_cards_by_issuer(
             )
         )
 
-    scored.sort(key=lambda item: (-item[0], item[1]["card_name"]))
-    return [row for _, row in scored[:limit]]
+    scored.sort(key=_search_sort_key)
+    rows = [row for _, _, row in scored]
+    if limit and limit > 0:
+        return rows[:limit]
+    return rows
 
 
 def enrich_registry_cards() -> list[dict[str, Any]]:
     """Registry cards with image URLs for /api/cards."""
-    index_by_key = {str(r["card_key"]): r for r in load_catalog_index()}
+    index_by_key = {str(r["card_key"]): r for r in load_catalog_index_all()}
     cards: list[dict[str, Any]] = []
     for entry in load_card_registry():
         key = str(entry["card_key"])
@@ -339,7 +431,7 @@ def enrich_registry_cards() -> list[dict[str, Any]]:
             {
                 "card_key": key,
                 "rewards_cc_card_key": entry.get("rewards_cc_card_key") or key,
-                "card_name": _registry_card_name(key),
+                "card_name": str(idx.get("card_name") or _registry_card_name(key)),
                 "issuer": entry.get("issuer") or "",
                 "reward_program": entry.get("reward_program") or "",
                 "image_url": entry.get("image_url") or idx.get("image_url") or "",

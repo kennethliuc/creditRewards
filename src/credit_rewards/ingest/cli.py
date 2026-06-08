@@ -25,7 +25,7 @@ def seed_cmd() -> None:
     counts = seed_database()
     typer.echo(
         f"Seeded taxonomy: {counts['transfer_partners']} transfer partners. "
-        "Run `credit-rewards-db refresh-all` to scrape card rewards from issuer sites."
+        "Run `paycue-db refresh-all` to scrape card rewards from issuer sites."
     )
 
 
@@ -233,7 +233,7 @@ def bulk_sync_cmd(
         typer.echo(
             "bulk-sync pulls every US card (~50k API calls). "
             "For Amex/Chase/Citi in card_registry.yaml, run:\n"
-            "  credit-rewards-db sync-reference",
+            "  paycue-db sync-reference",
             err=True,
         )
         raise typer.Exit(1)
@@ -264,7 +264,7 @@ def bulk_status_cmd() -> None:
 
     manifest_path = REFERENCE_DIR / "bulk_manifest.json"
     if not manifest_path.exists():
-        typer.echo("No bulk sync yet. Run: credit-rewards-db bulk-sync")
+        typer.echo("No bulk sync yet. Run: paycue-db bulk-sync")
         raise typer.Exit(1)
     manifest = json.loads(manifest_path.read_text())
     typer.echo(json.dumps(manifest, indent=2))
@@ -296,7 +296,23 @@ def sync_reference_cmd(
     typer.echo(f"API calls used: {manifest['api_calls']} (registry scope only)")
     for key, meta in manifest["cards"].items():
         typer.echo(f"  ✓ {key}: {meta['rule_count']} rules ({meta.get('issuer', '')})")
-    typer.echo("Next: credit-rewards-db import-reference")
+    typer.echo("Next: paycue-db import-reference")
+
+
+@app.command("sync-co-brand-categories")
+def sync_co_brand_categories_cmd(
+    all_files: bool = typer.Option(False, "--all", help="Re-download existing snapshots"),
+) -> None:
+    """Download category-card snapshots for merchant co-brand bonuses (Starbucks, Delta, etc.)."""
+    from credit_rewards.ingest.co_brand_sync import sync_co_brand_categories
+
+    result = sync_co_brand_categories(only_missing=not all_files)
+    typer.echo(f"Co-brand categories: {result['category_count']}")
+    typer.echo(f"Synced: {len(result['synced'])} · Skipped: {len(result['skipped'])}")
+    if result["errors"]:
+        for err in result["errors"]:
+            typer.echo(f"  error: {err}", err=True)
+        raise typer.Exit(1)
 
 
 @app.command("import-catalog-wallet")

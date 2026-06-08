@@ -72,3 +72,37 @@ CREATE TABLE IF NOT EXISTS program_valuations (
 );
 
 CREATE INDEX IF NOT EXISTS idx_program_valuations_source ON program_valuations(source);
+
+CREATE TABLE IF NOT EXISTS analytics_devices (
+    device_id TEXT PRIMARY KEY,
+    first_seen_at TEXT NOT NULL,
+    last_seen_at TEXT NOT NULL,
+    locale TEXT,
+    user_agent TEXT,
+    card_count INTEGER,
+    meta_json TEXT
+);
+
+CREATE TABLE IF NOT EXISTS analytics_sessions (
+    session_id TEXT PRIMARY KEY,
+    device_id TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    ended_at TEXT,
+    duration_sec INTEGER,
+    FOREIGN KEY (device_id) REFERENCES analytics_devices(device_id)
+);
+
+CREATE TABLE IF NOT EXISTS analytics_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    device_id TEXT NOT NULL,
+    session_id TEXT NOT NULL,
+    event_type TEXT NOT NULL,
+    occurred_at TEXT NOT NULL,
+    properties_json TEXT NOT NULL DEFAULT '{}',
+    received_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_analytics_events_device ON analytics_events(device_id);
+CREATE INDEX IF NOT EXISTS idx_analytics_events_type ON analytics_events(event_type);
+CREATE INDEX IF NOT EXISTS idx_analytics_events_occurred ON analytics_events(occurred_at);
+CREATE INDEX IF NOT EXISTS idx_analytics_devices_last_seen ON analytics_devices(last_seen_at);

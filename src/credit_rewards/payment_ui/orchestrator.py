@@ -73,7 +73,7 @@ def _tasks_from_gates(gate_report: dict[str, Any]) -> list[PaymentUITask]:
                 AGENT_FRONTEND: ["# edit src/credit_rewards/web/static/index.html"],
                 AGENT_API: ["# edit src/credit_rewards/web/app.py"],
                 AGENT_QA: ["pytest tests/test_merchant_mapping.py tests/test_pay_web.py -q"],
-                AGENT_MONITOR: ["credit-rewards-db validation-monitor-run"],
+                AGENT_MONITOR: ["paycue-db validation-monitor-run"],
             }.get(agent, [])
             tasks.append(
                 PaymentUITask(
@@ -111,9 +111,9 @@ def build_payment_ui_monitor_plan(*, run_pytest: bool = True) -> dict[str, Any]:
         "monitor_doc": "docs/archive/agents/payment-ui-agent-system.md",
         "tracker_doc": "docs/archive/agents/payment-ui-tracker.md",
         "commands": {
-            "monitor": "credit-rewards-db payment-ui-monitor",
-            "monitor_run": "credit-rewards-db payment-ui-monitor-run",
-            "validation": "credit-rewards-db validation-monitor-run",
+            "monitor": "paycue-db payment-ui-monitor",
+            "monitor_run": "paycue-db payment-ui-monitor-run",
+            "validation": "paycue-db validation-monitor-run",
             "pytest": "pytest tests/test_merchant_mapping.py tests/test_pay_web.py -q",
             "dev_server": "uvicorn credit_rewards.web.app:app --port 8000",
         },

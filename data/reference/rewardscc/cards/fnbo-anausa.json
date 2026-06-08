@@ -1,0 +1,138 @@
+[
+  {
+    "cardKey": "fnbo-anausa",
+    "cardIssuer": "FNBO",
+    "cardName": "ANA CARD U.S.A. Plus",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Traditional",
+    "cardType": "Business",
+    "cardUrl": "https://www.anacardusa.com/en/",
+    "annualFee": 85,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "ANA Mileage Club",
+    "baseSpendEarnCategory": "Airline",
+    "baseSpendEarnCurrency": "miles",
+    "baseSpendEarnValuation": 1.4,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "10000",
+    "signupBonusType": "ANA Mileage Club",
+    "signupBonusCategory": "Airline",
+    "signUpBonusItem": "miles",
+    "signupBonusSpend": 7000,
+    "signupBonusLength": 3,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 1,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 10,000 Bonus Miles after spending $7,000 in purchases within the first 3 billing cycles of opening your account.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "+25% Additional Flight Bonus Miles",
+        "benefitDesc": "ANA Mileage Club regular members with the primary cardholder of this card are now qualified for 25% Flight Bonus Miles as Card Type Multiplication rate, when flying on ANA Group flights.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "+5,000 Miles",
+        "benefitDesc": "Earn 5,000 bonus miles after your first purchase",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "10% off on ANA in-flight purchases",
+        "benefitDesc": "Receive a 10% discount on all ANA in-flight purchases for international and domestic flights when using this card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "Auto Rental Collision Damage Waiver (ARCDW) provides primary insurance coverage for physical damage and theft, reasonable and customary towing, and valid loss-of-use charges and administrative fees when you reserve and pay for a rental car with your covered Visa Business card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Less Requirements toward ANA Bronze member status",
+        "benefitDesc": "Primary cardholders of this card who earn 30,000 premium points or more within one year will be qualified for ANA Bronze Service membership status even if they do not meet the 15,000 points requreiment for ANA Group operated flights.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "OpenTable",
+        "benefitDesc": "Eligible Visa cardholders can enjoy special events access to the hottest dining events on OpenTable. Restrictions apply.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Check-In",
+        "benefitDesc": "Enjoy Priority Check-In on ANA-operated International Flights! To receive this benefit, present this card at the Business Class check-in counter.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Security and Extended Protection",
+        "benefitDesc": "Purchase Security can replace, repair or reimburse you for an eligible item purchased with your covered card up to $10,000.00 per claim in the event your item is stolen or damaged. Extended Protection doubles the time period of the original manufacturer's written U.S. warranty up to 1 additional year on eligible warranties of 3 years or less.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Receive 10% off at duty free shops at the airport",
+        "benefitDesc": "Present your card when checking out at the following ANA group duty free stores in the airport, and receive a 10% discount on selected items.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Receive 5% off while shopping at ANA Group airport shops",
+        "benefitDesc": "Present this credit card and you will receive a 5% discount on selected items at “ANA FESTA” gift shops operated by ANA Trading Co. at airports in Japan.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Receive discounts at ANA Hotels and ANA – IHG co-branded hotels",
+        "benefitDesc": "When booking your stay, mention you are a primary cardholder of this card and enjoy 5% off the Best Flexible Rates at IHG ANA Hotels Group Japan. Please present your card at the front desk when you check in.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program available 24x7. Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sofar Sounds",
+        "benefitDesc": "Enjoy a free ticket per show with the purchase of one or more tickets, plus you can access 7-day Visa Exclusive Presale opportunities.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel and Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - ANA",
+        "spendBonusCategoryName": "ANA",
+        "spendBonusCategoryId": 34622,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Airfare",
+        "spendBonusDesc": "Earn 2 miles for every $1 spent on eligible ANA purchases",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

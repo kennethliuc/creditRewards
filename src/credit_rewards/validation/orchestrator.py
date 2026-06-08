@@ -60,9 +60,9 @@ def tasks_for_independent_failures(result) -> list[AgentTask]:
                     layer="internal",
                     scope="All registry cards",
                     commands=[
-                        "credit-rewards-db sync-reference",
-                        "credit-rewards-db import-reference",
-                        "credit-rewards-db validate-reference",
+                        "paycue-db sync-reference",
+                        "paycue-db import-reference",
+                        "paycue-db validate-reference",
                     ],
                     acceptance="validate-reference 20/20 green",
                 )
@@ -95,7 +95,7 @@ def tasks_for_independent_failures(result) -> list[AgentTask]:
                     priority=1,
                     layer="internal",
                     scope="data/curated/official_cpp.yaml",
-                    commands=["credit-rewards-db refresh-official-cpp"],
+                    commands=["paycue-db refresh-official-cpp"],
                     acceptance="all programs have source in official_cpp.yaml",
                 )
             )
@@ -107,7 +107,7 @@ def tasks_for_independent_failures(result) -> list[AgentTask]:
                     layer="internal",
                     scope="data/mcc/visa_mcc_categories.yaml",
                     commands=[
-                        "credit-rewards-db mcc-lookup 5411",
+                        "paycue-db mcc-lookup 5411",
                         "pytest tests/test_mcc_mapping.py -q",
                     ],
                     acceptance="TOP_VALIDATION_MCCS 100% mapped",
@@ -127,8 +127,8 @@ def tasks_for_external_failures(result) -> list[AgentTask]:
                     layer="external",
                     scope=card.card_key,
                     commands=[
-                        f"credit-rewards-db refresh --card-key {card.card_key}",
-                        "credit-rewards-db validation-external --card-key "
+                        f"paycue-db refresh --card-key {card.card_key}",
+                        "paycue-db validation-external --card-key "
                         f"{card.card_key}",
                     ],
                     acceptance=f"raw scrape succeeds for {card.card_key}",
@@ -142,8 +142,8 @@ def tasks_for_external_failures(result) -> list[AgentTask]:
                     layer="external",
                     scope=card.card_key,
                     commands=[
-                        f"credit-rewards-db compare --card-key {card.card_key}",
-                        f"credit-rewards-db validation-external --card-key {card.card_key}",
+                        f"paycue-db compare --card-key {card.card_key}",
+                        f"paycue-db validation-external --card-key {card.card_key}",
                     ],
                     acceptance=(
                         f"≥{result.gate_pct * 100}% earn rows cross-verified "
@@ -170,7 +170,7 @@ def tasks_for_external_failures(result) -> list[AgentTask]:
                 priority=1,
                 layer="external",
                 scope="All registry cards",
-                commands=["credit-rewards-db validation-external"],
+                commands=["paycue-db validation-external"],
                 acceptance="external cross-verify ≥90% rows, ≥18/20 cards scraped raw",
             )
         )
@@ -188,7 +188,7 @@ def tasks_for_mcc_gap(result) -> list[AgentTask]:
                 layer="mcc_gap",
                 scope=row.category_name,
                 commands=[
-                    f"credit-rewards-db mcc-gap-report",
+                    f"paycue-db mcc-gap-report",
                     f"# Add MCC codes for {row.category_name} in data/mcc/visa_mcc_categories.yaml",
                 ],
                 acceptance=f"dedicated MCC path for {row.category_name} (not base-rate fallback)",
@@ -218,7 +218,7 @@ def tasks_for_mcc_gap(result) -> list[AgentTask]:
                 priority=1,
                 layer="mcc_gap",
                 scope="Phase-1 categories",
-                commands=["credit-rewards-db mcc-gap-report"],
+                commands=["paycue-db mcc-gap-report"],
                 acceptance="100% categories classified; ≥70% bonus categories with MCC path",
             )
         )
@@ -242,8 +242,8 @@ def tasks_for_l2(*, scrape_failures: list[dict[str, str]] | None = None) -> list
                 layer="l2_overlay",
                 scope=key,
                 commands=[
-                    f"credit-rewards-db refresh --card-key {key}",
-                    f"credit-rewards-db compare --card-key {key}",
+                    f"paycue-db refresh --card-key {key}",
+                    f"paycue-db compare --card-key {key}",
                 ],
                 acceptance=f"compare aligned or evidence-backed for {key}",
             )
@@ -257,7 +257,7 @@ def tasks_for_l2(*, scrape_failures: list[dict[str, str]] | None = None) -> list
                     priority=4,
                     layer="l2_overlay",
                     scope=key,
-                    commands=[f"credit-rewards-db compare --card-key {key} --write-json"],
+                    commands=[f"paycue-db compare --card-key {key} --write-json"],
                     acceptance=f"L2 overlay verified for {key}",
                     status="pending",
                 )
@@ -303,7 +303,7 @@ def build_monitor_plan(
             layer="monitor",
             scope="Verify sub-agent deliverables",
             commands=[
-                "credit-rewards-db validation-monitor",
+                "paycue-db validation-monitor",
                 "pytest tests/test_validation_external.py tests/test_mcc_gap.py -q",
             ],
             acceptance="Monitor re-runs gates after fixers merge; pytest green",

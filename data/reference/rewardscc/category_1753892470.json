@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "commercebank-gtrewards",
+    "cardName": "Georgia Tech Rewards Mastercard®",
+    "cardIssuer": "Commerce Bank",
+    "cardNetwork": "Mastercard",
+    "categoryType": "Single Category - Starbucks",
+    "spendBonusCategoryName": "Starbucks",
+    "spendBonusCategoryId": 1753892470,
+    "spendBonusDesc": "",
+    "earnMultiplier": 3.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  },
+  {
+    "cardKey": "chase-starbucksrewardsvisa",
+    "cardName": "Starbucks® Rewards Visa®",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Starbucks",
+    "spendBonusCategoryName": "Starbucks",
+    "spendBonusCategoryId": 1753892470,
+    "spendBonusDesc": "Earn up to 3 Stars per $1 you spend at Starbucks stores: 1 Star per $1 digitally loaded to your Starbucks Card with your Starbucks Rewards Visa Card (excludes money added at the register), plus 2 Stars per $1 spent when that Starbucks Card is used to pay at Starbucks stores",
+    "earnMultiplier": 3.0,
+    "spendType": "Starbucks",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

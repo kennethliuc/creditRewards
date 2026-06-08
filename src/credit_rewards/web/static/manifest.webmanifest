@@ -1,13 +1,13 @@
 {
-  "name": "CreditRewards",
-  "short_name": "CreditRewards",
+  "name": "PayCue",
+  "short_name": "PayCue",
   "description": "At checkout, pick the credit card that earns the most rewards.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#06080d",
-  "theme_color": "#06080d",
+  "background_color": "#F5F6F8",
+  "theme_color": "#0F766E",
   "lang": "en",
   "icons": [
     {

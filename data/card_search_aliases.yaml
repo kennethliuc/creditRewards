@@ -1,0 +1,23 @@
+# Card nicknames and alternate search terms (wallet add flow)
+# Keys are catalog card_key values.
+card_aliases:
+  chase-hyatt:
+    - hyatt
+    - world of hyatt
+  chase-ritzcarlton:
+    - ritz
+    - ritz carlton
+    - 栗子
+    - 栗子卡
+  chase-sapphire-preferred:
+    - csp
+    - sapphire preferred
+  chase-sapphire-reserve:
+    - csr
+    - sapphire reserve
+  amex-platinum:
+    - plat
+    - amex plat
+  amex-gold:
+    - amex gold
+    - gold card

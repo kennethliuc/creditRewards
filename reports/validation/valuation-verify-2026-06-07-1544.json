@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-06-07 15:44 UTC",
+  "valuation_ready": true,
+  "agents": [
+    {
+      "agent": "RedemptionEvidence",
+      "pass": true,
+      "failures": [],
+      "rows": [
+        {
+          "program": "American Express Membership Rewards",
+          "official_cpp": 2.2,
+          "floor_cpp": 0.6,
+          "portal_cpp": 2.0,
+          "benchmark_cpp": 2.0,
+          "proof": "Amex Pay-with-Points floor 0.6\u00a2; Amex Travel ~2\u00a2; RC valuation 2.2\u00a2",
+          "resolved_official_cpp": 2.2,
+          "pass": true
+        },
+        {
+          "program": "Chase Ultimate Rewards",
+          "official_cpp": 2.0,
+          "floor_cpp": 1.0,
+          "portal_cpp": 2.0,
+          "benchmark_cpp": 2.0,
+          "proof": "UR portal with Sapphire; statement credit 1\u00a2 floor",
+          "resolved_official_cpp": 2.0,
+          "pass": true
+        },
+        {
+          "program": "Citi ThankYou Rewards",
+          "official_cpp": 1.7,
+          "floor_cpp": 0.8,
+          "portal_cpp": 1.6,
+          "benchmark_cpp": 1.7,
+          "proof": "TY portal + transfer partners; Double Cash override",
+          "resolved_official_cpp": 1.7,
+          "pass": true
+        },
+        {
+          "program": "Capital One Miles",
+          "official_cpp": 1.85,
+          "floor_cpp": 0.5,
+          "portal_cpp": 1.0,
+          "benchmark_cpp": 1.85,
+          "proof": "Travel erasure ~1\u00a2; partner transfers up to ~1.85\u00a2 cited",
+          "resolved_official_cpp": 1.85,
+          "pass": true
+        },
+        {
+          "program": "Bilt Points",
+          "official_cpp": 2.2,
+          "floor_cpp": 1.0,
+          "portal_cpp": 2.2,
+          "benchmark_cpp": 2.2,
+          "proof": "Bilt travel 2.2\u00a2 documented",
+          "resolved_official_cpp": 2.2,
+          "pass": true
+        },
+        {
+          "program": "Wells Fargo Go Far Rewards",
+          "official_cpp": 1.0,
+          "floor_cpp": 1.0,
+          "portal_cpp": 1.0,
+          "benchmark_cpp": 1.0,
+          "proof": "Effectively cash-equivalent rewards",
+          "resolved_official_cpp": 1.0,
+          "pass": true
+        },
+        {
+          "program": "Cash",
+          "official_cpp": 1.0,
+          "floor_cpp": 1.0,
+          "portal_cpp": 1.0,
+          "benchmark_cpp": 1.0,
+          "proof": "Literal cash back",
+          "resolved_official_cpp": 1.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "agent": "ImplementationAuditor",
+      "pass": true,
+      "failures": [],
+      "scenarios": [
+        {
+          "id": "G01",
+          "card_key": "amex-gold",
+          "category": "Grocery Stores",
+          "amount": 100.0,
+          "expected_usd": 8.8,
+          "note": "4\u00d7 MR @ 2.2\u00a2",
+          "pass": true,
+          "actual_usd": 8.8,
+          "multiplier": 4.0,
+          "points_earned": 400.0,
+          "cpp_used": 2.2,
+          "program": "American Express Membership Rewards",
+          "reason": "4x on groceries at U.S. supermarkets on up to $25,000 in purchases per calendar "
+        },
+        {
+          "id": "G02",
+          "card_key": "amex-gold",
+          "category": "Dining",
+          "amount": 25.0,
+          "expected_usd": 2.2,
+          "note": "4\u00d7 MR @ 2.2\u00a2 on $25",
+          "pass": true,
+          "actual_usd": 2.2,
+          "multiplier": 4.0,
+          "points_earned": 100.0,
+          "cpp_used": 2.2,
+          "program": "American Express Membership Rewards",
+          "reason": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, th"
+        },
+        {
+          "id": "G03",
+          "card_key": "citi-double-cash",
+          "category": "Anything",
+          "amount": 100.0,
+          "expected_usd": 3.4,
+          "note": "2% \u2192 TY @ 1.7\u00a2",
+          "pass": true,
+          "actual_usd": 3.4,
+          "multiplier": 2.0,
+          "points_earned": 200.0,
+          "cpp_used": 1.7,
+          "program": "Citi ThankYou Rewards",
+          "reason": "2x base earn on Cash"
+        },
+        {
+          "id": "G04",
+          "card_key": "wells-fargo-active-cash",
+          "category": "Anything",
+          "amount": 100.0,
+          "expected_usd": 2.0,
+          "note": "2% cash",
+          "pass": true,
+          "actual_usd": 2.0,
+          "multiplier": 2.0,
+          "points_earned": 2.0,
+          "cpp_used": 1.0,
+          "program": "Cash",
+          "reason": "2% cash back"
+        },
+        {
+          "id": "G05",
+          "card_key": "chase-sapphire-preferred",
+          "category": "Travel",
+          "amount": 100.0,
+          "expected_usd": 10.0,
+          "note": "5\u00d7 UR @ 2.0\u00a2",
+          "pass": true,
+          "actual_usd": 10.0,
+          "multiplier": 5.0,
+          "points_earned": 500.0,
+          "cpp_used": 2.0,
+          "program": "Chase Ultimate Rewards",
+          "reason": "Earn 5x total points on travel purchased through Chase Ultimate Rewards\u00ae, exclud"
+        }
+      ],
+      "registry_card_count": 20
+    },
+    {
+      "agent": "IndependentVerifier",
+      "pass": true,
+      "verified": [
+        {
+          "program": "American Express Membership Rewards",
+          "official_cpp": 2.2,
+          "signals": 2
+        },
+        {
+          "program": "Chase Ultimate Rewards",
+          "official_cpp": 2.0,
+          "signals": 2
+        },
+        {
+          "program": "Citi ThankYou Rewards",
+          "official_cpp": 1.7,
+          "signals": 2
+        },
+        {
+          "program": "Capital One Miles",
+          "official_cpp": 1.85,
+          "signals": 2
+        },
+        {
+          "program": "Bilt Points",
+          "official_cpp": 2.2,
+          "signals": 2
+        },
+        {
+          "program": "Wells Fargo Go Far Rewards",
+          "official_cpp": 1.0,
+          "signals": 2
+        },
+        {
+          "program": "Cash",
+          "official_cpp": 1.0,
+          "signals": 2
+        }
+      ],
+      "challenges": []
+    },
+    {
+      "agent": "ProductionSmoke",
+      "pass": true,
+      "best": {
+        "card_key": "amex-gold",
+        "card_name": "American Express\u00ae Gold",
+        "multiplier": 4.0,
+        "points_earned": 400.0,
+        "estimated_value_usd": 8.8,
+        "cpp_used": 2.2,
+        "reason": "4x at restaurants worldwide, on up to $50,000 in purchases per calendar year, then 1X points for the rest of the year (cap $50000/Year)",
+        "rank": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "cardKey": "aplusfcu-reserve",
+    "cardIssuer": "A+ Federal Credit Union",
+    "cardName": "A+ Federal Credit Union Visa® Reserve Rewards+ Card",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Infinite®",
+    "cardType": "Personal",
+    "cardUrl": "https://aplusfcu.org/loans/personal-credit/credit-cards",
+    "annualFee": 390,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Elan Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "50000",
+    "signupBonusType": "Elan Rewards",
+    "signupBonusCategory": "Flex point",
+    "signUpBonusItem": "points",
+    "signupBonusSpend": 4500,
+    "signupBonusLength": 90,
+    "signupBonusLengthPeriod": "Days",
+    "signupAnnualFee": 390,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn $500 bonus reward (50,000 points) after you spend $4,500 within first 90 days of account opening.",
+    "trustedTraveler": "TSA PreCheck® or Global Entry® credit.",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "Complimentary Priority Pass™ Select membership with access to more than 1,300 VIP lounges worldwide.",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Auto Rental Collision Damage Waiver",
+        "benefitDesc": "When you use your covered Visa card to rent a vehicle, you’ll get built-in Auto Rental Coverage. You can be covered for physical damage, theft, reasonable and customary towing and loss-of-use charges. Decline the Collision Damage Waiver coverage offered by the rental agency and make sure your name is listed as the primary renter on the auto rental contract.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Extended Warranty Protection",
+        "benefitDesc": "When you use your covered Visa card for your eligible purchases Extended Warranty Protection will extend the term of your eligible manufacturer’s U.S. warranty by 1 additional year on eligible warranties of 3 years or less; for a manufacturer’s warranty of 3 months, the term is extended an additional 12 months for a combined total of 15 months of coverage; for warranties of one year or more an additional year of coverage is provided.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global Entry Statement Credit",
+        "benefitDesc": "Apply for Global Entry, a U.S. Customs and Border Protection program and use your Visa Infinite card to pay the application fee (currently $120) to receive a $120 statement credit. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Golf Benefits from Troon Rewards®",
+        "benefitDesc": "Your Visa Infinite card entitles you to automatic Platinum Status when you sign up for Troon Rewards®, for 20% saving on golf fees, merchandise and lessons at over 150 golf courses across the United States and world.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "ID Navigator Powered by NortonLifeLock",
+        "benefitDesc": "Provides tools so you can act quickly if your identity is threatened.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lost Luggage Reimbursement",
+        "benefitDesc": "When you use your covered card to purchase an airline or common carrier ticket, you can be eligible to receive reimbursement for your checked luggage or carry-on baggage and their contents in the event of theft or misdirection by the airline or common carrier.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lounge Access",
+        "benefitDesc": "Complimentary Priority Pass™ Select membership with access to more than 1,300 VIP lounges worldwide.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Relais & Châteaux",
+        "benefitDesc": "Visa Infinite cardholders receive special privileges from Relais & Châteaux, a highly prestigious association of approximately 500 luxury properties worldwide.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "When you use your covered Visa card to make an eligible purchase, you can get return protection if you are dissatisfied with your item within 90 days of purchase and the merchant will not accept the return.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program; available 24x7; Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Statement Credits",
+        "benefitDesc": "Up to $240 in statement credits for categories like sports and fitness, personal care, entertainment, streaming services and dining/restaurants.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Stay connected in over 175 countries",
+        "benefitDesc": "Eligible Visa cardholders can now use the GigSky app to access complimentary or discounted global mobile data, in 175+ countries and destinations worldwide as well as on over 200 of the world’s top cruise ships. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Add peace of mind to your itinerary. Purchase your airline ticket with your covered Visa card and you can enjoy Travel Accident Insurance.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Travel Credit",
+        "benefitDesc": "$100 travel credit when you book through the Rewards Center.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Emergency Assistance Services",
+        "benefitDesc": "When you are traveling or working anywhere in the world, your covered Visa card gets you access to a multilingual call center, 24 hours a day, 365 days a year to help get the assistance you need. As a covered cardholder, you, your spouse and dependent children under 22 years of age who are traveling with can call a dedicated toll-free number in the United States, or call collect when traveling abroad. Keep in mind this program provides assistance only. Cardholders are responsible for the cost of any services received.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Cancellation / Interruption",
+        "benefitDesc": "When you purchase your travel ticket with a covered Visa card and you must cancel or interrupt your trip, this benefit can help reimburse for the non-refundable cost of your passenger fare. This coverage applies to more than air travel. It also can be in place when a covered Visa card is used to purchase a ticket for travel via other forms of eligible transportation, such as a ferry, rail, bus or cruise ship.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trip Delay Reimbursement",
+        "benefitDesc": "Anticipate delays when you purchase air travel with your covered Visa card. With Trip Delay coverage, you can receive up to $500.00 when you’re stuck for more than 6 hours due to a covered hazard such as equipment failure, inclement weather, strike and hijacking/skyjacking.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Trusted Traveler Credit",
+        "benefitDesc": "TSA PreCheck® or Global Entry® credit.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Visa Infinite Concierge Services",
+        "benefitDesc": "Enjoy 24/7 personalized assistance for travel planning, dinner reservations, sports, entertainment tickets and more. Available 365 days a year from home or abroad.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Luxury Hotel Collection",
+        "benefitDesc": "The Visa Luxury Hotel Collection offers an unparalleled experience with an extraordinary collection of benefits like VIP status, complimentary breakfast daily, an upgrade when available and a special amenity unique to each property.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Visa Infinite Rental car privileges",
+        "benefitDesc": "Book with your Visa Infinite card and get VIP amenities and discounts with Avis, Hertz, and National®.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Wine Credit",
+        "benefitDesc": "$60 Priority Wine Pass credits.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - All Travel (Elan Rewards)",
+        "spendBonusCategoryName": "All Travel (Elan Rewards)",
+        "spendBonusCategoryId": 780924772,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusDesc": "6x on prepaid travel booked directly in the Rewards Center when you use your card",
+        "earnMultiplier": 6.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

@@ -35,8 +35,8 @@
 cd creditRewards && source .venv/bin/activate
 pip install -e ".[dev]"
 pytest -q
-credit-rewards-db refresh-all
-credit-rewards-db compare-all
+paycue-db refresh-all
+paycue-db compare-all
 uvicorn credit_rewards.web.app:app --port 8000
 # → http://127.0.0.1:8000/compare
 ```

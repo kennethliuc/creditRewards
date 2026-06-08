@@ -191,7 +191,7 @@ def build_cards_response(
         "meta": {
             "version": "1.0",
             "format": "awardwallet-credit-card-bonus-compatible",
-            "source": "credit-rewards-local",
+            "source": "paycue-local",
             "reference": "https://awardwallet.com/api/cc",
         },
     }

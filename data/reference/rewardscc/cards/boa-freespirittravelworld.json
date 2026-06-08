@@ -1,0 +1,132 @@
+[
+  {
+    "cardKey": "boa-freespirittravelworld",
+    "cardIssuer": "Bank of America",
+    "cardName": "Free Spirit® Travel World Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Spirit Airlines Free Spirit",
+    "baseSpendEarnCategory": "Airline",
+    "baseSpendEarnCurrency": "miles",
+    "baseSpendEarnValuation": 1.1,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "0",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Anniversary Bonus",
+        "benefitDesc": "Receive 5,000 Bonus Points each anniversary after making at least $10,000 in purchases within the prior anniversary year",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Inflight Discount",
+        "benefitDesc": "25% rebate on all inflight food and beverage purchases when you pay with your card",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Shortcut Boarding",
+        "benefitDesc": "Automatic Zone 2 Shortcut Boarding on all flights",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Spirit Airlines",
+        "spendBonusCategoryName": "Spirit Airlines",
+        "spendBonusCategoryId": 701522248,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Airfare",
+        "spendBonusDesc": "Earn 2X points on eligible Spirit purchases",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": [
+      {
+        "annualSpendDesc": "Receive 5,000 points each anniversary after making at least $10,000 in purchases within the prior anniversary year"
+      }
+    ]
+  }
+]

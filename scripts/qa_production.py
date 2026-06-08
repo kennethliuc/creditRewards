@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run multi-agent production QA against the live CreditRewards deployment."""
+"""Run multi-agent production QA against the live PayCue deployment."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from credit_rewards.qa.supervisor import DEFAULT_BASE_URL, run_production_qa  # 
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="CreditRewards multi-agent production QA (supervisor + sub-agents)",
+        description="PayCue multi-agent production QA (supervisor + sub-agents)",
     )
     parser.add_argument(
         "--base-url",

@@ -6,7 +6,7 @@ import time
 from typing import Any
 
 from credit_rewards.card_catalog import resolve_wallet_card_key
-from credit_rewards.client import CardDataClient, RewardsCCError
+from credit_rewards.client import CardDataClient, RewardsCCError, upstream_api_enabled
 from credit_rewards.datastore.db import session
 from credit_rewards.datastore.repository import CardDataRepository
 from credit_rewards.ingest.reference_sync import (
@@ -69,9 +69,10 @@ def ensure_card_in_db(card_key: str) -> bool:
         _upsert_detail(assembled, source_type="category_snapshot")
         return True
 
-    client = CardDataClient(use_local=False)
-    if not client.is_configured:
+    if not upstream_api_enabled():
         return False
+
+    client = CardDataClient(use_upstream=True)
 
     for attempt in range(3):
         try:
@@ -108,9 +109,7 @@ def import_catalog_wallet_to_db(*, limit: int | None = None) -> dict[str, Any]:
     Skips cards that need live API (imported on first recommend when REWARDS_CC_API_KEY is set).
     """
     from credit_rewards.card_catalog import load_catalog_index
-    from credit_rewards.client import CardDataClient
 
-    api_available = CardDataClient(use_local=False).is_configured
     rows = load_catalog_index()
     if limit is not None:
         rows = rows[:limit]
@@ -132,5 +131,5 @@ def import_catalog_wallet_to_db(*, limit: int | None = None) -> dict[str, Any]:
         "imported_count": len(imported),
         "skipped_count": len(skipped),
         "total": len(rows),
-        "live_api": api_available,
+        "live_api": upstream_api_enabled(),
     }

@@ -1,0 +1,38 @@
+[
+  {
+    "cardKey": "citi-costcoanywherevisa",
+    "cardName": "Costco Anywhere Visa®",
+    "cardIssuer": "Citi",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Costco",
+    "spendBonusCategoryName": "Costco",
+    "spendBonusCategoryId": 160868508,
+    "spendBonusDesc": "Unlimited 2% on all other purchases from Costco and Costco.com.",
+    "earnMultiplier": 2.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  },
+  {
+    "cardKey": "citi-biz-costcoanywherevisa",
+    "cardName": "Costco Anywhere Visa® Business",
+    "cardIssuer": "Citi",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Costco",
+    "spendBonusCategoryName": "Costco",
+    "spendBonusCategoryId": 160868508,
+    "spendBonusDesc": "Unlimited 2% on all other purchases from Costco and Costco.com.",
+    "earnMultiplier": 2.0,
+    "spendType": "Cash",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

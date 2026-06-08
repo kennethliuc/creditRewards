@@ -21,7 +21,7 @@ from tests.twenty_cards_fixtures import (
 
 pytestmark = pytest.mark.skipif(
     not reference_files_ready(),
-    reason="Run: credit-rewards-db sync-reference (all 20 cards)",
+    reason="Run: paycue-db sync-reference (all 20 cards)",
 )
 
 
@@ -57,7 +57,7 @@ def test_amex_gold_grocery_dollar_value():
     ref = load_reference_detail("amex-gold")
     card = enrich_from_official_table(normalize_card_detail(ref))
     purchase = PurchaseContext(category="Grocery Stores", amount_usd=100)
-    _, _, value, _ = compute_earn_value(card, purchase)
+    _, _, value, _, _, _, _ = compute_earn_value(card, purchase)
     assert value == pytest.approx(8.8)
 
 

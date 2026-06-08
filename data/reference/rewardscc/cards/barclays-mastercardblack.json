@@ -1,0 +1,143 @@
+[
+  {
+    "cardKey": "barclays-mastercardblack",
+    "cardIssuer": "Barclays",
+    "cardName": "Mastercard® Black",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.luxurycard.com/blackcard",
+    "annualFee": 699,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 1.5,
+    "baseSpendEarnType": "Barclays Luxury Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 699,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "$120 Global Entry or TSA Pre✓® Application Credit",
+    "isTrustedTraveler": 1,
+    "loungeAccess": "VIP Priority Pass™ Select Airport Lounge Access",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$100 Annual Dining Credit",
+        "benefitDesc": "Dine and Earn. Get up to $100 in annual statement credits when you use your Luxury Card at qualifying restaurants.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$120 Global Entry or TSA Pre?® Application Credit",
+        "benefitDesc": "Mastercard Black Card members are eligible to receive a statement credit up to one-hundred-twenty-dollars ($120) as reimbursement for a Global Entry or TSA PreCheck® application fee. Enjoy expedited arrival into the United States from international destinations. Global Entry members are eligible to participate in TSA PreCheck, an expedited domestic security screening at participating airports in the United States, with no additional application or fee required.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$200 Annual Airline Credit",
+        "benefitDesc": "Receive up to $200 in annual air travel credits toward flight-related purchases, including airline tickets, baggage fees, upgrades and more.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "1.5% Value for Cash Back Redemptions",
+        "benefitDesc": "Cash back can be deposited directly into a US bank account or applied as a statement credit. No minimum threshold requirement for cash back redemptions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "2% Value for Airfare Redemptions",
+        "benefitDesc": "Earn $1,000 toward airfare when you acquire 50,000 points—with no blackout dates or seat restrictions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "2X Earn on Airfare and Hotel",
+        "benefitDesc": "Earn double the points when you book your airfare or hotel through LuxuryCardTravel.com.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Baggage Delay Insurance",
+        "benefitDesc": "Baggage delays are an inconvenience. You may be eligible for reimbursement of covered items for up to $100 a day (maximum 3 qualifying days) for qualifying baggage delays of more than 4 hours from the time you arrive at your travel destination (arrival at your primary residence is excluded).",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Cellular Phone Protection",
+        "benefitDesc": "Simply pay for your monthly mobile phone bill with your Luxury Card to activate coverage for eligible damage or theft claims. Your Luxury Card comes with coverage that can reimburse the actual cost to repair or replace your phone if it is damaged or stolen.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "MasterRental Coverage",
+        "benefitDesc": "Provides secondary coverage for covered damages to an eligible rental vehicle when you pay for the entire rental transaction using your card and decline the coverage offered by the rental agency.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Priceless Golf®",
+        "benefitDesc": "Unlock access to over 1,000 luxurious private country clubs across North America. Play at one of the dozens of TPC courses near you. Schedule a tee-time at the World Famous Pebble Beach Resort. Visit priceless.com for details.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Receive up to $250,000 coverage for eligible common carrier accidental death & dismemberment, at no additional cost, when you charge your entire travel fare to your eligible card for a covered trip.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Cancellation / Trip Interruption",
+        "benefitDesc": "Provides secondary coverage for a covered, roundtrip purchase when you use your eligible card. You can be reimbursed for the cost of the non-refundable, roundtrip expenses up to $5,000 per insured person if certain accidental covered events cause you to cancel or interrupt your trip for a covered reason.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "VIP Priority Pass™ Select Airport Lounge Access",
+        "benefitDesc": "With your Luxury Card, enjoy complimentary access to over 1,700 airport lounges and travel experiences in more than 600 cities across 145 countries with Priority Pass Select. Access includes unlimited visits for yourself as well as your guests.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Airfare (LuxuryCardTravel.com)",
+        "spendBonusCategoryName": "Airfare (LuxuryCardTravel.com)",
+        "spendBonusCategoryId": 1504561470,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Airfare (LuxuryCardTravel.com)",
+        "spendBonusDesc": "Earn double the points when you book your airfare through LuxuryCardTravel.com.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels (LuxuryCardTravel.com)",
+        "spendBonusCategoryName": "Hotels (LuxuryCardTravel.com)",
+        "spendBonusCategoryId": 1900989179,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel (LuxuryCardTravel.com)",
+        "spendBonusDesc": "Earn double the points when you book your hotel through LuxuryCardTravel.com.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

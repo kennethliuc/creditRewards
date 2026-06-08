@@ -39,7 +39,7 @@ def fetch_catalog_keys(ctx: QAContext) -> tuple[list[str], list[QAResult]]:
     issuers_res = ctx.client.get(url(ctx, "/api/cards/issuers"))
     issuers = issuers_res.json().get("issuers") or [] if issuers_res.status_code == 200 else []
     for q in issuers:
-        res = ctx.client.get(url(ctx, "/api/cards/by-issuer"), params={"q": q, "limit": 40})
+        res = ctx.client.get(url(ctx, "/api/cards/by-issuer"), params={"q": q})
         if res.status_code != 200:
             continue
         for m in res.json().get("matches") or []:

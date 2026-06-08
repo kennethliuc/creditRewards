@@ -1,0 +1,138 @@
+[
+  {
+    "cardKey": "barclays-biz-gm",
+    "cardIssuer": "Barclays",
+    "cardName": "GM Business™ Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Elite Mastercard®",
+    "cardType": "Business",
+    "cardUrl": "https://cards.barclaycardus.com/banking/cards/general-motors-business/",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 3.0,
+    "baseSpendEarnType": "General Motors",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "100000",
+    "signupBonusType": "General Motors",
+    "signupBonusCategory": "Retail",
+    "signUpBonusItem": "rewards",
+    "signupBonusSpend": 5000,
+    "signupBonusLength": 5,
+    "signupBonusLengthPeriod": "Months",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 100,000 bonus points after spending $5,000 in the first 5 months of account opening.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$0 Fraud liability",
+        "benefitDesc": "You are not responsible for any charges you do not authorize. Just one more way Barclays protects you and your business.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Car Rental Insurance",
+        "benefitDesc": "Reimbursement for covered physical damage and/or theft of a rental vehicle with primary protection: 1-800-MASTERCARD.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enroll in HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart Business",
+        "benefitDesc": "Fuel your business with same-day delivery of snacks, supplies and more. Enjoy $0 delivery fees* with three free months of Instacart+ and $20 off your second order each month. Offer expires on 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Intuit® QuickBooks® Online and QuickBooks Online Payroll",
+        "benefitDesc": "Save 30% on QuickBooks Online, QuickBooks Solopreneur or QuickBooks Online Payroll for 12 months.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Intuit® TurboTax®",
+        "benefitDesc": "Save 20% on the TurboTax solution that best fits your small business needs and can help get your best possible tax outcome.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Luminary",
+        "benefitDesc": "Save 30% on an annual or monthly Luminary membership to access Luminary’s global professional education and networking platform. Offer expires on 11/30/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Impress clients and employees alike with exclusive PGA TOUR® experiences and access to other amazing golf benefits.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Melio",
+        "benefitDesc": "Paying your business bills has never been simpler — or more rewarding. Get up to $100 in fee credits when you pay with Melio. Offer expires on 7/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Microsoft Advertising",
+        "benefitDesc": "Grow your business and attract more customers with $300 in advertising credit after spending only $150 with Microsoft Advertising. Offer expires on 7/31/2026.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences®",
+        "benefitDesc": "Share with your clients both in-person and digital experiences in dining, sports, entertainment and more in over 45 exciting destinations around the globe exclusively for Mastercard cardholders. Visit priceless.com.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - GM",
+        "spendBonusCategoryName": "GM",
+        "spendBonusCategoryId": 2522,
+        "spendBonusCategoryGroup": "Auto",
+        "spendBonusSubcategoryGroup": "Auto Manufacturer",
+        "spendBonusDesc": "Earn 7x Business Card Points for GM purchases",
+        "earnMultiplier": 7.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

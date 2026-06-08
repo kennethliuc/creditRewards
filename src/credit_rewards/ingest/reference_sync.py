@@ -6,7 +6,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from credit_rewards.client import CardDataClient, RewardsCCError
+from credit_rewards.client import CardDataClient, RewardsCCError, upstream_api_enabled
+from credit_rewards.official_cpp import infer_program_from_metadata, normalize_earn_type
 
 from credit_rewards.paths import data_dir
 
@@ -22,8 +23,8 @@ def _category_ids_from_detail(detail: dict[str, Any]) -> set[int]:
 
 
 def _reference_client() -> CardDataClient:
-    """Always talk to upstream Rewards CC (never local API)."""
-    return CardDataClient(use_local=False)
+    """Optional upstream Rewards CC (one-off sync commands only)."""
+    return CardDataClient(use_upstream=True)
 
 
 def sync_reference(
@@ -43,7 +44,10 @@ def sync_reference(
     """
     client = _reference_client()
     if not client.is_configured:
-        raise RewardsCCError("Set REWARDS_CC_API_KEY in .env before sync-reference.")
+        raise RewardsCCError(
+            "Upstream API disabled. Set CREDITREWARDS_USE_UPSTREAM_API=1 and REWARDS_CC_API_KEY "
+            "for optional sync-reference, or use committed data under data/reference/."
+        )
 
     out = output_dir or REFERENCE_DIR
     out.mkdir(parents=True, exist_ok=True)
@@ -139,6 +143,14 @@ def load_reference_card(
     return None
 
 
+def _infer_spend_type_from_meta(card_key: str, meta: dict[str, Any]) -> str | None:
+    detail = {
+        "cardIssuer": meta.get("cardIssuer") or "",
+        "baseSpendEarnType": "",
+    }
+    return infer_program_from_metadata(card_key, detail)
+
+
 def assemble_card_from_category_snapshots(
     card_key: str,
     upstream_key: str | None = None,
@@ -192,7 +204,10 @@ def assemble_card_from_category_snapshots(
     if not rules_by_id:
         return None
 
-    spend_type = str(meta.get("spendType") or "Points")
+    spend_type = str(meta.get("spendType") or "").strip()
+    if not spend_type or spend_type.lower() in {"points", "point"}:
+        spend_type = _infer_spend_type_from_meta(card_key, meta) or "Points"
+    spend_type = normalize_earn_type(spend_type) or spend_type
     return {
         "cardKey": card_key,
         "cardName": meta.get("cardName") or card_key,
@@ -207,4 +222,71 @@ def assemble_card_from_category_snapshots(
         "baseSpendEarnCashValue": 1.0,
         "isActive": 1,
         "spendBonusCategory": list(rules_by_id.values()),
+    }
+
+
+def catalog_card_has_offline_reference(card_key: str, upstream_key: str | None = None) -> bool:
+    return bool(
+        load_reference_card(card_key, upstream_key=upstream_key)
+        or assemble_card_from_category_snapshots(card_key, upstream_key)
+    )
+
+
+def list_catalog_cards_missing_offline_reference() -> list[dict[str, Any]]:
+    from credit_rewards.card_catalog import load_catalog_index
+
+    missing: list[dict[str, Any]] = []
+    for row in load_catalog_index():
+        wallet_key = str(row.get("card_key") or "")
+        rc_key = str(row.get("rewards_cc_card_key") or wallet_key)
+        if not catalog_card_has_offline_reference(wallet_key, rc_key):
+            missing.append(dict(row))
+    return missing
+
+
+def backfill_catalog_reference_cards(
+    *,
+    sleep_seconds: float = 0.05,
+    output_dir: Path | None = None,
+) -> dict[str, Any]:
+    """
+    One-time: save creditcard-detail JSON for wallet catalog cards missing offline data.
+    Requires CREDITREWARDS_USE_UPSTREAM_API=1 + REWARDS_CC_API_KEY.
+    """
+    client = _reference_client()
+    if not client.is_configured:
+        raise RewardsCCError(
+            "Set CREDITREWARDS_USE_UPSTREAM_API=1 and REWARDS_CC_API_KEY to backfill reference JSON."
+        )
+
+    out = output_dir or REFERENCE_DIR
+    cards_dir = out / "cards"
+    cards_dir.mkdir(parents=True, exist_ok=True)
+
+    missing = list_catalog_cards_missing_offline_reference()
+    saved: list[str] = []
+    errors: list[str] = []
+    for row in missing:
+        rc_key = str(row.get("rewards_cc_card_key") or row.get("card_key") or "")
+        if not rc_key:
+            continue
+        dest = cards_dir / f"{rc_key}.json"
+        try:
+            payload = client.card_detail(rc_key)
+        except RewardsCCError as exc:
+            errors.append(f"{rc_key}: {exc}")
+            continue
+        dest.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+        saved.append(rc_key)
+        if sleep_seconds:
+            import time
+
+            time.sleep(sleep_seconds)
+
+    return {
+        "missing_before": len(missing),
+        "saved": saved,
+        "saved_count": len(saved),
+        "errors": errors,
+        "output_dir": str(out),
     }

@@ -1,0 +1,118 @@
+[
+  {
+    "cardKey": "usbank-edwardjonesflex",
+    "cardIssuer": "U.S. Bank",
+    "cardName": "Edward Jones® Everyday Solutions Flex Balance Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "Standard Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/flex-balance-mastercard.html",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "Edward Jones Loyalty Points",
+    "baseSpendEarnCategory": "Flex Point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Annual Statement Credit",
+        "benefitDesc": "$20 annual statement credit for 11 consecutive months of purchases.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Cell Phone Protection",
+        "benefitDesc": "You can be reimbursed up to $600 for damage or theft of an eligible cell phone when you pay your monthly cell phone bill with your card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection™",
+        "benefitDesc": "Detects and helps quickly resolve ID Theft events, 24/7.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Zero Fraud Liability Protection",
+        "benefitDesc": "Stay safe from unauthorized purchases.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - All Travel (U.S. Bank)",
+        "spendBonusCategoryName": "All Travel (U.S. Bank)",
+        "spendBonusCategoryId": 1850534442,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusDesc": "Earn 4 Loyalty Points per net $1 spent on travel booked through the Rewards Center.",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

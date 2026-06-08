@@ -1,9 +1,43 @@
 {
-  "updated": "2026-06-07T05:17:22+00:00",
-  "source": "rewardscc_categories",
+  "updated": "2026-06-08T01:37:57+00:00",
+  "source": "rewardscc_cardlist+categories",
   "card_count": 527,
   "issuer_count": 30,
   "image_fetch_count": 0,
+  "discovery_sources": {
+    "all_issuers": 1794,
+    "top_tier": 527,
+    "Barclays": 45,
+    "Capital One": 33,
+    "Goldman Sachs": 3,
+    "Comenity": 109,
+    "Bank of America": 33,
+    "American Express": 40,
+    "FNBO": 15,
+    "Citi": 45,
+    "Synchrony Bank": 20,
+    "Chase": 52,
+    "Wells Fargo": 12,
+    "BMO": 5,
+    "U.S. Bank": 44,
+    "USAA": 5,
+    "Discover": 6,
+    "Pegasus Bank": 6,
+    "Comerica Bank": 6,
+    "Huntington": 2,
+    "Credit One": 9,
+    "Regions": 1,
+    "Merrick Bank": 4,
+    "TD Bank": 4,
+    "A+ Federal Credit Union": 6,
+    "First Citizens Bank": 5,
+    "Citizens Bank": 2,
+    "Truist": 6,
+    "Navy Federal Credit Union": 3,
+    "HSBC": 2,
+    "PNC": 1,
+    "Fifth Third Bank": 3
+  },
   "sync_errors": [],
   "cards": [
     {
@@ -11,7 +45,6 @@
       "rewards_cc_card_key": "aplusfcu-biz-cashpreffered",
       "card_name": "A+ Federal Credit Union Visa® Business Cash Preferred",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -19,7 +52,6 @@
       "rewards_cc_card_key": "aplusfcu-everyday",
       "card_name": "A+ Federal Credit Union Visa® Everyday Rewards+",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -27,7 +59,6 @@
       "rewards_cc_card_key": "aplusfcu-maxcashpreferred",
       "card_name": "A+ Federal Credit Union Visa® Max Cash Preferred",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -35,7 +66,6 @@
       "rewards_cc_card_key": "aplusfcu-maxcashsecured",
       "card_name": "A+ Federal Credit Union Visa® Max Cash Secured",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -43,7 +73,6 @@
       "rewards_cc_card_key": "aplusfcu-reserve",
       "card_name": "A+ Federal Credit Union Visa® Reserve Rewards+ Card",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -51,7 +80,6 @@
       "rewards_cc_card_key": "aplusfcu-travel",
       "card_name": "A+ Federal Credit Union Visa® Travel Rewards+",
       "issuer": "A+ Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -59,7 +87,6 @@
       "rewards_cc_card_key": "amex-biz-amazon",
       "card_name": "Amazon Business",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -67,7 +94,6 @@
       "rewards_cc_card_key": "amex-biz-amazonprime",
       "card_name": "Amazon Business Prime",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -75,7 +101,6 @@
       "rewards_cc_card_key": "charlesschwab-amexplat",
       "card_name": "American Express Platinum Card® for Schwab",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -83,7 +108,6 @@
       "rewards_cc_card_key": "amex-gold",
       "card_name": "American Express® Gold",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -91,7 +115,6 @@
       "rewards_cc_card_key": "amex-green",
       "card_name": "American Express® Green",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -99,7 +122,6 @@
       "rewards_cc_card_key": "amex-everyday",
       "card_name": "Amex EveryDay®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -107,7 +129,6 @@
       "rewards_cc_card_key": "amex-everydaypreferred",
       "card_name": "Amex EveryDay® Preferred",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -115,7 +136,6 @@
       "rewards_cc_card_key": "amex-zync",
       "card_name": "Amex Zync",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -123,7 +143,6 @@
       "rewards_cc_card_key": "amex-biz-bluebusinesscash",
       "card_name": "Blue Business Cash™",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -131,7 +150,6 @@
       "rewards_cc_card_key": "amex-biz-bluebusinessplus",
       "card_name": "Blue Business® Plus",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -139,7 +157,6 @@
       "rewards_cc_card_key": "amex-bluecasheveryday",
       "card_name": "Blue Cash Everyday®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -147,7 +164,6 @@
       "rewards_cc_card_key": "amex-bluecashpreferred",
       "card_name": "Blue Cash Preferred®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -155,7 +171,6 @@
       "rewards_cc_card_key": "amex-blue",
       "card_name": "Blue from American Express®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -163,7 +178,6 @@
       "rewards_cc_card_key": "amex-biz-gold",
       "card_name": "Business Gold",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -171,7 +185,6 @@
       "rewards_cc_card_key": "amex-biz-green",
       "card_name": "Business Green Rewards",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -179,7 +192,6 @@
       "rewards_cc_card_key": "amex-biz-platinum",
       "card_name": "Business Platinum®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -187,7 +199,6 @@
       "rewards_cc_card_key": "amex-centurion",
       "card_name": "Centurion® Card from American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -195,7 +206,6 @@
       "rewards_cc_card_key": "amex-deltablue",
       "card_name": "Delta SkyMiles® Blue American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -203,7 +213,6 @@
       "rewards_cc_card_key": "amex-deltagold",
       "card_name": "Delta SkyMiles® Gold American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -211,7 +220,6 @@
       "rewards_cc_card_key": "amex-biz-deltagold",
       "card_name": "Delta SkyMiles® Gold Business",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -219,7 +227,6 @@
       "rewards_cc_card_key": "amex-deltaplatinum",
       "card_name": "Delta SkyMiles® Platinum American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -227,7 +234,6 @@
       "rewards_cc_card_key": "amex-biz-deltaplatinum",
       "card_name": "Delta SkyMiles® Platinum Business",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -235,7 +241,6 @@
       "rewards_cc_card_key": "amex-deltareserve",
       "card_name": "Delta SkyMiles® Reserve American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -243,7 +248,6 @@
       "rewards_cc_card_key": "amex-biz-deltareserve",
       "card_name": "Delta SkyMiles® Reserve Business",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -251,7 +255,6 @@
       "rewards_cc_card_key": "amex-hilton",
       "card_name": "Hilton Honors",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -259,7 +262,6 @@
       "rewards_cc_card_key": "amex-hiltonaspire",
       "card_name": "Hilton Honors American Express Aspire",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -267,7 +269,6 @@
       "rewards_cc_card_key": "amex-hiltonsurpass",
       "card_name": "Hilton Honors American Express Surpass®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -275,7 +276,6 @@
       "rewards_cc_card_key": "amex-biz-hilton",
       "card_name": "Hilton Honors Business",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -283,7 +283,6 @@
       "rewards_cc_card_key": "amex-biz-lowes",
       "card_name": "Lowe's Business Rewards",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -291,7 +290,6 @@
       "rewards_cc_card_key": "amex-marriotbonvoyamex",
       "card_name": "Marriott Bonvoy American Express",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -299,7 +297,6 @@
       "rewards_cc_card_key": "amex-marriottbonvoybevy",
       "card_name": "Marriott Bonvoy Bevy™ American Express®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -307,7 +304,6 @@
       "rewards_cc_card_key": "amex-marriottbonvoybrilliant",
       "card_name": "Marriott Bonvoy Brilliant® American Express®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -315,7 +311,6 @@
       "rewards_cc_card_key": "amex-biz-marriottbonvoy",
       "card_name": "Marriott Bonvoy Business®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -323,7 +318,6 @@
       "rewards_cc_card_key": "amex-morganstanleybluecashpreferred",
       "card_name": "Morgan Stanley Blue Cash Preferred Card",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -331,7 +325,6 @@
       "rewards_cc_card_key": "amex-biz-corporateplatinum",
       "card_name": "The American Express Corporate Platinum Card®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -339,7 +332,6 @@
       "rewards_cc_card_key": "amex-biz-corporategold",
       "card_name": "The American Express® Corporate Gold Card",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -347,7 +339,6 @@
       "rewards_cc_card_key": "amex-biz-corporategreen",
       "card_name": "The American Express® Corporate Green Card",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -355,7 +346,6 @@
       "rewards_cc_card_key": "amex-biz-graphite",
       "card_name": "The American Express® Graphite™ Business Cash Unlimited",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -363,7 +353,6 @@
       "rewards_cc_card_key": "amex-morganstanleyplatinum",
       "card_name": "The Platinum Card from American Express Exclusively for Morgan Stanley",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -371,7 +360,6 @@
       "rewards_cc_card_key": "amex-platinum",
       "card_name": "The Platinum Card®",
       "issuer": "American Express",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -379,7 +367,6 @@
       "rewards_cc_card_key": "bmo-biz-platrewards",
       "card_name": "BMO Business Platinum Rewards",
       "issuer": "BMO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -387,7 +374,6 @@
       "rewards_cc_card_key": "bmo-cashback",
       "card_name": "BMO Cash Back Mastercard",
       "issuer": "BMO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -395,7 +381,6 @@
       "rewards_cc_card_key": "bmo-escape",
       "card_name": "BMO Escape",
       "issuer": "BMO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -403,7 +388,6 @@
       "rewards_cc_card_key": "bmo-platinumrewards",
       "card_name": "BMO Platinum Rewards Mastercard®",
       "issuer": "BMO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -411,7 +395,6 @@
       "rewards_cc_card_key": "bmo-premiumrewards",
       "card_name": "BMO Premium Rewards Mastercard®",
       "issuer": "BMO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -419,7 +402,6 @@
       "rewards_cc_card_key": "boa-aaa",
       "card_name": "AAA Member Rewards",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -427,7 +409,6 @@
       "rewards_cc_card_key": "boa-aaavisasignature",
       "card_name": "AAA Member Rewards Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -435,7 +416,6 @@
       "rewards_cc_card_key": "boa-amsacustomizedcash",
       "card_name": "AMSA Customized Cash Rewards Card",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -443,7 +423,6 @@
       "rewards_cc_card_key": "boa-airfranceklmworldelite",
       "card_name": "Air France KLM World Elite Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -451,7 +430,6 @@
       "rewards_cc_card_key": "boa-biz-alaska",
       "card_name": "Alaska Airlines Business",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -459,7 +437,6 @@
       "rewards_cc_card_key": "boa-alaska",
       "card_name": "Alaska Airlines Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -467,7 +444,6 @@
       "rewards_cc_card_key": "boa-allegiant",
       "card_name": "Allways Rewards Visa®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -475,7 +451,6 @@
       "rewards_cc_card_key": "boa-amtrakplatinum",
       "card_name": "Amtrak Guest Rewards® Platinum Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -483,7 +458,6 @@
       "rewards_cc_card_key": "boa-amtrakworld",
       "card_name": "Amtrak Guest Rewards® World Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -491,7 +465,6 @@
       "rewards_cc_card_key": "boa-asiana",
       "card_name": "Asiana Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -499,7 +472,6 @@
       "rewards_cc_card_key": "boa-alaskaatmosascent",
       "card_name": "Atmos Rewards™ Ascent Visa Signature",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -507,7 +479,6 @@
       "rewards_cc_card_key": "boa-alaskaatmossummit",
       "card_name": "Atmos™ Rewards Summit Visa Infinite®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -515,7 +486,6 @@
       "rewards_cc_card_key": "boa-biz-alaskaatmos",
       "card_name": "Atmos™ Rewards Visa® Business",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -523,7 +493,6 @@
       "rewards_cc_card_key": "boa-elitevisa",
       "card_name": "Bank of America Elite Visa Infinite",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -531,7 +500,6 @@
       "rewards_cc_card_key": "boa-customizedcashrewards",
       "card_name": "Bank of America® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -539,7 +507,6 @@
       "rewards_cc_card_key": "boa-customizedcashrewardssecured",
       "card_name": "Bank of America® Customized Cash Rewards Secured",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -547,7 +514,6 @@
       "rewards_cc_card_key": "boa-customizedcashrewardsstudents",
       "card_name": "Bank of America® Customized Cash Rewards for Students",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -555,7 +521,6 @@
       "rewards_cc_card_key": "boa-premiumrewards",
       "card_name": "Bank of America® Premium Rewards®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -563,7 +528,6 @@
       "rewards_cc_card_key": "boa-premiumrewardselite",
       "card_name": "Bank of America® Premium Rewards® Elite",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -571,7 +535,6 @@
       "rewards_cc_card_key": "boa-biz-customizedcashrewards",
       "card_name": "Business Advantage Customized Cash Rewards",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -579,7 +542,6 @@
       "rewards_cc_card_key": "boa-celecritycruises",
       "card_name": "Celebrity Cruises Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -587,7 +549,6 @@
       "rewards_cc_card_key": "boa-freespirit",
       "card_name": "Free Spirit® Travel More World Elite Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -595,7 +556,6 @@
       "rewards_cc_card_key": "boa-freespirittravelworld",
       "card_name": "Free Spirit® Travel World Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -603,7 +563,6 @@
       "rewards_cc_card_key": "boa-mln",
       "card_name": "MLB™",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -611,7 +570,6 @@
       "rewards_cc_card_key": "boa-nyuaacustomizedcash",
       "card_name": "NYUAA Customized Cash Rewards Credit Card",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -619,7 +577,6 @@
       "rewards_cc_card_key": "boa-norwegiancruiseline",
       "card_name": "Norwegian Cruise Line® World Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -627,7 +584,6 @@
       "rewards_cc_card_key": "boa-royalcarribean",
       "card_name": "Royal Caribbean Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -635,7 +591,6 @@
       "rewards_cc_card_key": "boa-royaloneplus",
       "card_name": "Royal ONE™ Plus Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -643,7 +598,6 @@
       "rewards_cc_card_key": "boa-royalone",
       "card_name": "Royal ONE™ Visa Signature®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -651,7 +605,6 @@
       "rewards_cc_card_key": "boa-sonesta",
       "card_name": "Sonesta World Mastercard®",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -659,7 +612,6 @@
       "rewards_cc_card_key": "boa-susankomen",
       "card_name": "Susan G. Komen® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -667,7 +619,6 @@
       "rewards_cc_card_key": "boa-uspridecustomized",
       "card_name": "U.S. Pride® Customized Cash Rewards",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -675,7 +626,6 @@
       "rewards_cc_card_key": "boa-worldwildlifefund",
       "card_name": "World Wildlife Fund",
       "issuer": "Bank of America",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -683,7 +633,6 @@
       "rewards_cc_card_key": "barclays-aviatormastercard",
       "card_name": "AAdvantage® Aviator® Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -691,7 +640,6 @@
       "rewards_cc_card_key": "barclays-aviatorred",
       "card_name": "AAdvantage® Aviator® Red World Elite Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -699,7 +647,6 @@
       "rewards_cc_card_key": "barclays-biz-aviatorworldelite",
       "card_name": "AAdvantage® Aviator® World Elite Business Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -707,7 +654,6 @@
       "rewards_cc_card_key": "barclays-athleta",
       "card_name": "Athleta Encore Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -715,7 +661,6 @@
       "rewards_cc_card_key": "barclays-bananarepublic",
       "card_name": "Banana Republic Encore Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -723,7 +668,6 @@
       "rewards_cc_card_key": "barclays-financing",
       "card_name": "Barclaycard Financing",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -731,7 +675,6 @@
       "rewards_cc_card_key": "barclays-rewards",
       "card_name": "Barclaycard Rewards",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -739,7 +682,6 @@
       "rewards_cc_card_key": "barclays-visaapplerewards",
       "card_name": "Barclaycard Visa® with Apple Rewards",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -747,7 +689,6 @@
       "rewards_cc_card_key": "barclays-viewmastercard",
       "card_name": "Barclays View™ Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -755,7 +696,6 @@
       "rewards_cc_card_key": "barclays-barnesnoble",
       "card_name": "Barnes & Noble Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -763,7 +703,6 @@
       "rewards_cc_card_key": "barclays-breeze",
       "card_name": "Breeze Easy™ Visa®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -771,7 +710,6 @@
       "rewards_cc_card_key": "barclays-capital",
       "card_name": "Capital Vacations® World Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -779,7 +717,6 @@
       "rewards_cc_card_key": "barclays-carnival",
       "card_name": "Carnival® World Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -787,7 +724,6 @@
       "rewards_cc_card_key": "barclays-choicepriviledges",
       "card_name": "Choice Privileges®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -795,7 +731,6 @@
       "rewards_cc_card_key": "barclays-diamondresorts",
       "card_name": "Diamond Resorts World",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -803,7 +738,6 @@
       "rewards_cc_card_key": "barclays-emiratesskywardspremium",
       "card_name": "Emirates Skywards Premium World Elite Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -811,7 +745,6 @@
       "rewards_cc_card_key": "barclays-emiratesskywards",
       "card_name": "Emirates Skywards Rewards World Elite Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -819,7 +752,6 @@
       "rewards_cc_card_key": "barclays-frontier",
       "card_name": "FRONTIER Airlines World Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -827,7 +759,6 @@
       "rewards_cc_card_key": "barclays-biz-gm",
       "card_name": "GM Business™ Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -835,7 +766,6 @@
       "rewards_cc_card_key": "barclays-gm",
       "card_name": "GM Rewards™ Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -843,7 +773,6 @@
       "rewards_cc_card_key": "barclays-gap",
       "card_name": "Gap Encore Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -851,7 +780,6 @@
       "rewards_cc_card_key": "barclays-biz-hawaiianairlines",
       "card_name": "Hawaiian Airlines® World Elite Business Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -859,7 +787,6 @@
       "rewards_cc_card_key": "barclays-hawaiianairlines",
       "card_name": "Hawaiian Airlines® World Elite Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -867,7 +794,6 @@
       "rewards_cc_card_key": "barclays-hollandamerica",
       "card_name": "Holland America Line Rewards Visa®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -875,7 +801,6 @@
       "rewards_cc_card_key": "barclays-jetblue",
       "card_name": "JetBlue",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -883,7 +808,6 @@
       "rewards_cc_card_key": "barclays-biz-jetblue",
       "card_name": "JetBlue Business",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -891,7 +815,6 @@
       "rewards_cc_card_key": "barclays-jetblueplus",
       "card_name": "JetBlue Plus",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -899,7 +822,6 @@
       "rewards_cc_card_key": "barclays-jetbluepremier",
       "card_name": "JetBlue Premier",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -907,7 +829,6 @@
       "rewards_cc_card_key": "barclays-mastercardblack",
       "card_name": "Mastercard® Black",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -915,7 +836,6 @@
       "rewards_cc_card_key": "barclays-mastercardtitanium",
       "card_name": "Mastercard® Titanium",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -923,7 +843,6 @@
       "rewards_cc_card_key": "barclays-milesmoreworldelite",
       "card_name": "Miles & More® World Elite Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -931,7 +850,6 @@
       "rewards_cc_card_key": "barclays-navyist",
       "card_name": "Old Navy Encore Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -939,7 +857,6 @@
       "rewards_cc_card_key": "barclays-pricelinerewards",
       "card_name": "Priceline Rewards™",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -947,7 +864,6 @@
       "rewards_cc_card_key": "barclays-pricelinevip",
       "card_name": "Priceline VIP Rewards™ Visa®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -955,7 +871,6 @@
       "rewards_cc_card_key": "barclays-princesscruises",
       "card_name": "Princess® Rewards Visa®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -963,7 +878,6 @@
       "rewards_cc_card_key": "barclays-rci",
       "card_name": "RCI® Elite Rewards® Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -971,7 +885,6 @@
       "rewards_cc_card_key": "barclays-aarpessential",
       "card_name": "The AARP® Essential Rewards Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -979,7 +892,6 @@
       "rewards_cc_card_key": "barclays-aarptravel",
       "card_name": "The AARP® Travel Rewards Mastercard®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -987,7 +899,6 @@
       "rewards_cc_card_key": "barclays-ubervisa",
       "card_name": "Uber Visa",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -995,7 +906,6 @@
       "rewards_cc_card_key": "barclays-wyndham",
       "card_name": "Wyndham Rewards Earner®",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1003,7 +913,6 @@
       "rewards_cc_card_key": "barclays-biz-wyndham",
       "card_name": "Wyndham Rewards Earner® Business",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1011,7 +920,6 @@
       "rewards_cc_card_key": "barclays-wyndhamplus",
       "card_name": "Wyndham Rewards Earner® Plus",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1019,7 +927,6 @@
       "rewards_cc_card_key": "barclays-wyndhamrewardsgold",
       "card_name": "Wyndham Rewards® Gold",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1027,7 +934,6 @@
       "rewards_cc_card_key": "barclays-wyndhamrewardsplatinum",
       "card_name": "Wyndham Rewards® Platinum",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1035,7 +941,6 @@
       "rewards_cc_card_key": "barclays-xbox",
       "card_name": "Xbox Mastercard",
       "issuer": "Barclays",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1043,7 +948,6 @@
       "rewards_cc_card_key": "capitalone-bjsoneplus",
       "card_name": "BJ’s One+™ Mastercard®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1051,7 +955,6 @@
       "rewards_cc_card_key": "capitalone-bjsone",
       "card_name": "BJ’s One™ Mastercard®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1059,7 +962,6 @@
       "rewards_cc_card_key": "capitalone-bassproshops",
       "card_name": "Bass Pro Shops® CLUB Card",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1067,7 +969,6 @@
       "rewards_cc_card_key": "capitalone-biz-buypower",
       "card_name": "BuyPower Business Card™",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1075,7 +976,6 @@
       "rewards_cc_card_key": "capitalone-buypower",
       "card_name": "BuyPower Card®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1083,7 +983,6 @@
       "rewards_cc_card_key": "capitalone-cabelas",
       "card_name": "Cabela’s CLUB® Card",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1091,7 +990,6 @@
       "rewards_cc_card_key": "capitalone-walmartrewards",
       "card_name": "Capital One Walmart Rewards® Mastercard®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1099,7 +997,6 @@
       "rewards_cc_card_key": "capitalone-kohls",
       "card_name": "Kohl's Rewards® Visa",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1107,7 +1004,6 @@
       "rewards_cc_card_key": "capitalone-menards",
       "card_name": "Menards® BIG Card",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1115,7 +1011,6 @@
       "rewards_cc_card_key": "capitalone-potterybarn",
       "card_name": "Pottery Barn Key Rewards Visa",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1123,7 +1018,6 @@
       "rewards_cc_card_key": "capitalone-quicksilverstudents",
       "card_name": "Quicksilver Rewards for Students",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1131,7 +1025,6 @@
       "rewards_cc_card_key": "capitalone-rei",
       "card_name": "REI Co-op® Mastercard®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1139,7 +1032,6 @@
       "rewards_cc_card_key": "capitalone-saksfirstworld",
       "card_name": "SaksFirst World Elite Mastercard®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1147,7 +1039,6 @@
       "rewards_cc_card_key": "capitalone-savorone",
       "card_name": "Savor Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1155,7 +1046,6 @@
       "rewards_cc_card_key": "capitalone-savoronegoodcredit",
       "card_name": "Savor Rewards for Good Credit",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1163,7 +1053,6 @@
       "rewards_cc_card_key": "capitalone-savoronestudents",
       "card_name": "Savor Rewards for Students",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1171,7 +1060,6 @@
       "rewards_cc_card_key": "capitalone-savor",
       "card_name": "SavorOne Dining Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1179,7 +1067,6 @@
       "rewards_cc_card_key": "capitalone-savoronerewards",
       "card_name": "SavorOne Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1187,7 +1074,6 @@
       "rewards_cc_card_key": "capitalone-biz-sparkmileselect",
       "card_name": "Spark 1.5X Miles Select",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1195,7 +1081,6 @@
       "rewards_cc_card_key": "capitalone-biz-sparkmiles",
       "card_name": "Spark 2X Miles",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1203,7 +1088,6 @@
       "rewards_cc_card_key": "capitalone-biz-sparkcash",
       "card_name": "Spark Cash",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1211,7 +1095,6 @@
       "rewards_cc_card_key": "capitalone-biz-sparkcashplus",
       "card_name": "Spark Cash Plus",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1219,7 +1102,6 @@
       "rewards_cc_card_key": "capitalone-tmobile",
       "card_name": "T-Mobile Visa®",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1227,7 +1109,6 @@
       "rewards_cc_card_key": "capitalone-keyrewards",
       "card_name": "The Key Rewards Visa",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1235,7 +1116,6 @@
       "rewards_cc_card_key": "capitalone-biz-venture",
       "card_name": "Venture Business",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1243,7 +1123,6 @@
       "rewards_cc_card_key": "capitalone-biz-ventureone",
       "card_name": "Venture One Business",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1251,7 +1130,6 @@
       "rewards_cc_card_key": "capitalone-venture",
       "card_name": "Venture Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1259,7 +1137,6 @@
       "rewards_cc_card_key": "capitalone-biz-venturex",
       "card_name": "Venture X Business",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1267,7 +1144,6 @@
       "rewards_cc_card_key": "capitalone-venturex",
       "card_name": "Venture X Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1275,7 +1151,6 @@
       "rewards_cc_card_key": "capitalone-ventureone",
       "card_name": "VentureOne Rewards",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1283,7 +1158,6 @@
       "rewards_cc_card_key": "capitalone-ventureonegoodcredit",
       "card_name": "VentureOne Rewards for Good Credit",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1291,7 +1165,6 @@
       "rewards_cc_card_key": "capitalone-westelm",
       "card_name": "West Elm Key Rewards Visa",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1299,7 +1172,6 @@
       "rewards_cc_card_key": "capitalone-williamssonoma",
       "card_name": "Williams Sonoma Key Rewards Visa",
       "issuer": "Capital One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1307,7 +1179,6 @@
       "rewards_cc_card_key": "chase-aarp",
       "card_name": "AARP®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1315,7 +1186,6 @@
       "rewards_cc_card_key": "chase-aeroplan",
       "card_name": "Aeroplan® Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1323,7 +1193,6 @@
       "rewards_cc_card_key": "chase-amazonrewardsvisasignature",
       "card_name": "Amazon Rewards Visa Signature",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1331,7 +1200,6 @@
       "rewards_cc_card_key": "chase-amazon",
       "card_name": "Amazon Visa",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1339,7 +1207,6 @@
       "rewards_cc_card_key": "chase-britishairways",
       "card_name": "British Airways Visa Signature® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1347,7 +1214,6 @@
       "rewards_cc_card_key": "chase-freedomflex",
       "card_name": "Chase Freedom Flex® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1355,7 +1221,6 @@
       "rewards_cc_card_key": "chase-freedomunlimited",
       "card_name": "Chase Freedom Unlimited® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1363,7 +1228,6 @@
       "rewards_cc_card_key": "chase-freedom",
       "card_name": "Chase Freedom®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1371,7 +1235,6 @@
       "rewards_cc_card_key": "chase-sapphire",
       "card_name": "Chase Sapphire",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1379,7 +1242,6 @@
       "rewards_cc_card_key": "chase-sapphirepreferred",
       "card_name": "Chase Sapphire Preferred® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1387,7 +1249,6 @@
       "rewards_cc_card_key": "chase-sapphirereserve",
       "card_name": "Chase Sapphire Reserve® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1395,7 +1256,6 @@
       "rewards_cc_card_key": "chase-slate",
       "card_name": "Chase Slate®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1403,7 +1263,6 @@
       "rewards_cc_card_key": "chase-disneyinspire",
       "card_name": "Disney® Inspire Visa® Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1411,7 +1270,6 @@
       "rewards_cc_card_key": "chase-disneypremier",
       "card_name": "Disney® Premier Visa® Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1419,7 +1277,6 @@
       "rewards_cc_card_key": "chase-doordash",
       "card_name": "DoorDash Rewards Mastercard®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1427,7 +1284,6 @@
       "rewards_cc_card_key": "chase-ihgpremier",
       "card_name": "IHG One Rewards Premier Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1435,7 +1291,6 @@
       "rewards_cc_card_key": "chase-ihgtraveler",
       "card_name": "IHG One Rewards Traveler Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1443,7 +1298,6 @@
       "rewards_cc_card_key": "chase-ihgrewardsclassic",
       "card_name": "IHG® Rewards Classic",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1451,7 +1305,6 @@
       "rewards_cc_card_key": "chase-ihgrewardsselect",
       "card_name": "IHG® Rewards Select",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1459,7 +1312,6 @@
       "rewards_cc_card_key": "chase-inkcash",
       "card_name": "Ink Business Cash® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1467,7 +1319,6 @@
       "rewards_cc_card_key": "chase-inkpreferred",
       "card_name": "Ink Business Preferred® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1475,7 +1326,6 @@
       "rewards_cc_card_key": "chase-inkpremier",
       "card_name": "Ink Business Premier® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1483,7 +1333,6 @@
       "rewards_cc_card_key": "chase-inkunlimited",
       "card_name": "Ink Business Unlimited® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1491,7 +1340,6 @@
       "rewards_cc_card_key": "chase-biz-inkplus",
       "card_name": "Ink Plus® Business",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1499,7 +1347,6 @@
       "rewards_cc_card_key": "chase-instacart",
       "card_name": "Instacart Mastercard®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1507,7 +1354,6 @@
       "rewards_cc_card_key": "chase-jpmorganreserve",
       "card_name": "J.P. Morgan Reserve®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1515,7 +1361,6 @@
       "rewards_cc_card_key": "chase-marriottbold",
       "card_name": "Marriott Bonvoy Bold® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1523,7 +1368,6 @@
       "rewards_cc_card_key": "chase-marriottboundless",
       "card_name": "Marriott Bonvoy Boundless® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1531,7 +1375,6 @@
       "rewards_cc_card_key": "chase-marriottbountiful",
       "card_name": "Marriott Bonvoy Bountiful® Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1539,7 +1382,6 @@
       "rewards_cc_card_key": "chase-marriottbonvoypremier",
       "card_name": "Marriott Bonvoy™ Premier",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1547,7 +1389,6 @@
       "rewards_cc_card_key": "chase-biz-marriottbonvoypremierplus",
       "card_name": "Marriott Bonvoy™ Premier Plus Business",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1555,7 +1396,6 @@
       "rewards_cc_card_key": "chase-militarystarrewardsmastercard",
       "card_name": "Military Star Rewards Mastercard",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1563,7 +1403,6 @@
       "rewards_cc_card_key": "chase-amazonprime",
       "card_name": "Prime Visa",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1571,7 +1410,6 @@
       "rewards_cc_card_key": "chase-biz-sapphirereserve",
       "card_name": "Sapphire Reserve for Business℠ Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1579,7 +1417,6 @@
       "rewards_cc_card_key": "chase-biz-southwestperformance",
       "card_name": "Southwest Rapid Rewards® Performance Business Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1587,7 +1424,6 @@
       "rewards_cc_card_key": "chase-southwestplus",
       "card_name": "Southwest Rapid Rewards® Plus Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1595,7 +1431,6 @@
       "rewards_cc_card_key": "chase-biz-southwestpremier",
       "card_name": "Southwest Rapid Rewards® Premier Business Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1603,7 +1438,6 @@
       "rewards_cc_card_key": "chase-southwestpremier",
       "card_name": "Southwest Rapid Rewards® Premier Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1611,7 +1445,6 @@
       "rewards_cc_card_key": "chase-southwestpriority",
       "card_name": "Southwest Rapid Rewards® Priority Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1619,7 +1452,6 @@
       "rewards_cc_card_key": "chase-starbucksrewardsvisa",
       "card_name": "Starbucks® Rewards Visa®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1627,7 +1459,6 @@
       "rewards_cc_card_key": "chase-ritzcarlton",
       "card_name": "The Ritz-Carlton™",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1635,7 +1466,6 @@
       "rewards_cc_card_key": "chase-unitedclub",
       "card_name": "United Club℠ (discontinued)",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1643,7 +1473,6 @@
       "rewards_cc_card_key": "chase-biz-unitedclubbusiness",
       "card_name": "United Club℠ Business Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1651,7 +1480,6 @@
       "rewards_cc_card_key": "chase-unitedclubinfinite",
       "card_name": "United Club℠ Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1659,7 +1487,6 @@
       "rewards_cc_card_key": "chase-unitedgateway",
       "card_name": "United Gateway℠ Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1667,7 +1494,6 @@
       "rewards_cc_card_key": "chase-unitedmileageplus",
       "card_name": "United MileagePlus®",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1675,7 +1501,6 @@
       "rewards_cc_card_key": "chase-unitedmileageplusselect",
       "card_name": "United MileagePlus® Select",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1683,7 +1508,6 @@
       "rewards_cc_card_key": "chase-unitedquest",
       "card_name": "United Quest℠ Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1691,7 +1515,6 @@
       "rewards_cc_card_key": "chase-biz-unitedbusiness",
       "card_name": "United℠ Business Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1699,7 +1522,6 @@
       "rewards_cc_card_key": "chase-unitedpresidentialplus",
       "card_name": "United℠  Presidential Plus℠ ",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1707,7 +1529,6 @@
       "rewards_cc_card_key": "chase-unitedexplorer",
       "card_name": "United℠ Explorer Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1715,7 +1536,6 @@
       "rewards_cc_card_key": "chase-hyatt",
       "card_name": "World of Hyatt Credit Card",
       "issuer": "Chase",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1723,7 +1543,6 @@
       "rewards_cc_card_key": "citi-att-access",
       "card_name": "AT&T Access",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1731,7 +1550,6 @@
       "rewards_cc_card_key": "citi-attpointsplus",
       "card_name": "AT&T Points Plus® Card From Citi",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1739,7 +1557,6 @@
       "rewards_cc_card_key": "citi-attuniversalplatinum",
       "card_name": "AT&T Universal Platinum",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1747,7 +1564,6 @@
       "rewards_cc_card_key": "citi-attuniversalrewards",
       "card_name": "AT&T Universal Rewards World Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1755,7 +1571,6 @@
       "rewards_cc_card_key": "citi-attuniversalsavingsplatinum",
       "card_name": "AT&T Universal Savings Platinum",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1763,7 +1578,6 @@
       "rewards_cc_card_key": "citi-attuniversalsavingsrewards",
       "card_name": "AT&T Universal Savings and Rewards",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1771,7 +1585,6 @@
       "rewards_cc_card_key": "citi-allmodern",
       "card_name": "AllModern Mastercard",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1779,7 +1592,6 @@
       "rewards_cc_card_key": "citi-aaadvantagemileup",
       "card_name": "American Airlines AAdvantage® MileUp® Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1787,7 +1599,6 @@
       "rewards_cc_card_key": "citi-bestbuy",
       "card_name": "Best Buy® Visa",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1795,7 +1606,6 @@
       "rewards_cc_card_key": "citi-birchlane",
       "card_name": "Birch Lane Mastercard",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1803,7 +1613,6 @@
       "rewards_cc_card_key": "citi-brooksbrothers",
       "card_name": "Brooks Brothers Platinum Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1811,7 +1620,6 @@
       "rewards_cc_card_key": "citi-customcash",
       "card_name": "Citi Custom Cash℠ ",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1819,7 +1627,6 @@
       "rewards_cc_card_key": "citi-dividend",
       "card_name": "Citi Dividend",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1827,7 +1634,6 @@
       "rewards_cc_card_key": "citi-doublecash",
       "card_name": "Citi Double Cash",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1835,7 +1641,6 @@
       "rewards_cc_card_key": "citi-forward",
       "card_name": "Citi Forward",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1843,7 +1648,6 @@
       "rewards_cc_card_key": "citi-prestige",
       "card_name": "Citi Prestige®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1851,7 +1655,6 @@
       "rewards_cc_card_key": "citi-rewardsplus",
       "card_name": "Citi Rewards+®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1859,7 +1662,6 @@
       "rewards_cc_card_key": "citi-rewardsplusstudent",
       "card_name": "Citi Rewards+℠  Student",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1867,7 +1669,6 @@
       "rewards_cc_card_key": "citi-simplicitycash",
       "card_name": "Citi Simplicity Cash",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1875,7 +1676,6 @@
       "rewards_cc_card_key": "citi-strata",
       "card_name": "Citi Strata",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1883,7 +1683,6 @@
       "rewards_cc_card_key": "citi-strataelite",
       "card_name": "Citi Strata Elite",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1891,7 +1690,6 @@
       "rewards_cc_card_key": "citi-premier",
       "card_name": "Citi Strata Premier®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -1899,7 +1697,6 @@
       "rewards_cc_card_key": "citi-thankyoupreferred",
       "card_name": "Citi ThankYou Preferred",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1907,7 +1704,6 @@
       "rewards_cc_card_key": "citi-aaadvantageexecutive",
       "card_name": "Citi® / AAdvantage® Executive World Elite Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1915,7 +1711,6 @@
       "rewards_cc_card_key": "citi-aaadvantageplatinum",
       "card_name": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1923,7 +1718,6 @@
       "rewards_cc_card_key": "citi-biz-aaadvantageplatinum",
       "card_name": "Citi® / Aadvantage Business™ World Elite Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1931,7 +1725,6 @@
       "rewards_cc_card_key": "citi-aaadvantageglobe",
       "card_name": "Citi® AAdvantage® Globe™ Card",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1939,7 +1732,6 @@
       "rewards_cc_card_key": "citi-procash",
       "card_name": "Citi® Professional℠  Cash",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1947,7 +1739,6 @@
       "rewards_cc_card_key": "citi-prothankyourewards",
       "card_name": "Citi® Professional℠  ThankYou® Rewards",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1955,7 +1746,6 @@
       "rewards_cc_card_key": "citi-costcoanywherevisa",
       "card_name": "Costco Anywhere Visa®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1963,7 +1753,6 @@
       "rewards_cc_card_key": "citi-biz-costcoanywherevisa",
       "card_name": "Costco Anywhere Visa® Business",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1971,7 +1760,6 @@
       "rewards_cc_card_key": "citi-dillardsmastercard",
       "card_name": "Dillard’s Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1979,7 +1767,6 @@
       "rewards_cc_card_key": "citi-driversedgeplatinumselect",
       "card_name": "Drivers Edge Platinum Select",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1987,7 +1774,6 @@
       "rewards_cc_card_key": "citi-expediarewards",
       "card_name": "Expedia® Rewards",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -1995,7 +1781,6 @@
       "rewards_cc_card_key": "citi-expediarewardsvoyager",
       "card_name": "Expedia® Rewards Voyager",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2003,7 +1788,6 @@
       "rewards_cc_card_key": "citi-jossmain",
       "card_name": "Joss & Main Mastercard",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2011,7 +1795,6 @@
       "rewards_cc_card_key": "citi-llbean",
       "card_name": "L.L.Bean Mastercard",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2019,7 +1802,6 @@
       "rewards_cc_card_key": "citi-macysamex",
       "card_name": "Macys American Express Card",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2027,7 +1809,6 @@
       "rewards_cc_card_key": "citi-premierpassexpedia",
       "card_name": "PremierPass Expedia",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2035,7 +1816,6 @@
       "rewards_cc_card_key": "citi-premierpassexpediaelite",
       "card_name": "PremierPass Expedia Elite",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2043,7 +1823,6 @@
       "rewards_cc_card_key": "citi-searsthankyou",
       "card_name": "Sears ThankYou",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2051,7 +1830,6 @@
       "rewards_cc_card_key": "citi-shellfuelrewards",
       "card_name": "Shell Fuel Rewards® Mastercard®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2059,7 +1837,6 @@
       "rewards_cc_card_key": "citi-shopyourway",
       "card_name": "Shop Your Way Mastercard",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2067,7 +1844,6 @@
       "rewards_cc_card_key": "citi-tsc",
       "card_name": "TSC Visa Card",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2075,7 +1851,6 @@
       "rewards_cc_card_key": "citi-wawa",
       "card_name": "Wawa®",
       "issuer": "Citi",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2083,7 +1858,6 @@
       "rewards_cc_card_key": "citizensbank-summitreserve",
       "card_name": "Citizens Summit Reserve™ World Elite Mastercard®",
       "issuer": "Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2091,7 +1865,6 @@
       "rewards_cc_card_key": "citizensbank-summit",
       "card_name": "Citizens Summit™ World Mastercard®",
       "issuer": "Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2099,7 +1872,6 @@
       "rewards_cc_card_key": "comenity-aaadaily",
       "card_name": "AAA Daily Advantage Visa Signature®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2107,7 +1879,6 @@
       "rewards_cc_card_key": "comenity-aaatravel",
       "card_name": "AAA Travel Advantage Visa Signature®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2115,7 +1886,6 @@
       "rewards_cc_card_key": "comenity-anntaylor",
       "card_name": "Ann Taylor",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2123,7 +1893,6 @@
       "rewards_cc_card_key": "comenity-anntaylormc",
       "card_name": "Ann Taylor Mastercard",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2131,7 +1900,6 @@
       "rewards_cc_card_key": "comenity-arhaus",
       "card_name": "Arhaus Archarge",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2139,7 +1907,6 @@
       "rewards_cc_card_key": "comenity-nflcardinals",
       "card_name": "Arizona Cardinals Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2147,7 +1914,6 @@
       "rewards_cc_card_key": "comenity-nflfalcons",
       "card_name": "Atlanta Falcons Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2155,7 +1921,6 @@
       "rewards_cc_card_key": "comenity-avenue",
       "card_name": "Avenue",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2163,7 +1928,6 @@
       "rewards_cc_card_key": "comenity-ballarddesigns",
       "card_name": "Ballard Designs",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2171,7 +1935,6 @@
       "rewards_cc_card_key": "comenity-nflravens",
       "card_name": "Baltimore Ravens Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2179,7 +1942,6 @@
       "rewards_cc_card_key": "comenity-biglots",
       "card_name": "Big Lots",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2187,7 +1949,6 @@
       "rewards_cc_card_key": "comenity-boscovs",
       "card_name": "Boscov's",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2195,7 +1956,6 @@
       "rewards_cc_card_key": "comenity-breadrewardsamex",
       "card_name": "Bread Rewards™ American Express®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2203,7 +1963,6 @@
       "rewards_cc_card_key": "comenity-brylane",
       "card_name": "BrylaneHome",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2211,7 +1970,6 @@
       "rewards_cc_card_key": "comenity-buckle",
       "card_name": "Buckle",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2219,7 +1977,6 @@
       "rewards_cc_card_key": "comenity-nflbills",
       "card_name": "Buffalo Bills Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2227,7 +1984,6 @@
       "rewards_cc_card_key": "comenity-burkes",
       "card_name": "Burkes Outlet",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2235,7 +1991,6 @@
       "rewards_cc_card_key": "comenity-burlington",
       "card_name": "Burlington",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2243,7 +1998,6 @@
       "rewards_cc_card_key": "comenity-caesarsrewardsprestige",
       "card_name": "Caesars Rewards Prestige Visa Signature®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2251,7 +2005,6 @@
       "rewards_cc_card_key": "comenity-caesarsrewards",
       "card_name": "Caesars Rewards Visa Signature®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2259,7 +2012,6 @@
       "rewards_cc_card_key": "comenity-nflpanthers",
       "card_name": "Carolina Panthers Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2267,7 +2019,6 @@
       "rewards_cc_card_key": "comenity-carters",
       "card_name": "Carter's®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2275,7 +2026,6 @@
       "rewards_cc_card_key": "comenity-catherines",
       "card_name": "Catherines",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2283,7 +2033,6 @@
       "rewards_cc_card_key": "comenity-nflbears",
       "card_name": "Chicago Bears Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2291,7 +2040,6 @@
       "rewards_cc_card_key": "comenity-nflbengals",
       "card_name": "Cincinnati Bengals Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2299,7 +2047,6 @@
       "rewards_cc_card_key": "comenity-nflbrowns",
       "card_name": "Cleveland Browns Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2307,7 +2054,6 @@
       "rewards_cc_card_key": "comenity-coasttocoast",
       "card_name": "Coast to Coast Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2315,7 +2061,6 @@
       "rewards_cc_card_key": "comenity-nflcowboys",
       "card_name": "Dallas Cowboys Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2323,7 +2068,6 @@
       "rewards_cc_card_key": "comenity-nflbroncos",
       "card_name": "Denver Broncos Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2331,7 +2075,6 @@
       "rewards_cc_card_key": "comenity-nfllions",
       "card_name": "Detroit Lions Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2339,7 +2082,6 @@
       "rewards_cc_card_key": "comenity-eddiebauer",
       "card_name": "Eddie Bauer",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2347,7 +2089,6 @@
       "rewards_cc_card_key": "comenity-express",
       "card_name": "Express",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2355,7 +2096,6 @@
       "rewards_cc_card_key": "comenity-famousfootwear",
       "card_name": "Famous Footwear® FAMOUSLY YOU REWARDS®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2363,7 +2103,6 @@
       "rewards_cc_card_key": "comenity-ftf",
       "card_name": "Fashion to Figure TRENDSETTER REWARDS",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2371,7 +2110,6 @@
       "rewards_cc_card_key": "comenity-forever21",
       "card_name": "Forever 21",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2379,7 +2117,6 @@
       "rewards_cc_card_key": "comenity-forever21visa",
       "card_name": "Forever 21 Visa",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2387,7 +2124,6 @@
       "rewards_cc_card_key": "comenity-frontgate",
       "card_name": "Frontgate",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2395,7 +2131,6 @@
       "rewards_cc_card_key": "comenity-gasbuddy",
       "card_name": "GasBuddy™ Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2403,7 +2138,6 @@
       "rewards_cc_card_key": "comenity-gsrewards",
       "card_name": "Good Sam Rewards",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2411,7 +2145,6 @@
       "rewards_cc_card_key": "comenity-gsvisa",
       "card_name": "Good Sam Rewards Visa",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2419,7 +2152,6 @@
       "rewards_cc_card_key": "comenity-grandinroad",
       "card_name": "Grandin Road",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2427,7 +2159,6 @@
       "rewards_cc_card_key": "comenity-nflpackers",
       "card_name": "Green Bay Packers Extra Points Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2435,7 +2166,6 @@
       "rewards_cc_card_key": "comenity-harley",
       "card_name": "Harley-Davidson® Experience",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2443,7 +2173,6 @@
       "rewards_cc_card_key": "comenity-nfltexans",
       "card_name": "Houston Texans Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2451,7 +2180,6 @@
       "rewards_cc_card_key": "comenity-houzz",
       "card_name": "Houzz",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2459,7 +2187,6 @@
       "rewards_cc_card_key": "comenity-houzzmc",
       "card_name": "Houzz Mastercard",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2467,7 +2194,6 @@
       "rewards_cc_card_key": "comenity-ikeavisa",
       "card_name": "IKEA® Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2475,7 +2201,6 @@
       "rewards_cc_card_key": "comenity-nflcolts",
       "card_name": "Indianapolis Colts Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2483,7 +2208,6 @@
       "rewards_cc_card_key": "comenity-iwmc",
       "card_name": "Interval World Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2491,7 +2215,6 @@
       "rewards_cc_card_key": "comenity-jcrew",
       "card_name": "J.Crew",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2499,7 +2222,6 @@
       "rewards_cc_card_key": "comenity-nfljaguars",
       "card_name": "Jacksonville Jaguars Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2507,7 +2229,6 @@
       "rewards_cc_card_key": "comenity-jl",
       "card_name": "Jessica London",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2515,7 +2236,6 @@
       "rewards_cc_card_key": "comenity-nflchiefs",
       "card_name": "Kansas City Chiefs Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2523,7 +2243,6 @@
       "rewards_cc_card_key": "comenity-kingize",
       "card_name": "KingSize",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2531,7 +2250,6 @@
       "rewards_cc_card_key": "comenity-loft",
       "card_name": "LOFT",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2539,7 +2257,6 @@
       "rewards_cc_card_key": "comenity-loftmc",
       "card_name": "LOFT Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2547,7 +2264,6 @@
       "rewards_cc_card_key": "comenity-landsend",
       "card_name": "Lands' End®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2555,7 +2271,6 @@
       "rewards_cc_card_key": "comenity-landsendvisa",
       "card_name": "Lands' End® Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2563,7 +2278,6 @@
       "rewards_cc_card_key": "comenity-lanebryant",
       "card_name": "Lane Bryant",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2571,7 +2285,6 @@
       "rewards_cc_card_key": "comenity-nflraiders",
       "card_name": "Las Vegas Raiders Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2579,7 +2292,6 @@
       "rewards_cc_card_key": "comenity-legendarypine",
       "card_name": "Legendary Pine Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2587,7 +2299,6 @@
       "rewards_cc_card_key": "comenity-lexusvisa",
       "card_name": "Lexus Pursuits Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2595,7 +2306,6 @@
       "rewards_cc_card_key": "comenity-nflchargers",
       "card_name": "Los Angeles Chargers Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2603,7 +2313,6 @@
       "rewards_cc_card_key": "comenity-nflrams",
       "card_name": "Los Angeles Rams Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2611,7 +2320,6 @@
       "rewards_cc_card_key": "comenity-nfldolphins",
       "card_name": "Miami Dolphins Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2619,7 +2327,6 @@
       "rewards_cc_card_key": "comenity-michaels",
       "card_name": "Michaels™",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2627,7 +2334,6 @@
       "rewards_cc_card_key": "comenity-nflvikings",
       "card_name": "Minnesota Vikings Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2635,7 +2341,6 @@
       "rewards_cc_card_key": "comenity-nflextrapoints",
       "card_name": "NFL Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2643,7 +2348,6 @@
       "rewards_cc_card_key": "comenity-nflpatriots",
       "card_name": "New England Patriots Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2651,7 +2355,6 @@
       "rewards_cc_card_key": "comenity-nflsaints",
       "card_name": "New Orleans Saints Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2659,7 +2362,6 @@
       "rewards_cc_card_key": "comenity-nyc",
       "card_name": "New York & Company RUNWAYREWARDS",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2667,7 +2369,6 @@
       "rewards_cc_card_key": "comenity-nflgiants",
       "card_name": "New York Giants Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2675,7 +2376,6 @@
       "rewards_cc_card_key": "comenity-nfljets",
       "card_name": "New York Jets Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2683,7 +2383,6 @@
       "rewards_cc_card_key": "comenity-yankees",
       "card_name": "New York Yankees Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2691,7 +2390,6 @@
       "rewards_cc_card_key": "comenity-penngaming",
       "card_name": "PENN Entertainment Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2699,7 +2397,6 @@
       "rewards_cc_card_key": "comenity-petco",
       "card_name": "Petco Pay",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2707,7 +2404,6 @@
       "rewards_cc_card_key": "comenity-petcomc",
       "card_name": "Petco Pay Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2715,7 +2411,6 @@
       "rewards_cc_card_key": "comenity-nfleagles",
       "card_name": "Philadelphia Eagles Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2723,7 +2418,6 @@
       "rewards_cc_card_key": "comenity-nflsteelers",
       "card_name": "Pittsburgh Steelers Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2731,7 +2425,6 @@
       "rewards_cc_card_key": "comenity-playstation",
       "card_name": "PlayStation® Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2739,7 +2432,6 @@
       "rewards_cc_card_key": "comenity-pointspower",
       "card_name": "Points Power Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2747,7 +2439,6 @@
       "rewards_cc_card_key": "comenity-roamans",
       "card_name": "Roaman's",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2755,7 +2446,6 @@
       "rewards_cc_card_key": "comenity-ross",
       "card_name": "Ross",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2763,7 +2453,6 @@
       "rewards_cc_card_key": "comenity-rossmastercard",
       "card_name": "Ross Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2771,7 +2460,6 @@
       "rewards_cc_card_key": "comenity-sallybeauty",
       "card_name": "Sally Beauty™ Rewards",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2779,7 +2467,6 @@
       "rewards_cc_card_key": "comenity-saloncentric",
       "card_name": "SalonCentric",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2787,7 +2474,6 @@
       "rewards_cc_card_key": "comenity-nfl49ers",
       "card_name": "San Francisco 49ers Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2795,7 +2481,6 @@
       "rewards_cc_card_key": "comenity-nflseahawks",
       "card_name": "Seattle Seahawks Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2803,7 +2488,6 @@
       "rewards_cc_card_key": "comenity-sephora",
       "card_name": "Sephora",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2811,7 +2495,6 @@
       "rewards_cc_card_key": "comenity-sephoravisa",
       "card_name": "Sephora Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2819,7 +2502,6 @@
       "rewards_cc_card_key": "comenity-sony",
       "card_name": "Sony Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2827,7 +2509,6 @@
       "rewards_cc_card_key": "comenity-swe",
       "card_name": "Sportsman's Warehouse Explorewards",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2835,7 +2516,6 @@
       "rewards_cc_card_key": "comenity-swev",
       "card_name": "Sportsman's Warehouse Explorewards Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2843,7 +2523,6 @@
       "rewards_cc_card_key": "comenity-talbots",
       "card_name": "Talbots",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2851,7 +2530,6 @@
       "rewards_cc_card_key": "comenity-nflbucs",
       "card_name": "Tampa Bay Buccaneers Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2859,7 +2537,6 @@
       "rewards_cc_card_key": "comenity-nfltitans",
       "card_name": "Tennessee Titans Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2867,7 +2544,6 @@
       "rewards_cc_card_key": "comenity-childrensplace",
       "card_name": "The Children's Place My Place Rewards",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2875,7 +2551,6 @@
       "rewards_cc_card_key": "comenity-toyotavisa",
       "card_name": "Toyota Rewards Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2883,7 +2558,6 @@
       "rewards_cc_card_key": "comenity-ultramate",
       "card_name": "Ultamate Rewards®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2891,7 +2565,6 @@
       "rewards_cc_card_key": "comenity-ultramatemc",
       "card_name": "Ultamate Rewards® Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2899,7 +2572,6 @@
       "rewards_cc_card_key": "comenity-venus",
       "card_name": "Venus",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2907,7 +2579,6 @@
       "rewards_cc_card_key": "comenity-vs",
       "card_name": "Victoria's Secret",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2915,7 +2586,6 @@
       "rewards_cc_card_key": "comenity-vsmc",
       "card_name": "Victoria's Secret Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2923,7 +2593,6 @@
       "rewards_cc_card_key": "comenity-nflcommanders",
       "card_name": "Washington Commanders Extra Points Visa®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2931,7 +2600,6 @@
       "rewards_cc_card_key": "comenity-womanwithin",
       "card_name": "Woman Within",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2939,7 +2607,6 @@
       "rewards_cc_card_key": "comenity-worldmarket",
       "card_name": "World Market",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2947,7 +2614,6 @@
       "rewards_cc_card_key": "comenity-wwvtmc",
       "card_name": "Worldwide Vacation & Travel Mastercard®",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2955,7 +2621,6 @@
       "rewards_cc_card_key": "comenity-fullbeauty",
       "card_name": "fullbeauty",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2963,7 +2628,6 @@
       "rewards_cc_card_key": "comenity-rue21",
       "card_name": "rue21 REWARDS",
       "issuer": "Comenity",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2971,7 +2635,6 @@
       "rewards_cc_card_key": "comericabank-biz-cashpreffered",
       "card_name": "Comerica Bank Visa® Business Cash Preferred",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2979,7 +2642,6 @@
       "rewards_cc_card_key": "comericabank-everyday",
       "card_name": "Comerica Bank Visa® Everyday Rewards+",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2987,7 +2649,6 @@
       "rewards_cc_card_key": "comericabank-maxcashpreferred",
       "card_name": "Comerica Bank Visa® Max Cash Preferred",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -2995,7 +2656,6 @@
       "rewards_cc_card_key": "comericabank-maxcashsecured",
       "card_name": "Comerica Bank Visa® Max Cash Secured",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3003,7 +2663,6 @@
       "rewards_cc_card_key": "comericabank-reserve",
       "card_name": "Comerica Bank Visa® Reserve Rewards+ Card",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3011,7 +2670,6 @@
       "rewards_cc_card_key": "comericabank-travel",
       "card_name": "Comerica Bank Visa® Travel Rewards+",
       "issuer": "Comerica Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3019,7 +2677,6 @@
       "rewards_cc_card_key": "creditone-bestfriends",
       "card_name": "Best Friends® Credit Card",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3027,7 +2684,6 @@
       "rewards_cc_card_key": "creditone-wander",
       "card_name": "Credit One Bank Wander®\r\nAmerican Express®",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3035,7 +2691,6 @@
       "rewards_cc_card_key": "creditone-platinumx5",
       "card_name": "Credit One Bank® Platinum\r\nX5 Visa Signature",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3043,7 +2698,6 @@
       "rewards_cc_card_key": "creditone-platinumrewards",
       "card_name": "Credit One Bank® Platinum Rewards Visa with No Annual Fee",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3051,7 +2705,6 @@
       "rewards_cc_card_key": "creditone-platinum",
       "card_name": "Credit One Bank® Platinum Visa",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3059,7 +2712,6 @@
       "rewards_cc_card_key": "creditone-platinumrebuilding",
       "card_name": "Credit One Bank® Platinum Visa For Rebuilding Credit",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3067,7 +2719,6 @@
       "rewards_cc_card_key": "creditone-platinume3",
       "card_name": "Credit One Platinum E3 Visa",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3075,7 +2726,6 @@
       "rewards_cc_card_key": "creditone-vegasgoldenknights",
       "card_name": "Vegas Golden Knights Credit Card",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3083,7 +2733,6 @@
       "rewards_cc_card_key": "creditone-wwe",
       "card_name": "WWE® Credit Card",
       "issuer": "Credit One",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3091,7 +2740,6 @@
       "rewards_cc_card_key": "discover-secured",
       "card_name": "Discover It® Secured",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3099,7 +2747,6 @@
       "rewards_cc_card_key": "discover-studentcashback",
       "card_name": "Discover It® Student Cash Back",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3107,7 +2754,6 @@
       "rewards_cc_card_key": "discover-studentchrome",
       "card_name": "Discover It® Student Chrome",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3115,7 +2761,6 @@
       "rewards_cc_card_key": "discover-cashback",
       "card_name": "Discover it® Cash Back",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -3123,7 +2768,6 @@
       "rewards_cc_card_key": "discover-chrome",
       "card_name": "Discover it® Chrome Gas & Restaurant",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3131,7 +2775,6 @@
       "rewards_cc_card_key": "discover-nhl",
       "card_name": "NHL® Discover It®",
       "issuer": "Discover",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3139,7 +2782,6 @@
       "rewards_cc_card_key": "fnbo-anausa",
       "card_name": "ANA CARD U.S.A. Plus",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3147,7 +2789,6 @@
       "rewards_cc_card_key": "fnbo-amtrakmc",
       "card_name": "Amtrak Guest Rewards® Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3155,7 +2796,6 @@
       "rewards_cc_card_key": "fnbo-amtrakpreferredmc",
       "card_name": "Amtrak Guest Rewards® Preferred Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3163,7 +2803,6 @@
       "rewards_cc_card_key": "fnbo-bpme",
       "card_name": "BPme Rewards Visa®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3171,7 +2810,6 @@
       "rewards_cc_card_key": "fnbo-bestwestern",
       "card_name": "Best Western Rewards® Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3179,7 +2817,6 @@
       "rewards_cc_card_key": "fnbo-bestwesternpremium",
       "card_name": "Best Western Rewards® Premium Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3187,7 +2824,6 @@
       "rewards_cc_card_key": "fnbo-traveliteamex",
       "card_name": "FNBO TravElite American Express®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3195,7 +2831,6 @@
       "rewards_cc_card_key": "fnbo-fordpass",
       "card_name": "FordPass Rewards™ Visa®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3203,7 +2838,6 @@
       "rewards_cc_card_key": "fnbo-getaway",
       "card_name": "Getaway by FNBO℠ ",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3211,7 +2845,6 @@
       "rewards_cc_card_key": "fnbo-icelandair",
       "card_name": "Icelandair Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3219,7 +2852,6 @@
       "rewards_cc_card_key": "fnbo-icelandairpremium",
       "card_name": "Icelandair Premium Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3227,7 +2859,6 @@
       "rewards_cc_card_key": "fnbo-mgmrewardsiconic",
       "card_name": "MGM Rewards Iconic World Elite Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3235,7 +2866,6 @@
       "rewards_cc_card_key": "fnbo-mgmrewards",
       "card_name": "MGM Rewards World Elite Mastercard®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3243,7 +2873,6 @@
       "rewards_cc_card_key": "fnbo-universalplusvisa",
       "card_name": "Universal Rewards Plus Visa Signature®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3251,7 +2880,6 @@
       "rewards_cc_card_key": "fnbo-universalvisa",
       "card_name": "Universal Rewards Visa Signature®",
       "issuer": "FNBO",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3259,7 +2887,6 @@
       "rewards_cc_card_key": "fifththirdbank-rewardsmc",
       "card_name": "Fifth Third Bank Rewards MasterCard®",
       "issuer": "Fifth Third Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3267,7 +2894,6 @@
       "rewards_cc_card_key": "fifththirdbank-trio",
       "card_name": "TRIO®",
       "issuer": "Fifth Third Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3275,7 +2901,6 @@
       "rewards_cc_card_key": "fifththirdbank-triopreferred",
       "card_name": "TRIO® Preferred",
       "issuer": "Fifth Third Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3283,7 +2908,6 @@
       "rewards_cc_card_key": "fcb-biz-cashrewards",
       "card_name": "First Citizens Bank Cash Rewards Business",
       "issuer": "First Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3291,7 +2915,6 @@
       "rewards_cc_card_key": "fcb-biz-premrewards",
       "card_name": "First Citizens Bank Premium Rewards Business",
       "issuer": "First Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3299,7 +2922,6 @@
       "rewards_cc_card_key": "fcb-rewards",
       "card_name": "First Citizens Bank Rewards ",
       "issuer": "First Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3307,7 +2929,6 @@
       "rewards_cc_card_key": "fcb-biz-rewards",
       "card_name": "First Citizens Bank Rewards Business",
       "issuer": "First Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3315,7 +2936,6 @@
       "rewards_cc_card_key": "fcb-travelrewards",
       "card_name": "First Citizens Bank Travel Rewards",
       "issuer": "First Citizens Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3323,7 +2943,6 @@
       "rewards_cc_card_key": "goldmansachs-applecard",
       "card_name": "Apple Card",
       "issuer": "Goldman Sachs",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -3331,7 +2950,6 @@
       "rewards_cc_card_key": "goldmansachs-biz-gmbusiness",
       "card_name": "GM Business Card™",
       "issuer": "Goldman Sachs",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3339,7 +2957,6 @@
       "rewards_cc_card_key": "goldmansachs-mygm",
       "card_name": "My GM Rewards Card™",
       "issuer": "Goldman Sachs",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3347,7 +2964,6 @@
       "rewards_cc_card_key": "hsbc-elite",
       "card_name": "HSBC Elite",
       "issuer": "HSBC",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3355,7 +2971,6 @@
       "rewards_cc_card_key": "hsbc-premier",
       "card_name": "HSBC Premier",
       "issuer": "HSBC",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3363,7 +2978,6 @@
       "rewards_cc_card_key": "huntington-biz-voice",
       "card_name": "Huntington Voice Business",
       "issuer": "Huntington",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3371,7 +2985,6 @@
       "rewards_cc_card_key": "huntington-voice",
       "card_name": "Huntington Voice Rewards",
       "issuer": "Huntington",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3379,7 +2992,6 @@
       "rewards_cc_card_key": "merrickbank-olloeveryday",
       "card_name": "Ollo Everyday Rewards Mastercard®",
       "issuer": "Merrick Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3387,7 +2999,6 @@
       "rewards_cc_card_key": "merrickbank-ollorewardspluseducators",
       "card_name": "Ollo Rewards+ for Educators Mastercard®",
       "issuer": "Merrick Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3395,7 +3006,6 @@
       "rewards_cc_card_key": "merrickbank-ollorewardsplusnurses",
       "card_name": "Ollo Rewards+ for Nurses Mastercard®",
       "issuer": "Merrick Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3403,7 +3013,6 @@
       "rewards_cc_card_key": "merrickbank-olloselect",
       "card_name": "Ollo Select Rewards Mastercard®",
       "issuer": "Merrick Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3411,7 +3020,6 @@
       "rewards_cc_card_key": "nfcu-gorewards",
       "card_name": "Navy Federal GO REWARDS®",
       "issuer": "Navy Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3419,7 +3027,6 @@
       "rewards_cc_card_key": "nfcu-morerewardsamex",
       "card_name": "Navy Federal More Rewards American Express®",
       "issuer": "Navy Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3427,7 +3034,6 @@
       "rewards_cc_card_key": "nfcu-flagshiprewards",
       "card_name": "Navy Federal Visa Signature® Flagship Rewards",
       "issuer": "Navy Federal Credit Union",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3435,7 +3041,6 @@
       "rewards_cc_card_key": "pnc-cashrewardsvisa",
       "card_name": "PNC Cash Rewards®",
       "issuer": "PNC",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3443,7 +3048,6 @@
       "rewards_cc_card_key": "pegasusbank-biz-cashpreffered",
       "card_name": "Pegasus Bank Visa® Business Cash Preferred",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3451,7 +3055,6 @@
       "rewards_cc_card_key": "pegasusbank-everyday",
       "card_name": "Pegasus Bank Visa® Everyday Rewards+",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3459,7 +3062,6 @@
       "rewards_cc_card_key": "pegasusbank-maxcashpreferred",
       "card_name": "Pegasus Bank Visa® Max Cash Preferred",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3467,7 +3069,6 @@
       "rewards_cc_card_key": "pegasusbank-maxcashsecured",
       "card_name": "Pegasus Bank Visa® Max Cash Secured",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3475,7 +3076,6 @@
       "rewards_cc_card_key": "pegasusbank-reserve",
       "card_name": "Pegasus Bank Visa® Reserve Rewards+ Card",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3483,7 +3083,6 @@
       "rewards_cc_card_key": "pegasusbank-travel",
       "card_name": "Pegasus Bank Visa® Travel Rewards+",
       "issuer": "Pegasus Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3491,7 +3090,6 @@
       "rewards_cc_card_key": "regions-prestigevisa",
       "card_name": "Regions Prestige Visa® Signature",
       "issuer": "Regions",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3499,7 +3097,6 @@
       "rewards_cc_card_key": "synchrony-amazonstore",
       "card_name": "Amazon Prime Store Card",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3507,7 +3104,6 @@
       "rewards_cc_card_key": "synchrony-belk",
       "card_name": "Belk Rewards",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3515,7 +3111,6 @@
       "rewards_cc_card_key": "synchrony-cathay",
       "card_name": "Cathay World Elite Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3523,7 +3118,6 @@
       "rewards_cc_card_key": "synchrony-jcp",
       "card_name": "JCPenney",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3531,7 +3125,6 @@
       "rewards_cc_card_key": "synchrony-lowes",
       "card_name": "MyLowe’s Rewards",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3539,7 +3132,6 @@
       "rewards_cc_card_key": "synchrony-paypalcashback",
       "card_name": "PayPal Cashback Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3547,7 +3139,6 @@
       "rewards_cc_card_key": "synchrony-paypalextras",
       "card_name": "PayPal Extras Mastercard",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3555,7 +3146,6 @@
       "rewards_cc_card_key": "synchrony-rakutencashback",
       "card_name": "Rakuten Cash Back",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3563,7 +3153,6 @@
       "rewards_cc_card_key": "synchrony-rakutebmr",
       "card_name": "Rakuten Membership Rewards",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3571,7 +3160,6 @@
       "rewards_cc_card_key": "synchrony-biz-samsclub",
       "card_name": "Sam's Club Business Mastercard",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3579,7 +3167,6 @@
       "rewards_cc_card_key": "synchrony-samsclub",
       "card_name": "Sam’s Club Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3587,7 +3174,6 @@
       "rewards_cc_card_key": "synchrony-samsclubworldeliteclub",
       "card_name": "Sam’s Club World Elite Mastercard® (Club members)",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3595,7 +3181,6 @@
       "rewards_cc_card_key": "synchrony-samsclubworldelite",
       "card_name": "Sam’s Club World Elite Mastercard® (Plus members)",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3603,7 +3188,6 @@
       "rewards_cc_card_key": "synchrony-samsclubworldmastercard",
       "card_name": "Sam’s Club World Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3611,7 +3195,6 @@
       "rewards_cc_card_key": "synchrony-venmo",
       "card_name": "Venmo",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3619,7 +3202,6 @@
       "rewards_cc_card_key": "synchrony-verizon",
       "card_name": "Verizon Visa",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3627,7 +3209,6 @@
       "rewards_cc_card_key": "synchrony-virginred",
       "card_name": "Virgin Red Rewards Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3635,7 +3216,6 @@
       "rewards_cc_card_key": "synchrony-walmartone",
       "card_name": "Walmart OnePay CashRewards",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3643,7 +3223,6 @@
       "rewards_cc_card_key": "synchrony-ebay",
       "card_name": "eBay Mastercard",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3651,7 +3230,6 @@
       "rewards_cc_card_key": "synchrony-mywallgreens",
       "card_name": "myWalgreens™ Mastercard®",
       "issuer": "Synchrony Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3659,7 +3237,6 @@
       "rewards_cc_card_key": "tdbank-nordstrom",
       "card_name": "Nordstrom Rewards",
       "issuer": "TD Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3667,7 +3244,6 @@
       "rewards_cc_card_key": "tdbank-cashcredit",
       "card_name": "TD Cash",
       "issuer": "TD Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3675,7 +3251,6 @@
       "rewards_cc_card_key": "tdbank-firstclass",
       "card_name": "TD First Class℠  Visa Signature®",
       "issuer": "TD Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3683,7 +3258,6 @@
       "rewards_cc_card_key": "tdbank-targetredcard",
       "card_name": "Target Circle™️ Credit Card",
       "issuer": "TD Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3691,7 +3265,6 @@
       "rewards_cc_card_key": "truist-biz-cashrewards",
       "card_name": "Truist Business Cash Rewards",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3699,7 +3272,6 @@
       "rewards_cc_card_key": "truist-biz-travelrewards",
       "card_name": "Truist Business Travel Rewards",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3707,7 +3279,6 @@
       "rewards_cc_card_key": "truist-enjoybeyond",
       "card_name": "Truist Enjoy Beyond",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3715,7 +3286,6 @@
       "rewards_cc_card_key": "truist-enjoycash321",
       "card_name": "Truist Enjoy Cash (3-2-1%)",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3723,7 +3293,6 @@
       "rewards_cc_card_key": "truist-enjoycashsecured",
       "card_name": "Truist Enjoy Cash Secured",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3731,7 +3300,6 @@
       "rewards_cc_card_key": "truist-enjoytravel",
       "card_name": "Truist Enjoy Travel",
       "issuer": "Truist",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3739,7 +3307,6 @@
       "rewards_cc_card_key": "usbank-dillions",
       "card_name": "Dillons REWARDS World Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3747,7 +3314,6 @@
       "rewards_cc_card_key": "usbank-biz-busisnessworld",
       "card_name": "Edward Jones® Everyday Solutions Business World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3755,7 +3321,6 @@
       "rewards_cc_card_key": "usbank-edwardjonesflex",
       "card_name": "Edward Jones® Everyday Solutions Flex Balance Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3763,7 +3328,6 @@
       "rewards_cc_card_key": "usbank-edwardjonestriple",
       "card_name": "Edward Jones® Everyday Solutions Triple Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3771,7 +3335,6 @@
       "rewards_cc_card_key": "usbank-fredmeyer",
       "card_name": "Fred Meyer Rewards® World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3779,7 +3342,6 @@
       "rewards_cc_card_key": "usbank-frys",
       "card_name": "Fry's REWARDS World Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3787,7 +3349,6 @@
       "rewards_cc_card_key": "usbank-hdhogelitevisasig",
       "card_name": "H-D™ H.O.G.™ Elite Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3795,7 +3356,6 @@
       "rewards_cc_card_key": "usbank-hdvisasig",
       "card_name": "H-D™ Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3803,7 +3363,6 @@
       "rewards_cc_card_key": "usbank-harristeeter",
       "card_name": "Harris Teeter Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3811,7 +3370,6 @@
       "rewards_cc_card_key": "usbank-kingsoopers",
       "card_name": "King Soopers Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3819,7 +3377,6 @@
       "rewards_cc_card_key": "usbank-kroger",
       "card_name": "Kroger Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3827,7 +3384,6 @@
       "rewards_cc_card_key": "usbank-latamvisasignature",
       "card_name": "LATAM Visa Signature",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3835,7 +3391,6 @@
       "rewards_cc_card_key": "usbank-picknsave",
       "card_name": "Pick 'n Save/Metro Market Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3843,7 +3398,6 @@
       "rewards_cc_card_key": "usbank-polaris",
       "card_name": "Polaris® Visa®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3851,7 +3405,6 @@
       "rewards_cc_card_key": "usbank-qfc",
       "card_name": "QFC Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3859,7 +3412,6 @@
       "rewards_cc_card_key": "usbank-quicken",
       "card_name": "Quicken® World Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3867,7 +3419,6 @@
       "rewards_cc_card_key": "usbank-biz-radisson",
       "card_name": "Radisson Rewards™ Business Visa®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3875,7 +3426,6 @@
       "rewards_cc_card_key": "usbank-radissonpremier",
       "card_name": "Radisson Rewards™ Premier Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3883,7 +3433,6 @@
       "rewards_cc_card_key": "usbank-radissonvisa",
       "card_name": "Radisson Rewards™ Visa®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3891,7 +3440,6 @@
       "rewards_cc_card_key": "usbank-ralphs",
       "card_name": "Ralphs Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3899,7 +3447,6 @@
       "rewards_cc_card_key": "usbank-skypassselect",
       "card_name": "SKYPASS Select Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3907,7 +3454,6 @@
       "rewards_cc_card_key": "usbank-skyblueskypass",
       "card_name": "SKYPASS SkyBlue Visa®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3915,7 +3461,6 @@
       "rewards_cc_card_key": "usbank-skypassvisa",
       "card_name": "SKYPASS Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3923,7 +3468,6 @@
       "rewards_cc_card_key": "usbank-biz-skypassvisa",
       "card_name": "SKYPASS Visa Signature® Business",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3931,7 +3475,6 @@
       "rewards_cc_card_key": "usbank-smiths",
       "card_name": "Smith's Rewards World Elite Mastercard®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3939,7 +3482,6 @@
       "rewards_cc_card_key": "usbank-biz-startfarmbizcashrewards",
       "card_name": "State Farm Business Cash Rewards Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3947,7 +3489,6 @@
       "rewards_cc_card_key": "usbank-startfarmpremier",
       "card_name": "State Farm Premier Cash Rewards Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3955,7 +3496,6 @@
       "rewards_cc_card_key": "usbank-altitudegosecuredvisa",
       "card_name": "U.S. Bank Altitude Go® Secured Visa® Signature",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3963,7 +3503,6 @@
       "rewards_cc_card_key": "usbank-altitudeconnect",
       "card_name": "U.S. Bank Altitude® Connect Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3971,7 +3510,6 @@
       "rewards_cc_card_key": "usbank-altitudego",
       "card_name": "U.S. Bank Altitude® Go Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3979,7 +3517,6 @@
       "rewards_cc_card_key": "usbank-infinite",
       "card_name": "U.S. Bank Altitude® Reserve Visa Infinite®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3987,7 +3524,6 @@
       "rewards_cc_card_key": "usbank-biz-altitudeconnect",
       "card_name": "U.S. Bank Business Altitude™ Connect Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -3995,7 +3531,6 @@
       "rewards_cc_card_key": "usbank-biz-altitudepower",
       "card_name": "U.S. Bank Business Altitude™ Power Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4003,7 +3538,6 @@
       "rewards_cc_card_key": "usbank-biz-cashrewards",
       "card_name": "U.S. Bank Business Cash Rewards",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4011,7 +3545,6 @@
       "rewards_cc_card_key": "usbank-biz-selectrewards",
       "card_name": "U.S. Bank Business Select Rewards",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4019,7 +3552,6 @@
       "rewards_cc_card_key": "usbank-cashplus",
       "card_name": "U.S. Bank Cash+® Visa Signature®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4027,7 +3559,6 @@
       "rewards_cc_card_key": "usbank-biz-flexperksbiztravel",
       "card_name": "U.S. Bank FlexPerks® Business Travel Rewards",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4035,7 +3566,6 @@
       "rewards_cc_card_key": "usbank-flexperksgoldamex",
       "card_name": "U.S. Bank FlexPerks® Gold American Express®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4043,7 +3573,6 @@
       "rewards_cc_card_key": "usbank-flexperksreserveamex",
       "card_name": "U.S. Bank FlexPerks® Reserve American Express®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4051,7 +3580,6 @@
       "rewards_cc_card_key": "usbank-flexperksselectplus",
       "card_name": "U.S. Bank FlexPerks® Select+ American Express®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4059,7 +3587,6 @@
       "rewards_cc_card_key": "usbank-flexperkstravelrewards",
       "card_name": "U.S. Bank FlexPerks® Travel Rewards American Express®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4067,7 +3594,6 @@
       "rewards_cc_card_key": "usbank-perksplusvisa",
       "card_name": "U.S. Bank Perks+ Visa®",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4075,7 +3601,6 @@
       "rewards_cc_card_key": "usbank-shieldvisa",
       "card_name": "U.S. Bank Shield Visa",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4083,7 +3608,6 @@
       "rewards_cc_card_key": "usbank-biz-triplecash",
       "card_name": "U.S. Bank Triple Cash Rewards Visa® Business",
       "issuer": "U.S. Bank",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4091,7 +3615,6 @@
       "rewards_cc_card_key": "usaa-cashbackrewardsplusamex",
       "card_name": "USAA Cashback Rewards Plus American Express®",
       "issuer": "USAA",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4099,7 +3622,6 @@
       "rewards_cc_card_key": "usaa-eaglenavigator",
       "card_name": "USAA Eagle Navigator™ Visa Signature®",
       "issuer": "USAA",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4107,7 +3629,6 @@
       "rewards_cc_card_key": "usaa-militaryaffiliateamex",
       "card_name": "USAA Military Affiliate American Express",
       "issuer": "USAA",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4115,7 +3636,6 @@
       "rewards_cc_card_key": "usaa-rewardsamex",
       "card_name": "USAA Rewards™ American Express®",
       "issuer": "USAA",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4123,7 +3643,6 @@
       "rewards_cc_card_key": "usaa-rewardsvisa",
       "card_name": "USAA Rewards™ Visa Signature®",
       "issuer": "USAA",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4131,7 +3650,6 @@
       "rewards_cc_card_key": "wellsfargo-bilt",
       "card_name": "Bilt Mastercard®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4139,7 +3657,6 @@
       "rewards_cc_card_key": "wellsfargo-choiceprivmc",
       "card_name": "Choice Privileges® Mastercard®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4147,7 +3664,6 @@
       "rewards_cc_card_key": "wellsfargo-choiceprivselectmc",
       "card_name": "Choice Privileges® Select Mastercard®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4155,7 +3671,6 @@
       "rewards_cc_card_key": "wellsfargo-onekey",
       "card_name": "One Key",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4163,7 +3678,6 @@
       "rewards_cc_card_key": "wellsfargo-onekeyplus",
       "card_name": "One Key+",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4171,7 +3685,6 @@
       "rewards_cc_card_key": "wellsfargo-activecash",
       "card_name": "Wells Fargo Active Cash",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -4179,7 +3692,6 @@
       "rewards_cc_card_key": "wellsfargo-advisors",
       "card_name": "Wells Fargo Advisors By Invitation Visa Signature®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4187,7 +3699,6 @@
       "rewards_cc_card_key": "wellsfargo-attune",
       "card_name": "Wells Fargo Attune",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4195,7 +3706,6 @@
       "rewards_cc_card_key": "wellsfargo-autographjourney",
       "card_name": "Wells Fargo Autograph Journey",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4203,7 +3713,6 @@
       "rewards_cc_card_key": "wellsfargo-autograph",
       "card_name": "Wells Fargo Autograph℠ ",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": true
     },
     {
@@ -4211,7 +3720,6 @@
       "rewards_cc_card_key": "wellsfargo-microcenter",
       "card_name": "Wells Fargo Micro Center Insider®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     },
     {
@@ -4219,7 +3727,6 @@
       "rewards_cc_card_key": "wellsfargo-propelamex",
       "card_name": "Wells Fargo Propel American Express®",
       "issuer": "Wells Fargo",
-      "image_url": "",
       "in_registry": false
     }
   ],

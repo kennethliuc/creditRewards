@@ -1,0 +1,68 @@
+[
+  {
+    "cardKey": "barclays-hollandamerica",
+    "cardIssuer": "Barclays",
+    "cardName": "Holland America Line Rewards Visa®",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Holland America Line",
+    "baseSpendEarnCategory": "Cruise",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Concierge Services",
+        "benefitDesc": "Concierge service provides personal assistance via telephone, including recommendations and reservations for dining, travel, hotels, entertainment, and sporting events",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Holland America",
+        "spendBonusCategoryName": "Holland America",
+        "spendBonusCategoryId": 460028077,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Cruise",
+        "spendBonusDesc": "Earn 2 points per $1 spent on all Holland America purchases, including onboard purchases",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

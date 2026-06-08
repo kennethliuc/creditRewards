@@ -6,7 +6,7 @@
 
 **Last updated:** 2026-06-07
 
-**Re-verify:** `credit-rewards-db payment-ui-monitor-run`
+**Re-verify:** `paycue-db payment-ui-monitor-run`
 
 **Requirements:** [`payment-ui-requirements.md`](payment-ui-requirements.md)
 

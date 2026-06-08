@@ -19,7 +19,7 @@ from tests.twenty_cards_fixtures import (
 
 pytestmark = pytest.mark.skipif(
     not reference_files_ready(),
-    reason="Run: credit-rewards-db sync-reference",
+    reason="Run: paycue-db sync-reference",
 )
 
 

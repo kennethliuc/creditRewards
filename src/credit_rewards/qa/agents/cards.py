@@ -75,7 +75,7 @@ class CardsAgent(BaseQAAgent):
         issuer_img_ok = 0
         issuer_fail: list[str] = []
         for q in issuer_list:
-            res = ctx.client.get(url(ctx, "/api/cards/by-issuer"), params={"q": q, "limit": 40})
+            res = ctx.client.get(url(ctx, "/api/cards/by-issuer"), params={"q": q})
             if res.status_code != 200:
                 issuer_fail.append(q)
                 continue

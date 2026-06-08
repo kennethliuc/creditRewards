@@ -9,7 +9,7 @@ from tests.twenty_cards_fixtures import reference_files_ready, twenty_card_db
 
 pytestmark = pytest.mark.skipif(
     not reference_files_ready(),
-    reason="Run: credit-rewards-db sync-reference && import-reference",
+    reason="Run: paycue-db sync-reference && import-reference",
 )
 
 
@@ -23,6 +23,9 @@ def test_assemble_chase_starbucks_from_category_snapshots():
     names = {r["spendBonusCategoryName"] for r in detail["spendBonusCategory"]}
     assert "Grocery Stores" in names
     assert "Transit" in names
+    assert "Starbucks" in names
+    starbucks_rule = next(r for r in detail["spendBonusCategory"] if r["spendBonusCategoryName"] == "Starbucks")
+    assert starbucks_rule["earnMultiplier"] == 3.0
 
 
 def test_ensure_starbucks_card_in_db(twenty_card_db, monkeypatch):

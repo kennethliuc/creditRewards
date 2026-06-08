@@ -1,0 +1,128 @@
+[
+  {
+    "cardKey": "barclays-mastercardtitanium",
+    "cardIssuer": "Barclays",
+    "cardName": "Mastercard® Titanium",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.luxurycard.com/titaniumcard",
+    "annualFee": 299,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Barclays Luxury Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 299,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "VIP Priority Pass™ Select Airport Lounge Access",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "1% Value for Cash Back Redemptions",
+        "benefitDesc": "Cash back can be deposited directly into a US bank account or applied as a statement credit. No minimum threshold requirement for cash back redemptions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "2% Value for Airfare Redemptions",
+        "benefitDesc": "Earn $1,000 toward airfare when you acquire 50,000 points—with no titaniumout dates or seat restrictions.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "2X Earn on Airfare and Hotel",
+        "benefitDesc": "Earn double the points when you book your airfare or hotel through LuxuryCardTravel.com.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Baggage Delay Insurance",
+        "benefitDesc": "Baggage delays are an inconvenience. You may be eligible for reimbursement of covered items for up to $100 a day (maximum 3 qualifying days) for qualifying baggage delays of more than 4 hours from the time you arrive at your travel destination (arrival at your primary residence is excluded).",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Cellular Phone Protection",
+        "benefitDesc": "Simply pay for your monthly mobile phone bill with your Luxury Card to activate coverage for eligible damage or theft claims. Your Luxury Card comes with coverage that can reimburse the actual cost to repair or replace your phone if it is damaged or stolen.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "MasterRental Coverage",
+        "benefitDesc": "Provides secondary coverage for covered damages to an eligible rental vehicle when you pay for the entire rental transaction using your card and decline the coverage offered by the rental agency.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Priceless Golf®",
+        "benefitDesc": "Unlock access to over 1,000 luxurious private country clubs across North America. Play at one of the dozens of TPC courses near you. Schedule a tee-time at the World Famous Pebble Beach Resort. Visit priceless.com for details.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Receive up to $250,000 coverage for eligible common carrier accidental death & dismemberment, at no additional cost, when you charge your entire travel fare to your eligible card for a covered trip.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Cancellation / Trip Interruption",
+        "benefitDesc": "Provides secondary coverage for a covered, roundtrip purchase when you use your eligible card. You can be reimbursed for the cost of the non-refundable, roundtrip expenses up to $5,000 per insured person if certain accidental covered events cause you to cancel or interrupt your trip for a covered reason.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "VIP Priority Pass™ Select Airport Lounge Access",
+        "benefitDesc": "With your Luxury Card, enjoy complimentary access to over 1,700 airport lounges and travel experiences in more than 600 cities across 145 countries with Priority Pass Select. Access includes unlimited visits for yourself as well as your guests.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Airfare (LuxuryCardTravel.com)",
+        "spendBonusCategoryName": "Airfare (LuxuryCardTravel.com)",
+        "spendBonusCategoryId": 1504561470,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Airfare (LuxuryCardTravel.com)",
+        "spendBonusDesc": "Earn double the points when you book your airfare through LuxuryCardTravel.com.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels (LuxuryCardTravel.com)",
+        "spendBonusCategoryName": "Hotels (LuxuryCardTravel.com)",
+        "spendBonusCategoryId": 1900989179,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel (LuxuryCardTravel.com)",
+        "spendBonusDesc": "Earn double the points when you book your hotel through LuxuryCardTravel.com.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

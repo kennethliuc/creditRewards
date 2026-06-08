@@ -1,4 +1,4 @@
-# CreditRewards — Idea
+# PayCue — Idea
 
 ## Problem
 

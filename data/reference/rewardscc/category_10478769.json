@@ -1,0 +1,20 @@
+[
+  {
+    "cardKey": "chase-hyatt",
+    "cardName": "World of Hyatt Credit Card",
+    "cardIssuer": "Chase",
+    "cardNetwork": "Visa",
+    "categoryType": "Single Category - Hyatt",
+    "spendBonusCategoryName": "Hyatt",
+    "spendBonusCategoryId": 10478769,
+    "spendBonusDesc": "Up to 9 total Points per $1 - 4 Bonus Points per $1 spent on purchases at all Hyatt hotel. Plus, 5 Base Points from Hyatt per eligible $1 spent for being a World of Hyatt member.",
+    "earnMultiplier": 9.0,
+    "spendType": "World of Hyatt Loyalty Program",
+    "isDateLimit": 0,
+    "limitBeginDate": "",
+    "limitEndDate": "",
+    "isSpendLimit": 0,
+    "spendLimit": 0,
+    "spendLimitResetPeriod": ""
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "cardKey": "wellsfargo-microcenter",
+    "cardIssuer": "Wells Fargo",
+    "cardName": "Wells Fargo Micro Center Insider®",
+    "cardNetwork": "Store Card",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.microcenter.com/site/content/mcinsidercard.aspx",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "",
+    "baseSpendEarnCategory": "",
+    "baseSpendEarnCurrency": "",
+    "baseSpendEarnValuation": 0.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "12 months special financing",
+        "benefitDesc": "With credit approval, use your Micro Center Insider® credit card for special financing for 12 months. Minimum purchase of $499 required. Offer valid only on select products. See store for details.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "36 months 0% APR",
+        "benefitDesc": "With credit approval, use your Micro Center Insider® credit card for 36 months with 0% APR. 36 equal monthly payments required. Offer valid only on select products. See store for details.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "5% off† on purchases every day",
+        "benefitDesc": "With credit approval, use your Micro Center Insider® credit card for 5% off your purchase every day. Offer cannot be combined with special financing. See store for details.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "6 months special financing",
+        "benefitDesc": "With credit approval, use your Micro Center Insider® credit card for special financing for 6 months. Minimum purchase of $240 required. See store for details.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Micro Center",
+        "spendBonusCategoryName": "Micro Center",
+        "spendBonusCategoryId": 376297687,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Electronics",
+        "spendBonusDesc": "With credit approval, use your Micro Center Insider® credit card for 5% off your purchase every day.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

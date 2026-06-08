@@ -13,7 +13,7 @@ from urllib.parse import quote
 import httpx
 
 from credit_rewards.card_catalog import resolve_wallet_card_key
-from credit_rewards.client import CardDataClient, RewardsCCError
+from credit_rewards.client import CardDataClient, RewardsCCError, upstream_api_enabled
 from credit_rewards.paths import data_dir
 
 IMAGE_CACHE_PATH = data_dir() / "card_image_cache.json"
@@ -140,8 +140,8 @@ def _remote_image_url(
         _save_cache(cached)
         return existing
 
-    api = client or CardDataClient(use_local=False)
-    if not api.is_configured:
+    api = client or CardDataClient(use_upstream=True)
+    if not upstream_api_enabled() or not api.is_configured:
         return ""
 
     rc_key = str(resolved["rewards_cc_card_key"])
@@ -185,13 +185,12 @@ def fetch_card_image_urls(
     *,
     client: CardDataClient | None = None,
 ) -> dict[str, str]:
-    api = client or CardDataClient(use_local=False)
     out: dict[str, str] = {}
     for key in card_keys:
         k = key.strip()
         if not k:
             continue
-        out[k] = fetch_card_image_url(k, client=api)
+        out[k] = fetch_card_image_url(k, client=client)
     return out
 
 
@@ -208,7 +207,9 @@ def warm_card_images(
     sleep_seconds: float = 0.05,
 ) -> dict[str, str]:
     """Download missing images for the given card keys."""
-    api = client or CardDataClient(use_local=False)
+    if not upstream_api_enabled():
+        return {}
+    api = client or CardDataClient(use_upstream=True)
     out: dict[str, str] = {}
     for key in card_keys:
         k = key.strip()

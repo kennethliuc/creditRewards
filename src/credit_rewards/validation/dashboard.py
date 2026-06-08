@@ -111,7 +111,7 @@ def _summarize_external(*, reports_dir: Path | None = None) -> dict[str, Any]:
             "cross_verified_pct": 0.0,
             "gate_pct": 90.0,
             "scraped_count": 0,
-            "blockers": ["Run: credit-rewards-db validation-external"],
+            "blockers": ["Run: paycue-db validation-external"],
             "report_path": None,
         }
     data = json.loads(files[0].read_text())
@@ -325,7 +325,7 @@ def build_validation_dashboard(
         independent_blockers.append("MCC: expand visa_mcc_categories.yaml")
     if not external.get("ok"):
         if external.get("status") == "pending":
-            independent_blockers.append("External: run credit-rewards-db validation-external")
+            independent_blockers.append("External: run paycue-db validation-external")
         else:
             independent_blockers.extend(external.get("blockers") or ["External cross-verify failed"])
     if not mcc_gap.get("ok"):

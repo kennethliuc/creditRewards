@@ -4,7 +4,7 @@
 
 **Last updated:** 2026-06-07
 
-**Re-verify:** `credit-rewards-db validation-monitor-run`
+**Re-verify:** `paycue-db validation-monitor-run`
 
 ---
 

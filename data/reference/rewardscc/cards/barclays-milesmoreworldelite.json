@@ -1,0 +1,168 @@
+[
+  {
+    "cardKey": "barclays-milesmoreworldelite",
+    "cardIssuer": "Barclays",
+    "cardName": "Miles & More® World Elite Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Elite Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard/",
+    "annualFee": 89,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Miles & More",
+    "baseSpendEarnCategory": "Airline",
+    "baseSpendEarnCurrency": "miles",
+    "baseSpendEarnValuation": 1.3,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "60000",
+    "signupBonusType": "Miles & More",
+    "signupBonusCategory": "Airline",
+    "signUpBonusItem": "miles",
+    "signupBonusSpend": 3000,
+    "signupBonusLength": 90,
+    "signupBonusLengthPeriod": "Days",
+    "signupAnnualFee": 89,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 60,000 miles if you spend $3,000 in purchases and pay the annual fee in full, both within the first 90 days.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "Lounge access - Receive two complimentary Lufthansa Business Lounge Vouchers after each account anniversary",
+    "isLoungeAccess": 1,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Achieve Miles & More status faster",
+        "benefitDesc": "Convert award miles earned on purchases into status miles. Once each calendar year, you can convert 5,000 to 25,000 award miles at a 5 to 1 ratio. For example, 5,000 award miles convert to 1,000 status miles.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Earn 50,000 award miles",
+        "benefitDesc": "Earn 50,000 award miles if you spend $3,000 in purchases and pay the annual fee, both within the first 90 days.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enroll in HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Lounge access",
+        "benefitDesc": "Receive two complimentary Lufthansa Business Lounge Vouchers after each account anniversary.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Low Introductory APR",
+        "benefitDesc": "0% introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 20.49%, 24.49% or 29.49%, based on your creditworthiness. There is a fee for balance transfers.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lyft",
+        "benefitDesc": "More rides means more adventure. Take three rides in a month with Lyft to earn a $5 credit.3* Plus, save 10% on all scheduled rides to or from U.S. airports when you pay with your World Elite or World Legend Mastercard. Offer expires 1/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to premium preferred seats and ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "No foreign transaction fees",
+        "benefitDesc": "on international purchases.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Peacock",
+        "benefitDesc": "Get $3 off Peacock Premium or Peacock Premium Plus each month when you use your World Elite or World Legend Mastercard to subscribe. Watch new movies from theaters, buzzworthy original series, hit TV shows, live sports and so much more. Eligibility restrictions, exclusions and terms apply. Offer expires 12/31/2027.1",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priority Pass",
+        "benefitDesc": "Get access to 1,700+ airport lounges worldwide and special offers and discounts in the terminal on dining, retail and spa experiences.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Receive a Companion Ticket",
+        "benefitDesc": "after each account anniversary (taxes and fees apply).",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Redeem miles",
+        "benefitDesc": "You can redeem miles for flight awards and upgrades on Lufthansa, Austrian Airlines, Brussels Airlines, SWISS, Star Alliance Airlines and other partners.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "World Elite Concierge",
+        "benefitDesc": "Complimentary 24/7 concierge agent for lifestyle needs, travel bookings and event access.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Lufthansa",
+        "spendBonusCategoryName": "Lufthansa",
+        "spendBonusCategoryId": 1181912803,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Airfare",
+        "spendBonusDesc": "Earn 2 award miles per $1 spent on Miles & More ticket purchases",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

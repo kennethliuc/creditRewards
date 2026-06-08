@@ -6,7 +6,7 @@ from credit_rewards.ingest.reference_validate import validate_card_against_refer
 
 @pytest.mark.skipif(
     not (REFERENCE_DIR / "manifest.json").exists(),
-    reason="Run credit-rewards-db sync-reference after setting REWARDS_CC_API_KEY",
+    reason="Run paycue-db sync-reference after setting REWARDS_CC_API_KEY",
 )
 @pytest.mark.xfail(
     reason="Scraper vs Rewards CC reference — run validate-reference to track gaps",

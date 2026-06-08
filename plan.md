@@ -1,10 +1,10 @@
-# CreditRewards — Plan
+# PayCue — Plan
 
 ## Architecture overview
 
 ```
 ┌─────────────────┐     ┌──────────────────────┐     ┌─────────────────────┐
-│  Mobile app     │────▶│  CreditRewards API   │────▶│  Rewards CC API     │
+│  Mobile app     │────▶│  PayCue API   │────▶│  Rewards CC API     │
 │  (later)        │     │  (our layer)         │     │  (upstream data)    │
 └─────────────────┘     └──────────┬───────────┘     └─────────────────────┘
                                    │
@@ -82,13 +82,13 @@ UserWallet
 **Progress:** **20 / 20** in `data/card_registry.yaml`.
 
 - [x] Own CardData API (Rewards CC–compatible paths) — `src/credit_rewards/card_api/`
-- [x] SQLite store + seed loader — `data/seed/cards/`, `credit-rewards-db seed`
-- [x] Scraper stub (issuer page fetch) — `credit-rewards-db scrape`
+- [x] SQLite store + seed loader — `data/seed/cards/`, `paycue-db seed`
+- [x] Scraper stub (issuer page fetch) — `paycue-db scrape`
 - [x] Typed HTTP client (local or RapidAPI fallback) — `CardDataClient`
 - [x] Normalizer: API JSON → `Card` + `EarnRule[]`
 - [x] Wallet service: given `cardKeys[]`, return merged rules
 - [x] Category resolver v0: user picks category → `spendBonusCategoryId`
-- [x] Rewards CC reference sync (registry scope only) — `credit-rewards-db sync-reference`
+- [x] Rewards CC reference sync (registry scope only) — `paycue-db sync-reference`
 - [x] Expand registry to 20 cards (Wave A → B → C per phase1 doc)
 - [x] Issuer parsers: `capitalone`, `discover`, `wellsfargo`, `bofa`, `apple`, `bilt`
 - [ ] Rate limit handler for external RapidAPI fallback
@@ -97,7 +97,7 @@ UserWallet
 ### Phase 1b — Merchant → category (needed for “at payment”)
 
 - [x] v0: user selects from category list (no ML) — `GET /creditcard-spendbonuscategory-categorylist/`
-- [x] **Visa MCC (ISO 18245) → spend category** — `data/mcc/visa_mcc_categories.yaml`, `GET /creditcard-mcc-lookup/{mcc}`, `credit-rewards-db mcc-lookup`
+- [x] **Visa MCC (ISO 18245) → spend category** — `data/mcc/visa_mcc_categories.yaml`, `GET /creditcard-mcc-lookup/{mcc}`, `paycue-db mcc-lookup`
 - [x] **v1: merchant URL / name → category** — fuzzy URL scan + user confirm modal on `/`; `POST /api/merchant/resolve`, `merchant_id` on recommend
 - [ ] v2 (optional): Google Maps Spend API category from Rewards CC docs
 
@@ -171,7 +171,51 @@ For earn-time comparison, **Layer 1–3 on earn currency is enough**. Transfer p
 - [x] `compute_earn_value()` — one `estimated_value_usd` (no ValuationMode)
 - [x] `recommendBestCard()` → sorted list + explanation string
 - [x] Unit tests: cash-back, capped category, Double Cash→TYP, Amex Gold $8.80
+- [x] UI: distinguish points (`400 pts ≈ $8.80`) vs cash back (`6% ≈ $6`); “How we estimate $” modal
+- [x] Catalog program audit: `scripts/audit_program_resolution.py` + `normalize_earn_type` / issuer inference
 - [ ] Show user **both** multiplier and `$X estimated value` in UI copy
+
+### Official CPP update cadence
+
+The conversion map has **two layers** — curated product table vs computed runtime values:
+
+| Layer | Artifact | Who changes | Role |
+|-------|----------|-------------|------|
+| **Curated** | `data/curated/official_cpp.yaml` | Human | Program list, card overrides (CFU→UR, Double Cash→TYP), optional `manual_cpp` |
+| **Computed** | `program_valuations` in SQLite | CLI | `max(Rewards CC, UP benchmark, AwardWallet, manual)` after refresh |
+
+Runtime recommendation reads **DB** (`official_cpp` column), not YAML on every request.
+
+**Cadence (MVP — locked until Post-MVP automation):**
+
+| Trigger | Frequency | Actions |
+|---------|-----------|---------|
+| **Routine recompute** | **Monthly** (1st week) | `sync-reference` → `import-reference` → `refresh-official-cpp` |
+| **Benchmark snapshot** | **Quarterly** | Review Upgraded Points; update `data/reference/program_benchmarks.yaml`; re-run refresh + verify |
+| **Curated YAML** | **As needed** | New program, new override card, product rule change (cap, aggregation) |
+| **Issuer devaluation** | **Within 48h** | Edit `official_cpp.yaml` if needed → refresh → `python scripts/valuation_verify.py` → deploy |
+| **Pre-deploy gate** | **Every release** | `valuation_verify.py` + `pytest tests/test_official_cpp.py tests/test_valuation_twenty_cards.py -q` |
+
+**Why not daily YAML edits:** CPP sources (portal valuations, UP benchmarks) change slowly; `max()` aggregation is stable month-to-month. Event-driven updates beat blind daily churn.
+
+**Monthly pipeline:**
+
+```bash
+paycue-db sync-reference
+paycue-db import-reference
+paycue-db refresh-official-cpp
+python scripts/valuation_verify.py
+```
+
+**Quarterly add-on:** diff `program_benchmarks.yaml` against current Upgraded Points program pages; document date in YAML comment or validation report.
+
+**Post-MVP automation (not built yet):**
+
+- [ ] GitHub Actions cron: monthly pipeline above + fail on `valuation_ready != PASS`
+- [ ] Slack/email alert when `refresh-official-cpp` changes any program CPP by ≥0.25¢
+- [ ] Extend weekly `sync-reference` diff alert (see `docs/archive/validation-cross-check-plan.md`) to include CPP source drift
+
+Docs: [`docs/architecture/official-cpp-valuation.md`](docs/architecture/official-cpp-valuation.md) · [`docs/architecture/points-to-dollar-valuation-report.md`](docs/architecture/points-to-dollar-valuation-report.md)
 
 ---
 
@@ -217,7 +261,7 @@ card_registry.yaml
 
 ### Workstream A — Website scrape → local database
 
-**Already built:** `credit-rewards-db refresh-all`, issuer parsers (`amex`, `chase`, `citi`), SQLite schema + CardData API.
+**Already built:** `paycue-db refresh-all`, issuer parsers (`amex`, `chase`, `citi`), SQLite schema + CardData API.
 
 | Task | Detail | Exit |
 |------|--------|------|
@@ -229,9 +273,9 @@ card_registry.yaml
 **CLI:**
 
 ```bash
-credit-rewards-db init && credit-rewards-db seed
-credit-rewards-db refresh-all
-credit-rewards-db info
+paycue-db init && paycue-db seed
+paycue-db refresh-all
+paycue-db info
 ```
 
 ### Workstream B — API ground truth → local reference cache
@@ -247,7 +291,7 @@ credit-rewards-db info
 **CLI:**
 
 ```bash
-credit-rewards-db sync-reference
+paycue-db sync-reference
 # optional: --card-key amex-gold
 ```
 
@@ -262,7 +306,7 @@ credit-rewards-db sync-reference
 | C1 | **Normalized comparison model** — map website categories ↔ API categories (alias table, e.g. `Travel` ↔ `Airfare`, `amextravel.com`) | `src/credit_rewards/ingest/compare.py` |
 | C2 | **Structured diff report** per card: `matched`, `missing_in_scrape`, `missing_in_api`, `multiplier_mismatch`, `base_rate_mismatch` | `data/reports/comparison/{card_key}.json` |
 | C3 | **Root-cause notes** when mismatch: enum `scraper_bug` \| `category_mapping` \| `api_stale` \| `issuer_ambiguous` \| `cap_or_date_rule` + human-readable `explanation` citing issuer page snippet | Stored in report JSON |
-| C4 | CLI `credit-rewards-db compare-all` and `compare --card-key …` | Non-zero exit if any hard mismatch |
+| C4 | CLI `paycue-db compare-all` and `compare --card-key …` | Non-zero exit if any hard mismatch |
 | C5 | Optional: attach `evidence` — excerpt from last scrape snapshot or live re-fetch of issuer bullet | Links diff to source text |
 
 **Comparison rules (v1):**
@@ -288,7 +332,7 @@ credit-rewards-db sync-reference
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│  CreditRewards — Scrape vs API Comparison                   │
+│  PayCue — Scrape vs API Comparison                   │
 │  5 cards · 3 mismatched · Last sync: 2026-06-02           │
 ├─────────────────────────────────────────────────────────────┤
 │ ▼ amex-gold · American Express · ⚠ 2 mismatches            │
@@ -329,9 +373,9 @@ credit-rewards-db sync-reference
 
 ```bash
 # Full refresh pipeline for dashboard
-credit-rewards-db refresh-all
-credit-rewards-db sync-reference
-credit-rewards-db compare-all          # NEW
+paycue-db refresh-all
+paycue-db sync-reference
+paycue-db compare-all          # NEW
 uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 # open http://127.0.0.1:8000/compare    # NEW
 ```
@@ -347,7 +391,7 @@ uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 
 ## Active development — Payment UI (homepage `/`)
 
-**Prerequisite:** Validation **`core_ready`** ✅ · **Shipped:** https://credit-rewards-production.up.railway.app
+**Prerequisite:** Validation **`core_ready`** ✅ · **Shipped:** https://paycue-production.up.railway.app
 
 **Spec:** [`docs/product/payment-ui.md`](docs/product/payment-ui.md) · **Docs index:** [`docs/README.md`](docs/README.md)
 
@@ -361,7 +405,7 @@ uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 
 ```bash
 pytest tests/test_pay_web.py tests/test_payment_ui_e2e_smoke.py -q
-credit-rewards-db payment-ui-monitor-run   # optional agent monitor
+paycue-db payment-ui-monitor-run   # optional agent monitor
 ```
 
 ### Phase checklist — Payment UI

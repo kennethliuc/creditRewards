@@ -252,9 +252,9 @@ def build_validation_summary_report(*, fetch_evidence: bool = False) -> dict[str
         "limitations": _limitations(dashboard, external_summary),
         "reproduce": {
             "cli": [
-                "credit-rewards-db validation-monitor-run",
-                "credit-rewards-db validation-external",
-                "credit-rewards-db mcc-gap-report",
+                "paycue-db validation-monitor-run",
+                "paycue-db validation-external",
+                "paycue-db mcc-gap-report",
                 "pytest tests/test_golden_recommend.py -q",
             ],
             "urls": {

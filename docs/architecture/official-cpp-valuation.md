@@ -99,7 +99,7 @@ Per-card resolved CPP stored at read time: `card_official_cpp = override.use_pro
 
 ## Max aggregation pipeline
 
-**Command:** `credit-rewards-db refresh-official-cpp`  
+**Command:** `paycue-db refresh-official-cpp`  
 **Runs after:** `sync-reference`, optional `sync-awardwallet`, `import-reference`
 
 For each program in `official_cpp.yaml` (except fixed Cash):

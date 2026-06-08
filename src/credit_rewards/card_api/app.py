@@ -12,7 +12,7 @@ from credit_rewards.ingest.awardwallet_sync import load_awardwallet_by_registry_
 from credit_rewards.ingest.scrape.registry import load_card_registry
 
 app = FastAPI(
-    title="CreditRewards CardData API",
+    title="PayCue CardData API",
     description="Rewards CC–compatible credit card data API (own dataset)",
     version="0.1.0",
 )
@@ -45,7 +45,7 @@ def _with_repo(handler: Callable[[CardDataRepository, str], Any], request: Reque
 @app.get("/")
 def root() -> dict[str, str]:
     return {
-        "service": "CreditRewards CardData API",
+        "service": "PayCue CardData API",
         "docs": "/docs",
         "compatible_with": "https://rewardscc.com/docs/",
     }
@@ -172,5 +172,5 @@ def api_usage(skey: str, request: Request) -> list[dict[str, Any]]:
 @app.middleware("http")
 async def add_compat_headers(request: Request, call_next: Callable) -> Response:
     response = await call_next(request)
-    response.headers["X-CreditRewards-Data-API"] = "0.1.0"
+    response.headers["X-PayCue-Data-API"] = "0.1.0"
     return response

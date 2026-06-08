@@ -1,0 +1,112 @@
+[
+  {
+    "cardKey": "amex-biz-corporateplatinum",
+    "cardIssuer": "American Express",
+    "cardName": "The American Express Corporate Platinum Card®",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Business",
+    "cardUrl": "https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/american-express-platinum-corporate-card/",
+    "annualFee": 550,
+    "fxFee": 2.5,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "American Express Membership Rewards",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 2.2,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 0.6,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "0",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 550,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$189 CLEAR® Plus Credit",
+        "benefitDesc": "Earn faster entry to dozens of airports around the country. Enjoy a more streamlined experience from curb to gate at select U.S. airports with CLEAR®, the identity verification system that uses biometrics like fingerprints. Enroll in CLEAR® and you'll receive up to $189 per calendar year in statement credits when you charge the CLEAR® Plus membership to your Corporate Platinum Card. CLEAR® Plus Membership is auto-renewing.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "$200 Airline Fee Credit",
+        "benefitDesc": "Stop small travel costs from becoming a big roadblock with the $200 Airline Fee Credit. Corporate Platinum Card Members receive up to $200 back in the form of a statement credit each calendar year when incidental fees like change fees are charged by the airline to your Corporate Platinum Card Account by the one qualifying airline you selected.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "American Express Global Lounge Collection®",
+        "benefitDesc": "You deserve choices. With the American Express Global Lounge Collection® get complimentary access to plenty, including 1,400+ airport lounges in over 500 airports around the world. Whether you're looking for a place to rest and recharge or somewhere to catch up on work, enjoy our growing network of lounges across 140 countries and counting",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Earn 5% Uber Cash",
+        "benefitDesc": "Make business rides with Uber or make orders through Uber Eats to earn Uber Cash back. Corporate Platinum Card Members enrolled in the Uber benefit can earn 5% Uber Cash on eligible rides with Uber and orders with Uber Eats when you book them through your business profile and charge them to your Corporate Platinum Card. You can use Uber Cash for personal rides with Uber and orders with Uber Eats in the U.S.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Fee Credit for Global Entry or TSA PreCheck",
+        "benefitDesc": "Keep long airport lines from slowing you down. Receive either a $120 statement credit for Global Entry or a statement credit for up to $85 for TSA PreCheck® (through a TSA PreCheck official enrollment provider) for a 5-year plan. TSA PreCheck can expedite security screening and Global Entry can reduce wait time at US Customs at select airports. If you are approved for Global Entry, you will also receive access to TSA PreCheck at no additional charge. Only one credit will be given in a 4-year period for Global Entry or in a 4.5-year period for TSA PreCheck for whichever application fee is charged to your Card first.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Fine Hotels + Resorts® program",
+        "benefitDesc": "Stay somewhere you won't soon forget. Choose from over 1,500 handpicked Fine Hotels + Resorts® properties",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global Dining Access by Resy",
+        "benefitDesc": "Global Dining Access by Resy provides Platinum Card® Members insider access to some of the world’s most sought-after restaurants. This includes access to exclusive reservations, Priority Notify, and a badge on your Resy profile, letting restaurants know that you are a valued member of the Global Dining Access program. Download the Resy app and add your Platinum Card to your Resy profile to take advantage of your special benefits.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "ilton Honors Gold Status",
+        "benefitDesc": "When you enroll in Hilton Honors Gold, you can enjoy benefits at hotels and resorts within the Hilton Portfolio and earn reward stays faster with Hilton Honors Bonus Points.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Lufthansa Business Lounges",
+        "benefitDesc": "Platinum Card Members have complimentary access to select Lufthansa Business Lounges (regardless of ticket class) and Lufthansa Senator Lounges (when flying business class) when flying on a Lufthansa Group flight.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Marriott Bonvoy Gold Elite status",
+        "benefitDesc": "Cushion your return to travel with benefits that allow for more flexibility and spontaneity, like late checkouts and member rates. Plus, with Marriott Bonvoy Gold Elite status, you can receive upgrades to enhanced rooms upon check-in when available.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Premium Global Assist® Hotline",
+        "benefitDesc": "With Premium Global Assist® Hotline‡, when you travel more than 100 miles from home, we can provide you with 24/7 medical, legal, financial or other select emergency coordination and assistance services.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "The Centurion® Lounge",
+        "benefitDesc": "U.S. Corporate Platinum Card Members have unlimited complimentary access to all locations of The Centurion Lounge.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Trip Delay Insurance",
+        "benefitDesc": "Booking the trip is easy. Avoiding delays is next to impossible. If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 6 hours, Trip Delay Insurance‡ can help reimburse certain additional expenses purchased with your same Eligible Card, up to $500 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": []
+  }
+]

@@ -15,7 +15,7 @@ from credit_rewards.card_image import (  # noqa: E402
     registry_card_keys_for_images,
     warm_card_images,
 )
-from credit_rewards.client import CardDataClient  # noqa: E402
+from credit_rewards.client import CardDataClient, upstream_api_enabled  # noqa: E402
 
 
 def main() -> int:
@@ -28,9 +28,13 @@ def main() -> int:
     parser.add_argument("card_keys", nargs="*", help="Additional card_key values to prefetch")
     args = parser.parse_args()
 
-    client = CardDataClient(use_local=False)
+    if not upstream_api_enabled():
+        print("Upstream API disabled; use bundled data/card_images/ only.", file=sys.stderr)
+        return 1
+
+    client = CardDataClient(use_upstream=True)
     if not client.is_configured:
-        print("REWARDS_CC_API_KEY not set; skipping remote image fetch.", file=sys.stderr)
+        print("Set CREDITREWARDS_USE_UPSTREAM_API=1 and REWARDS_CC_API_KEY to prefetch remote art.", file=sys.stderr)
         return 1
 
     keys = list(args.card_keys)

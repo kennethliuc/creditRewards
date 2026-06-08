@@ -60,7 +60,7 @@ def build_card_valuation_summary(
         resolved_program=resolved_program,
     )
     purchase = PurchaseContext(category=example_category, amount_usd=example_amount_usd)
-    mult, points, value, reason = compute_earn_value(card, purchase)
+    mult, points, value, reason, _cpp, _, _ = compute_earn_value(card, purchase)
 
     return {
         "cardKey": key,

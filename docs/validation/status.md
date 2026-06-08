@@ -33,7 +33,7 @@
 ## Monitor commands
 
 ```bash
-credit-rewards-db validation-monitor-run   # re-verify all core gates
+paycue-db validation-monitor-run   # re-verify all core gates
 uvicorn credit_rewards.web.app:app --port 8000
 ```
 

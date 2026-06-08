@@ -1,4 +1,4 @@
-# CreditRewards
+# PayCue
 
 Payment-moment credit card recommendation + **own CardData API** (Rewards CC–compatible).
 
@@ -7,7 +7,7 @@ Payment-moment credit card recommendation + **own CardData API** (Rewards CC–c
 **Card rewards are scraped from issuer websites — not manually maintained.**
 
 - `data/card_registry.yaml` — cardKey + issuer URL only (no reward numbers)
-- `credit-rewards-db refresh-all` — fetches live pages and parses earn rules
+- `paycue-db refresh-all` — fetches live pages and parses earn rules
 - Issuer parsers: `amex`, `chase`, `citi` (extend in `src/credit_rewards/ingest/scrape/`)
 
 ## Quick start
@@ -18,11 +18,11 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 
 # 1) DB + category taxonomy
-credit-rewards-db init
-credit-rewards-db seed
+paycue-db init
+paycue-db seed
 
 # 2) Scrape rewards from issuer sites (required before API has card data)
-credit-rewards-db refresh-all
+paycue-db refresh-all
 
 # 3) CardData API (:8080)
 uvicorn credit_rewards.card_api.app:app --host 0.0.0.0 --port 8080
@@ -36,19 +36,19 @@ uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
 
 ```bash
 # All cards in registry
-credit-rewards-db refresh-all
+paycue-db refresh-all
 
 # One card
-credit-rewards-db refresh --card-key amex-gold
+paycue-db refresh --card-key amex-gold
 
 # Ad-hoc URL test
-credit-rewards-db scrape --card-key my-card --url https://... --parser chase
+paycue-db scrape --card-key my-card --url https://... --parser chase
 ```
 
 ## Add a new card
 
 1. Add entry to `data/card_registry.yaml` (url + parser)
-2. Run `credit-rewards-db refresh --card-key ...`
+2. Run `paycue-db refresh --card-key ...`
 3. If parser fails, add/improve issuer rules in `ingest/scrape/parsers.py`
 
 ## API examples
@@ -66,19 +66,19 @@ Use upstream API as **golden data** to tune scrapers — not as your runtime dat
 
 ```bash
 # Pull only cards in data/card_registry.yaml (~64 API calls for 20 cards, NOT the full catalog)
-credit-rewards-db sync-reference
+paycue-db sync-reference
 
 # Load Rewards CC JSON into local CardData API (aligned multipliers for all 20 cards)
-credit-rewards-db import-reference
+paycue-db import-reference
 
 # Point/mile → dollar value (CPP from Rewards CC + Upgraded Points benchmark cross-check)
-credit-rewards-db valuation-report
+paycue-db valuation-report
 
 # One card
-credit-rewards-db sync-reference --card-key amex-gold
+paycue-db sync-reference --card-key amex-gold
 
 # Compare scraped DB vs reference (CLI + JSON reports)
-credit-rewards-db compare-all
+paycue-db compare-all
 
 # Web dashboard — side-by-side scrape vs API
 uvicorn credit_rewards.web.app:app --host 0.0.0.0 --port 8000
@@ -89,14 +89,14 @@ uvicorn credit_rewards.web.app:app --port 8000
 # → http://127.0.0.1:8000/validation
 
 # Full validation run (writes reports/validation + docs/validation/status.md)
-credit-rewards-db validation-report
+paycue-db validation-report
 
 # Phase 1 only — Monitor gate (L1 + L3 + CPP + MCC, no scrape)
-credit-rewards-db validation-independent
+paycue-db validation-independent
 
 # Monitor: JSON task plan for fixer agents
-credit-rewards-db validation-monitor
-# credit-rewards-db validation-monitor --include-l2   # after Phase 1
+paycue-db validation-monitor
+# paycue-db validation-monitor --include-l2   # after Phase 1
 ```
 
 Set `REWARDS_CC_API_KEY` in `.env` (RapidAPI). Do **not** run `bulk-sync` unless you explicitly want every US card (~50k calls).

@@ -1,0 +1,98 @@
+[
+  {
+    "cardKey": "usbank-flexperksselectplus",
+    "cardIssuer": "U.S. Bank",
+    "cardName": "U.S. Bank FlexPerks® Select+ American Express®",
+    "cardNetwork": "American Express",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.americanexpress.com/en-us/network/us-bank/flexperks/credit-cards/select-plus.html",
+    "annualFee": 0,
+    "fxFee": 2.0,
+    "isFxFee": 1,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "U.S. Bank FlexPoints",
+    "baseSpendEarnCategory": "Flex point",
+    "baseSpendEarnCurrency": "points",
+    "baseSpendEarnValuation": 1.5,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "#AMEXFORFOODIES Dining Benefits",
+        "benefitDesc": "Enjoy up to 20% off your bill or a free appetizer for dine-in or take-out at participating restaurants.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Car Rental Loss And Damage Insurance",
+        "benefitDesc": "Coverage is provided in excess of other insurances against damage or loss to a rental vehicle in the USA & Canada. Coverage applies when the entire rental fee is charged to your Card.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "For eligible products purchased entirely with Card, Extended Warranty doubles the original manufacturer's (or U.S. store brand) warranty of 1 year or less.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Travel Accident Insurance",
+        "benefitDesc": "Provides accidental death or dismemberment insurance while traveling on a common carrier, (plane, train, ship or bus) when the entire fare is charged to your Card. Travel Accident Insurance provides coverage up to $250,000.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Car Rentals (U.S. Bank)",
+        "spendBonusCategoryName": "Car Rentals (U.S. Bank)",
+        "spendBonusCategoryId": 600360476,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Car Rental",
+        "spendBonusDesc": "5X on prepaid car rentals booked directly in the FlexPerks Rewards Center",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": " ",
+        "limitEndDate": " ",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - Hotels (U.S. Bank)",
+        "spendBonusCategoryName": "Hotels (U.S. Bank)",
+        "spendBonusCategoryId": 1481287317,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency - Hotel",
+        "spendBonusDesc": "5X on prepaid hotels booked directly in the FlexPerks Rewards Center",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": " ",
+        "limitEndDate": " ",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

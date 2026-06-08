@@ -1,0 +1,88 @@
+[
+  {
+    "cardKey": "comenity-sephoravisa",
+    "cardIssuer": "Comenity",
+    "cardName": "Sephora Visa®",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "Visa Traditional",
+    "cardType": "Personal",
+    "cardUrl": "https://comenity.net/sephoravisa",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Fair",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Sephora Rewards",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Booking.com",
+        "benefitDesc": "Purchase qualifying stays with your eligible Visa Credit or Debit card and get up to 8% in Travel Credits to use on future flights, stays, car rentals, attractions, car rentals, taxis and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Dovly Uplift™",
+        "benefitDesc": "Get free access to Dovly Uplift. Dovly helps you raise your credit score and get more for your money. While Dovly's platform is designed to remove inaccuracies from your credit report, every case is different, and not everyone will achieve the same results.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "OpenTable",
+        "benefitDesc": "Eligible Visa cardholders can enjoy special events access to the hottest dining events on OpenTable. Restrictions apply.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Roadside Dispatch®",
+        "benefitDesc": "This is a pay-per-use roadside assistance program available 24x7. Roadside Dispatch will ask for your location, find out what the problem is, and will remain on the phone with you while arranging a dispatch to a reliable tow operator or locksmith. You pay a set price per service call. ",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Sofar Sounds",
+        "benefitDesc": "Enjoy a free ticket per show with the purchase of one or more tickets, plus you can access 7-day Visa Exclusive Presale opportunities.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Sephora",
+        "spendBonusCategoryName": "Sephora",
+        "spendBonusCategoryId": 1447770754,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Department Store",
+        "spendBonusDesc": "4% back in Credit Card Rewards on Sephora purchases",
+        "earnMultiplier": 4.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

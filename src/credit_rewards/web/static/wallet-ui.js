@@ -1,8 +1,8 @@
 (() => {
-  const STORAGE_KEY = 'creditrewards_wallet_v1';
-  const IMAGE_CACHE_KEY = 'creditrewards_card_images_v1';
-  const PAY_TAB_KEY = 'creditrewards_pay_tab_v1';
-  const LAST_MERCHANT_KEY = 'creditrewards_last_merchant_v1';
+  const STORAGE_KEY = 'paycue_wallet_v1';
+  const IMAGE_CACHE_KEY = 'paycue_card_images_v1';
+  const PAY_TAB_KEY = 'paycue_pay_tab_v1';
+  const LAST_MERCHANT_KEY = 'paycue_last_merchant_v1';
   const DEFAULT_AMOUNT = 100;
   const views = ['language', 'local-setup', 'pay', 'savings-history', 'manage'];
   let languageReturnView = 'bootstrap';
@@ -277,9 +277,35 @@
   let localSetupSelected = new Set();
   let userLocation = null; // { lat, lng } | null
   let merchantConfig = { googlePlacesEnabled: false, locationRecommended: false, nearbyStoresEnabled: false };
-  let nearbyPlaces = [];
+  const DEMO_CARD_KEYS = ['chase-sapphire-preferred', 'amex-gold', 'chase-freedom-unlimited'];
 
-  const $ = (id) => document.getElementById(id);
+  function cardMetaFromKey(key) {
+    const meta = catalogByKey[key] || {};
+    return {
+      card_key: key,
+      card_name: meta.card_name || key,
+      nickname: '',
+      last4: '',
+      image_url: meta.image_url || imageCache[key] || '',
+    };
+  }
+
+  async function loadDemoWallet() {
+    await ensureCatalogImages();
+    const cards = DEMO_CARD_KEYS.map(cardMetaFromKey);
+    saveLocalWallet(cards);
+    walletState = { mode: 'local', cards };
+    localSetupSelected = new Set(DEMO_CARD_KEYS);
+  }
+
+  function startSetupTour() {
+    window.CR_ONBOARDING?.start('setup');
+  }
+
+  function maybeStartPayTour() {
+    if (window.CR_ONBOARDING?.isComplete()) return;
+    setTimeout(() => window.CR_ONBOARDING?.startPayTour(), 400);
+  }
 
   function esc(s) {
     const d = document.createElement('div');
@@ -296,6 +322,7 @@
     if (settingsBtn) settingsBtn.classList.toggle('hidden', name === 'language');
     const homeBtn = $('btnHome');
     if (homeBtn) homeBtn.classList.toggle('nav-home-muted', name === 'pay');
+    window.CR_ANALYTICS?.trackScreen(name);
   }
 
   async function goHome() {
@@ -505,6 +532,71 @@
     const tail = `${storeLine} · ${best.multiplier}x · ${best.reason}`;
     if (amountProvided) return `$${amount_usd.toFixed(2)} · ${tail}`;
     return `${t('pay.amountEstimateNote', { amount: amount_usd.toFixed(0) })} · ${tail}`;
+  }
+
+  function formatPct(multiplier) {
+    const n = Number(multiplier);
+    if (Number.isInteger(n)) return String(n);
+    return n.toFixed(1).replace(/\.0$/, '');
+  }
+
+  function formatRewardValue(rec) {
+    const amount = rec.estimated_value_usd.toFixed(2);
+    if (rec.valuate_as_points) {
+      return t('result.pointsValue', {
+        points: Math.round(rec.points_earned),
+        amount,
+      });
+    }
+    return t('result.cashValue', { pct: formatPct(rec.multiplier), amount });
+  }
+
+  function formatRankValue(rec) {
+    const amount = rec.estimated_value_usd.toFixed(2);
+    if (rec.valuate_as_points) {
+      return t('result.rankPoints', {
+        points: Math.round(rec.points_earned),
+        amount,
+      });
+    }
+    return t('result.rankCash', { amount });
+  }
+
+  function formatRankSub(rec) {
+    if (rec.valuate_as_points) {
+      const pts = Math.round(rec.points_earned);
+      const mult = formatPct(rec.multiplier);
+      if (rec.partner_bonus) {
+        return t('result.rankPartnerEarn', { mult, pts });
+      }
+      return `${mult}x · ${pts} pts · ${rec.reason}`;
+    }
+    return `${formatPct(rec.multiplier)}% · ${rec.reason}`;
+  }
+
+  function renderPartnerNotes(rankings, merchantName) {
+    const el = $('partnerNotes');
+    if (!el) return;
+    const notes = (rankings || []).filter((r) => r.partner_bonus && r.rank > 1);
+    if (!notes.length || !merchantName) {
+      el.classList.add('hidden');
+      el.innerHTML = '';
+      return;
+    }
+    el.classList.remove('hidden');
+    el.innerHTML = notes
+      .map((r) =>
+        `<p class="partner-note">${esc(
+          t('result.partnerRankNote', {
+            card: r.card_name,
+            mult: formatPct(r.multiplier),
+            pts: Math.round(r.points_earned),
+            rank: r.rank,
+            merchant: merchantName,
+          })
+        )}</p>`
+      )
+      .join('');
   }
 
   function attachLocationToBody(body) {
@@ -760,25 +852,90 @@
     </button>`;
   }
 
+  function toggleLocalSetupCard(cardKey, btn) {
+    if (localSetupSelected.has(cardKey)) {
+      localSetupSelected.delete(cardKey);
+      btn?.classList.remove('selected');
+    } else {
+      localSetupSelected.add(cardKey);
+      btn?.classList.add('selected');
+    }
+    syncLocalSetupTileSelection(cardKey);
+  }
+
+  function syncLocalSetupTileSelection(cardKey) {
+    const selected = localSetupSelected.has(cardKey);
+    $('localCardPicker')
+      ?.querySelector(`.card-tile[data-key="${cardKey}"]`)
+      ?.classList.toggle('selected', selected);
+    $('setupIssuerResults')
+      ?.querySelectorAll(`.card-tile[data-key="${cardKey}"]`)
+      .forEach((el) => el.classList.toggle('selected', selected));
+  }
+
   async function renderLocalCardTiles() {
     const grid = $('localCardPicker');
     if (!grid) return;
     await ensureCatalogImages();
+    await loadIssuerHints();
     localSetupSelected = new Set();
     grid.innerHTML = catalog.map((c) => cardTileHtml(c)).join('');
     grid.querySelectorAll('.card-tile').forEach((btn) => {
       btn.addEventListener('click', () => {
-        const key = btn.dataset.key;
-        if (localSetupSelected.has(key)) {
-          localSetupSelected.delete(key);
-          btn.classList.remove('selected');
-        } else {
-          localSetupSelected.add(key);
-          btn.classList.add('selected');
-        }
+        toggleLocalSetupCard(btn.dataset.key, btn);
       });
     });
     await hydrateCardImages(grid);
+    const setupResults = $('setupIssuerResults');
+    if (setupResults) setupResults.innerHTML = '';
+    const setupQuery = $('setupIssuerQuery');
+    if (setupQuery) setupQuery.value = '';
+  }
+
+  async function searchSetupIssuerCards() {
+    const q = ($('setupIssuerQuery')?.value || '').trim();
+    const resultsEl = $('setupIssuerResults');
+    const errorEl = $('localSetupError');
+    if (!resultsEl) return;
+    errorEl?.classList.remove('show');
+    if (q.length < 2) {
+      if (errorEl) {
+        errorEl.textContent = t('wallet.errorIssuerLen');
+        errorEl.classList.add('show');
+      }
+      resultsEl.innerHTML = '';
+      return;
+    }
+    resultsEl.innerHTML = '<p class="hints">' + esc(t('wallet.searching')) + '</p>';
+    try {
+      const res = await fetch(`/api/cards/by-issuer?q=${encodeURIComponent(q)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || 'Search failed');
+      const matches = data.matches || [];
+      if (!matches.length) {
+        resultsEl.innerHTML = '<p class="hints">' + esc(t('wallet.noIssuerMatch')) + '</p>';
+        return;
+      }
+      matches.forEach((c) => {
+        catalogByKey[c.card_key] = { ...catalogByKey[c.card_key], ...c };
+        if (c.image_url) imageCache[c.card_key] = c.image_url;
+      });
+      resultsEl.innerHTML = matches
+        .map((c) =>
+          cardTileHtml(c, { selected: localSetupSelected.has(c.card_key) }),
+        )
+        .join('');
+      resultsEl.querySelectorAll('.card-tile').forEach((btn) => {
+        btn.addEventListener('click', () => toggleLocalSetupCard(btn.dataset.key, btn));
+      });
+      await hydrateCardImages(resultsEl);
+    } catch (err) {
+      resultsEl.innerHTML = '';
+      if (errorEl) {
+        errorEl.textContent = err.message;
+        errorEl.classList.add('show');
+      }
+    }
   }
 
   function activeInputEl() {
@@ -1036,27 +1193,41 @@
     const best = data.best;
     const merchant = data.merchant || {};
     $('bestName').textContent = best.card_name;
-    $('bestValue').textContent = t('result.value', { amount: best.estimated_value_usd.toFixed(2) });
+    $('bestValue').textContent = formatRewardValue(best);
     const storeLine = merchant.merchantName
       ? `${merchant.merchantName} → ${data.resolved_category}`
       : data.resolved_category;
     $('bestMeta').textContent = formatResultMeta(amount_usd, storeLine, best);
+    $('btnValuationHelp').classList.remove('hidden');
     $('rankHead').textContent = t('result.rankHead', { count: data.card_count });
     $('rankings').innerHTML = data.rankings
       .map(
         (r) => `
-        <div class="rank-row ${r.rank === 1 ? 'top' : ''}">
+        <div class="rank-row ${r.rank === 1 ? 'top' : ''} ${r.partner_bonus ? 'partner-earn' : ''}">
           <div class="rank-num">#${r.rank}</div>
           <div>
-            <div class="rank-name">${esc(r.card_name)}</div>
-            <div class="rank-sub">${r.multiplier}x · ${esc(r.reason)}</div>
+            <div class="rank-name">${esc(r.card_name)}${
+              r.partner_bonus
+                ? `<span class="partner-badge">${esc(t('result.partnerBadge'))}</span>`
+                : ''
+            }</div>
+            <div class="rank-sub">${esc(formatRankSub(r))}</div>
           </div>
-          <div class="rank-usd">$${r.estimated_value_usd.toFixed(2)}</div>
+          <div class="rank-usd">${esc(formatRankValue(r))}</div>
         </div>`
       )
       .join('');
+    renderPartnerNotes(data.rankings, merchant.merchantName || '');
     resultEl.classList.add('show');
     recordSavingsLookup(data, best, amount_usd, pick);
+    window.CR_ANALYTICS?.track('recommend', {
+      merchant_name: merchant.merchantName || pick.merchantName || '',
+      amount_usd,
+      card_count: data.card_count,
+      best_card: best.card_key || best.card_name || '',
+      partner_bonus: !!best.partner_bonus,
+      resolved_category: data.resolved_category || '',
+    });
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     markInputsForReentry();
   }
@@ -1195,9 +1366,10 @@
     walletState = { mode: 'local', cards: manageDraft.map((c) => ({ ...c })) };
     updatePaySub();
     await loadCatalog();
+    window.CR_ANALYTICS?.track('wallet_save', { card_count: manageDraft.length });
   }
 
-  async function enterPayFlow() {
+  async function enterPayFlow({ startPayTour = true } = {}) {
     await loadCatalog();
     applyPayTab(loadPayTab());
     applyPageI18n();
@@ -1210,23 +1382,28 @@
     updateLastMerchantChip();
     if (activeTab === 'name') await refreshNearbyStores();
     else hideNearbyStores();
+    if (startPayTour) maybeStartPayTour();
   }
 
   function continueAfterLanguage() {
     applyPageI18n();
     const w = resolveWallet();
-    if (w) enterPayFlow();
-    else {
+    if (w) {
+      walletState = w;
+      enterPayFlow({ startPayTour: !window.CR_ONBOARDING?.isComplete() });
+    } else {
       void (async () => {
         await ensureCatalogImages();
         showView('local-setup');
         await renderLocalCardTiles();
+        startSetupTour();
       })();
     }
   }
 
   function finishLanguagePick(code) {
     window.CR_I18N.setLocale(code);
+    window.CR_ANALYTICS?.track('language_pick', { locale: code });
     if (languageReturnView === 'wallet') {
       applyPageI18n();
       showView('manage');
@@ -1278,12 +1455,31 @@
           card_name: meta.card_name || key,
           nickname: '',
           last4: '',
+          image_url: meta.image_url || imageCache[key] || '',
         };
       });
       saveLocalWallet(cards);
       walletState = { mode: 'local', cards };
       $('localSetupError').classList.remove('show');
+      window.CR_ANALYTICS?.track('setup_complete', { card_count: cards.length });
       enterPayFlow();
+    });
+
+    $('btnReplayTour')?.addEventListener('click', () => {
+      showView('pay');
+      window.CR_ONBOARDING?.startPayTour({ force: true });
+    });
+
+    window.CR_ONBOARDING?.registerTryDemo(async () => {
+      await loadDemoWallet();
+      await enterPayFlow({ startPayTour: false });
+      const nameInput = $('merchantName');
+      if (nameInput) nameInput.value = 'Chipotle';
+      const amountInput = $('amount');
+      if (amountInput) amountInput.value = '25';
+      pendingAmount = 25;
+      amountProvided = true;
+      syncPendingAmount();
     });
 
     $('btnWalletSettings').addEventListener('click', () => openWalletView());
@@ -1296,10 +1492,17 @@
 
     $('manageBack').addEventListener('click', () => showView('pay'));
     $('issuerSearchBtn').addEventListener('click', () => searchIssuerCards());
+    $('setupIssuerSearchBtn')?.addEventListener('click', () => searchSetupIssuerCards());
     $('issuerQuery').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
         searchIssuerCards();
+      }
+    });
+    $('setupIssuerQuery')?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        searchSetupIssuerCards();
       }
     });
 
@@ -1309,6 +1512,15 @@
       issuerDebounce = setTimeout(() => {
         const q = $('issuerQuery').value.trim();
         if (q.length >= 2) searchIssuerCards();
+      }, 300);
+    });
+
+    let setupIssuerDebounce = null;
+    $('setupIssuerQuery')?.addEventListener('input', () => {
+      clearTimeout(setupIssuerDebounce);
+      setupIssuerDebounce = setTimeout(() => {
+        const q = $('setupIssuerQuery').value.trim();
+        if (q.length >= 2) searchSetupIssuerCards();
       }, 300);
     });
 
@@ -1325,14 +1537,30 @@
       walletState = null;
       renderSavingsUI(null);
       $('resetModal').classList.remove('show');
+      window.CR_ONBOARDING?.reset();
       showView('local-setup');
-      void renderLocalCardTiles();
+      void renderLocalCardTiles().then(() => startSetupTour());
     }
 
     $('resetConfirm').addEventListener('click', () => performLocalReset());
     $('resetCancel').addEventListener('click', () => $('resetModal').classList.remove('show'));
     $('resetModal').addEventListener('click', (e) => {
       if (e.target.id === 'resetModal') $('resetModal').classList.remove('show');
+    });
+
+    $('btnValuationHelp').addEventListener('click', () => {
+      $('valuationModal').classList.add('show');
+      $('valuationModal').setAttribute('aria-hidden', 'false');
+    });
+    $('valuationClose').addEventListener('click', () => {
+      $('valuationModal').classList.remove('show');
+      $('valuationModal').setAttribute('aria-hidden', 'true');
+    });
+    $('valuationModal').addEventListener('click', (e) => {
+      if (e.target.id === 'valuationModal') {
+        $('valuationModal').classList.remove('show');
+        $('valuationModal').setAttribute('aria-hidden', 'true');
+      }
     });
 
     $('form').addEventListener('submit', async (e) => {
@@ -1374,6 +1602,10 @@
         const data = await res.json();
         if (!res.ok) throw new Error(data.detail || t('pay.errorRequest'));
         rememberLastMerchantFromForm();
+        window.CR_ANALYTICS?.track('merchant_resolve', {
+          merchant_name: data.best?.merchantName || body.merchant_name || '',
+          candidates: (data.candidates || []).length,
+        });
         if (shouldConfirmMerchant(data)) showConfirmModal(data);
         else await runRecommend(data.best, pendingAmount);
       } catch (err) {
@@ -1428,10 +1660,11 @@
     window.CR_I18N.setLocale(window.CR_I18N.loadLocale());
     applyPageI18n();
     const w = resolveWallet();
-    if (w) enterPayFlow();
+    if (w) enterPayFlow({ startPayTour: !window.CR_ONBOARDING?.isComplete() });
     else {
       showView('local-setup');
       await renderLocalCardTiles();
+      startSetupTour();
     }
   }
 

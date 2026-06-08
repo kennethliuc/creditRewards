@@ -1,0 +1,138 @@
+[
+  {
+    "cardKey": "barclays-capital",
+    "cardIssuer": "Barclays",
+    "cardName": "Capital Vacations® World Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "World Mastercard®",
+    "cardType": "Personal",
+    "cardUrl": "https://cards.barclaycardus.com/banking/cards/capital-vacations/",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Capital Vacations Rewards",
+    "baseSpendEarnCategory": "Misc. Travel",
+    "baseSpendEarnCurrency": "",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 1,
+    "signupBonusAmount": "5000",
+    "signupBonusType": "Capital Vacations Rewards",
+    "signupBonusCategory": "Misc. Travel",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "Earn 5,000 bonus Rewards after your first purchase, less credits, returns, and adjustments. The bonus Rewards will be reflected on the billing statement after you have qualified to earn the bonus.",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "$0 Fraud Liability Protection",
+        "benefitDesc": "Means you’re not responsible for unauthorized charges you report to us",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "3-night Capital Vacations Resort Stay Certificate",
+        "benefitDesc": "After spending $10,000 in net purchases each calendar year",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Global emergency services",
+        "benefitDesc": "Call 1-800-MASTERCARD (1-800-627-8372) for 24/7 assistance to report a lost or stolen card.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "HealthLock",
+        "benefitDesc": "Enjoy a HealthLock for Mastercard Medical Claim Monitor complimentary membership plus a 90-day upgrade to all HealthLock services at no monthly cost.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Instacart",
+        "benefitDesc": "Groceries and more delivered in as fast as one hour. Get $10 off your second order each month, and new Instacart+ members can also get three free months of Instacart+.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Golf",
+        "benefitDesc": "Get exclusive PGA TOUR® experiences and access amazing golf benefits with our Golf Concierge Service.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard ID Theft Protection",
+        "benefitDesc": "Monitor your credit file for fraud, get alerts for suspicious activity and access a resolution specialist.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Music and Entertainment Access benefit",
+        "benefitDesc": "Mastercard gives you exclusive access to ticket presales at top venues and festivals across the U.S. Eligibility restrictions, exclusions and terms apply. Offer expires 3/31/2027.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Transit Benefit",
+        "benefitDesc": "Save when you tap and go with your eligible Mastercard and receive a $2.50 statement credit when you spend $10 or more each month at participating transit systems.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Mastercard Travel",
+        "benefitDesc": "Browse exclusive Mastercard benefits, book travel, get hotel upgrades and more.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Priceless Experiences",
+        "benefitDesc": "Enjoy experiences in culture, dining, sports, entertainment and more in over 45 exciting destinations around the globe.",
+        "isBenefitCardNetworkTier": 1
+      },
+      {
+        "benefitTitle": "Protection wherever you shop",
+        "benefitDesc": "With Mastercard Zero Liability protection you’re protected against unauthorized transactions in stores, online and in app.",
+        "isBenefitCardNetworkTier": 1
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Capital Vacations",
+        "spendBonusCategoryName": "Capital Vacations",
+        "spendBonusCategoryId": 209817123,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Travel Agency",
+        "spendBonusDesc": "Earn 5X Rewards for every $1 spent on all eligible Capital Vacations purchases.",
+        "earnMultiplier": 5.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      },
+      {
+        "spendBonusCategoryType": "Single Category - RCI",
+        "spendBonusCategoryName": "RCI",
+        "spendBonusCategoryId": 38550,
+        "spendBonusCategoryGroup": "Travel",
+        "spendBonusSubcategoryGroup": "Cruise",
+        "spendBonusDesc": "Earn 2X Rewards for every $1 spent on all eligible RCI purchases.",
+        "earnMultiplier": 2.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

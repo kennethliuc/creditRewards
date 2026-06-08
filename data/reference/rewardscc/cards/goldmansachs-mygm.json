@@ -1,0 +1,73 @@
+[
+  {
+    "cardKey": "goldmansachs-mygm",
+    "cardIssuer": "Goldman Sachs",
+    "cardName": "My GM Rewards Card™",
+    "cardNetwork": "Mastercard",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 4.0,
+    "baseSpendEarnType": "General Motors",
+    "baseSpendEarnCategory": "Retail",
+    "baseSpendEarnCurrency": "rewards",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Annual vehicle detail credit",
+        "benefitDesc": "$50 annual vehicle detailing allowance",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Statement credit",
+        "benefitDesc": "Earn $100 statement credit when you spend $1,500 on fuel per calendar year or Earn a $100 statement credit when you use the My GM Rewards Card to pay 6 months of your electric bills",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - GM",
+        "spendBonusCategoryName": "GM",
+        "spendBonusCategoryId": 2522,
+        "spendBonusCategoryGroup": "Auto",
+        "spendBonusSubcategoryGroup": "Auto Manufacturer",
+        "spendBonusDesc": "Earn 7 points for every $1 spent with GM",
+        "earnMultiplier": 7.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]

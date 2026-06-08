@@ -1,0 +1,83 @@
+[
+  {
+    "cardKey": "synchrony-rakutencashback",
+    "cardIssuer": "Synchrony Bank",
+    "cardName": "Rakuten Cash Back",
+    "cardNetwork": "Store Card",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good",
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "signupBonusAmount": "",
+    "signupBonusType": "",
+    "signupBonusCategory": "",
+    "signUpBonusItem": "",
+    "signupBonusSpend": 0,
+    "signupBonusLength": 0,
+    "signupBonusLengthPeriod": "",
+    "signupAnnualFee": 0,
+    "isSignupAnnualFeeWaived": 0,
+    "signupStatementCredit": 0,
+    "signupBonusDesc": "",
+    "trustedTraveler": "",
+    "isTrustedTraveler": 0,
+    "loungeAccess": "",
+    "isLoungeAccess": 0,
+    "freeHotelNight": "",
+    "isFreeHotelNight": 0,
+    "freeCheckedBag": "",
+    "isFreeCheckedBag": 0,
+    "isActive": 0,
+    "benefit": [
+      {
+        "benefitTitle": "Extended Warranty",
+        "benefitDesc": "Up to 1 additional year on original manufacturer's warranty of 3 years or less.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Purchase Protection",
+        "benefitDesc": "Up to $10,000 per eligible purchase within 90 days of the purchase date. Maximum of $50,000 per year, per account.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Rental Insurance",
+        "benefitDesc": "Coverage for damage to or theft of a rental vehicle. Must decline the collision damage waiver (CDW) at the counter.  Coverage is secondary to personal insurance.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Return Protection",
+        "benefitDesc": "Up to $250 per eligible purchase within 90 days of the purchase date.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [
+      {
+        "spendBonusCategoryType": "Single Category - Rakuten",
+        "spendBonusCategoryName": "Rakuten",
+        "spendBonusCategoryId": 1754101573,
+        "spendBonusCategoryGroup": "Shopping",
+        "spendBonusSubcategoryGroup": "Shopping Portal",
+        "spendBonusDesc": "",
+        "earnMultiplier": 3.0,
+        "isDateLimit": 0,
+        "limitBeginDate": "",
+        "limitEndDate": "",
+        "isSpendLimit": 0,
+        "spendLimit": 0,
+        "spendLimitResetPeriod": ""
+      }
+    ],
+    "annualSpend": []
+  }
+]
