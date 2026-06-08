@@ -18,6 +18,10 @@ CATALOG_INDEX_PATH = data_dir() / "card_catalog_index.json"
 ISSUER_ALIASES_PATH = data_dir() / "card_issuer_aliases.yaml"
 CARD_SEARCH_ALIASES_PATH = data_dir() / "card_search_aliases.yaml"
 MARKET_SHARE_PATH = data_dir() / "card_issuer_market_share.yaml"
+WALLET_CARD_KEY_ALIASES: dict[str, str] = {
+    "wellsfargo-bilt": "bilt-mastercard",
+    "cardless-biltblue": "bilt-mastercard",
+}
 
 # Common US issuers for index build + fuzzy hints.
 DEFAULT_ISSUER_QUERIES = [
@@ -133,6 +137,7 @@ def catalog_card_keys() -> set[str]:
 def resolve_wallet_card_key(card_key: str) -> dict[str, Any]:
     """Map wallet card_key to catalog/registry row."""
     key = card_key.strip()
+    key = WALLET_CARD_KEY_ALIASES.get(key, key)
     reg = registry_by_key()
     if key in reg:
         entry = reg[key]
@@ -211,22 +216,65 @@ def _issuer_score(query: str, issuer: str) -> float:
         return 1.0
     best = 0.0
     for q in query_issuers:
+        q_tokens = q.split()
         for target in card_issuers:
-            if q in target or target in q:
-                best = max(best, 0.92)
+            t_tokens = target.split()
+            if q_tokens and all(token in t_tokens for token in q_tokens):
+                best = max(best, 0.95)
+            if len(q_tokens) == 1 and q_tokens[0] in t_tokens:
+                best = max(best, 0.95)
             best = max(best, fuzzy_name_score(q, target))
     return best
 
 
+def _resolve_issuer_browse_query(query: str) -> tuple[str, list[str]] | None:
+    """When the query is an issuer name (not a co-brand card search), return canonical issuer."""
+    q = _normalize(query)
+    if len(q) < 2:
+        return None
+
+    candidates: list[tuple[str, list[str], str]] = []
+    seen: set[str] = set()
+    for row in load_market_share_issuers():
+        name = str(row.get("name") or "")
+        if not name or name in seen:
+            continue
+        seen.add(name)
+        aliases = [str(a) for a in (row.get("aliases") or [])]
+        labels = {_normalize(name), *(_normalize(a) for a in aliases)}
+        for canonical, alias_list in load_issuer_aliases().items():
+            if _normalize(canonical) == _normalize(name):
+                labels.add(_normalize(canonical))
+                labels.update(_normalize(a) for a in alias_list)
+        if q in labels:
+            candidates.append((name, aliases, q))
+            continue
+        if _issuer_score(q, name) >= 0.95:
+            candidates.append((name, aliases, q))
+
+    if len(candidates) == 1:
+        name, aliases, _ = candidates[0]
+        return name, aliases
+    if len(candidates) > 1:
+        exact = [c for c in candidates if c[2] == _normalize(c[0]) or c[2] in {_normalize(a) for a in c[1]}]
+        if len(exact) == 1:
+            return exact[0][0], exact[0][1]
+    return None
+
+
+def _issuer_matches_canonical(card_issuer: str, canonical: str, aliases: list[str]) -> bool:
+    """Strict issuer label match (no fuzzy substring: Citi ≠ Citizens Bank)."""
+    labels = {_normalize(canonical), *(_normalize(a) for a in aliases)}
+    expanded = _expand_card_issuer(card_issuer)
+    if labels & expanded:
+        return True
+    return _normalize(card_issuer) in labels
+
+
 def _issuer_in_catalog(catalog_issuers: set[str], target_name: str, aliases: list[str]) -> bool:
-    labels = {_normalize(target_name), *(_normalize(a) for a in aliases)}
     for issuer in catalog_issuers:
-        expanded = _expand_card_issuer(issuer)
-        if labels & expanded:
+        if _issuer_matches_canonical(issuer, target_name, aliases):
             return True
-        for label in labels:
-            if _issuer_score(label, issuer) >= 0.88:
-                return True
     return False
 
 
@@ -249,7 +297,14 @@ def is_top_tier_issuer(issuer: str) -> bool:
     name = str(issuer or "").strip()
     if not name:
         return False
-    return name in _top_tier_issuer_names_in_data()
+    if name in _top_tier_issuer_names_in_data():
+        return True
+    for row in load_market_share_issuers():
+        canonical = str(row.get("name") or "")
+        aliases = [str(a) for a in (row.get("aliases") or [])]
+        if _issuer_in_catalog({name}, canonical, aliases):
+            return True
+    return False
 
 
 def catalog_coverage_stats() -> dict[str, Any]:
@@ -345,9 +400,14 @@ def _card_name_score(
         return 0.0
     name = _normalize(card_name)
     key = _normalize(card_key.replace("-", " "))
+    q_tokens = q.split()
     best = 0.0
-    if name and (q in name or name in q):
-        best = max(best, 0.96)
+    if name:
+        name_tokens = name.split()
+        if q_tokens and all(token in name_tokens for token in q_tokens):
+            best = max(best, 0.96)
+        elif len(q) >= 5 and (q in name or name in q):
+            best = max(best, 0.96)
     if key and q in key:
         best = max(best, 0.94)
     if name:
@@ -378,6 +438,7 @@ def search_cards_by_issuer(
     if len(_normalize(query)) < 2:
         return []
 
+    browse = _resolve_issuer_browse_query(query)
     scored: list[tuple[float, float, dict[str, Any]]] = []
     seen: set[str] = set()
     card_aliases = load_card_search_aliases()
@@ -394,7 +455,14 @@ def search_cards_by_issuer(
             card_key,
             search_aliases=card_aliases.get(card_key),
         )
-        score = max(issuer_score, name_score)
+        if browse:
+            canonical, aliases = browse
+            if not _issuer_in_catalog({issuer}, canonical, aliases):
+                continue
+            score = issuer_score if issuer_score >= min_score else 1.0
+            issuer_score = max(issuer_score, 1.0)
+        else:
+            score = max(issuer_score, name_score)
         if score < min_score:
             continue
         seen.add(card_key)

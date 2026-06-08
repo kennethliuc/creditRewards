@@ -128,6 +128,8 @@ def load_reference_card(
     reference_dir: Path | None = None,
     upstream_key: str | None = None,
 ) -> dict[str, Any] | None:
+    from credit_rewards.ingest.quarterly_rotations import enrich_with_quarterly_rotations
+
     root = reference_dir or REFERENCE_DIR
     for name in (upstream_key, card_key):
         if not name:
@@ -137,9 +139,12 @@ def load_reference_card(
             payload = json.loads(path.read_text())
             if isinstance(payload, list):
                 if not payload:
-                    return {"cardKey": card_key, "spendBonusCategory": []}
-                return payload[0]
-            return payload
+                    return enrich_with_quarterly_rotations(
+                        {"cardKey": card_key, "spendBonusCategory": []},
+                        card_key=card_key,
+                    )
+                return enrich_with_quarterly_rotations(payload[0], card_key=card_key)
+            return enrich_with_quarterly_rotations(payload, card_key=card_key)
     return None
 
 
@@ -208,7 +213,7 @@ def assemble_card_from_category_snapshots(
     if not spend_type or spend_type.lower() in {"points", "point"}:
         spend_type = _infer_spend_type_from_meta(card_key, meta) or "Points"
     spend_type = normalize_earn_type(spend_type) or spend_type
-    return {
+    detail = {
         "cardKey": card_key,
         "cardName": meta.get("cardName") or card_key,
         "cardIssuer": meta.get("cardIssuer") or "",
@@ -223,6 +228,9 @@ def assemble_card_from_category_snapshots(
         "isActive": 1,
         "spendBonusCategory": list(rules_by_id.values()),
     }
+    from credit_rewards.ingest.quarterly_rotations import enrich_with_quarterly_rotations
+
+    return enrich_with_quarterly_rotations(detail, card_key=card_key)
 
 
 def catalog_card_has_offline_reference(card_key: str, upstream_key: str | None = None) -> bool:

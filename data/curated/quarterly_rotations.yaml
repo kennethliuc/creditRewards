@@ -1,0 +1,67 @@
+# Quarterly 5% rotating categories (activation required; $1,500 combined cap per quarter).
+# Sources: Discover 2026 calendar (Q1–Q3 announced; Q4 TBA Sep 2026).
+updated: "2026-06-08"
+cards:
+  discover-it-cash-back:
+    rewards_cc_card_key: discover-cashback
+    multiplier: 5.0
+    spend_limit: 1500
+    spend_limit_reset_period: Quarter
+    quarters:
+      - begin: "2026-01-01"
+        end: "2026-03-31"
+        label: "Q1 2026"
+        categories:
+          - name: Grocery Stores
+            id: 1132334901
+            group: Shopping
+            subcategory: Grocery
+            desc: "Earn 5% cash back at Grocery Stores"
+          - name: Wholesale Clubs
+            id: 1386466601
+            group: Shopping
+            subcategory: Wholesale
+            desc: "Earn 5% cash back at Wholesale Clubs"
+          - name: Streaming Services
+            id: 248970942
+            group: Entertainment
+            subcategory: Streaming
+            desc: "Earn 5% cash back on Select Streaming Services"
+      - begin: "2026-04-01"
+        end: "2026-06-30"
+        label: "Q2 2026"
+        categories:
+          - name: Dining
+            id: 160378660
+            group: Dining
+            subcategory: All Dining
+            desc: "Earn 5% cash back at Restaurants"
+          - name: Home Improvement
+            id: 1550080980
+            group: Shopping
+            subcategory: All Home Improvement
+            desc: "Earn 5% cash back at Home Improvement stores"
+      - begin: "2026-07-01"
+        end: "2026-09-30"
+        label: "Q3 2026"
+        categories:
+          - name: Gas Stations
+            id: 1455345350
+            group: Gas
+            subcategory: All Gas Stations
+            desc: "Earn 5% cash back at Gas Stations and EV charging"
+          - name: Transit
+            id: 1468589631
+            group: Travel
+            subcategory: Public Transit
+            desc: "Earn 5% cash back on public transportation"
+          - name: Airfare
+            id: 2013874334
+            group: Travel
+            subcategory: All Airfare
+            desc: "Earn 5% cash back on flights"
+          - name: Drugstores
+            id: 1096261883
+            group: Shopping
+            subcategory: All Drugstores
+            desc: "Earn 5% cash back at Drugstores"

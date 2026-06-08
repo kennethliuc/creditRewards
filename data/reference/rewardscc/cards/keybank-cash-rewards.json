@@ -1,0 +1,23 @@
+[
+  {
+    "cardKey": "keybank-cashrewards",
+    "cardIssuer": "KeyBank",
+    "cardName": "Key Cash Rewards® Credit Card",
+    "cardNetwork": "Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://www.key.com/personal/credit-cards/key-cash-rewards-credit-card.jsp",
+    "annualFee": 0,
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed — 2% gas/grocery, 1% other (simplified base)"
+  }
+]

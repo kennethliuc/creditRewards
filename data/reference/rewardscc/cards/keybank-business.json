@@ -1,0 +1,23 @@
+[
+  {
+    "cardKey": "keybank-business",
+    "cardIssuer": "KeyBank",
+    "cardName": "Key Business Credit Card",
+    "cardNetwork": "Mastercard",
+    "cardType": "Business",
+    "cardUrl": "https://www.key.com/small-business/credit-cards/key-business-credit-card.jsp",
+    "annualFee": 0,
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed"
+  }
+]

@@ -16,10 +16,42 @@ def test_registry_cards_list():
 
 def test_catalog_market_coverage_goal():
     stats = catalog_coverage_stats()
-    assert stats["issuerCount"] == 28
+    assert stats["issuerCount"] == 30
     assert stats["supportedIssuerCount"] == 30
     assert stats["marketShareTargetPct"] >= 94.0
-    assert stats["marketShareCoveredPct"] >= 90.0
+    assert stats["marketShareCoveredPct"] >= 95.0
+    assert stats["topIssuersMissing"] == []
+
+
+def test_search_issuer_no_cross_bank_pollution():
+    amex = search_cards_by_issuer("American Express")
+    assert amex
+    assert all(m["issuer"] == "American Express" for m in amex)
+
+    citi = search_cards_by_issuer("Citi")
+    assert citi
+    assert all(m["issuer"] == "Citi" for m in citi)
+    assert len(citi) >= 40
+
+    citizens = search_cards_by_issuer("Citizens Bank")
+    assert citizens
+    assert all("Citizens" in m["issuer"] for m in citizens)
+    assert not any(m["issuer"] == "Citi" for m in citizens)
+
+
+def test_bilt_mastercard_in_catalog():
+    keys = {r["card_key"] for r in load_catalog_index()}
+    assert "bilt-mastercard" in keys
+    assert "wellsfargo-bilt" not in keys
+
+
+def test_keybank_and_santander_in_catalog():
+    issuers = list_issuers()
+    assert "KeyBank" in issuers
+    assert "Santander" in issuers
+    assert len(search_cards_by_issuer("KeyBank")) >= 3
+    assert len(search_cards_by_issuer("Santander")) >= 2
+    assert any(m["card_key"] == "discover-it-miles" for m in search_cards_by_issuer("Discover"))
 
 
 def test_search_issuer_chase():
@@ -49,11 +81,11 @@ def test_search_co_brand_by_name():
 
 def test_list_issuers_top_tier_only():
     issuers = list_issuers()
-    assert len(issuers) == 28
+    assert len(issuers) == 30
     assert issuers == sorted(issuers, key=str.casefold)
     assert issuers[0] == "American Express"
-    assert "KeyBank" not in issuers
-    assert "Santander" not in issuers
+    assert "KeyBank" in issuers
+    assert "Santander" in issuers
     assert "Busey Bank" not in issuers
     for name in issuers:
         assert search_cards_by_issuer(name, limit=1), f"{name} has no catalog cards"

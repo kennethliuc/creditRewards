@@ -5,7 +5,10 @@ from __future__ import annotations
 import json
 import time
 from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
+
+import yaml
 
 from credit_rewards.client import CardDataClient, RewardsCCError
 from credit_rewards.ingest.bulk_sync import collect_card_keys_from_payload, extract_category_ids
@@ -14,6 +17,10 @@ from credit_rewards.ingest.scrape.registry import load_card_registry
 from credit_rewards.paths import data_dir
 
 REFERENCE_CARD_LIST_PATH = data_dir() / "reference" / "rewardscc" / "card_list.json"
+MANUAL_CATALOG_PATH = data_dir() / "card_catalog_manual.yaml"
+BILT_RC_KEYS = frozenset({"cardless-biltblue", "wellsfargo-bilt"})
+BILT_WALLET_KEY = "bilt-mastercard"
+BILT_PRIMARY_RC_KEY = "cardless-biltblue"
 
 
 def _rows_from_payload(payload: Any) -> list[dict[str, Any]]:
@@ -30,6 +37,87 @@ def _registry_map() -> dict[str, dict[str, Any]]:
         rc = str(entry.get("rewards_cc_card_key") or entry["card_key"])
         by_rc[rc] = entry
     return by_rc
+
+
+def load_manual_catalog_rows() -> list[dict[str, Any]]:
+    """Curated rows for issuers/cards missing from Rewards CC snapshots."""
+    if not MANUAL_CATALOG_PATH.exists():
+        return []
+    data = yaml.safe_load(MANUAL_CATALOG_PATH.read_text()) or {}
+    rows: list[dict[str, Any]] = []
+    reg_by_rc = _registry_map()
+    for raw in data.get("cards") or []:
+        if not isinstance(raw, dict):
+            continue
+        rc_key = str(raw.get("rewards_cc_card_key") or raw.get("card_key") or "").strip()
+        if not rc_key:
+            continue
+        reg = reg_by_rc.get(rc_key)
+        wallet_key = str(reg["card_key"]) if reg else str(raw.get("card_key") or rc_key).strip()
+        rows.append(
+            {
+                "card_key": wallet_key,
+                "rewards_cc_card_key": rc_key,
+                "card_name": str(raw.get("card_name") or wallet_key.replace("-", " ").title()),
+                "issuer": str(raw.get("issuer") or (reg.get("issuer") if reg else "")),
+                "in_registry": bool(reg),
+            }
+        )
+    return rows
+
+
+def merge_manual_catalog_rows(by_rc_key: dict[str, dict[str, Any]]) -> int:
+    """Merge manual YAML rows; returns count of newly added RC keys."""
+    added = 0
+    for row in load_manual_catalog_rows():
+        rc_key = str(row["rewards_cc_card_key"])
+        existing = by_rc_key.get(rc_key)
+        if existing:
+            name = str(row.get("card_name") or "")
+            if name and len(name) > len(str(existing.get("card_name") or "")):
+                existing["card_name"] = name
+            if row.get("issuer") and not str(existing.get("issuer") or "").strip():
+                existing["issuer"] = row["issuer"]
+            if row.get("card_key"):
+                existing["card_key"] = row["card_key"]
+            existing["in_registry"] = bool(existing.get("in_registry") or row.get("in_registry"))
+            continue
+        by_rc_key[rc_key] = dict(row)
+        added += 1
+    return added
+
+
+def apply_registry_card_keys(by_rc_key: dict[str, dict[str, Any]]) -> None:
+    """Prefer wallet card_key from Phase-1 registry when RC key matches."""
+    reg_by_rc = _registry_map()
+    for row in by_rc_key.values():
+        rc_key = str(row.get("rewards_cc_card_key") or "")
+        reg = reg_by_rc.get(rc_key)
+        if not reg:
+            continue
+        row["card_key"] = str(reg["card_key"])
+        row["in_registry"] = True
+        if reg.get("issuer"):
+            row["issuer"] = str(reg["issuer"])
+
+
+def normalize_bilt_catalog_rows(by_rc_key: dict[str, dict[str, Any]]) -> None:
+    """Single Bilt wallet key (bilt-mastercard) for legacy wellsfargo-bilt RC key."""
+    reg = _registry_map().get(BILT_PRIMARY_RC_KEY)
+    wf_row = by_rc_key.pop("wellsfargo-bilt", None)
+    primary = by_rc_key.get(BILT_PRIMARY_RC_KEY)
+    if primary is None and wf_row is not None:
+        primary = wf_row
+        by_rc_key[BILT_PRIMARY_RC_KEY] = primary
+    if primary is None:
+        return
+    primary["card_key"] = BILT_WALLET_KEY
+    primary["rewards_cc_card_key"] = BILT_PRIMARY_RC_KEY
+    primary["in_registry"] = True
+    if reg and reg.get("issuer"):
+        primary["issuer"] = str(reg["issuer"])
+    if not str(primary.get("card_name") or "").strip():
+        primary["card_name"] = "Bilt Mastercard"
 
 
 def load_reference_card_list() -> list[dict[str, Any]]:
@@ -64,6 +152,9 @@ def absorb_card_list_groups(
                     row["card_name"] = card_name
                 if issuer and not str(row.get("issuer") or "").strip():
                     row["issuer"] = issuer
+                if reg:
+                    row["card_key"] = str(reg["card_key"])
+                    row["in_registry"] = True
                 continue
             by_rc_key[rc_key] = {
                 "card_key": wallet_key,
@@ -160,6 +251,10 @@ def discover_catalog_rows_from_reference(
                 "in_registry": True,
             }
 
+    merge_manual_catalog_rows(by_rc_key)
+    apply_registry_card_keys(by_rc_key)
+    normalize_bilt_catalog_rows(by_rc_key)
+
     errors.append(f"reference_categories:{root}")
     return by_rc_key, errors
 
@@ -245,6 +340,10 @@ def discover_catalog_rows(
                 "issuer": str(entry.get("issuer") or ""),
                 "in_registry": True,
             }
+
+    merge_manual_catalog_rows(by_rc_key)
+    apply_registry_card_keys(by_rc_key)
+    normalize_bilt_catalog_rows(by_rc_key)
 
     return by_rc_key, errors
 

@@ -67,8 +67,8 @@ cases:
   - id: discover_dining_75
     wallet: [discover-it-cash-back, chase-freedom-unlimited]
     spend: { category: Dining, amount_usd: 75 }
-    expected_winner: chase-freedom-unlimited
-    reason: "Reference rules rank CFU above Discover on dining"
+    expected_winner: discover-it-cash-back
+    reason: "Discover 5% rotating dining in Q2 2026 beats CFU 3% on dining"
 
   - id: bilt_dining_100
     wallet: [bilt-mastercard, amex-gold]

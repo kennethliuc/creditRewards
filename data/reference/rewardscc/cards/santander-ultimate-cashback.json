@@ -1,0 +1,23 @@
+[
+  {
+    "cardKey": "santander-ultimatecashback",
+    "cardIssuer": "Santander",
+    "cardName": "Santander® Ultimate Cash Back® credit card",
+    "cardNetwork": "Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://www.santanderbank.com/personal/credit-cards/ultimate-cash-back-credit-card",
+    "annualFee": 0,
+    "baseSpendAmount": 1.5,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed — 1.5% all purchases, 3% grocery/gas (simplified base)"
+  }
+]

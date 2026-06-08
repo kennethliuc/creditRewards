@@ -1,0 +1,23 @@
+[
+  {
+    "cardKey": "santander-worldmc",
+    "cardIssuer": "Santander",
+    "cardName": "Santander® World Mastercard®",
+    "cardNetwork": "Mastercard",
+    "cardType": "Personal",
+    "cardUrl": "https://www.santanderbank.com/personal/credit-cards/world-mastercard",
+    "annualFee": 0,
+    "baseSpendAmount": 1.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed"
+  }
+]

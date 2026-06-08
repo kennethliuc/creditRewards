@@ -1,44 +1,48 @@
 {
-  "updated": "2026-06-08T01:37:57+00:00",
+  "updated": "2026-06-08T02:19:41+00:00",
   "source": "rewardscc_cardlist+categories",
-  "card_count": 527,
-  "issuer_count": 30,
+  "card_count": 535,
+  "issuer_count": 32,
   "image_fetch_count": 0,
   "discovery_sources": {
-    "all_issuers": 1794,
-    "top_tier": 527,
-    "Barclays": 45,
-    "Capital One": 33,
+    "all_issuers": 1606,
+    "top_tier": 535,
     "Goldman Sachs": 3,
-    "Comenity": 109,
-    "Bank of America": 33,
-    "American Express": 40,
-    "FNBO": 15,
-    "Citi": 45,
     "Synchrony Bank": 20,
+    "American Express": 40,
     "Chase": 52,
-    "Wells Fargo": 12,
-    "BMO": 5,
+    "Bank of America": 33,
+    "Merrick Bank": 4,
+    "First Citizens Bank": 5,
+    "Comenity": 109,
+    "Citi": 45,
     "U.S. Bank": 44,
+    "Barclays": 45,
+    "Fifth Third Bank": 3,
     "USAA": 5,
-    "Discover": 6,
-    "Pegasus Bank": 6,
-    "Comerica Bank": 6,
+    "FNBO": 15,
+    "Wells Fargo": 14,
+    "Capital One": 33,
     "Huntington": 2,
     "Credit One": 9,
-    "Regions": 1,
-    "Merrick Bank": 4,
     "TD Bank": 4,
-    "A+ Federal Credit Union": 6,
-    "First Citizens Bank": 5,
     "Citizens Bank": 2,
+    "Pegasus Bank": 6,
+    "Comerica Bank": 6,
+    "A+ Federal Credit Union": 6,
     "Truist": 6,
     "Navy Federal Credit Union": 3,
-    "HSBC": 2,
     "PNC": 1,
-    "Fifth Third Bank": 3
+    "BMO": 5,
+    "Discover": 7,
+    "Regions": 1,
+    "HSBC": 2,
+    "KeyBank": 3,
+    "Santander": 2
   },
-  "sync_errors": [],
+  "sync_errors": [
+    "reference_categories:/Users/canliu/Documents/GitHub/creditRewards/data/reference/rewardscc"
+  ],
   "cards": [
     {
       "card_key": "aplusfcu-biz-cashpreffered",
@@ -1632,7 +1636,7 @@
     {
       "card_key": "citi-double-cash",
       "rewards_cc_card_key": "citi-doublecash",
-      "card_name": "Citi Double Cash",
+      "card_name": "Citi Double Cash®",
       "issuer": "Citi",
       "in_registry": true
     },
@@ -2771,6 +2775,13 @@
       "in_registry": false
     },
     {
+      "card_key": "discover-it-miles",
+      "rewards_cc_card_key": "discover-miles",
+      "card_name": "Discover it® Miles",
+      "issuer": "Discover",
+      "in_registry": false
+    },
+    {
       "card_key": "discover-nhl",
       "rewards_cc_card_key": "discover-nhl",
       "card_name": "NHL® Discover It®",
@@ -2988,6 +2999,27 @@
       "in_registry": false
     },
     {
+      "card_key": "keybank-business",
+      "rewards_cc_card_key": "keybank-business",
+      "card_name": "Key Business Credit Card",
+      "issuer": "KeyBank",
+      "in_registry": false
+    },
+    {
+      "card_key": "keybank-cash-rewards",
+      "rewards_cc_card_key": "keybank-cashrewards",
+      "card_name": "Key Cash Rewards® Credit Card",
+      "issuer": "KeyBank",
+      "in_registry": false
+    },
+    {
+      "card_key": "keybank-key2more",
+      "rewards_cc_card_key": "keybank-key2more",
+      "card_name": "Key2More Rewards® Credit Card",
+      "issuer": "KeyBank",
+      "in_registry": false
+    },
+    {
       "card_key": "merrickbank-olloeveryday",
       "rewards_cc_card_key": "merrickbank-olloeveryday",
       "card_name": "Ollo Everyday Rewards Mastercard®",
@@ -3090,6 +3122,20 @@
       "rewards_cc_card_key": "regions-prestigevisa",
       "card_name": "Regions Prestige Visa® Signature",
       "issuer": "Regions",
+      "in_registry": false
+    },
+    {
+      "card_key": "santander-ultimate-cashback",
+      "rewards_cc_card_key": "santander-ultimatecashback",
+      "card_name": "Santander® Ultimate Cash Back® credit card",
+      "issuer": "Santander",
+      "in_registry": false
+    },
+    {
+      "card_key": "santander-world-mastercard",
+      "rewards_cc_card_key": "santander-worldmc",
+      "card_name": "Santander® World Mastercard®",
+      "issuer": "Santander",
       "in_registry": false
     },
     {
@@ -3646,11 +3692,11 @@
       "in_registry": false
     },
     {
-      "card_key": "wellsfargo-bilt",
-      "rewards_cc_card_key": "wellsfargo-bilt",
-      "card_name": "Bilt Mastercard®",
+      "card_key": "bilt-mastercard",
+      "rewards_cc_card_key": "cardless-biltblue",
+      "card_name": "Bilt Blue Card",
       "issuer": "Wells Fargo",
-      "in_registry": false
+      "in_registry": true
     },
     {
       "card_key": "wellsfargo-choiceprivmc",
@@ -3683,7 +3729,7 @@
     {
       "card_key": "wells-fargo-active-cash",
       "rewards_cc_card_key": "wellsfargo-activecash",
-      "card_name": "Wells Fargo Active Cash",
+      "card_name": "Wells Fargo Active Cash®",
       "issuer": "Wells Fargo",
       "in_registry": true
     },
@@ -3726,6 +3772,20 @@
       "card_key": "wellsfargo-propelamex",
       "rewards_cc_card_key": "wellsfargo-propelamex",
       "card_name": "Wells Fargo Propel American Express®",
+      "issuer": "Wells Fargo",
+      "in_registry": false
+    },
+    {
+      "card_key": "wells-fargo-reflect",
+      "rewards_cc_card_key": "wellsfargo-reflect",
+      "card_name": "Wells Fargo Reflect® Card",
+      "issuer": "Wells Fargo",
+      "in_registry": false
+    },
+    {
+      "card_key": "wellsfargo-signify-business",
+      "rewards_cc_card_key": "wellsfargo-signifybusiness",
+      "card_name": "Wells Fargo Signify Business Cash℠ Card",
       "issuer": "Wells Fargo",
       "in_registry": false
     }

@@ -1,0 +1,28 @@
+[
+  {
+    "cardKey": "wellsfargo-signifybusiness",
+    "cardIssuer": "Wells Fargo",
+    "cardName": "Wells Fargo Signify Business Cash℠ Card",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "",
+    "cardType": "Business",
+    "cardUrl": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 2.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed — 2% cash rewards on purchases"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "cardKey": "wellsfargo-reflect",
+    "cardIssuer": "Wells Fargo",
+    "cardName": "Wells Fargo Reflect® Card",
+    "cardNetwork": "Visa",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
+    "annualFee": 0,
+    "fxFee": 3.0,
+    "isFxFee": 1,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 0.0,
+    "baseSpendEarnType": "Cash",
+    "baseSpendEarnCategory": "Cash",
+    "baseSpendEarnCurrency": "cashback",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 1,
+    "baseSpendEarnCashValue": 1.0,
+    "isSignupBonus": 0,
+    "isActive": 1,
+    "benefit": [],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Manual catalog seed — balance-transfer focused, no ongoing earn"
+  }
+]

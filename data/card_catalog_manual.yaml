@@ -1,0 +1,44 @@
+# Curated catalog rows missing from Rewards CC category snapshots.
+# Merged by scripts/sync_card_catalog.py (see load_manual_catalog_rows).
+updated: "2026-06-08"
+source_note: "Manual seed for wallet picker + reference import"
+cards:
+  # --- P0: KeyBank ---
+  - card_key: keybank-cash-rewards
+    rewards_cc_card_key: keybank-cashrewards
+    card_name: Key Cash Rewards® Credit Card
+    issuer: KeyBank
+  - card_key: keybank-key2more
+    rewards_cc_card_key: keybank-key2more
+    card_name: Key2More Rewards® Credit Card
+    issuer: KeyBank
+  - card_key: keybank-business
+    rewards_cc_card_key: keybank-business
+    card_name: Key Business Credit Card
+    issuer: KeyBank
+
+  # --- P0: Santander ---
+  - card_key: santander-ultimate-cashback
+    rewards_cc_card_key: santander-ultimatecashback
+    card_name: Santander® Ultimate Cash Back® credit card
+    issuer: Santander
+  - card_key: santander-world-mastercard
+    rewards_cc_card_key: santander-worldmc
+    card_name: Santander® World Mastercard®
+    issuer: Santander
+
+  # --- P1: Discover ---
+  - card_key: discover-it-miles
+    rewards_cc_card_key: discover-miles
+    card_name: Discover it® Miles
+    issuer: Discover
+
+  # --- P1: Wells Fargo ---
+  - card_key: wells-fargo-reflect
+    rewards_cc_card_key: wellsfargo-reflect
+    card_name: Wells Fargo Reflect® Card
+    issuer: Wells Fargo
+  - card_key: wellsfargo-signify-business
+    rewards_cc_card_key: wellsfargo-signifybusiness
+    card_name: Wells Fargo Signify Business Cash℠ Card
+    issuer: Wells Fargo

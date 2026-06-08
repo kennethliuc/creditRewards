@@ -18,9 +18,12 @@ from credit_rewards.client import CardDataClient, upstream_api_enabled  # noqa: 
 from credit_rewards.ingest.card_catalog_sync import (  # noqa: E402
     _registry_map,
     absorb_card_list_groups,
+    apply_registry_card_keys,
     discover_catalog_rows,
     discover_catalog_rows_from_reference,
     fetch_card_list_rows,
+    merge_manual_catalog_rows,
+    normalize_bilt_catalog_rows,
     write_catalog_index,
 )
 
@@ -64,6 +67,10 @@ def main() -> None:
                 added = absorb_card_list_groups(local_groups, rows, reg_by_rc=_registry_map())
                 errors.append(f"card_list:{local_src}:+{added}")
                 print(f"  Local CardData API added {added} cards")
+
+    merge_manual_catalog_rows(rows)
+    apply_registry_card_keys(rows)
+    normalize_bilt_catalog_rows(rows)
 
     top_rows = {k: v for k, v in rows.items() if is_top_tier_issuer(str(v.get("issuer") or ""))}
     print(f"  Keeping {len(top_rows)} cards from top-tier issuers for wallet picker")

@@ -46,6 +46,7 @@ issuers:
     share_pct: 0.8
   - name: Credit One Bank
     share_pct: 0.8
+    aliases: [Credit One]
   - name: Regions Bank
     share_pct: 0.7
   - name: Huntington National Bank
@@ -58,6 +59,7 @@ issuers:
     share_pct: 0.5
   - name: Comerica
     share_pct: 0.4
+    aliases: [Comerica Bank]
   - name: HSBC
     share_pct: 0.3
   - name: Santander

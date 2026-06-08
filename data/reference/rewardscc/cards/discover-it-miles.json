@@ -1,0 +1,39 @@
+[
+  {
+    "cardKey": "discover-miles",
+    "cardIssuer": "Discover",
+    "cardName": "Discover it® Miles",
+    "cardNetwork": "Discover",
+    "cardNetworkTierName": "",
+    "cardType": "Personal",
+    "cardUrl": "https://www.discover.com/credit-cards/travel/miles/it-miles.html",
+    "annualFee": 0,
+    "fxFee": 0.0,
+    "isFxFee": 0,
+    "creditRange": "Good to Excellent",
+    "baseSpendAmount": 1.5,
+    "baseSpendEarnType": "Miles",
+    "baseSpendEarnCategory": "Travel",
+    "baseSpendEarnCurrency": "miles",
+    "baseSpendEarnValuation": 1.0,
+    "baseSpendEarnIsCash": 0,
+    "baseSpendEarnCashValue": 0.0,
+    "isSignupBonus": 0,
+    "isActive": 1,
+    "benefit": [
+      {
+        "benefitTitle": "Unlimited 1.5x Miles",
+        "benefitDesc": "Earn unlimited 1.5 Miles per dollar spent on all purchases — every day, everywhere, with no rotating categories to track.",
+        "isBenefitCardNetworkTier": 0
+      },
+      {
+        "benefitTitle": "Miles Match",
+        "benefitDesc": "Discover will match all the Miles you've earned at the end of your first year, automatically.",
+        "isBenefitCardNetworkTier": 0
+      }
+    ],
+    "spendBonusCategory": [],
+    "annualSpend": [],
+    "_sourceNote": "Flat 1.5x miles on all purchases; no quarterly 5% rotation (unlike Discover it Cash Back)"
+  }
+]
