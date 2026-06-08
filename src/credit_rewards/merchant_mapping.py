@@ -23,8 +23,6 @@ from credit_rewards.merchant_google_places import (
     google_places_enabled,
     lookup_places_for_parsed_brand,
     lookup_places_for_store_name,
-    lookup_places_text_queries,
-    lookup_places_with_location_queries,
 )
 from credit_rewards.merchant_url_parse import (
     ParsedStoreBrand,

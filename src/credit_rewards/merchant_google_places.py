@@ -6,7 +6,6 @@ import logging
 import os
 import re
 from dataclasses import dataclass
-from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -141,11 +140,16 @@ def _places_search(
                 "radius": radius_m,
             }
         }
+    else:
+        body["regionCode"] = os.getenv("CREDITREWARDS_GOOGLE_PLACES_REGION", "us")
     try:
         response = httpx.post(PLACES_SEARCH_URL, headers=headers, json=body, timeout=12.0)
         response.raise_for_status()
         payload = response.json()
-        return list(payload.get("places") or [])
+        places = list(payload.get("places") or [])
+        if not places:
+            logger.info("Google Places returned no results for %r", text_query[:80])
+        return places
     except httpx.HTTPError as exc:
         logger.warning("Google Places search failed for %r: %s", text_query[:80], exc)
         return []
@@ -208,7 +212,6 @@ def _row_to_match(
     )
 
 
-@lru_cache(maxsize=256)
 def lookup_places_with_location(
     text_query: str,
     latitude: float,
@@ -226,7 +229,6 @@ def lookup_places_with_location(
     return tuple(matches)
 
 
-@lru_cache(maxsize=256)
 def lookup_places_text_only(text_query: str) -> tuple[GooglePlaceMatch, ...]:
     q = text_query.strip()
     if len(q) < 2:
