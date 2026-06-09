@@ -24,14 +24,14 @@ def test_amex_gold_grocery_official_valuation():
     mult, points, value, _, _, _, _ = compute_earn_value(card, purchase)
     assert mult == 4.0
     assert points == 400
-    assert value == 8.8  # 400 × 2.2¢ official
+    assert value == pytest.approx(5.88)  # 400 × 1.47¢ typical utilization
 
 
 def test_citi_double_cash_uses_thankyou_cpp():
     card = enrich_from_official_table(normalize_card_detail(json.loads((FIXTURES / "citi-double-cash.json").read_text())))
     purchase = PurchaseContext(category="Anything", amount_usd=100)
     _, _, value, _, _, _, _ = compute_earn_value(card, purchase)
-    assert value == pytest.approx(3.4)  # 200 × 1.7¢
+    assert value == pytest.approx(2.37)  # 200 × 1.185¢
 
 
 def test_cash_back_card_literal_percent():

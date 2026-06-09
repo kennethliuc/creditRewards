@@ -58,7 +58,7 @@ def test_amex_gold_grocery_dollar_value():
     card = enrich_from_official_table(normalize_card_detail(ref))
     purchase = PurchaseContext(category="Grocery Stores", amount_usd=100)
     _, _, value, _, _, _, _ = compute_earn_value(card, purchase)
-    assert value == pytest.approx(8.8)
+    assert value == pytest.approx(5.88)
 
 
 def test_program_valuation_list_uses_official_cpp(client, twenty_card_db):

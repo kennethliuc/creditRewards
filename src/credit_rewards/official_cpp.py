@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Any
 
 import yaml
 
-from credit_rewards.benchmarks import load_program_benchmarks
+from credit_rewards.benchmarks import DEFAULT_UTILIZATION_WEIGHTS, load_program_benchmarks, typical_utilization_cpp
 
 if TYPE_CHECKING:
     from credit_rewards.models import CardProfile
@@ -162,9 +162,40 @@ def enrich_card_profile(
 
 
 def aggregate_official_cpp(candidates: list[float], *, sanity_cap: float) -> float:
+    """Legacy max aggregation (kept for tests and audit comparisons)."""
     if not candidates:
         return 1.0
     return min(max(candidates), sanity_cap)
+
+
+def resolve_official_cpp_from_benchmark_row(
+    program_name: str,
+    bench: dict[str, Any] | None,
+    *,
+    config: OfficialCppConfig | None = None,
+) -> tuple[float, dict[str, Any]]:
+    """Compute display CPP from program benchmark row."""
+    config = config or load_official_cpp_config()
+    if program_name == CASH_PROGRAM or not bench:
+        return 1.0, {"fixed": 1.0}
+
+    if config.aggregation == "typical_utilization":
+        typical = typical_utilization_cpp(bench)
+        sources = {
+            "typical_utilization": typical,
+            "benchmark_cap": float(bench.get("cpp_default") or typical),
+            "cpp_cash_floor": float(bench.get("cpp_cash_floor") or 1.0),
+            "cpp_portal": float(bench.get("cpp_portal") or bench.get("cpp_default") or 1.0),
+            "cpp_transfer": float(
+                bench.get("cpp_transfer") or bench.get("cpp_portal") or bench.get("cpp_default") or 1.0
+            ),
+            "utilization_weights": bench.get("utilization_weights") or list(DEFAULT_UTILIZATION_WEIGHTS),
+        }
+        return typical, sources
+
+    candidates = [float(bench.get("cpp_default") or 1.0)]
+    official = aggregate_official_cpp(candidates, sanity_cap=config.sanity_cap_cpp)
+    return official, {"benchmark": official}
 
 
 def compute_program_official_cpp(
@@ -183,6 +214,24 @@ def compute_program_official_cpp(
     if program_name == CASH_PROGRAM or program_cfg.get("official_cpp") is not None:
         fixed = float(program_cfg.get("official_cpp") or 1.0)
         return fixed, {"fixed": fixed}
+
+    bench_row = load_program_benchmarks().get(program_name)
+    if config.aggregation == "typical_utilization" and bench_row:
+        typical, sources = resolve_official_cpp_from_benchmark_row(
+            program_name,
+            bench_row,
+            config=config,
+        )
+        if rewards_cc_values:
+            sources["rewards_cc_max"] = max(rewards_cc_values)
+        if benchmark_cpp is not None:
+            sources["upgraded_points"] = benchmark_cpp
+        if awardwallet_values:
+            sources["awardwallet_max"] = max(awardwallet_values)
+        if manual_cpp is not None:
+            sources["manual"] = manual_cpp
+        sources["official_cpp"] = typical
+        return typical, sources
 
     candidates: list[float] = []
     sources: dict[str, Any] = {}
@@ -223,9 +272,11 @@ def lookup_official_cpp_from_table(
     program_cfg = config.programs.get(program_name) or {}
     if program_cfg.get("official_cpp") is not None:
         return float(program_cfg["official_cpp"])
-    benchmark = load_program_benchmarks().get(program_name)
-    if benchmark:
-        return float(benchmark["cpp_default"])
+    bench = load_program_benchmarks().get(program_name)
+    if bench and config.aggregation == "typical_utilization":
+        return typical_utilization_cpp(bench)
+    if bench:
+        return float(bench["cpp_default"])
     return 1.0
 
 
@@ -250,21 +301,14 @@ def fallback_program_table() -> dict[str, float]:
         if program_name == CASH_PROGRAM:
             table[CASH_PROGRAM] = float(cfg.get("official_cpp") or 1.0)
             continue
-        candidates: list[float] = []
         bench = benchmarks.get(program_name)
+        if bench and config.aggregation == "typical_utilization":
+            table[program_name] = typical_utilization_cpp(bench)
+            continue
+        candidates: list[float] = []
         if bench:
             candidates.append(float(bench["cpp_default"]))
         if cfg.get("manual_cpp") is not None:
             candidates.append(float(cfg["manual_cpp"]))
-        if program_name == "American Express Membership Rewards":
-            candidates.append(2.2)
-        elif program_name == "Chase Ultimate Rewards":
-            candidates.append(2.0)
-        elif program_name == "Citi ThankYou Rewards":
-            candidates.append(1.7)
-        elif program_name == "Capital One Miles":
-            candidates.append(1.85)
-        elif program_name == "Bilt Points":
-            candidates.extend([1.0, 2.2])
         table[program_name] = aggregate_official_cpp(candidates, sanity_cap=config.sanity_cap_cpp)
     return table

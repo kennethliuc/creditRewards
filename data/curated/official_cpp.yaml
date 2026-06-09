@@ -1,5 +1,5 @@
-version: "2026-06-02"
-aggregation: max
+version: "2026-06-08"
+aggregation: typical_utilization
 sanity_cap_cpp: 3.5
 
 programs:
