@@ -11,6 +11,7 @@ if [[ -n "$PERSIST_DB" ]]; then
     cp "$BUILTIN_DB" "$PERSIST_DB"
   fi
   python -c "from credit_rewards.datastore.db import init_db; init_db()"
+  paycue-db refresh-official-cpp || true
 fi
 
 PORT="${PORT:-8000}"

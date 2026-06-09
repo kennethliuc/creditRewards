@@ -5,9 +5,9 @@ from typing import Any
 
 import yaml
 
-BENCHMARKS_PATH = (
-    Path(__file__).resolve().parents[2] / "data" / "reference" / "program_benchmarks.yaml"
-)
+from credit_rewards.paths import data_dir
+
+BENCHMARKS_PATH = data_dir() / "reference" / "program_benchmarks.yaml"
 
 DEFAULT_UTILIZATION_WEIGHTS = (0.5, 0.35, 0.15)
 
